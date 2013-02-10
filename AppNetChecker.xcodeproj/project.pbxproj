@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E6E481E263742F9A0C55CB8 /* libPods-AppNetCheckerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 164169FAEA284DC88A60012F /* libPods-AppNetCheckerTests.a */; };
+		C28CEACFFAEB49CD958D3A20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3C7EAB274B1BA845227F /* libPods.a */; };
 		F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
@@ -18,12 +20,16 @@
 		F97B552C16C7752A005AD777 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F97B552B16C7752A005AD777 /* Default-568h@2x.png */; };
 		F97B552F16C7752A005AD777 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */; };
 		F97B553216C7752A005AD777 /* JGAMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B553116C7752A005AD777 /* JGAMasterViewController.m */; };
-		F97B553516C7752A005AD777 /* JGADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B553416C7752A005AD777 /* JGADetailViewController.m */; };
 		F97B553D16C7752A005AD777 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B553C16C7752A005AD777 /* SenTestingKit.framework */; };
 		F97B553E16C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B553F16C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B554716C7752A005AD777 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F97B554516C7752A005AD777 /* InfoPlist.strings */; };
-		F97B554A16C7752A005AD777 /* AppNetCheckerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B554916C7752A005AD777 /* AppNetCheckerTests.m */; };
+		F97B555616C77FCB005AD777 /* JGReactiveTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B555516C77FCB005AD777 /* JGReactiveTwitter.m */; };
+		F97B555916C78046005AD777 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B555716C78034005AD777 /* Accounts.framework */; };
+		F97B555D16C78F41005AD777 /* JGReactiveTwitterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B555C16C78F41005AD777 /* JGReactiveTwitterSpec.m */; };
+		F97B556116C79DF8005AD777 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B555716C78034005AD777 /* Accounts.framework */; };
+		F97B556416C7A469005AD777 /* FakeAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B556316C7A469005AD777 /* FakeAccountStore.m */; };
+		F97B556716C7AB2C005AD777 /* JGAAccountPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B556616C7AB2C005AD777 /* JGAAccountPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164169FAEA284DC88A60012F /* libPods-AppNetCheckerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppNetCheckerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		773C3C7EAB274B1BA845227F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77644BD0F970460FAC7B1976 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetCheckerTests.xcconfig"; path = "Pods/Pods-AppNetCheckerTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		F97B551216C7752A005AD777 /* AppNetChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B551516C7752A005AD777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F97B551716C7752A005AD777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,14 +63,20 @@
 		F97B552E16C7752A005AD777 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F97B553016C7752A005AD777 /* JGAMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGAMasterViewController.h; sourceTree = "<group>"; };
 		F97B553116C7752A005AD777 /* JGAMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGAMasterViewController.m; sourceTree = "<group>"; };
-		F97B553316C7752A005AD777 /* JGADetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGADetailViewController.h; sourceTree = "<group>"; };
-		F97B553416C7752A005AD777 /* JGADetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGADetailViewController.m; sourceTree = "<group>"; };
 		F97B553B16C7752A005AD777 /* AppNetCheckerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppNetCheckerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B553C16C7752A005AD777 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F97B554416C7752A005AD777 /* AppNetCheckerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppNetCheckerTests-Info.plist"; sourceTree = "<group>"; };
 		F97B554616C7752A005AD777 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F97B554816C7752A005AD777 /* AppNetCheckerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppNetCheckerTests.h; sourceTree = "<group>"; };
-		F97B554916C7752A005AD777 /* AppNetCheckerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppNetCheckerTests.m; sourceTree = "<group>"; };
+		F97B555416C77FCB005AD777 /* JGReactiveTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGReactiveTwitter.h; sourceTree = "<group>"; };
+		F97B555516C77FCB005AD777 /* JGReactiveTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGReactiveTwitter.m; sourceTree = "<group>"; };
+		F97B555716C78034005AD777 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F97B555C16C78F41005AD777 /* JGReactiveTwitterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGReactiveTwitterSpec.m; sourceTree = "<group>"; };
+		F97B555E16C7917C005AD777 /* KiwiHack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KiwiHack.h; path = ../AppNetChecker/KiwiHack.h; sourceTree = "<group>"; };
+		F97B555F16C79D4A005AD777 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F97B556216C7A469005AD777 /* FakeAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeAccountStore.h; sourceTree = "<group>"; };
+		F97B556316C7A469005AD777 /* FakeAccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeAccountStore.m; sourceTree = "<group>"; };
+		F97B556516C7AB2C005AD777 /* JGAAccountPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGAAccountPickerViewController.h; sourceTree = "<group>"; };
+		F97B556616C7AB2C005AD777 /* JGAAccountPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGAAccountPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +84,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97B555916C78046005AD777 /* Accounts.framework in Frameworks */,
 				F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */,
 				F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */,
 				F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */,
+				C28CEACFFAEB49CD958D3A20 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +96,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97B556116C79DF8005AD777 /* Accounts.framework in Frameworks */,
 				F97B553D16C7752A005AD777 /* SenTestingKit.framework in Frameworks */,
 				F97B553E16C7752A005AD777 /* UIKit.framework in Frameworks */,
 				F97B553F16C7752A005AD777 /* Foundation.framework in Frameworks */,
+				7E6E481E263742F9A0C55CB8 /* libPods-AppNetCheckerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,10 +110,13 @@
 		F97B550916C7752A005AD777 = {
 			isa = PBXGroup;
 			children = (
+				F97B555F16C79D4A005AD777 /* Social.framework */,
 				F97B551B16C7752A005AD777 /* AppNetChecker */,
 				F97B554216C7752A005AD777 /* AppNetCheckerTests */,
 				F97B551416C7752A005AD777 /* Frameworks */,
 				F97B551316C7752A005AD777 /* Products */,
+				77644BD0F970460FAC7B1976 /* Pods.xcconfig */,
+				9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,10 +132,13 @@
 		F97B551416C7752A005AD777 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F97B555716C78034005AD777 /* Accounts.framework */,
 				F97B551516C7752A005AD777 /* UIKit.framework */,
 				F97B551716C7752A005AD777 /* Foundation.framework */,
 				F97B551916C7752A005AD777 /* CoreGraphics.framework */,
 				F97B553C16C7752A005AD777 /* SenTestingKit.framework */,
+				773C3C7EAB274B1BA845227F /* libPods.a */,
+				164169FAEA284DC88A60012F /* libPods-AppNetCheckerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,9 +151,11 @@
 				F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */,
 				F97B553016C7752A005AD777 /* JGAMasterViewController.h */,
 				F97B553116C7752A005AD777 /* JGAMasterViewController.m */,
-				F97B553316C7752A005AD777 /* JGADetailViewController.h */,
-				F97B553416C7752A005AD777 /* JGADetailViewController.m */,
 				F97B551C16C7752A005AD777 /* Supporting Files */,
+				F97B555416C77FCB005AD777 /* JGReactiveTwitter.h */,
+				F97B555516C77FCB005AD777 /* JGReactiveTwitter.m */,
+				F97B556516C7AB2C005AD777 /* JGAAccountPickerViewController.h */,
+				F97B556616C7AB2C005AD777 /* JGAAccountPickerViewController.m */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -149,9 +177,11 @@
 		F97B554216C7752A005AD777 /* AppNetCheckerTests */ = {
 			isa = PBXGroup;
 			children = (
-				F97B554816C7752A005AD777 /* AppNetCheckerTests.h */,
-				F97B554916C7752A005AD777 /* AppNetCheckerTests.m */,
+				F97B555E16C7917C005AD777 /* KiwiHack.h */,
 				F97B554316C7752A005AD777 /* Supporting Files */,
+				F97B555C16C78F41005AD777 /* JGReactiveTwitterSpec.m */,
+				F97B556216C7A469005AD777 /* FakeAccountStore.h */,
+				F97B556316C7A469005AD777 /* FakeAccountStore.m */,
 			);
 			path = AppNetCheckerTests;
 			sourceTree = "<group>";
@@ -175,6 +205,7 @@
 				F97B550E16C7752A005AD777 /* Sources */,
 				F97B550F16C7752A005AD777 /* Frameworks */,
 				F97B551016C7752A005AD777 /* Resources */,
+				88FDB60BEEEF4678B9CDC72C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +224,7 @@
 				F97B553716C7752A005AD777 /* Frameworks */,
 				F97B553816C7752A005AD777 /* Resources */,
 				F97B553916C7752A005AD777 /* ShellScript */,
+				1D01D6B649FC474AB4565B14 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +288,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1D01D6B649FC474AB4565B14 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-AppNetCheckerTests-resources.sh\"\n";
+		};
+		88FDB60BEEEF4678B9CDC72C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		F97B553916C7752A005AD777 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,7 +339,8 @@
 				F97B552216C7752A005AD777 /* main.m in Sources */,
 				F97B552616C7752A005AD777 /* JGAAppDelegate.m in Sources */,
 				F97B553216C7752A005AD777 /* JGAMasterViewController.m in Sources */,
-				F97B553516C7752A005AD777 /* JGADetailViewController.m in Sources */,
+				F97B555616C77FCB005AD777 /* JGReactiveTwitter.m in Sources */,
+				F97B556716C7AB2C005AD777 /* JGAAccountPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +348,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F97B554A16C7752A005AD777 /* AppNetCheckerTests.m in Sources */,
+				F97B555D16C78F41005AD777 /* JGReactiveTwitterSpec.m in Sources */,
+				F97B556416C7A469005AD777 /* FakeAccountStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +449,7 @@
 		};
 		F97B554E16C7752A005AD777 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77644BD0F970460FAC7B1976 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppNetChecker/AppNetChecker-Prefix.pch";
@@ -398,6 +461,7 @@
 		};
 		F97B554F16C7752A005AD777 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77644BD0F970460FAC7B1976 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppNetChecker/AppNetChecker-Prefix.pch";
@@ -409,6 +473,7 @@
 		};
 		F97B555116C7752A005AD777 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppNetChecker.app/AppNetChecker";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -426,6 +491,7 @@
 		};
 		F97B555216C7752A005AD777 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppNetChecker.app/AppNetChecker";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -460,6 +526,7 @@
 				F97B554F16C7752A005AD777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F97B555016C7752A005AD777 /* Build configuration list for PBXNativeTarget "AppNetCheckerTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +535,7 @@
 				F97B555216C7752A005AD777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
