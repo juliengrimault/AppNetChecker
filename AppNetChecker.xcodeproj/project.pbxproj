@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E6E481E263742F9A0C55CB8 /* libPods-AppNetCheckerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 164169FAEA284DC88A60012F /* libPods-AppNetCheckerTests.a */; };
 		C28CEACFFAEB49CD958D3A20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3C7EAB274B1BA845227F /* libPods.a */; };
+		F90C201916C8BC4F00F29905 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B555F16C79D4A005AD777 /* Social.framework */; };
+		F90C201C16C8BC8600F29905 /* UIViewController+SLServiceHack.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */; };
 		F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
@@ -51,6 +53,8 @@
 		773C3C7EAB274B1BA845227F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		77644BD0F970460FAC7B1976 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetCheckerTests.xcconfig"; path = "Pods/Pods-AppNetCheckerTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		F90C201A16C8BC8600F29905 /* UIViewController+SLServiceHack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SLServiceHack.h"; sourceTree = "<group>"; };
+		F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLServiceHack.m"; sourceTree = "<group>"; };
 		F97B551216C7752A005AD777 /* AppNetChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B551516C7752A005AD777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F97B551716C7752A005AD777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90C201916C8BC4F00F29905 /* Social.framework in Frameworks */,
 				F97B555916C78046005AD777 /* Accounts.framework in Frameworks */,
 				F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */,
 				F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */,
@@ -120,7 +125,6 @@
 		F97B550916C7752A005AD777 = {
 			isa = PBXGroup;
 			children = (
-				F97B555F16C79D4A005AD777 /* Social.framework */,
 				F97B551B16C7752A005AD777 /* AppNetChecker */,
 				F97B554216C7752A005AD777 /* AppNetCheckerTests */,
 				F97B551416C7752A005AD777 /* Frameworks */,
@@ -142,6 +146,7 @@
 		F97B551416C7752A005AD777 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F97B555F16C79D4A005AD777 /* Social.framework */,
 				F97B555716C78034005AD777 /* Accounts.framework */,
 				F97B551516C7752A005AD777 /* UIKit.framework */,
 				F97B551716C7752A005AD777 /* Foundation.framework */,
@@ -168,6 +173,8 @@
 				F97B556616C7AB2C005AD777 /* JGAAccountPickerViewController.m */,
 				F97B557116C7AD5A005AD777 /* UIStoryboard+AppNetChecker.h */,
 				F97B557216C7AD5A005AD777 /* UIStoryboard+AppNetChecker.m */,
+				F90C201A16C8BC8600F29905 /* UIViewController+SLServiceHack.h */,
+				F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -358,6 +365,7 @@
 				F97B555616C77FCB005AD777 /* JGReactiveTwitter.m in Sources */,
 				F97B556716C7AB2C005AD777 /* JGAAccountPickerViewController.m in Sources */,
 				F97B557316C7AD5A005AD777 /* UIStoryboard+AppNetChecker.m in Sources */,
+				F90C201C16C8BC8600F29905 /* UIViewController+SLServiceHack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "JGAAccountPickerViewController.h"
 #import <libextobjc/EXTScope.h>
+#import <libextobjc/EXTKeyPathCoding.h>
+#import "UIViewController+SLServiceHack.h"
 
 @interface JGAAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
@@ -34,12 +36,13 @@
 {
     [super viewDidLoad];
     [self retrieveTwitterAccounts];
+    [self bindUIToError];
 }
 
 - (void)retrieveTwitterAccounts
 {
     @weakify(self);
-    [[[self.reactiveTwitter twitterAccountSignal]
+    [[[self.reactiveTwitter twitterAccount]
       deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext: ^(NSArray* accounts) {
          @strongify(self);
@@ -47,22 +50,39 @@
      }
      error: ^(NSError *error) {
          @strongify(self);
-         self.errorLabel.hidden = NO;
-         self.errorLabel.text = NSLocalizedString(@"No Twitter account was found on your device.", nil);
+         self.error = error;
      }];
+}
+
+- (void)bindUIToError
+{
+    @weakify(self)
+    [RACAbleWithStart(self.error) subscribeNext:^(id error) {
+        @strongify(self);
+        self.errorLabel.hidden = (error == nil);
+        self.retryButton.hidden = (error == nil);
+        self.errorLabel.text = [self descriptionForError:error];
+    }];
+}
+
+- (NSString*)descriptionForError:(NSError*)error
+{
+    switch (error.code) {
+        case ACErrorAccountNotFound:
+            return NSLocalizedString(@"No Twitter account was found on your device.", nil);
+            
+        case ACErrorCodeAccessNotGranted:
+            return NSLocalizedString(@"You did not allow this app to access your twitter account(s).", nil);
+            
+        default:
+            return NSLocalizedString(@"An error has occurred. Please try again later.", nil);
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark -
-- (void)viewDidLayoutSubviews
-{
-    self.tableView.center = self.view.center;
-    self.errorLabel.center = self.view.center;
 }
 
 #pragma mark - UITableView
@@ -83,6 +103,13 @@
     ACAccount* account = self.accounts[indexPath.row];
     cell.textLabel.text = account.username;
     return cell;
+}
+
+#pragma mark - Retry
+- (IBAction)retryButtonHandler:(id)sender
+{
+    self.error = nil;
+    [self retrieveTwitterAccounts];
 }
 
 @end

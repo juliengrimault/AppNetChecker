@@ -10,10 +10,14 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Accounts/Accounts.h>
 
+typedef NS_ENUM(NSInteger, ACErrorUserDefinedCode) {
+    ACErrorCodeAccessNotGranted = 100,
+};
+
 @interface JGReactiveTwitter : NSObject
 
 @property (nonatomic, strong) ACAccountStore* accountStore;
 
-- (RACSignal*)twitterAccountSignal;
+- (RACSignal*)twitterAccount;
 
 @end

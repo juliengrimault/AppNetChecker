@@ -14,16 +14,16 @@ beforeEach(^{
 describe(@"getting the signal", ^{
     __block RACSignal* signal;
     beforeEach(^{
-       signal = [reactiveTwitter twitterAccountSignal];
+       signal = [reactiveTwitter twitterAccount];
     });
     
     it(@"should return non null", ^{
         [signal shouldNotBeNil];
     });
     
-    it(@"should always return the same signal", ^{
-        RACSignal* signal2 = [reactiveTwitter twitterAccountSignal];
-        [[signal2 should] equal:signal];
+    it(@"should returns new signal everytime", ^{
+        RACSignal* signal2 = [reactiveTwitter twitterAccount];
+        [[signal2 shouldNot] equal:signal];
     });
 });
 
@@ -34,10 +34,14 @@ describe(@"starting request", ^{
         reactiveTwitter.accountStore = fakeStore;
     });
     
-    it(@"should receive selector to get ACAccountType", ^{
-        [[fakeStore should] receive:@selector(accountTypeWithAccountTypeIdentifier:) withArguments:ACAccountTypeIdentifierTwitter];
-        [[fakeStore should] receive:@selector(requestAccessToAccountsWithType:options:completion:)];
-        [reactiveTwitter twitterAccountSignal];
+    describe(@"subscribing to signal", ^{
+        it(@"should receive selector to get ACAccountType", ^{
+            [[fakeStore should] receive:@selector(accountTypeWithAccountTypeIdentifier:) withArguments:ACAccountTypeIdentifierTwitter];
+            [[fakeStore should] receive:@selector(requestAccessToAccountsWithType:options:completion:)];
+            
+            RACSignal* twitterAccounts = [reactiveTwitter twitterAccount];
+            [twitterAccounts subscribeNext:^(id x) {}];
+        });
     });
 
     describe(@"receiving values", ^{
@@ -45,7 +49,7 @@ describe(@"starting request", ^{
         __block NSArray* receivedAccounts = nil;
         __block NSError* receivedError = nil;
         beforeEach(^{
-            signal = [reactiveTwitter twitterAccountSignal];
+            signal = [reactiveTwitter twitterAccount];
             receivedError = nil;
             receivedAccounts = nil;
             
@@ -89,13 +93,13 @@ describe(@"starting request", ^{
         describe(@"access not granted and no error", ^{
             beforeEach(^{
                 fakeStore.accessToReturn = NO;
-                fakeStore.accountsToReturn = @[@"account1", @"account2"];
+                fakeStore.errorToReturn = nil;
+                fakeStore.accountsToReturn = nil;
             });
             
-            it(@"should receive the accounts", ^{
+            it(@"should create an error for access not granted receive the accounts", ^{
                 [fakeStore callRequestAccessHandler];
-                [receivedAccounts shouldBeNil];
-                [receivedError shouldBeNil];
+                [[receivedError shouldEventually] beNonNil];
             });
             
         });

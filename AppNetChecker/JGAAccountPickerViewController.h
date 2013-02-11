@@ -12,8 +12,12 @@
 @interface JGAAccountPickerViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) JGReactiveTwitter* reactiveTwitter;
+
 @property (nonatomic, readonly, copy) NSArray* accounts;
+@property (nonatomic, strong) NSError* error;
 
 @property (weak, nonatomic) IBOutlet UILabel* errorLabel;
 @property (weak, nonatomic) IBOutlet UITableView* tableView;
+@property (weak, nonatomic) IBOutlet UIButton* retryButton;
+- (IBAction)retryButtonHandler:(id)sender;
 @end
