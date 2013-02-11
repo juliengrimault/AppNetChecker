@@ -1,17 +1,18 @@
 #import "KiwiHack.h"
 #import "ACAccount+KWMock.h"
 #import "UIStoryboard+AppNetChecker.h"
-#import "JGAAccountPickerViewController.h"
+#import "XIGAccountPickerViewController.h"
 #import "UIViewController+SLServiceHack.h"
+#import "XIGAccountErrorCell.h"
 
-SPEC_BEGIN(JGAAccountPickerViewControllerSpec)
+SPEC_BEGIN(XIGAccountPickerViewControllerSpec)
 
-__block JGAAccountPickerViewController* vc;
-__block JGReactiveTwitter* fakeTwitter;
+__block XIGAccountPickerViewController* vc;
+__block XIGReactiveTwitter* fakeTwitter;
 
 beforeEach(^{
-    vc = [[UIStoryboard mainStoryboard] instantiateViewControllerOfClass:[JGAAccountPickerViewController class]];
-    fakeTwitter = [JGReactiveTwitter mock];
+    vc = [[UIStoryboard mainStoryboard] instantiateViewControllerOfClass:[XIGAccountPickerViewController class]];
+    fakeTwitter = [XIGReactiveTwitter mock];
 });
 
 it(@"should load properly", ^{
@@ -23,30 +24,24 @@ describe(@"view loaded", ^{
         [vc view];
     });
     
-    it(@"should have error label outlet connected", ^{
-        [vc.errorLabel shouldNotBeNil];
-        [[theValue(vc.errorLabel.hidden) should] beTrue];
-    });
-    
     it(@"should have tableview outlet connected", ^{
         [vc.tableView shouldNotBeNil];
         [[vc should] equal:vc.tableView.delegate];
         [[vc should] equal:vc.tableView.dataSource];
     });
     
-    it(@"should have retry button outlet connected and hidden", ^{
-        [vc.retryButton shouldNotBeNil];
-        [[theValue(vc.retryButton.hidden) should] beTrue];
+    it(@"should have refresh outlet connected", ^{
+        [vc.refreshControl shouldNotBeNil];
     });
     
-    it(@"should have the retry button connected to its action", ^{
-        NSArray* actions = [vc.retryButton actionsForTarget:vc forControlEvent:UIControlEventTouchUpInside];
+    it(@"should have the refresh control connected to its action", ^{
+        NSArray* actions = [vc.refreshControl actionsForTarget:vc forControlEvent: UIControlEventValueChanged];
         [[actions should] have:1];
     });
 });
 
 
-describe(@"viewDidLoad", ^{
+context(@"view is loaded", ^{
     beforeEach(^{
         vc.reactiveTwitter = fakeTwitter;
     });
@@ -55,7 +50,12 @@ describe(@"viewDidLoad", ^{
         [[vc.reactiveTwitter should] receive:@selector(twitterAccount)];
         [vc view];
     });
-    
+});
+
+context(@"Getting Twitter accounts", ^{
+    beforeEach(^{
+        vc.reactiveTwitter = fakeTwitter;
+    });
     describe(@"successfully getting the accounts", ^{ 
         ACAccount* account = [ACAccount mockWithName:@"account"];
         ACAccount* account2 = [ACAccount mockWithName:@"account1"];
@@ -100,46 +100,71 @@ describe(@"viewDidLoad", ^{
 
 });
 
-describe(@"error binding to UI elements", ^{
+context(@"error binding to UI elements", ^{
     beforeEach(^{
         [vc view];
     });
     
     describe(@"generic error", ^{
+        __block UITableViewCell* errorCell;
         beforeEach(^{
             vc.error = [NSError errorWithDomain:@"Test" code:123 userInfo:nil];
+            errorCell = [vc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
         });
         
-        it(@"should show the error label", ^{
-            [[theValue(vc.errorLabel.hidden) should] beFalse];
+        it(@"should show 1 row", ^{
+            [[@([vc.tableView numberOfRowsInSection:0]) should] equal:@1];
         });
         
-        it(@"should update the error label message", ^{
-            [vc.errorLabel.text shouldNotBeNil];
+        it(@"should have its error label set", ^{
+            [[(XIGAccountErrorCell*)errorCell errorLabel] shouldNotBeNil];
         });
         
-        it(@"should show the retry button", ^{
-            [[theValue(vc.retryButton.hidden) should] beFalse];
+        it(@"should have 1 cell of type ACAccountErrorCell", ^{
+            [[errorCell should] beKindOfClass:[XIGAccountErrorCell class]];
+        });
+        
+        it(@"the row should have the correct height", ^{
+            CGFloat rowHeight = [vc tableView:vc.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+            [[@(rowHeight) should] equal:@([XIGAccountErrorCell rowHeight])];
         });
 
     });
-    
+
     describe(@"error is no account found", ^{
         it(@"should present a control to log in to the user", ^{
-            //[[vc should] receive:@selector(presentRegisterServiceViewControllerWithServiceType:) withArguments:SLServiceTypeTwitter];
+          //  [[vc should] receive:@selector(presentRegisterServiceViewControllerWithServiceType:) withArguments:SLServiceTypeTwitter];
             vc.error = [NSError errorWithDomain:ACErrorDomain code:ACErrorAccountNotFound userInfo:nil];
         });
     });
+});
+
+context(@"Pull to Refresh", ^{
     
-    describe(@"Retry Button", ^{
+    describe(@"refresh start and stop", ^{
         beforeEach(^{
+            [vc view];
+        });
+
+        it(@"should start the refresh control", ^{
+            [[@(vc.refreshControl.refreshing) should] equal:@YES];
+        });
+        
+        it(@"should stop the refresh control eventually", ^{
+            [[expectFutureValue(@(vc.refreshControl.refreshing)) shouldEventually] equal:@NO];
+        });
+    });
+    
+    describe(@"triggering refresh", ^{
+        beforeEach(^{
+            [vc view];
             vc.reactiveTwitter = fakeTwitter;
         });
         
         it(@"should reset the error and ask for twitter accounts", ^{
             [[[vc should] receive] setError:nil];
             [[[fakeTwitter should] receive] twitterAccount];
-            [vc retryButtonHandler:nil];
+            [vc refreshControlValueChanged:nil];
         });
     });
 });

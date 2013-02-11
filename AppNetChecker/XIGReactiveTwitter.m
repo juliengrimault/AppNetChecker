@@ -6,14 +6,15 @@
 //  Copyright (c) 2013 XiaoGou. All rights reserved.
 //
 
-#import "JGReactiveTwitter.h"
+#import "XIGReactiveTwitter.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
+#import "XIGAccountError.h"
 
-@interface JGReactiveTwitter()
+@interface XIGReactiveTwitter()
 @end
 
-@implementation JGReactiveTwitter
+@implementation XIGReactiveTwitter
 
 - (ACAccountStore*)accountStore
 {
@@ -53,7 +54,7 @@
 
 - (NSError*)accessNotGrantedError
 {
-    return [NSError errorWithDomain:ACErrorDomain code:ACErrorCodeAccessNotGranted userInfo:nil];
+    return [NSError errorWithDomain:ACErrorDomain code:ACErrorAccessNotGranted userInfo:nil];
 }
 
 

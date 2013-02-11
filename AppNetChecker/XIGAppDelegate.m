@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 XiaoGou. All rights reserved.
 //
 
-#import "JGAAppDelegate.h"
+#import "XIGAppDelegate.h"
 
-@implementation JGAAppDelegate
+@implementation XIGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

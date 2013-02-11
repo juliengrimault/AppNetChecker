@@ -1,13 +1,13 @@
 #import <Kiwi/Kiwi.h>
-#import "JGReactiveTwitter.h"
+#import "XIGReactiveTwitter.h"
 #import "KiwiHack.h"
 #import "FakeAccountStore.h"
 
-SPEC_BEGIN(JGReactiveTwitterSpec)
+SPEC_BEGIN(XIGReactiveTwitterSpec)
 
-__block JGReactiveTwitter* reactiveTwitter;
+__block XIGReactiveTwitter* reactiveTwitter;
 beforeEach(^{
-    reactiveTwitter = [[JGReactiveTwitter alloc] init];
+    reactiveTwitter = [[XIGReactiveTwitter alloc] init];
 });
 
 
@@ -80,12 +80,12 @@ describe(@"starting request", ^{
             beforeEach(^{
                 fakeStore.accessToReturn = YES;
                 fakeStore.errorToReturn = [NSError errorWithDomain:@"Fake" code:123 userInfo:nil];
-                fakeStore.accountsToReturn = @[@"account1", @"account2"];
+                fakeStore.accountsToReturn = nil;
             });
             
             it(@"should receive the accounts", ^{
                 [fakeStore callRequestAccessHandler];
-                [receivedAccounts shouldBeNil];
+                [[receivedAccounts shouldEventually] beNil];
                 [[receivedError shouldEventually] equal:fakeStore.errorToReturn];
             });
         });

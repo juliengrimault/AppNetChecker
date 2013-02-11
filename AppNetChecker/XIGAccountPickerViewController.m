@@ -6,20 +6,21 @@
 //  Copyright (c) 2013 XiaoGou. All rights reserved.
 //
 
-#import "JGAAccountPickerViewController.h"
+#import "XIGAccountPickerViewController.h"
 #import <libextobjc/EXTScope.h>
 #import <libextobjc/EXTKeyPathCoding.h>
 #import "UIViewController+SLServiceHack.h"
+#import "XIGAccountErrorCell.h"
 
-@interface JGAAccountPickerViewController ()
+@interface XIGAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
 @end
 
-@implementation JGAAccountPickerViewController
-- (JGReactiveTwitter*)reactiveTwitter
+@implementation XIGAccountPickerViewController
+- (XIGReactiveTwitter*)reactiveTwitter
 {
     if(!_reactiveTwitter) {
-        _reactiveTwitter = [[JGReactiveTwitter alloc] init];
+        _reactiveTwitter = [[XIGReactiveTwitter alloc] init];
     }
     return _reactiveTwitter;
 }
@@ -35,21 +36,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged:) forControlEvents:UIControlEventValueChanged];
     [self retrieveTwitterAccounts];
     [self bindUIToError];
 }
 
 - (void)retrieveTwitterAccounts
 {
+    [self.refreshControl beginRefreshing];
     @weakify(self);
     [[[self.reactiveTwitter twitterAccount]
       deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext: ^(NSArray* accounts) {
          @strongify(self);
+         [self.refreshControl endRefreshing];
          self.accounts = accounts;
      }
      error: ^(NSError *error) {
          @strongify(self);
+         [self.refreshControl endRefreshing];
          self.error = error;
      }];
 }
@@ -59,25 +64,9 @@
     @weakify(self)
     [RACAbleWithStart(self.error) subscribeNext:^(id error) {
         @strongify(self);
-        self.errorLabel.hidden = (error == nil);
-        self.retryButton.hidden = (error == nil);
-        self.errorLabel.text = [self descriptionForError:error];
+        [self.tableView reloadData];
         [self showHelpForError:error];
     }];
-}
-
-- (NSString*)descriptionForError:(NSError*)error
-{
-    switch (error.code) {
-        case ACErrorAccountNotFound:
-            return NSLocalizedString(@"No Twitter account was found on your device.", nil);
-            
-        case ACErrorCodeAccessNotGranted:
-            return NSLocalizedString(@"Enable Twitter access for App.NetChecker from your device's Settings > Twitter", nil);
-            
-        default:
-            return NSLocalizedString(@"An error has occurred. Please try again later.", nil);
-    }
 }
 
 - (void)showHelpForError:(NSError*)error
@@ -104,19 +93,37 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.accounts.count;
+    if (self.error != nil) {
+        return 1;
+    } else {
+        return self.accounts.count;
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    ACAccount* account = self.accounts[indexPath.row];
-    cell.textLabel.text = account.username;
-    return cell;
+    if (self.error) {
+        XIGAccountErrorCell* cell = (XIGAccountErrorCell*)[tableView dequeueReusableCellWithIdentifier:@"XIGAccountErrorCell"];
+        [cell bindError:self.error];
+        return cell;
+    } else {
+        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        ACAccount* account = self.accounts[indexPath.row];
+        cell.textLabel.text = account.username;
+        return cell;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.error) {
+        return [XIGAccountErrorCell rowHeight];
+    }
+    return 44.0f;
 }
 
 #pragma mark - Retry
-- (IBAction)retryButtonHandler:(id)sender
+- (void)refreshControlValueChanged:(UIRefreshControl*)sender
 {
     self.error = nil;
     [self retrieveTwitterAccounts];
