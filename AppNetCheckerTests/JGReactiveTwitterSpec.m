@@ -66,7 +66,7 @@ describe(@"starting request", ^{
             
             it(@"should receive the accounts", ^{
                 [fakeStore callRequestAccessHandler];
-                [[receivedAccounts should] equal:fakeStore.accountsToReturn];
+                [[receivedAccounts shouldEventually] equal:fakeStore.accountsToReturn];
                 [receivedError shouldBeNil];
             });
         });
@@ -82,7 +82,7 @@ describe(@"starting request", ^{
             it(@"should receive the accounts", ^{
                 [fakeStore callRequestAccessHandler];
                 [receivedAccounts shouldBeNil];
-                [[receivedError should] equal:fakeStore.errorToReturn];
+                [[receivedError shouldEventually] equal:fakeStore.errorToReturn];
             });
         });
         
@@ -110,7 +110,7 @@ describe(@"starting request", ^{
             it(@"should receive the accounts", ^{
                 [fakeStore callRequestAccessHandler];
                 [receivedAccounts shouldBeNil];
-                [[receivedError should] equal:fakeStore.errorToReturn];
+                [[receivedError shouldEventually] equal:fakeStore.errorToReturn];
             });
         });
     });

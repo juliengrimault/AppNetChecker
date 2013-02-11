@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JGReactiveTwitter.h"
 
-@interface JGAAccountPickerViewController : UIViewController
+@interface JGAAccountPickerViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) JGReactiveTwitter* reactiveTwitter;
+@property (nonatomic, readonly, copy) NSArray* accounts;
+
+@property (weak, nonatomic) IBOutlet UILabel* errorLabel;
+@property (weak, nonatomic) IBOutlet UITableView* tableView;
 @end
