@@ -2,6 +2,7 @@
 #import "ACAccount+KWMock.h"
 #import "UIStoryboard+AppNetChecker.h"
 #import "JGAAccountPickerViewController.h"
+#import "UIViewController+SLServiceHack.h"
 
 SPEC_BEGIN(JGAAccountPickerViewControllerSpec)
 
@@ -102,19 +103,32 @@ describe(@"viewDidLoad", ^{
 describe(@"error binding to UI elements", ^{
     beforeEach(^{
         [vc view];
-        vc.error = [NSError errorWithDomain:@"Test" code:123 userInfo:nil];
     });
     
-    it(@"should show the error label", ^{
-        [[theValue(vc.errorLabel.hidden) should] beFalse];
+    describe(@"generic error", ^{
+        beforeEach(^{
+            vc.error = [NSError errorWithDomain:@"Test" code:123 userInfo:nil];
+        });
+        
+        it(@"should show the error label", ^{
+            [[theValue(vc.errorLabel.hidden) should] beFalse];
+        });
+        
+        it(@"should update the error label message", ^{
+            [vc.errorLabel.text shouldNotBeNil];
+        });
+        
+        it(@"should show the retry button", ^{
+            [[theValue(vc.retryButton.hidden) should] beFalse];
+        });
+
     });
     
-    it(@"should update the error label message", ^{
-        [vc.errorLabel.text shouldNotBeNil];
-    });
-    
-    it(@"should show the retry button", ^{
-        [[theValue(vc.retryButton.hidden) should] beFalse];
+    describe(@"error is no account found", ^{
+        it(@"should present a control to log in to the user", ^{
+            //[[vc should] receive:@selector(presentRegisterServiceViewControllerWithServiceType:) withArguments:SLServiceTypeTwitter];
+            vc.error = [NSError errorWithDomain:ACErrorDomain code:ACErrorAccountNotFound userInfo:nil];
+        });
     });
     
     describe(@"Retry Button", ^{

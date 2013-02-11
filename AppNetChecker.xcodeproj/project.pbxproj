@@ -11,6 +11,7 @@
 		C28CEACFFAEB49CD958D3A20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3C7EAB274B1BA845227F /* libPods.a */; };
 		F90C201916C8BC4F00F29905 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B555F16C79D4A005AD777 /* Social.framework */; };
 		F90C201C16C8BC8600F29905 /* UIViewController+SLServiceHack.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */; };
+		F90C202016C8E09100F29905 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B555F16C79D4A005AD777 /* Social.framework */; };
 		F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
@@ -111,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F90C202016C8E09100F29905 /* Social.framework in Frameworks */,
 				F97B556116C79DF8005AD777 /* Accounts.framework in Frameworks */,
 				F97B553D16C7752A005AD777 /* SenTestingKit.framework in Frameworks */,
 				F97B553E16C7752A005AD777 /* UIKit.framework in Frameworks */,

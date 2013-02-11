@@ -62,6 +62,7 @@
         self.errorLabel.hidden = (error == nil);
         self.retryButton.hidden = (error == nil);
         self.errorLabel.text = [self descriptionForError:error];
+        [self showHelpForError:error];
     }];
 }
 
@@ -72,12 +73,21 @@
             return NSLocalizedString(@"No Twitter account was found on your device.", nil);
             
         case ACErrorCodeAccessNotGranted:
-            return NSLocalizedString(@"You did not allow this app to access your twitter account(s).", nil);
+            return NSLocalizedString(@"Enable Twitter access for App.NetChecker from your device's Settings > Twitter", nil);
             
         default:
             return NSLocalizedString(@"An error has occurred. Please try again later.", nil);
     }
 }
+
+- (void)showHelpForError:(NSError*)error
+{
+    if ([error.domain isEqualToString:ACErrorDomain] && error.code == ACErrorAccountNotFound) {
+        [self presentRegisterServiceViewControllerWithServiceType:SLServiceTypeTwitter];
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
