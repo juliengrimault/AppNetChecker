@@ -1,13 +1,13 @@
 #import <Kiwi/Kiwi.h>
-#import "XIGReactiveTwitter.h"
+#import "XIGTwitterAccountStore.h"
 #import "KiwiHack.h"
 #import "FakeAccountStore.h"
 
-SPEC_BEGIN(XIGReactiveTwitterSpec)
+SPEC_BEGIN(XIGTwitterAccountStoreSpec)
 
-__block XIGReactiveTwitter* reactiveTwitter;
+__block XIGTwitterAccountStore* reactiveTwitter;
 beforeEach(^{
-    reactiveTwitter = [[XIGReactiveTwitter alloc] init];
+    reactiveTwitter = [[XIGTwitterAccountStore alloc] init];
 });
 
 

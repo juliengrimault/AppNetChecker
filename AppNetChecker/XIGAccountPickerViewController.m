@@ -17,10 +17,10 @@
 @end
 
 @implementation XIGAccountPickerViewController
-- (XIGReactiveTwitter*)reactiveTwitter
+- (XIGTwitterAccountStore*)reactiveTwitter
 {
     if(!_reactiveTwitter) {
-        _reactiveTwitter = [[XIGReactiveTwitter alloc] init];
+        _reactiveTwitter = [[XIGTwitterAccountStore alloc] init];
     }
     return _reactiveTwitter;
 }
@@ -62,7 +62,7 @@
 - (void)bindUIToError
 {
     @weakify(self)
-    [RACAbleWithStart(self.error) subscribeNext:^(id error) {
+    [RACAble(self.error) subscribeNext:^(id error) {
         @strongify(self);
         [self.tableView reloadData];
         [self showHelpForError:error];

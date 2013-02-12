@@ -1,5 +1,5 @@
 #import "KiwiHack.h"
-#import "ACAccount+KWMock.h"
+#import "ACAccount+XIGTest.h"
 #import "UIStoryboard+AppNetChecker.h"
 #import "XIGAccountPickerViewController.h"
 #import "UIViewController+SLServiceHack.h"
@@ -8,11 +8,11 @@
 SPEC_BEGIN(XIGAccountPickerViewControllerSpec)
 
 __block XIGAccountPickerViewController* vc;
-__block XIGReactiveTwitter* fakeTwitter;
+__block XIGTwitterAccountStore* fakeTwitter;
 
 beforeEach(^{
     vc = [[UIStoryboard mainStoryboard] instantiateViewControllerOfClass:[XIGAccountPickerViewController class]];
-    fakeTwitter = [XIGReactiveTwitter mock];
+    fakeTwitter = [XIGTwitterAccountStore mock];
 });
 
 it(@"should load properly", ^{
@@ -57,8 +57,8 @@ context(@"Getting Twitter accounts", ^{
         vc.reactiveTwitter = fakeTwitter;
     });
     describe(@"successfully getting the accounts", ^{ 
-        ACAccount* account = [ACAccount mockWithName:@"account"];
-        ACAccount* account2 = [ACAccount mockWithName:@"account1"];
+        ACAccount* account = [ACAccount testAccount];
+        ACAccount* account2 = [ACAccount testAccount];
         NSArray* accounts = @[account, account2];
         RACSignal* signal = [RACSignal return:accounts];
         

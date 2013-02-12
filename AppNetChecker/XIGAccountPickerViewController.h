@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XIGReactiveTwitter.h"
+#import "XIGTwitterAccountStore.h"
 
 @interface XIGAccountPickerViewController : UITableViewController
 
-@property (nonatomic, strong) XIGReactiveTwitter* reactiveTwitter;
+@property (nonatomic, strong) XIGTwitterAccountStore* reactiveTwitter;
 
 @property (nonatomic, readonly, copy) NSArray* accounts;
 @property (nonatomic, strong) NSError* error;

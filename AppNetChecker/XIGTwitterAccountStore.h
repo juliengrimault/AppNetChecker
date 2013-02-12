@@ -10,7 +10,7 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <Accounts/Accounts.h>
 
-@interface XIGReactiveTwitter : NSObject
+@interface XIGTwitterAccountStore : NSObject
 
 @property (nonatomic, strong) ACAccountStore* accountStore;
 

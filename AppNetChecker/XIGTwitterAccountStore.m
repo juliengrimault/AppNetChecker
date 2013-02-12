@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 XiaoGou. All rights reserved.
 //
 
-#import "XIGReactiveTwitter.h"
+#import "XIGTwitterAccountStore.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <libextobjc/EXTScope.h>
 #import "XIGAccountError.h"
 
-@interface XIGReactiveTwitter()
+@interface XIGTwitterAccountStore()
 @end
 
-@implementation XIGReactiveTwitter
+@implementation XIGTwitterAccountStore
 
 - (ACAccountStore*)accountStore
 {
