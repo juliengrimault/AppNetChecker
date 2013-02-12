@@ -3,14 +3,17 @@
 #import "XIGTwitterClient+Private.h"
 #import <Social/Social.h>
 #import "ACAccount+XIGTest.h"
+#import "XIGNSURLRequestBuilder.h"
 
 SPEC_BEGIN(XIGTwitterClientSpec)
 
 __block XIGTwitterClient* twitter;
+__block XIGNSURLRequestBuilder* builder;
 __block ACAccount* account;
 beforeEach(^{
     twitter = [[XIGTwitterClient alloc] init];
     account = [ACAccount testAccount];
+    builder = [[XIGNSURLRequestBuilder alloc] init];
     twitter.account = account;
 });
 
@@ -33,9 +36,19 @@ describe(@"Initialization", ^{
         NSArray* registered = [twitter valueForKey:@"registeredHTTPOperationClassNames"];
         [[registered should] contain:NSStringFromClass([AFJSONRequestOperation class])];
     });
+    
+    it(@"should lazyly load a request builder if none is provided", ^{
+        [twitter.requestBuilder shouldNotBeNil];
+    });
 });
 
 describe(@"Friends Ids Signal", ^{
+    beforeEach(^{
+        twitter.requestBuilder = builder;
+        [builder stub:@selector(requestForURL:parameters:)
+            andReturn:[[NSURLRequest alloc] initWithURL:[twitter friendsIdURL]]];
+        [twitter stub:@selector(enqueueHTTPRequestOperation:)];
+    });
     
     context(@"No Account set", ^{
         beforeEach(^{
@@ -49,8 +62,8 @@ describe(@"Friends Ids Signal", ^{
     });
     
     describe(@"enqueuing operation", ^{
-        
         it(@"should enqueue a request signal", ^{
+            [[[builder should] receive] requestForURL:[twitter friendsIdURL] parameters:nil];
             [[twitter should] receive:@selector(HTTPRequestOperationWithRequest:success:failure:)];
             [[twitter should] receive:@selector(enqueueHTTPRequestOperation:)];
             RACSignal* friendsId = [twitter friendsId];
@@ -63,9 +76,6 @@ describe(@"Friends Ids Signal", ^{
         __block RACSignal* friendsId;
         __block NSError* receivedError;
         __block NSArray* receivedIds;
-        
-        beforeEach(^{
-        });
         
         describe(@"Receiving Error Response", ^{
             __block NSError* errorToReturn;
@@ -87,8 +97,8 @@ describe(@"Friends Ids Signal", ^{
             });
             
             it(@"should send an error to the subscriber", ^{
-                [[receivedError shouldEventually] equal:errorToReturn];
-                [[receivedIds shouldEventually] beNil];
+                [[expectFutureValue(receivedError) shouldEventually] equal:errorToReturn];
+                [[expectFutureValue(receivedIds) shouldEventually] beNil];
             });
         });
         

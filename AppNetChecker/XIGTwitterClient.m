@@ -9,8 +9,14 @@
 #import "XIGTwitterClient.h"
 #import "XIGTwitterClient+Private.h"
 #import <Social/Social.h>
+#import "XIGNSURLRequestBuilder.h"
 
 NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
+@interface XIGTwitterClient () {
+    XIGNSURLRequestBuilder* _requestBuilder;
+}
+
+@end
 @implementation XIGTwitterClient
 
 - (id)init
@@ -26,6 +32,29 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 
 #pragma mark - Properties
 
+- (XIGNSURLRequestBuilder*)requestBuilder
+{
+    if (!_requestBuilder) {
+        _requestBuilder = [[XIGNSURLRequestBuilder alloc] init];
+        _requestBuilder.account = self.account;
+    }
+    return _requestBuilder;
+}
+
+- (void)setRequestBuilder:(XIGNSURLRequestBuilder *)requestBuilder
+{
+    if (requestBuilder == _requestBuilder) return;
+    _requestBuilder = requestBuilder;
+    _requestBuilder.account = self.account;
+}
+
+- (void)setAccount:(ACAccount *)account
+{
+    if (_account == account) return;
+    _account = account;
+    _requestBuilder.account = account;
+}
+
 #pragma mark -
 
 - (RACSignal*)friendsId
@@ -33,7 +62,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
     NSParameterAssert(self.account != nil);
     
     RACReplaySubject* subject = [RACReplaySubject subject];
-	NSURLRequest* request = [self requestForURL:[self friendsIdURL] parameters:nil];
+	NSURLRequest* request = [self.requestBuilder requestForURL:[self friendsIdURL] parameters:nil];
     AFHTTPRequestOperation* operation = [self HTTPRequestOperationWithRequest:request
                                                                       success:
                                          ^(AFHTTPRequestOperation *operation, id json)

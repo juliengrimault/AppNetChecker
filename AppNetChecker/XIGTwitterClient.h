@@ -12,11 +12,12 @@
 #import <AFNetworking/AFNetworking.h>
 
 OBJC_EXTERN NSString* const TwitterAPIBaseURL;
+
 @class XIGNSURLRequestBuilder;
 @interface XIGTwitterClient : AFHTTPClient
 
 @property (nonatomic, strong) ACAccount* account;
-@property (nonatomic,strong) XIGNSURLRequestBuilder* requestBuilder;
+@property (nonatomic, strong) XIGNSURLRequestBuilder* requestBuilder;
 
 - (RACSignal*)friendsId;
 @end

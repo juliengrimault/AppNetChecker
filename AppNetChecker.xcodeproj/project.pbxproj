@@ -223,7 +223,7 @@
 		F97B554216C7752A005AD777 /* AppNetCheckerTests */ = {
 			isa = PBXGroup;
 			children = (
-				F97B555E16C7917C005AD777 /* KiwiHack.h */,
+				F9BBFF6716CA7B3700CEE372 /* Spec Helpers */,
 				F97B554316C7752A005AD777 /* Supporting Files */,
 				F97B555C16C78F41005AD777 /* XIGTwitterAccountStoreSpec.m */,
 				F97B556D16C7AC5F005AD777 /* XIGAccountPickerSpec.m */,
@@ -233,10 +233,6 @@
 				F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */,
 				F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */,
 				F9D52EB716CA02B800ABC885 /* XIGTwitterClientSpec.m */,
-				F9D52EC916CA225700ABC885 /* NSObject+XIGKiwiMockAddition.h */,
-				F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */,
-				F9BBFF6416CA79D900CEE372 /* ACAccount+XIGTest.h */,
-				F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */,
 			);
 			path = AppNetCheckerTests;
 			sourceTree = "<group>";
@@ -248,6 +244,18 @@
 				F97B554516C7752A005AD777 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9BBFF6716CA7B3700CEE372 /* Spec Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9BBFF6416CA79D900CEE372 /* ACAccount+XIGTest.h */,
+				F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */,
+				F97B555E16C7917C005AD777 /* KiwiHack.h */,
+				F9D52EC916CA225700ABC885 /* NSObject+XIGKiwiMockAddition.h */,
+				F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */,
+			);
+			name = "Spec Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
