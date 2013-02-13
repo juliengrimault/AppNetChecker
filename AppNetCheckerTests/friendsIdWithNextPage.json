@@ -1,0 +1,11 @@
+{
+    "ids": [
+            123,
+            456,
+            789
+            ],
+    "next_cursor": 10,
+    "next_cursor_str": "10",
+    "previous_cursor": 0,
+    "previous_cursor_str": "0"
+}

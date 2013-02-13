@@ -15,7 +15,8 @@
 #define SPEC_END \
     } \
     - (void)testNothing{ NSLog(@""); }\
-    \
     @end
 #endif
+
+
 
