@@ -4,6 +4,11 @@
 #import <Social/Social.h>
 #import "ACAccount+XIGTest.h"
 #import "XIGNSURLRequestBuilder.h"
+#import "KWSpec+Fixture.h"
+
+@interface XIGTwitterClient (XIGStub)
+- (void)stubHTTPRequestOperationWithJSONToReturn:(id)json errorToReturn:(NSError*)error;
+@end
 
 SPEC_BEGIN(XIGTwitterClientSpec)
 
@@ -77,16 +82,18 @@ describe(@"Friends Ids Signal", ^{
         __block NSError* receivedError;
         __block NSArray* receivedIds;
         
+        beforeEach(^{
+            friendsId = nil;
+            receivedIds = nil;
+            receivedError = nil;
+        });
+        
         describe(@"Receiving Error Response", ^{
             __block NSError* errorToReturn;
             
             beforeEach(^{
                 errorToReturn = [NSError errorWithDomain:@"Test" code:123 userInfo:nil];
-                [twitter stub:@selector(HTTPRequestOperationWithRequest:success:failure:) withBlock:^id(NSArray *params) {
-                    void(^errorHandler)(AFHTTPRequestOperation *operation, NSError *error) = params[2];
-                    errorHandler(nil, errorToReturn);
-                    return [[AFJSONRequestOperation alloc] initWithRequest:params[0]];
-                }];
+                [twitter stubHTTPRequestOperationWithJSONToReturn:nil errorToReturn:errorToReturn];
                 
                 friendsId = [twitter friendsId];
                 [friendsId subscribeNext:^(id x) {
@@ -103,7 +110,24 @@ describe(@"Friends Ids Signal", ^{
         });
         
         describe(@"Receiving Ids", ^{
+            __block NSDictionary* jsonResponse;
             describe(@"receiving less than 1 page", ^{
+                beforeEach(^{
+                    jsonResponse = [KWSpec loadJSONFixture:@"friendsId.json"];
+                    [twitter stubHTTPRequestOperationWithJSONToReturn:jsonResponse errorToReturn:nil];
+                    
+                    friendsId = [twitter friendsId];
+                    [friendsId subscribeNext:^(id x) {
+                        receivedIds = x;
+                    } error:^(NSError *error) {
+                        receivedError = error;
+                    }];
+                });
+                
+                it(@"should send the ids received", ^{
+                    [[expectFutureValue(receivedError) shouldEventually] beNil];
+                    [[expectFutureValue(receivedIds) shouldEventually] equal:jsonResponse[@"ids"]];
+                });
             });
             
             describe(@"receiving more than 1 page", ^{
@@ -114,3 +138,21 @@ describe(@"Friends Ids Signal", ^{
 });
 
 SPEC_END
+
+@implementation XIGTwitterClient (XIGStub)
+- (void)stubHTTPRequestOperationWithJSONToReturn:(id)json errorToReturn:(NSError*)error
+{
+    [self stub:@selector(HTTPRequestOperationWithRequest:success:failure:) withBlock:^id(NSArray *params) {
+        NSURLRequest* urlRequest = params[0];
+        void(^completionHandler)(AFHTTPRequestOperation *operation, id json) = params[1];
+        void(^errorHandler)(AFHTTPRequestOperation *operation, NSError *error) = params[2];
+        
+        if (error) {
+            errorHandler(nil, error);
+        } else {
+            completionHandler(nil, json);
+        }
+        return [[AFJSONRequestOperation alloc] initWithRequest:urlRequest];
+    }];
+}
+@end

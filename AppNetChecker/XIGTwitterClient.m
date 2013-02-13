@@ -67,6 +67,9 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                                                                       success:
                                          ^(AFHTTPRequestOperation *operation, id json)
                                          {
+                                             NSArray* ids = json[@"ids"];
+                                             [subject sendNext:ids];
+                                             [subject sendCompleted];
                                          }
                                                                       failure:
                                          ^(AFHTTPRequestOperation *operation, NSError *error)

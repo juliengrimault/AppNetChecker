@@ -36,6 +36,8 @@
 		F97B556E16C7AC5F005AD777 /* XIGAccountPickerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B556D16C7AC5F005AD777 /* XIGAccountPickerSpec.m */; };
 		F97B557016C7ACB0005AD777 /* UIStoryboardSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B556F16C7ACB0005AD777 /* UIStoryboardSpec.m */; };
 		F97B557316C7AD5A005AD777 /* UIStoryboard+AppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B557216C7AD5A005AD777 /* UIStoryboard+AppNetChecker.m */; };
+		F991A61616CB802C00BDB36F /* friendsId.json in Resources */ = {isa = PBXBuildFile; fileRef = F991A61516CB802C00BDB36F /* friendsId.json */; };
+		F991A61916CB809C00BDB36F /* KWSpec+Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */; };
 		F9ACF72616C8F99700539A23 /* XIGAccountErrorCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */; };
 		F9ACF72816C901FB00539A23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
 		F9BBFF6116CA77E300CEE372 /* XIGNSURLRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */; };
@@ -97,6 +99,9 @@
 		F97B556F16C7ACB0005AD777 /* UIStoryboardSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIStoryboardSpec.m; sourceTree = "<group>"; };
 		F97B557116C7AD5A005AD777 /* UIStoryboard+AppNetChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+AppNetChecker.h"; sourceTree = "<group>"; };
 		F97B557216C7AD5A005AD777 /* UIStoryboard+AppNetChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+AppNetChecker.m"; sourceTree = "<group>"; };
+		F991A61516CB802C00BDB36F /* friendsId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsId.json; sourceTree = "<group>"; };
+		F991A61716CB809C00BDB36F /* KWSpec+Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KWSpec+Fixture.h"; sourceTree = "<group>"; };
+		F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KWSpec+Fixture.m"; sourceTree = "<group>"; };
 		F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAccountErrorCellSpec.m; sourceTree = "<group>"; };
 		F9ACF72716C8FB8800539A23 /* XIGAccountError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XIGAccountError.h; sourceTree = "<group>"; };
 		F9BBFF5F16CA77E300CEE372 /* XIGNSURLRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGNSURLRequestBuilder.h; sourceTree = "<group>"; };
@@ -223,6 +228,9 @@
 		F97B554216C7752A005AD777 /* AppNetCheckerTests */ = {
 			isa = PBXGroup;
 			children = (
+				F991A61716CB809C00BDB36F /* KWSpec+Fixture.h */,
+				F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */,
+				F991A61516CB802C00BDB36F /* friendsId.json */,
 				F9BBFF6716CA7B3700CEE372 /* Spec Helpers */,
 				F97B554316C7752A005AD777 /* Supporting Files */,
 				F97B555C16C78F41005AD777 /* XIGTwitterAccountStoreSpec.m */,
@@ -345,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F97B554716C7752A005AD777 /* InfoPlist.strings in Resources */,
+				F991A61616CB802C00BDB36F /* friendsId.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +433,7 @@
 				F9D52ECB16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m in Sources */,
 				F9BBFF6316CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m in Sources */,
 				F9BBFF6616CA79D900CEE372 /* ACAccount+XIGTest.m in Sources */,
+				F991A61916CB809C00BDB36F /* KWSpec+Fixture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
