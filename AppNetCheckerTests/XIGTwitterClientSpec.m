@@ -146,8 +146,8 @@ describe(@"Friends Ids Signal", ^{
                     jsonResponseWithNextPage = [KWSpec loadJSONFixture:@"friendsIdWithNextPage.json"];
                     jsonResponseNoNextPage = [KWSpec loadJSONFixture:@"friendsId.json"];
                     [twitter stubHTTPRequestOperationWithJSONRoutes:
-                     @{ [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json"] : jsonResponseWithNextPage,
-                        [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json?cursor=10"] : jsonResponseNoNextPage }];
+                     @{ [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=-1"] : jsonResponseWithNextPage,
+                        [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=10"] : jsonResponseNoNextPage }];
                     
                     friendsId = [twitter friendsId];
                     [friendsId subscribeNext:^(id x) {
