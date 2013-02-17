@@ -4,15 +4,15 @@ PODS:
 - CocoaLumberjack (1.6)
 - JRSwizzle (1.0)
 - Kiwi (2.0.4)
-- ReactiveCocoa (0.16.1):
-  - ReactiveCocoa/Core (= 0.16.1)
-  - ReactiveCocoa/RACExtensions (= 0.16.1)
-- ReactiveCocoa/Core (0.16.1):
+- ReactiveCocoa (0.17.1):
+  - ReactiveCocoa/Core (= 0.17.1)
+  - ReactiveCocoa/RACExtensions (= 0.17.1)
+- ReactiveCocoa/Core (0.17.1):
   - JRSwizzle (~> 1.0)
-  - libextobjc/EXTConcreteProtocol (~> 0.2.4)
-  - libextobjc/EXTKeyPathCoding (~> 0.2.4)
-  - libextobjc/EXTScope (~> 0.2.4)
-- ReactiveCocoa/RACExtensions (0.16.1):
+  - libextobjc/EXTConcreteProtocol (~> 0.2.5)
+  - libextobjc/EXTKeyPathCoding (~> 0.2.5)
+  - libextobjc/EXTScope (~> 0.2.5)
+- ReactiveCocoa/RACExtensions (0.17.1):
   - ReactiveCocoa/Core
 - libextobjc/EXTConcreteProtocol (0.2.5)
 - libextobjc/EXTKeyPathCoding (0.2.5)
@@ -22,15 +22,15 @@ DEPENDENCIES:
 - AFNetworking (~> 1.1.0)
 - CocoaLumberjack (~> 1.6)
 - Kiwi (~> 2.0.2)
-- ReactiveCocoa (~> 0.16.1)
+- ReactiveCocoa (~> 0.17.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
   CocoaLumberjack: 0f2fa7090a23f13261072d882e017c688300efbe
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
-  ReactiveCocoa: 7285e28efe41e6fab51a2241bb8938fe02ad6110
-  ReactiveCocoa/Core: 7285e28efe41e6fab51a2241bb8938fe02ad6110
-  ReactiveCocoa/RACExtensions: 7285e28efe41e6fab51a2241bb8938fe02ad6110
+  ReactiveCocoa: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
+  ReactiveCocoa/Core: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
+  ReactiveCocoa/RACExtensions: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
   libextobjc/EXTConcreteProtocol: 4a286cdbe966b6685b20a0a1444188a104ed3f40
   libextobjc/EXTKeyPathCoding: 4a286cdbe966b6685b20a0a1444188a104ed3f40
   libextobjc/EXTScope: 4a286cdbe966b6685b20a0a1444188a104ed3f40
