@@ -61,50 +61,66 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 - (RACSignal*)friendsId
 {
     NSParameterAssert(self.account != nil);
-    RACReplaySubject* subject = [RACReplaySubject subject];
-    [self enqueueWithSubject:subject cursor:-1];
-    return subject;
+    return [self enqueueWithCursor:-1];
 }
 
-- (void)enqueueWithSubject:(RACSubject*)subject cursor:(NSInteger)cursor
+- (RACSignal*)enqueueWithCursor:(NSInteger)cursor
 {
-    RACSignal* json = [self friendsIdAtCursor:cursor];
     @weakify(self);
-    [json subscribeNext:^(id json) {
-        @strongify(self);
-        [subject sendNext:json[@"ids"]];
-        NSNumber* nextCursor = json[@"next_cursor"];
-        if (!nextCursor || [nextCursor isEqual:@0]) {
-            [subject sendCompleted];
-        } else {
-            [self enqueueWithSubject:subject cursor:[nextCursor integerValue]];
-        }
-    } error:^(NSError *error) {
-        [subject sendError:error];
-    }];
+    return [[self friendsIdAtCursor:cursor]
+            // Map each `next` (there should only be one) to a new signal.
+            flattenMap:^RACStream *(id json) {
+                @strongify(self);
+                NSArray* ids = json[@"ids"];
+                
+                // Prepare a signal representing the next page of results.
+                NSNumber* nextCursor = json[@"next_cursor"];
+                RACSignal* nextFriends = [RACSignal empty];
+                if (nextCursor && ![nextCursor isEqualToNumber:@0]) {
+                    nextFriends = [self enqueueWithCursor:[nextCursor integerValue]];
+                }
+                
+                // Concatenate the results of this page with whatever comes from the
+                // next page.
+                return [[RACSignal return:ids] concat:nextFriends];
+            }];
 }
      
 
 - (RACSignal*)friendsIdAtCursor:(NSInteger)cursor
 {
     NSParameterAssert(self.account != nil);
-    RACReplaySubject* subject = [RACReplaySubject subject];
+
     NSDictionary* parameters = @{ @"cursor" : [NSString stringWithFormat:@"%d",cursor] };
 	NSURLRequest* request = [self.requestBuilder requestForURL:[self friendsIdURL] parameters:parameters];
-    AFHTTPRequestOperation* operation = [self HTTPRequestOperationWithRequest:request
-                                                                      success:
-                                         ^(AFHTTPRequestOperation *operation, id json)
-                                         {
-                                             [subject sendNext:json];
-                                             [subject sendCompleted];
-                                         }
-                                                                      failure:
-                                         ^(AFHTTPRequestOperation *operation, NSError *error)
-                                         {
-                                             [subject sendError:error];
-                                         }];
-    [self enqueueHTTPRequestOperation:operation];
-    return subject;
+    
+    @weakify(self);
+    // Using this method instead of a subject ensures that we don't start the
+    // request until someone subscribes to the result.
+    RACSignal* requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        AFHTTPRequestOperation* operation = [self HTTPRequestOperationWithRequest:request
+                                                                          success:
+                                             ^(AFHTTPRequestOperation *operation, id json)
+                                             {
+                                                 [subscriber sendNext:json];
+                                                 [subscriber sendCompleted];
+                                             }
+                                                                          failure:
+                                             ^(AFHTTPRequestOperation *operation, NSError *error)
+                                             {
+                                                 [subscriber sendError:error];
+                                             }];
+        [self enqueueHTTPRequestOperation:operation];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [operation cancel];
+        }];
+    }];
+    
+    // Kicks off this request only when subscribed to, and makes sure that
+    // a RACReplaySubject is used to buffer values.
+    return [requestSignal replayLazily];
 }
 
 - (NSURL*)friendsIdURL

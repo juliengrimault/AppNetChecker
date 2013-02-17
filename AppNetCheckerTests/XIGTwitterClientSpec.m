@@ -75,13 +75,18 @@ describe(@"Friends Ids Signal", ^{
     });
     
     describe(@"enqueuing operation", ^{
-        it(@"should enqueue a request signal", ^{
+        it(@"should return a request signal", ^{
             [[[builder should] receive] requestForURL:[twitter friendsIdURL] parameters:any()];
-            [[twitter should] receive:@selector(HTTPRequestOperationWithRequest:success:failure:)];
-            [[twitter should] receive:@selector(enqueueHTTPRequestOperation:)];
             RACSignal* friendsId = [twitter friendsId];
-            
             [friendsId shouldNotBeNil];
+        });
+        
+        it(@"should enqueue the operation upon subscription to the signal", ^{
+            RACSignal* friendsId = [twitter friendsId];
+            [[expectFutureValue(twitter) shouldEventually] receive:@selector(HTTPRequestOperationWithRequest:success:failure:)];
+            [[expectFutureValue(twitter) shouldEventually] receive:@selector(enqueueHTTPRequestOperation:)];
+            
+            [friendsId subscribeNext:^(id x) {}];
         });
     });
     
