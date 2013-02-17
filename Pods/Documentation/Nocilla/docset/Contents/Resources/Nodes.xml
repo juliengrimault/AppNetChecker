@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>Nocilla 0.2</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>LSNocilla</Name>
+			<Path>Classes/LSNocilla.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>LSStubRequestDSL</Name>
+			<Path>Classes/LSStubRequestDSL.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>LSStubResponseDSL</Name>
+			<Path>Classes/LSStubResponseDSL.html</Path>
+		</Node>
+		
+		
+		
+	</Library>
+</DocSetNodes>

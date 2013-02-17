@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/LSStubResponseDSL.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/LSStubResponseDSL</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSStubResponseDSL.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSStubResponseDSL/initWithResponse:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSStubResponseDSL.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithResponse:(LSStubResponse *)response</Declaration>
+			
+			
+			<Anchor>//api/name/initWithResponse:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSStubResponseDSL/withHeader</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSStubResponseDSL.h</DeclaredIn>			
+			
+			<Declaration>- (ResponseWithHeaderMethod)withHeader</Declaration>
+			
+			
+			<Anchor>//api/name/withHeader</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSStubResponseDSL/withHeaders</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSStubResponseDSL.h</DeclaredIn>			
+			
+			<Declaration>- (ResponseWithHeadersMethod)withHeaders</Declaration>
+			
+			
+			<Anchor>//api/name/withHeaders</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSStubResponseDSL/withBody</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSStubResponseDSL.h</DeclaredIn>			
+			
+			<Declaration>- (ResponseWithBodyMethod)withBody</Declaration>
+			
+			
+			<Anchor>//api/name/withBody</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

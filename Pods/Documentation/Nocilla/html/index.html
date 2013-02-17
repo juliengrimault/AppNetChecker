@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Nocilla 0.2 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">Nocilla 0.2 </a></h1>
+				<a id="developerHome" href="index.html">Luis Solano</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">Nocilla 0.2 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">Nocilla 0.2 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>Nocilla</h1>
+
+<p>Stunning HTTP stubbing for iOS and OS X. Testing HTTP requests has never been easier.</p>
+
+<p>This library was inspired by <a href="https://github.com/bblimke/webmock">WebMock</a> and it&rsquo;s using <a href="http://www.infinite-loop.dk/blog/2011/09/using-nsurlprotocol-for-injecting-test-data/">this approach</a> to stub the requests.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>Stub HTTP and HTTPS requests in your unit tests.</li>
+<li>Awesome DSL that will improve the readability and maintainability of your tests.</li>
+<li>Tested.</li>
+<li>Fast.</li>
+<li>Extendable to support more HTTP libraries.</li>
+<li>Huge community, we overflowed the number of Stars and Forks in GitHub (meh, not really).</li>
+</ul>
+
+
+<h2>Limitations</h2>
+
+<ul>
+<li>At this moment only works with requests made with <code>NSURLConnection</code>, but it&rsquo;s possible to extend Nocilla to support more HTTP libraries. Nocilla has been tested with <a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a> and <a href="https://github.com/MugunthKumar/MKNetworkKit">MKNetworkKit</a></li>
+</ul>
+
+
+<h2>Installation</h2>
+
+<p><em>WIP</em> (please, read: You figure it out, and then you tell me)</p>
+
+<ul>
+<li>Nocilla will be a <a href="http://cocoapods.org/">CocoaPod</a> soon.</li>
+<li>You should be able to add Nocilla to you source tree. If you are using git, consider using a <code>git submodule</code></li>
+</ul>
+
+
+<h2>Usage</h2>
+
+<p><em>Yes, the following code is valid Objective-C, or at least, it should be</em></p>
+
+<p>The following examples are described using <a href="https://github.com/allending/Kiwi">Kiwi</a></p>
+
+<h3>Common parts</h3>
+
+<p>Until Nocilla can hook directly into Kiwi, you will have to include the following snippet in the specs you want to use Nocilla:</p>
+
+<p>```objc</p>
+
+<h1>import &ldquo;Kiwi.h&rdquo;</h1>
+
+<h1>import &ldquo;Nocilla.h&rdquo;</h1>
+
+<p>SPEC_BEGIN(ExampleSpec)
+beforeAll(^{
+  [[LSNocilla sharedInstance] start];
+});
+afterAll(^{
+  [[LSNocilla sharedInstance] stop];
+});
+afterEach(^{
+  [[LSNocilla sharedInstance] clearStubs];
+});</p>
+
+<p>it(@&ldquo;should do something&rdquo;, ^{
+  // Stub here!
+});
+SPEC_END
+```</p>
+
+<h3>Stubbing requests</h3>
+
+<h4>Stubbing a simple request</h4>
+
+<p>It will return the default response, which is a 200 and an empty body.</p>
+
+<p><code>objc
+stubRequest(@"GET", @"http://www.google.com");
+</code></p>
+
+<h4>Stubbing a request with a particular header</h4>
+
+<p><code>objc
+stubRequest(@"GET", @"https://api.example.com").
+withHeader(@"Accept", @"application/json");
+</code></p>
+
+<h4>Stubbing a request with multiple headers</h4>
+
+<p>Using the <code>withHeaders</code> method makes sense with the new Objective-C literals, but it accepts an NSDictionary.</p>
+
+<p><code>objc
+stubRequest(@"GET", @"https://api.example.com/dogs.json").
+withHeaders(@{@"Accept": @"application/json", @"X-CUSTOM-HEADER": @"abcf2fbc6abgf"});
+</code></p>
+
+<h4>Stubbing a request with a particular body</h4>
+
+<p><code>objc
+stubRequest(@"POST", @"https://api.example.com/dogs.json").
+withHeaders(@{@"Accept": @"application/json", @"X-CUSTOM-HEADER": @"abcf2fbc6abgf"}).
+withBody(@"{\"name\":\"foo\"}");
+</code></p>
+
+<h4>Returning a specific status code</h4>
+
+<p><code>objc
+stubRequest(@"GET", @"http://www.google.com").andReturn(404);
+</code></p>
+
+<h4>Returning a specific status code and header</h4>
+
+<p>The same approch here, you can use <code>withHeader</code> or <code>withHeaders</code></p>
+
+<p><code>objc
+stubRequest(@"POST", @"https://api.example.com/dogs.json").
+andReturn(201).
+withHeaders(@{@"Content-Type": @"application/json"});
+</code></p>
+
+<h4>Returning a specific status code, headers and body</h4>
+
+<p><code>objc
+stubRequest(@"GET", @"https://api.example.com/dogs.json").
+andReturn(201).
+withHeaders(@{@"Content-Type": @"application/json"}).
+withBody(@"{\"ok\":true}");
+</code></p>
+
+<h4>Returning raw responses recorded with <code>curl -is</code></h4>
+
+<p><code>curl -is http://api.example.com/dogs.json &gt; /tmp/example_curl_-is_output.txt</code></p>
+
+<p><code>objc
+stubRequest(@"GET", @"https://api.example.com/dogs.json").
+andReturnRawResponse([NSData dataWithContentsOfFile:"/tmp/example_curl_-is_output.txt"]);
+</code></p>
+
+<h4>All together</h4>
+
+<p><code>objc
+stubRequest(@"POST", @"https://api.example.com/dogs.json").
+withHeaders(@{@"Accept": @"application/json", @"X-CUSTOM-HEADER": @"abcf2fbc6abgf"}).
+withBody(@"{\"name\":\"foo\"}").
+andReturn(201).
+withHeaders(@{@"Content-Type": @"application/json"}).
+withBody(@"{\"ok\":true}");
+</code></p>
+
+<h3>Unexpected requests</h3>
+
+<p>If some request is made but it wasn&rsquo;t stubbed, Nocilla won&rsquo;t let that request hit the real world. In that case your test should fail.
+At this moment Nocilla will return a response with a 500, the header <code>X-Nocilla: Unexpected Request</code> and a body with a meaningful message about the error and how to solve it, including a snippet of code on how to stub the unexpected request.
+I&rsquo;m not particularly happy with returning a 500 and this will change. Check <a href="https://github.com/luisobo/Nocilla/issues/5">this issue</a> for more details.</p>
+
+<h2>Other alternatives</h2>
+
+<ul>
+<li><a href="https://github.com/InfiniteLoopDK/ILTesting">ILTesting</a></li>
+<li><a href="https://github.com/AliSoftware/OHHTTPStubs">OHHTTPStubs</a></li>
+</ul>
+
+
+<h2>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch</li>
+<li>Commit your changes</li>
+<li>Push to the branch</li>
+<li>Create new Pull Request</li>
+</ol>
+
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/LSNocilla.html">LSNocilla</a></li>
+							
+							<li><a href="Classes/LSStubRequestDSL.html">LSStubRequestDSL</a></li>
+							
+							<li><a href="Classes/LSStubResponseDSL.html">LSStubResponseDSL</a></li>
+							
+						</ul>
+					</div>
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Luis Solano. All rights reserved. (Last updated: 2013-02-17)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

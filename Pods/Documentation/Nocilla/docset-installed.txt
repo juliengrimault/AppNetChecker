@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/julien/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.Nocilla-0.2.docset
+Time: 2013-02-17 07:06:49 +0000

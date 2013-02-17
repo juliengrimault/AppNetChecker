@@ -5,4 +5,5 @@ pod 'CocoaLumberjack', '~> 1.6'
 
 target :AppNetCheckerTests, :exclusive => true do
     pod 'Kiwi', '~> 2.0.2'
+    pod 'Nocilla', '~> 0.2'
 end

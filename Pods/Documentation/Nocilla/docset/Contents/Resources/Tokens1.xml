@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/LSNocilla.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/LSNocilla</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/LSNocilla/sharedInstance</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>			
+			
+			<Declaration>+ (LSNocilla *)sharedInstance</Declaration>
+			
+			
+			<Anchor>//api/name/sharedInstance</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSNocilla/setStubbedRequests:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *stubbedRequests</Declaration>
+			
+			
+			<Anchor>//api/name/stubbedRequests</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/LSNocilla/stubbedRequests</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *stubbedRequests</Declaration>
+			
+			
+			<Anchor>//api/name/stubbedRequests</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSNocilla/start</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>			
+			
+			<Declaration>- (void)start</Declaration>
+			
+			
+			<Anchor>//api/name/start</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSNocilla/stop</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>			
+			
+			<Declaration>- (void)stop</Declaration>
+			
+			
+			<Anchor>//api/name/stop</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSNocilla/addStubbedRequest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>			
+			
+			<Declaration>- (void)addStubbedRequest:(LSStubRequest *)request</Declaration>
+			
+			
+			<Anchor>//api/name/addStubbedRequest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LSNocilla/clearStubs</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LSNocilla.h</DeclaredIn>			
+			
+			<Declaration>- (void)clearStubs</Declaration>
+			
+			
+			<Anchor>//api/name/clearStubs</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
