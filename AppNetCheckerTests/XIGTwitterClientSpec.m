@@ -5,17 +5,24 @@
 #import "ACAccount+XIGTest.h"
 #import "XIGNSURLRequestBuilder.h"
 #import "KWSpec+Fixture.h"
-
-@interface XIGTwitterClient (XIGStub)
-- (void)stubHTTPRequestOperationWithJSONToReturn:(id)json errorToReturn:(NSError*)error;
-- (void)stubHTTPRequestOperationWithJSONRoutes:(NSDictionary*)routes;
-@end
+#import "Nocilla.h"
 
 SPEC_BEGIN(XIGTwitterClientSpec)
 
 __block XIGTwitterClient* twitter;
 __block XIGNSURLRequestBuilder* builder;
 __block ACAccount* account;
+
+beforeAll(^{
+    [[LSNocilla sharedInstance] start];
+});
+afterAll(^{
+    [[LSNocilla sharedInstance] stop];
+});
+afterEach(^{
+    [[LSNocilla sharedInstance] clearStubs];
+});
+
 beforeEach(^{
     twitter = [[XIGTwitterClient alloc] init];
     account = [ACAccount testAccount];
@@ -60,7 +67,6 @@ describe(@"Friends Ids Signal", ^{
                                                       parameters:parameters];
             return [request preparedURLRequest];
         }];
-        [twitter stub:@selector(enqueueHTTPRequestOperation:)];
     });
     
     context(@"No Account set", ^{
@@ -102,11 +108,11 @@ describe(@"Friends Ids Signal", ^{
         });
         
         describe(@"Receiving Error Response", ^{
-            __block NSError* errorToReturn;
-            
             beforeEach(^{
-                errorToReturn = [NSError errorWithDomain:@"Test" code:123 userInfo:nil];
-                [twitter stubHTTPRequestOperationWithJSONToReturn:nil errorToReturn:errorToReturn];
+                
+                stubRequest(@"GET", @"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=-1").
+                withHeaders(@{@"Accept": @"application/json"}).
+                andReturn(500);
                 
                 friendsId = [twitter friendsId];
                 [friendsId subscribeNext:^(id x) {
@@ -117,17 +123,20 @@ describe(@"Friends Ids Signal", ^{
             });
             
             it(@"should send an error to the subscriber", ^{
-                [[expectFutureValue(receivedError) shouldEventually] equal:errorToReturn];
+                [[expectFutureValue(receivedError) shouldEventually] beNonNil];
                 [[expectFutureValue(receivedIds) shouldEventually] beNil];
             });
         });
         
         describe(@"Receiving Ids", ^{
-            __block NSDictionary* jsonResponse;
+            __block NSDictionary* json;
             describe(@"receiving less than 1 page", ^{
                 beforeEach(^{
-                    jsonResponse = [KWSpec loadJSONFixture:@"friendsId.json"];
-                    [twitter stubHTTPRequestOperationWithJSONToReturn:jsonResponse errorToReturn:nil];
+                    json = [KWSpec jsonFixtureInFile:@"friendsId.json"];
+                    stubRequest(@"GET", @"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=-1").
+                    andReturn(200).
+                    withHeaders(@{@"Content-Type": @"application/json"}).
+                    withBody([KWSpec stringFixtureInFile:@"friendsId.json"]);
                     
                     friendsId = [twitter friendsId];
                     [friendsId subscribeNext:^(id x) {
@@ -139,20 +148,28 @@ describe(@"Friends Ids Signal", ^{
                 
                 it(@"should send the ids received", ^{
                     [[expectFutureValue(receivedError) shouldEventually] beNil];
-                    [[expectFutureValue(receivedIds) shouldEventually] equal:jsonResponse[@"ids"]];
+                    [[expectFutureValue(receivedIds) shouldEventually] equal:json[@"ids"]];
                 });
             });
             
             describe(@"receiving more than 1 page", ^{
-                __block NSDictionary* jsonResponseNoNextPage;
-                __block NSDictionary* jsonResponseWithNextPage;
+                __block NSDictionary* json1;
+                __block NSDictionary* json2;
                 beforeEach(^{
+                    json1 = [KWSpec jsonFixtureInFile:@"friendsIdWithNextPage.json"];
+                    json2 = [KWSpec jsonFixtureInFile:@"friendsId.json"];
+                    
                     receivedIds = @[];
-                    jsonResponseWithNextPage = [KWSpec loadJSONFixture:@"friendsIdWithNextPage.json"];
-                    jsonResponseNoNextPage = [KWSpec loadJSONFixture:@"friendsId.json"];
-                    [twitter stubHTTPRequestOperationWithJSONRoutes:
-                     @{ [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=-1"] : jsonResponseWithNextPage,
-                        [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=10"] : jsonResponseNoNextPage }];
+                    
+                    stubRequest(@"GET", @"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=-1").
+                    andReturn(200).
+                    withHeaders(@{@"Content-Type": @"application/json"}).
+                    withBody([KWSpec stringFixtureInFile:@"friendsIdWithNextPage.json"]);
+                    
+                    stubRequest(@"GET", @"https://api.twitter.com/1.1/friends/ids.json?adc=phone&cursor=10").
+                    andReturn(200).
+                    withHeaders(@{@"Content-Type": @"application/json"}).
+                    withBody([KWSpec stringFixtureInFile:@"friendsId.json"]);
                     
                     friendsId = [twitter friendsId];
                     [friendsId subscribeNext:^(id x) {
@@ -164,7 +181,7 @@ describe(@"Friends Ids Signal", ^{
                 
                 it(@"should send the ids received", ^{
                     [[expectFutureValue(receivedError) shouldEventually] beNil];
-                    NSArray* expected = [jsonResponseWithNextPage[@"ids"] arrayByAddingObjectsFromArray:jsonResponseNoNextPage[@"ids"]];
+                    NSArray* expected = [json1[@"ids"] arrayByAddingObjectsFromArray:json2[@"ids"]];
                     [[expectFutureValue(receivedIds) shouldEventually] equal:expected];
                 });
             });
@@ -173,46 +190,3 @@ describe(@"Friends Ids Signal", ^{
 });
 
 SPEC_END
-
-@implementation XIGTwitterClient (XIGStub)
-- (void)stubHTTPRequestOperationWithJSONToReturn:(id)json errorToReturn:(NSError*)error
-{
-    [self stub:@selector(HTTPRequestOperationWithRequest:success:failure:) withBlock:^id(NSArray *params) {
-        NSURLRequest* urlRequest = params[0];
-        void(^completionHandler)(AFHTTPRequestOperation *operation, id json) = params[1];
-        void(^errorHandler)(AFHTTPRequestOperation *operation, NSError *error) = params[2];
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            if (error) {
-                errorHandler(nil, error);
-            } else {
-                completionHandler(nil, json);
-            }
-        });
-        return [[AFJSONRequestOperation alloc] initWithRequest:urlRequest];
-    }];
-}
-
-- (void)stubHTTPRequestOperationWithJSONRoutes:(NSDictionary*)routes
-{
-    [self stub:@selector(HTTPRequestOperationWithRequest:success:failure:) withBlock:^id(NSArray *params) {
-        NSURLRequest* urlRequest = params[0];
-        void(^completionHandler)(AFHTTPRequestOperation *operation, id json) = params[1];
-        void(^errorHandler)(AFHTTPRequestOperation *operation, NSError *error) = params[2];
-        
-        [routes enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-            if ([key isEqual:urlRequest.URL]) {
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    if ([obj isKindOfClass:[NSError class]]) {
-                        errorHandler(nil, obj);
-                    } else {
-                        completionHandler(nil, obj);
-                    }
-                });
-            }
-        }];
-        return [[AFJSONRequestOperation alloc] initWithRequest:urlRequest];
-    }];
-
-}
-@end

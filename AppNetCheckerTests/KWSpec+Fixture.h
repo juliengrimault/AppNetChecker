@@ -9,5 +9,7 @@
 
 @interface KWSpec (Fixture)
 
-+ (id)loadJSONFixture:(NSString*)fileName;
++ (id)jsonFixtureInFile:(NSString*)fileName;
++ (NSData*)dataFixtureInFile:(NSString*)fileName;
++ (NSString*)stringFixtureInFile:(NSString*)fileName;
 @end
