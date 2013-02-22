@@ -24,7 +24,7 @@
     return _accountStore;
 }
 
-- (RACSignal*)twitterAccount
+- (RACSignal*)twitterAccounts
 {
     @weakify(self);
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {

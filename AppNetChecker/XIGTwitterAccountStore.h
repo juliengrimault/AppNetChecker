@@ -14,6 +14,6 @@
 
 @property (nonatomic, strong) ACAccountStore* accountStore;
 
-- (RACSignal*)twitterAccount;
+- (RACSignal*)twitterAccounts;
 
 @end

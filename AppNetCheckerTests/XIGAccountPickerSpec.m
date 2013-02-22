@@ -163,7 +163,7 @@ context(@"Pull to Refresh", ^{
         
         it(@"should reset the error and ask for twitter accounts", ^{
             [[[vc should] receive] setError:nil];
-            [[[fakeTwitter should] receive] twitterAccount];
+            [[[fakeTwitter should] receive] twitterAccounts];
             [vc refreshControlValueChanged:nil];
         });
     });

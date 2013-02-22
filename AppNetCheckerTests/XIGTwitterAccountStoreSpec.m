@@ -14,7 +14,7 @@ beforeEach(^{
 describe(@"getting the signal", ^{
     __block RACSignal* signal;
     beforeEach(^{
-       signal = [reactiveTwitter twitterAccount];
+       signal = [reactiveTwitter twitterAccounts];
     });
     
     it(@"should return non null", ^{
@@ -22,7 +22,7 @@ describe(@"getting the signal", ^{
     });
     
     it(@"should returns new signal everytime", ^{
-        RACSignal* signal2 = [reactiveTwitter twitterAccount];
+        RACSignal* signal2 = [reactiveTwitter twitterAccounts];
         [[signal2 shouldNot] equal:signal];
     });
 });
@@ -39,7 +39,7 @@ describe(@"starting request", ^{
             [[fakeStore should] receive:@selector(accountTypeWithAccountTypeIdentifier:) withArguments:ACAccountTypeIdentifierTwitter];
             [[fakeStore should] receive:@selector(requestAccessToAccountsWithType:options:completion:)];
             
-            RACSignal* twitterAccounts = [reactiveTwitter twitterAccount];
+            RACSignal* twitterAccounts = [reactiveTwitter twitterAccounts];
             [twitterAccounts subscribeNext:^(id x) {}];
         });
     });
@@ -49,7 +49,7 @@ describe(@"starting request", ^{
         __block NSArray* receivedAccounts = nil;
         __block NSError* receivedError = nil;
         beforeEach(^{
-            signal = [reactiveTwitter twitterAccount];
+            signal = [reactiveTwitter twitterAccounts];
             receivedError = nil;
             receivedAccounts = nil;
             

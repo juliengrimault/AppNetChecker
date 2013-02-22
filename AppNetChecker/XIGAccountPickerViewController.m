@@ -45,7 +45,7 @@
 {
     [self.refreshControl beginRefreshing];
     @weakify(self);
-    [[[self.reactiveTwitter twitterAccount]
+    [[[self.reactiveTwitter twitterAccounts]
       deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext: ^(NSArray* accounts) {
          @strongify(self);
