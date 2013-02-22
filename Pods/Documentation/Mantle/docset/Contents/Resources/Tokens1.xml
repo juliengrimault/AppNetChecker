@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MTLModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MTLModel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MTLModel/modelWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)modelWithDictionary:(NSDictionary *)dictionaryValue</Declaration>
+			
+			
+			<Anchor>//api/name/modelWithDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MTLModel/modelWithExternalRepresentation:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)modelWithExternalRepresentation:(NSDictionary *)externalRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/modelWithExternalRepresentation:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MTLModel/init</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>- (instancetype)init</Declaration>
+			
+			
+			<Anchor>//api/name/init</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MTLModel/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>- (instancetype)initWithDictionary:(NSDictionary *)dictionaryValue</Declaration>
+			
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MTLModel/initWithExternalRepresentation:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>- (instancetype)initWithExternalRepresentation:(NSDictionary *)externalRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/initWithExternalRepresentation:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MTLModel/externalRepresentationKeyPathsByPropertyKey</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDictionary *)externalRepresentationKeyPathsByPropertyKey</Declaration>
+			
+			
+			<Anchor>//api/name/externalRepresentationKeyPathsByPropertyKey</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MTLModel/transformerForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>+ (NSValueTransformer *)transformerForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/transformerForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MTLModel/propertyKeys</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>+ (NSSet *)propertyKeys</Declaration>
+			
+			
+			<Anchor>//api/name/propertyKeys</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MTLModel/setDictionaryValue:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *dictionaryValue</Declaration>
+			
+			
+			<Anchor>//api/name/dictionaryValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MTLModel/dictionaryValue</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *dictionaryValue</Declaration>
+			
+			
+			<Anchor>//api/name/dictionaryValue</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MTLModel/setExternalRepresentation:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *externalRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/externalRepresentation</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MTLModel/externalRepresentation</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) NSDictionary *externalRepresentation</Declaration>
+			
+			
+			<Anchor>//api/name/externalRepresentation</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MTLModel/modelVersion</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>+ (NSUInteger)modelVersion</Declaration>
+			
+			
+			<Anchor>//api/name/modelVersion</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/MTLModel/migrateExternalRepresentation:fromVersion:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>+ (NSDictionary *)migrateExternalRepresentation:(NSDictionary *)externalRepresentation fromVersion:(NSUInteger)fromVersion</Declaration>
+			
+			
+			<Anchor>//api/name/migrateExternalRepresentation:fromVersion:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MTLModel/mergeValueForKey:fromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>- (void)mergeValueForKey:(NSString *)key fromModel:(MTLModel *)model</Declaration>
+			
+			
+			<Anchor>//api/name/mergeValueForKey:fromModel:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MTLModel/mergeValuesForKeysFromModel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MTLModel.h</DeclaredIn>			
+			
+			<Declaration>- (void)mergeValuesForKeysFromModel:(MTLModel *)model</Declaration>
+			
+			
+			<Anchor>//api/name/mergeValuesForKeysFromModel:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

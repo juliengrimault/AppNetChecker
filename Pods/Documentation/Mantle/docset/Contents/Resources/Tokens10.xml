@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSValueTransformer+MTLPredefinedTransformerAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSValueTransformer(MTLPredefinedTransformerAdditions)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSValueTransformer+MTLPredefinedTransformerAdditions.h</DeclaredIn>
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSValueTransformer(MTLPredefinedTransformerAdditions)/mtl_externalRepresentationTransformerWithModelClass:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSValueTransformer+MTLPredefinedTransformerAdditions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSValueTransformer *)mtl_externalRepresentationTransformerWithModelClass:(Class)modelClass</Declaration>
+			
+			
+			<Anchor>//api/name/mtl_externalRepresentationTransformerWithModelClass:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSValueTransformer(MTLPredefinedTransformerAdditions)/mtl_externalRepresentationArrayTransformerWithModelClass:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSValueTransformer+MTLPredefinedTransformerAdditions.h</DeclaredIn>			
+			
+			<Declaration>+ (NSValueTransformer *)mtl_externalRepresentationArrayTransformerWithModelClass:(Class)modelClass</Declaration>
+			
+			
+			<Anchor>//api/name/mtl_externalRepresentationArrayTransformerWithModelClass:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

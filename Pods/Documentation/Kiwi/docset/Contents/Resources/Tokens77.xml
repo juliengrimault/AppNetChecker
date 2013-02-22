@@ -23,6 +23,17 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(KiwiStubAdditions)/stub:withBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSObject+KiwiStubAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (void)stub:(SEL)aSelector withBlock:(id ( ^ ) ( NSArray *params ))block</Declaration>
+			
+			
+			<Anchor>//api/name/stub:withBlock:</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(KiwiStubAdditions)/stub:withArguments:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>NSObject+KiwiStubAdditions.h</DeclaredIn>			
@@ -108,6 +119,17 @@
 			
 			
 			<Anchor>//api/name/stubMessagePattern:andReturn:times:afterThatReturn:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(KiwiStubAdditions)/stubMessagePattern:withBlock:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSObject+KiwiStubAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (void)stubMessagePattern:(KWMessagePattern *)aMessagePattern withBlock:(id ( ^ ) ( NSArray *params ))block</Declaration>
+			
+			
+			<Anchor>//api/name/stubMessagePattern:withBlock:</Anchor>
 		</Token>
 		
 		<Token>

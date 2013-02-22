@@ -11,5 +11,7 @@
 @interface XIGTwitterClient (Private)
 
 - (NSURL*)friendsIdURL;
+- (NSURL*)profilesURL;
+
 - (NSURLRequest*)requestForURL:(NSURL*)url parameters:(NSDictionary*)parameters;
 @end

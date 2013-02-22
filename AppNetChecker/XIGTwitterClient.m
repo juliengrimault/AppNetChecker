@@ -11,6 +11,7 @@
 #import <Social/Social.h>
 #import "XIGNSURLRequestBuilder.h"
 #import <libextobjc/EXTScope.h>
+#import "XIGTwitterUser.h"
 
 NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 @interface XIGTwitterClient () {
@@ -56,7 +57,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
     _requestBuilder.account = account;
 }
 
-#pragma mark -
+#pragma mark - Friends id
 
 - (RACSignal*)friendsId
 {
@@ -126,5 +127,49 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 - (NSURL*)friendsIdURL
 {
     return [NSURL URLWithString:@"https://api.twitter.com/1.1/friends/ids.json"];
+}
+
+
+#pragma mark - Profiles
+- (RACSignal*)profilesForIds:(NSArray*)ids
+{
+    NSParameterAssert(self.account);
+    NSURL* url = [self profilesURL];
+    NSURLRequest* request = [self.requestBuilder requestForURL:url parameters:@{ @"user_id" : [ids componentsJoinedByString:@","] }];
+    @weakify(self);
+    // Using this method instead of a subject ensures that we don't start the
+    // request until someone subscribes to the result.
+    RACSignal* requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        @strongify(self);
+        AFHTTPRequestOperation* operation = [self HTTPRequestOperationWithRequest:request
+                                                                          success:
+                                             ^(AFHTTPRequestOperation *operation, id json)
+                                             {
+                                                 NSArray *users = [json mtl_mapUsingBlock:^id(NSDictionary* userJSON) {
+                                                     return [[XIGTwitterUser alloc] initWithExternalRepresentation:userJSON];
+                                                 }];
+                                                 [subscriber sendNext:users];
+                                                 [subscriber sendCompleted];
+                                             }
+                                                                          failure:
+                                             ^(AFHTTPRequestOperation *operation, NSError *error)
+                                             {
+                                                 [subscriber sendError:error];
+                                             }];
+        [self enqueueHTTPRequestOperation:operation];
+        
+        return [RACDisposable disposableWithBlock:^{
+            [operation cancel];
+        }];
+    }];
+    
+    // Kicks off this request only when subscribed to, and makes sure that
+    // a RACReplaySubject is used to buffer values.
+    return [requestSignal replayLazily];
+}
+
+- (NSURL*)profilesURL
+{
+    return [NSURL URLWithString:@"https://api.twitter.com/1.1/users/lookup.json"];
 }
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "KWSpec+Fixture.h"
-#import "DDLog.h"
 
 @implementation KWSpec (Fixture)
 

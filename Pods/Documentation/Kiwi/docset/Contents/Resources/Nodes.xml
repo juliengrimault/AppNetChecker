@@ -2,7 +2,7 @@
 <DocSetNodes version="1.0">
     <TOC>
         <Node type="folder">
-            <Name>Kiwi 2.0.4</Name>
+            <Name>Kiwi 2.0.5</Name>
             <Path>index.html</Path>
 			<Subnodes>
                 
@@ -102,6 +102,7 @@
 						<NodeRef refid="80"/>
 						<NodeRef refid="81"/>
 						<NodeRef refid="82"/>
+						<NodeRef refid="83"/>
 						
 					</Subnodes>
 				</Node>
@@ -111,7 +112,6 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="83"/>
 						<NodeRef refid="84"/>
 						<NodeRef refid="85"/>
 						<NodeRef refid="86"/>
@@ -121,6 +121,7 @@
 						<NodeRef refid="90"/>
 						<NodeRef refid="91"/>
 						<NodeRef refid="92"/>
+						<NodeRef refid="93"/>
 						
 					</Subnodes>
 				</Node>
@@ -452,51 +453,55 @@
 			<Path>Categories/NSOrderedSet+KiwiGenericMatchingAdditions.html</Path>
 		</Node>
 		<Node id="81">
+			<Name>NSProxy(KiwiVerifierAdditions)</Name>
+			<Path>Categories/NSProxy+KiwiVerifierAdditions.html</Path>
+		</Node>
+		<Node id="82">
 			<Name>NSSet(KiwiGenericMatchingAdditions)</Name>
 			<Path>Categories/NSSet+KiwiGenericMatchingAdditions.html</Path>
 		</Node>
-		<Node id="82">
+		<Node id="83">
 			<Name>NSValue(KiwiAdditions)</Name>
 			<Path>Categories/NSValue+KiwiAdditions.html</Path>
 		</Node>
 		
-		<Node id="83">
+		<Node id="84">
 			<Name>KWContainmentCountMatcherTerminals</Name>
 			<Path>Protocols/KWContainmentCountMatcherTerminals.html</Path>
 		</Node>
-		<Node id="84">
+		<Node id="85">
 			<Name>KWExampleDelegate</Name>
 			<Path>Protocols/KWExampleDelegate.html</Path>
 		</Node>
-		<Node id="85">
+		<Node id="86">
 			<Name>KWExampleNode</Name>
 			<Path>Protocols/KWExampleNode.html</Path>
 		</Node>
-		<Node id="86">
+		<Node id="87">
 			<Name>KWExampleNodeVisitor</Name>
 			<Path>Protocols/KWExampleNodeVisitor.html</Path>
 		</Node>
-		<Node id="87">
+		<Node id="88">
 			<Name>KWInvocationCapturerDelegate</Name>
 			<Path>Protocols/KWInvocationCapturerDelegate.html</Path>
 		</Node>
-		<Node id="88">
+		<Node id="89">
 			<Name>KWMatching</Name>
 			<Path>Protocols/KWMatching.html</Path>
 		</Node>
-		<Node id="89">
+		<Node id="90">
 			<Name>KWMessageSpying</Name>
 			<Path>Protocols/KWMessageSpying.html</Path>
 		</Node>
-		<Node id="90">
+		<Node id="91">
 			<Name>KWProbe</Name>
 			<Path>Protocols/KWProbe.html</Path>
 		</Node>
-		<Node id="91">
+		<Node id="92">
 			<Name>KWReporting</Name>
 			<Path>Protocols/KWReporting.html</Path>
 		</Node>
-		<Node id="92">
+		<Node id="93">
 			<Name>KWVerifying</Name>
 			<Path>Protocols/KWVerifying.html</Path>
 		</Node>

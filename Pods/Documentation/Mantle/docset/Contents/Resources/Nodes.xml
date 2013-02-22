@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>Mantle 0.2.3</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
+						<NodeRef refid="8"/>
+						<NodeRef refid="9"/>
+						<NodeRef refid="10"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>MTLModel</Name>
+			<Path>Classes/MTLModel.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>MTLValueTransformer</Name>
+			<Path>Classes/MTLValueTransformer.html</Path>
+		</Node>
+		
+		<Node id="3">
+			<Name>NSArray(MTLHigherOrderAdditions)</Name>
+			<Path>Categories/NSArray+MTLHigherOrderAdditions.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>NSArray(MTLManipulationAdditions)</Name>
+			<Path>Categories/NSArray+MTLManipulationAdditions.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>NSDictionary(MTLHigherOrderAdditions)</Name>
+			<Path>Categories/NSDictionary+MTLHigherOrderAdditions.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>NSDictionary(MTLManipulationAdditions)</Name>
+			<Path>Categories/NSDictionary+MTLManipulationAdditions.html</Path>
+		</Node>
+		<Node id="7">
+			<Name>NSNotificationCenter(MTLWeakReferenceAdditions)</Name>
+			<Path>Categories/NSNotificationCenter+MTLWeakReferenceAdditions.html</Path>
+		</Node>
+		<Node id="8">
+			<Name>NSOrderedSet(MTLHigherOrderAdditions)</Name>
+			<Path>Categories/NSOrderedSet+MTLHigherOrderAdditions.html</Path>
+		</Node>
+		<Node id="9">
+			<Name>NSSet(MTLHigherOrderAdditions)</Name>
+			<Path>Categories/NSSet+MTLHigherOrderAdditions.html</Path>
+		</Node>
+		<Node id="10">
+			<Name>NSValueTransformer(MTLPredefinedTransformerAdditions)</Name>
+			<Path>Categories/NSValueTransformer+MTLPredefinedTransformerAdditions.html</Path>
+		</Node>
+		
+		
+	</Library>
+</DocSetNodes>

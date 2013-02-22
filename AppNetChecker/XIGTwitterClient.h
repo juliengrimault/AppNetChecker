@@ -20,4 +20,5 @@ OBJC_EXTERN NSString* const TwitterAPIBaseURL;
 @property (nonatomic, strong) XIGNSURLRequestBuilder* requestBuilder;
 
 - (RACSignal*)friendsId;
+- (RACSignal*)profilesForIds:(NSArray*)ids;
 @end

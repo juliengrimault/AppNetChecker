@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSOrderedSet+MTLHigherOrderAdditions.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSOrderedSet(MTLHigherOrderAdditions)</TokenIdentifier>
+			<Abstract type="html">Higher-order functions for NSOrderedSet.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_filterUsingBlock:</TokenIdentifier>
+			<Abstract type="html">Filters the objects of the receiver with the given predicate, returning a new
+ordered set built from those objects.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_filterUsingBlock:(BOOL ( ^ ) ( id obj ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A predicate block that determines whether to include or exclude
+a given object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_filterUsingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_filterWithOptions:usingBlock:</TokenIdentifier>
+			<Abstract type="html">Filters the objects of the receiver with the given predicate, according to
+the semantics of opts, returning a new ordered set built from those
+objects.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_filterWithOptions:(NSEnumerationOptions)opts usingBlock:(BOOL ( ^ ) ( id obj ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>opts</Name>
+					<Abstract type="html">A mask of NSEnumerationOptions to apply when filtering.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A predicate block that determines whether to include or exclude
+a given object.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_filterWithOptions:usingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_filterWithFailedObjects:usingBlock:</TokenIdentifier>
+			<Abstract type="html">Returns an ordered set of filtered objects for which block returns YES, and
+sets failedObjects to an ordered set of the objects for which block returned
+NO.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_filterWithFailedObjects:(NSOrderedSet **)failedObjects usingBlock:(BOOL ( ^ ) ( id obj ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>failedObjects</Name>
+					<Abstract type="html">If not NULL, this will be a collection of all the
+objects for which block returned NO. If no objects failed, this will be
+an empty ordered set.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A predicate with which to filter objects in the receiver. If
+this block returns YES, the object will be added to the returned
+collection. If this block returns NO, the object will be added to
+failedObjects.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_filterWithFailedObjects:usingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_filterWithOptions:failedObjects:usingBlock:</TokenIdentifier>
+			<Abstract type="html">Returns an ordered set of filtered objects for which block returns YES, and
+sets failedObjects to an ordered set of the objects for which block returned
+NO, applying opts while filtering.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_filterWithOptions:(NSEnumerationOptions)opts failedObjects:(NSOrderedSet **)failedObjects usingBlock:(BOOL ( ^ ) ( id obj ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>opts</Name>
+					<Abstract type="html">A mask of NSEnumerationOptions to apply when filtering.</Abstract>
+				</Parameter><Parameter>
+					<Name>failedObjects</Name>
+					<Abstract type="html">If not NULL, this will be a collection of all the
+objects for which block returned NO. If no objects failed, this will be
+an empty ordered set.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A predicate with which to filter objects in the receiver. If
+this block returns YES, the object will be added to the returned
+collection. If this block returns NO, the object will be added to
+failedObjects.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_filterWithOptions:failedObjects:usingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_foldLeftWithValue:usingBlock:</TokenIdentifier>
+			<Abstract type="html">Reduces the receiver to a single value from left to right, using the given
+block.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_foldLeftWithValue:(id)startingValue usingBlock:(id ( ^ ) ( id left , id right ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>startingValue</Name>
+					<Abstract type="html">The value to be combined with the first element of the
+receiver. If the receiver is empty, this is the value returned.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block that describes how to combine elements of the receiver.
+If the receiver is empty, this block will never be invoked.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_foldLeftWithValue:usingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_foldRightWithValue:usingBlock:</TokenIdentifier>
+			<Abstract type="html">Reduces the receiver to a single value from right to left, using the given
+block.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_foldRightWithValue:(id)startingValue usingBlock:(id ( ^ ) ( id left , id right ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>startingValue</Name>
+					<Abstract type="html">The value to be combined with the last element of the
+receiver. If the receiver is empty, this is the value returned.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block that describes how to combine elements of the receiver.
+If the receiver is empty, this block will never be invoked.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_foldRightWithValue:usingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_mapUsingBlock:</TokenIdentifier>
+			<Abstract type="html">Transforms each object in the receiver with the given predicate, returning
+a new ordered set built from the resulting objects.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_mapUsingBlock:(id ( ^ ) ( id obj ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block with which to transform each element. The element from
+the receiver is passed in as the obj argument. Returning nil from this
+block will omit the entry from the resultant ordered set.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_mapUsingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_mapWithOptions:usingBlock:</TokenIdentifier>
+			<Abstract type="html">Transforms each object in the receiver with the given predicate, according to
+the semantics of opts, returning a new ordered set built from the resulting
+objects.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_mapWithOptions:(NSEnumerationOptions)opts usingBlock:(id ( ^ ) ( id obj ))block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>opts</Name>
+					<Abstract type="html">A mask of NSEnumerationOptions to apply when mapping.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A block with which to transform each element. The element from
+the receiver is passed in as the obj argument. Returning nil from this
+block will omit the entry from the resultant ordered set.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_mapWithOptions:usingBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_objectPassingTest:</TokenIdentifier>
+			<Abstract type="html">Returns the first object in the receiver that passes the given test, or nil
+if no such object exists.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_objectPassingTest:(BOOL ( ^ ) ( id obj , NSUInteger index , BOOL *stop ))predicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">The test to apply to each element in the receiver. This block
+should return whether the object passed the test.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_objectPassingTest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_objectWithOptions:passingTest:</TokenIdentifier>
+			<Abstract type="html">Returns the first object in the receiver that passes the given test, or nil
+if no such object exists.</Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (id)mtl_objectWithOptions:(NSEnumerationOptions)opts passingTest:(BOOL ( ^ ) ( id obj , NSUInteger index , BOOL *stop ))predicate</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>opts</Name>
+					<Abstract type="html">A mask of NSEnumerationOptions to apply when enumerating.</Abstract>
+				</Parameter><Parameter>
+					<Name>predicate</Name>
+					<Abstract type="html">The test to apply to each element in the receiver. This block
+should return whether the object passed the test.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/mtl_objectWithOptions:passingTest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(MTLHigherOrderAdditions)/mtl_anyObjectPassingTest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSOrderedSet+MTLHigherOrderAdditions.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)mtl_anyObjectPassingTest:(BOOL ( ^ ) ( id obj ))predicate</Declaration>
+			
+			
+			<Anchor>//api/name/mtl_anyObjectPassingTest:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

@@ -103,7 +103,7 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 - (id)initAsNullMock:(BOOL)nullMockFlag withName:(NSString *)aName forClass:(Class)aClass protocol:(Protocol *)aProtocol {
     if ((self = [super init])) {
         isNullMock = nullMockFlag;
-        name = [aName copy];
+        mockName = [aName copy];
         mockedClass = aClass;
         mockedProtocol = aProtocol;
         stubs = [[NSMutableArray alloc] init];
@@ -147,7 +147,7 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 }
 
 - (void)dealloc {
-    [name release];
+    [mockName release];
     [stubs release];
     [expectedMessagePatterns release];
     [messageSpies release];
@@ -158,7 +158,7 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 #pragma mark Properties
 
 @synthesize isNullMock;
-@synthesize name;
+@synthesize mockName;
 @synthesize mockedClass;
 @synthesize mockedProtocol;
 @synthesize stubs;
@@ -203,7 +203,7 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
     NSUInteger stubCount = [self.stubs count];
 
     for (NSUInteger i = 0; i < stubCount; ++i) {
-        KWStub *stub = [self.stubs objectAtIndex:i];
+        KWStub *stub = (self.stubs)[i];
 
         if ([stub.messagePattern isEqualToMessagePattern:messagePattern]) {
             [self.stubs removeObjectAtIndex:i];
@@ -242,18 +242,18 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 }
 
 - (id)stub {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:StubTag forKey:ExpectOrStubTagKey];
+    NSDictionary *userInfo = @{ExpectOrStubTagKey: StubTag};
     return [KWInvocationCapturer invocationCapturerWithDelegate:self userInfo:userInfo];
 }
 
 - (id)stubAndReturn:(id)aValue {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:StubTag, ExpectOrStubTagKey,
-                                                                        aValue, StubValueKey, nil];
+    NSDictionary *userInfo = @{ExpectOrStubTagKey: StubTag,
+                                                                        StubValueKey: aValue};
     return [KWInvocationCapturer invocationCapturerWithDelegate:self userInfo:userInfo];
 }
 
 - (id)stubAndReturn:(id)aValue times:(id)times afterThatReturn:(id)aSecondValue {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys:StubTag, ExpectOrStubTagKey, aValue, StubValueKey, times, ChangeStubValueAfterTimesKey, aSecondValue, StubSecondValueKey, nil];
+    NSDictionary *userInfo = @{ExpectOrStubTagKey: StubTag, StubValueKey: aValue, ChangeStubValueAfterTimesKey: times, StubSecondValueKey: aSecondValue};
     return [KWInvocationCapturer invocationCapturerWithDelegate:self userInfo:userInfo];
 }
 
@@ -293,11 +293,11 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 
 - (void)addMessageSpy:(id<KWMessageSpying>)aSpy forMessagePattern:(KWMessagePattern *)aMessagePattern {
     [self expectMessagePattern:aMessagePattern];
-    NSMutableArray *messagePatternSpies = [self.messageSpies objectForKey:aMessagePattern];
+    NSMutableArray *messagePatternSpies = (self.messageSpies)[aMessagePattern];
 
     if (messagePatternSpies == nil) {
         messagePatternSpies = [[NSMutableArray alloc] init];
-        [self.messageSpies setObject:messagePatternSpies forKey:aMessagePattern];
+        (self.messageSpies)[aMessagePattern] = messagePatternSpies;
         [messagePatternSpies release];
     }
     NSValue *spyWrapper = [NSValue valueWithNonretainedObject:aSpy];
@@ -308,7 +308,7 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 
 - (void)removeMessageSpy:(id<KWMessageSpying>)aSpy forMessagePattern:(KWMessagePattern *)aMessagePattern {
     NSValue *spyWrapper = [NSValue valueWithNonretainedObject:aSpy];
-    NSMutableArray *messagePatternSpies = [self.messageSpies objectForKey:aMessagePattern];
+    NSMutableArray *messagePatternSpies = (self.messageSpies)[aMessagePattern];
     [messagePatternSpies removeObject:spyWrapper];
 }
 
@@ -328,7 +328,7 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 }
 
 - (id)expect {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:ExpectTag forKey:ExpectOrStubTagKey];
+    NSDictionary *userInfo = @{ExpectOrStubTagKey: ExpectTag};
     return [KWInvocationCapturer invocationCapturerWithDelegate:self userInfo:userInfo];
 }
 
@@ -346,14 +346,14 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 
 - (void)invocationCapturer:(KWInvocationCapturer *)anInvocationCapturer didCaptureInvocation:(NSInvocation *)anInvocation {
     KWMessagePattern *messagePattern = [KWMessagePattern messagePatternFromInvocation:anInvocation];
-    NSString *tag = [anInvocationCapturer.userInfo objectForKey:ExpectOrStubTagKey];
+    NSString *tag = (anInvocationCapturer.userInfo)[ExpectOrStubTagKey];
     if ([tag isEqualToString:StubTag]) {
-        id value = [anInvocationCapturer.userInfo objectForKey:StubValueKey];
-        if (![anInvocationCapturer.userInfo objectForKey:StubSecondValueKey]) {
+        id value = (anInvocationCapturer.userInfo)[StubValueKey];
+        if (!(anInvocationCapturer.userInfo)[StubSecondValueKey]) {
             [self stubMessagePattern:messagePattern andReturn:value];
         } else {
-            id times = [anInvocationCapturer.userInfo objectForKey:ChangeStubValueAfterTimesKey];
-            id secondValue = [anInvocationCapturer.userInfo objectForKey:StubSecondValueKey];
+            id times = (anInvocationCapturer.userInfo)[ChangeStubValueAfterTimesKey];
+            id secondValue = (anInvocationCapturer.userInfo)[StubSecondValueKey];
             [self stubMessagePattern:messagePattern andReturn:value times:times afterThatReturn:secondValue];
         }
     } else {
@@ -365,16 +365,16 @@ static NSString * const ChangeStubValueAfterTimesKey = @"ChangeStubValueAfterTim
 #pragma mark Handling Invocations
 
 - (NSString *)namePhrase {
-    if (self.name == nil)
+    if (self.mockName == nil)
         return @"mock";
     else
-        return [NSString stringWithFormat:@"mock \"%@\"", self.name];
+        return [NSString stringWithFormat:@"mock \"%@\"", self.mockName];
 }
 
 - (BOOL)processReceivedInvocation:(NSInvocation *)invocation {
     for (KWMessagePattern *messagePattern in self.messageSpies) {
         if ([messagePattern matchesInvocation:invocation]) {
-            NSArray *spies = [self.messageSpies objectForKey:messagePattern];
+            NSArray *spies = (self.messageSpies)[messagePattern];
 
             for (NSValue *spyWrapper in spies) {
                 id spy = [spyWrapper nonretainedObjectValue];

@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/julien/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.Mantle-0.2.3.docset
+Time: 2013-02-22 14:52:26 +0000

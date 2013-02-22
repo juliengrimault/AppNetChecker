@@ -1,0 +1,927 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>NSDictionary(MTLHigherOrderAdditions) Category Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Mantle 0.2.3 </a></h1>
+				<a id="developerHome" href="../index.html">GitHub</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">NSDictionary(MTLHigherOrderAdditions) Category Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/mtl_filterEntriesUsingBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_filterEntriesUsingBlock:</option>
+	
+	<option value="//api/name/mtl_filterEntriesWithFailedEntries:usingBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_filterEntriesWithFailedEntries:usingBlock:</option>
+	
+	<option value="//api/name/mtl_filterEntriesWithOptions:failedEntries:usingBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_filterEntriesWithOptions:failedEntries:usingBlock:</option>
+	
+	<option value="//api/name/mtl_filterEntriesWithOptions:usingBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_filterEntriesWithOptions:usingBlock:</option>
+	
+	<option value="//api/name/mtl_foldEntriesWithValue:usingBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_foldEntriesWithValue:usingBlock:</option>
+	
+	<option value="//api/name/mtl_keyOfEntryPassingTest:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_keyOfEntryPassingTest:</option>
+	
+	<option value="//api/name/mtl_keyOfEntryWithOptions:passingTest:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_keyOfEntryWithOptions:passingTest:</option>
+	
+	<option value="//api/name/mtl_mapValuesUsingBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_mapValuesUsingBlock:</option>
+	
+	<option value="//api/name/mtl_mapValuesWithOptions:usingBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- mtl_mapValuesWithOptions:usingBlock:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_filterEntriesUsingBlock:">mtl_filterEntriesUsingBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_filterEntriesWithFailedEntries:usingBlock:">mtl_filterEntriesWithFailedEntries:usingBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_filterEntriesWithOptions:failedEntries:usingBlock:">mtl_filterEntriesWithOptions:failedEntries:usingBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_filterEntriesWithOptions:usingBlock:">mtl_filterEntriesWithOptions:usingBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_foldEntriesWithValue:usingBlock:">mtl_foldEntriesWithValue:usingBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_keyOfEntryPassingTest:">mtl_keyOfEntryPassingTest:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_keyOfEntryWithOptions:passingTest:">mtl_keyOfEntryWithOptions:passingTest:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_mapValuesUsingBlock:">mtl_mapValuesUsingBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mtl_mapValuesWithOptions:usingBlock:">mtl_mapValuesWithOptions:usingBlock:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="NSDictionary(MTLHigherOrderAdditions) Category Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">NSDictionary(MTLHigherOrderAdditions) Category Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">NSDictionary+MTLHigherOrderAdditions.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Higher-order functions for <code>NSDictionary</code>.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_filterEntriesUsingBlock:">&ndash;&nbsp;mtl_filterEntriesUsingBlock:</a></code>
+		<span class="tooltip"><p>Filters the keys and values of the receiver with the given predicate,
+returning a new dictionary built from those entries.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_filterEntriesWithOptions:usingBlock:">&ndash;&nbsp;mtl_filterEntriesWithOptions:usingBlock:</a></code>
+		<span class="tooltip"><p>Filters the keys and values of the receiver with the given predicate,
+according to the semantics of <code>opts</code>, returning a new dictionary built from
+those entries.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_filterEntriesWithFailedEntries:usingBlock:">&ndash;&nbsp;mtl_filterEntriesWithFailedEntries:usingBlock:</a></code>
+		<span class="tooltip"><p>Returns an dictionary of filtered entries for which <code>block</code> returns <code>YES</code>,
+and sets <code>failedEntries</code> to a dictionary of the entries for which <code>block</code>
+returned <code>NO</code>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_filterEntriesWithOptions:failedEntries:usingBlock:">&ndash;&nbsp;mtl_filterEntriesWithOptions:failedEntries:usingBlock:</a></code>
+		<span class="tooltip"><p>Returns an dictionary of filtered entries for which <code>block</code> returns <code>YES</code>,
+and sets <code>failedEntries</code> to a dictionary of the entries for which <code>block</code>
+returned <code>NO</code>, applying <code>opts</code> while filtering.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_foldEntriesWithValue:usingBlock:">&ndash;&nbsp;mtl_foldEntriesWithValue:usingBlock:</a></code>
+		<span class="tooltip"><p>Reduces the receiver to a single value, using the given block.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_mapValuesUsingBlock:">&ndash;&nbsp;mtl_mapValuesUsingBlock:</a></code>
+		<span class="tooltip"><p>Transforms each value in the receiver with the given predicate, returning
+a new dictionary built from the original keys and the transformed values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_mapValuesWithOptions:usingBlock:">&ndash;&nbsp;mtl_mapValuesWithOptions:usingBlock:</a></code>
+		<span class="tooltip"><p>Transforms each value in the receiver with the given predicate, according to
+the semantics of <code>opts</code>, returning a new dictionary built from the original
+keys and transformed values.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_keyOfEntryPassingTest:">&ndash;&nbsp;mtl_keyOfEntryPassingTest:</a></code>
+		<span class="tooltip"><p>Returns the key of an entry in the receiver that passes the given test, or
+<code>nil</code> if no such entry exists.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mtl_keyOfEntryWithOptions:passingTest:">&ndash;&nbsp;mtl_keyOfEntryWithOptions:passingTest:</a></code>
+		<span class="tooltip"><p>Returns the key of an entry in the receiver that passes the given test, or
+<code>nil</code> if no such entry exists.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_filterEntriesUsingBlock:" title="mtl_filterEntriesUsingBlock:"></a>
+	<h3 class="subsubtitle method-title">mtl_filterEntriesUsingBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Filters the keys and values of the receiver with the given predicate,
+returning a new dictionary built from those entries.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)mtl_filterEntriesUsingBlock:(BOOL ( ^ ) ( id key , id value ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A predicate block that determines whether to include or exclude
+a given key-value pair.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Filters the keys and values of the receiver with the given predicate,
+returning a new dictionary built from those entries.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_filterEntriesWithFailedEntries:usingBlock:" title="mtl_filterEntriesWithFailedEntries:usingBlock:"></a>
+	<h3 class="subsubtitle method-title">mtl_filterEntriesWithFailedEntries:usingBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an dictionary of filtered entries for which <code>block</code> returns <code>YES</code>,
+and sets <code>failedEntries</code> to a dictionary of the entries for which <code>block</code>
+returned <code>NO</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)mtl_filterEntriesWithFailedEntries:(NSDictionary **)<em>failedEntries</em> usingBlock:(BOOL ( ^ ) ( id key , id value ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failedEntries</em></dt>
+			<dd><p>If not <code>NULL</code>, this will be a collection of all the
+entries for which <code>block</code> returned <code>NO</code>. If no entries failed, this will be
+an empty dictionary.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A predicate with which to filter key-value pairs in the
+receiver. If this block returns <code>YES</code>, the entry will be added to the
+returned collection. If this block returns <code>NO</code>, the object will be added to
+<code>failedEntries</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns an dictionary of filtered entries for which <code>block</code> returns <code>YES</code>,
+and sets <code>failedEntries</code> to a dictionary of the entries for which <code>block</code>
+returned <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_filterEntriesWithOptions:failedEntries:usingBlock:" title="mtl_filterEntriesWithOptions:failedEntries:usingBlock:"></a>
+	<h3 class="subsubtitle method-title">mtl_filterEntriesWithOptions:failedEntries:usingBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an dictionary of filtered entries for which <code>block</code> returns <code>YES</code>,
+and sets <code>failedEntries</code> to a dictionary of the entries for which <code>block</code>
+returned <code>NO</code>, applying <code>opts</code> while filtering.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)mtl_filterEntriesWithOptions:(NSEnumerationOptions)<em>opts</em> failedEntries:(NSDictionary **)<em>failedEntries</em> usingBlock:(BOOL ( ^ ) ( id key , id value ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>opts</em></dt>
+			<dd><p>A mask of <code>NSEnumerationOptions</code> to apply when filtering.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>failedEntries</em></dt>
+			<dd><p>If not <code>NULL</code>, this will be a collection of all the
+entries for which <code>block</code> returned <code>NO</code>. If no entries failed, this will be
+an empty dictionary.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A predicate with which to filter key-value pairs in the
+receiver. If this block returns <code>YES</code>, the entry will be added to the
+returned collection. If this block returns <code>NO</code>, the object will be added to
+<code>failedEntries</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns an dictionary of filtered entries for which <code>block</code> returns <code>YES</code>,
+and sets <code>failedEntries</code> to a dictionary of the entries for which <code>block</code>
+returned <code>NO</code>, applying <code>opts</code> while filtering.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_filterEntriesWithOptions:usingBlock:" title="mtl_filterEntriesWithOptions:usingBlock:"></a>
+	<h3 class="subsubtitle method-title">mtl_filterEntriesWithOptions:usingBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Filters the keys and values of the receiver with the given predicate,
+according to the semantics of <code>opts</code>, returning a new dictionary built from
+those entries.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)mtl_filterEntriesWithOptions:(NSEnumerationOptions)<em>opts</em> usingBlock:(BOOL ( ^ ) ( id key , id value ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>opts</em></dt>
+			<dd><p>A mask of <code>NSEnumerationOptions</code> to apply when filtering.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A predicate block that determines whether to include or exclude
+a given key-value pair.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Filters the keys and values of the receiver with the given predicate,
+according to the semantics of <code>opts</code>, returning a new dictionary built from
+those entries.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_foldEntriesWithValue:usingBlock:" title="mtl_foldEntriesWithValue:usingBlock:"></a>
+	<h3 class="subsubtitle method-title">mtl_foldEntriesWithValue:usingBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reduces the receiver to a single value, using the given block.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)mtl_foldEntriesWithValue:(id)<em>startingValue</em> usingBlock:(id ( ^ ) ( id left , id rightKey , id rightValue ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>startingValue</em></dt>
+			<dd><p>The value to be combined with the first entry of the
+receiver. If the receiver is empty, this is the value returned.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block that describes how to combine elements of the receiver.
+If the receiver is empty, this block will never be invoked.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reduces the receiver to a single value, using the given block.</p>
+
+<p>If the receiver is empty, <code>startingValue</code> is returned. Otherwise, the
+algorithm proceeds as follows:</p>
+
+<ol>
+<li><code>startingValue</code> is passed into the block as the <code>left</code> value, and the
+first key and value of the receiver are passed into the block as <code>rightKey</code>
+and <code>rightValue</code>, respectively.</li>
+<li>The result of the previous invocation is passed into the block as the
+<code>left</code> value, and the next key and value of the receiver are passed into the
+block as <code>rightKey</code> and <code>rightValue</code>, respectively.</li>
+<li>Step 2 is repeated until all elements have been processed.</li>
+<li>The result of the last call to <code>block</code> is returned.</li>
+</ol>
+<div class="warning"><p><strong>Warning:</strong> <strong>Important:</strong> Although this method is structured as a left fold,
+the algorithm used for <code>block</code> must work irrespective of the order that the
+dictionary&rsquo;s elements are processed, as dictionaries are unordered.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_keyOfEntryPassingTest:" title="mtl_keyOfEntryPassingTest:"></a>
+	<h3 class="subsubtitle method-title">mtl_keyOfEntryPassingTest:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the key of an entry in the receiver that passes the given test, or
+<code>nil</code> if no such entry exists.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)mtl_keyOfEntryPassingTest:(BOOL ( ^ ) ( id key , id obj , BOOL *stop ))<em>predicate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>predicate</em></dt>
+			<dd><p>The test to apply to each entry in the receiver. This block
+should return whether the entry passed the test.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the key of an entry in the receiver that passes the given test, or
+<code>nil</code> if no such entry exists.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_keyOfEntryWithOptions:passingTest:" title="mtl_keyOfEntryWithOptions:passingTest:"></a>
+	<h3 class="subsubtitle method-title">mtl_keyOfEntryWithOptions:passingTest:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the key of an entry in the receiver that passes the given test, or
+<code>nil</code> if no such entry exists.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)mtl_keyOfEntryWithOptions:(NSEnumerationOptions)<em>opts</em> passingTest:(BOOL ( ^ ) ( id key , id obj , BOOL *stop ))<em>predicate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>opts</em></dt>
+			<dd><p>A mask of <code>NSEnumerationOptions</code> to apply when enumerating.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>predicate</em></dt>
+			<dd><p>The test to apply to each entry in the receiver. This block
+should return whether the entry passed the test.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the key of an entry in the receiver that passes the given test, or
+<code>nil</code> if no such entry exists.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_mapValuesUsingBlock:" title="mtl_mapValuesUsingBlock:"></a>
+	<h3 class="subsubtitle method-title">mtl_mapValuesUsingBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Transforms each value in the receiver with the given predicate, returning
+a new dictionary built from the original keys and the transformed values.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)mtl_mapValuesUsingBlock:(id ( ^ ) ( id key , id value ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block with which to transform each value. The key and original
+value from the receiver are passed in as the arguments.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Transforms each value in the receiver with the given predicate, returning
+a new dictionary built from the original keys and the transformed values.</p><div class="warning"><p><strong>Warning:</strong> <strong>Important:</strong> It is permissible to return <code>nil</code> from <code>block</code>, but
+doing so will omit an entry from the resultant dictionary, such that the
+number of objects in the result is less than the number of objects in the
+receiver. If you need the dictionaries to match in size, ensure that the
+given block returns <code>NSNull</code> or <code>EXTNil</code> instead of <code>nil</code>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mtl_mapValuesWithOptions:usingBlock:" title="mtl_mapValuesWithOptions:usingBlock:"></a>
+	<h3 class="subsubtitle method-title">mtl_mapValuesWithOptions:usingBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Transforms each value in the receiver with the given predicate, according to
+the semantics of <code>opts</code>, returning a new dictionary built from the original
+keys and transformed values.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)mtl_mapValuesWithOptions:(NSEnumerationOptions)<em>opts</em> usingBlock:(id ( ^ ) ( id key , id value ))<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>opts</em></dt>
+			<dd><p>A mask of <code>NSEnumerationOptions</code> to apply when mapping.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>A block with which to transform each value. The key and original
+value from the receiver are passed in as the arguments.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Transforms each value in the receiver with the given predicate, according to
+the semantics of <code>opts</code>, returning a new dictionary built from the original
+keys and transformed values.</p><div class="warning"><p><strong>Warning:</strong> <strong>Important:</strong> It is permissible to return <code>nil</code> from <code>block</code>, but
+doing so will omit an entry from the resultant dictionary, such that the
+number of objects in the result is less than the number of objects in the
+receiver. If you need the dictionaries to match in size, ensure that the
+given block returns <code>NSNull</code> or <code>EXTNil</code> instead of <code>nil</code>.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+MTLHigherOrderAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 GitHub. All rights reserved. (Last updated: 2013-02-22)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

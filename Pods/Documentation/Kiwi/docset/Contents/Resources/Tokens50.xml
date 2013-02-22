@@ -210,25 +210,25 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/KWMock/setName:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/KWMock/setMockName:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>KWMock.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) NSString *name</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSString *mockName</Declaration>
 			
 			
-			<Anchor>//api/name/name</Anchor>
+			<Anchor>//api/name/mockName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/KWMock/name</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/KWMock/mockName</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>KWMock.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, readonly) NSString *name</Declaration>
+			<Declaration>@property (nonatomic, readonly) NSString *mockName</Declaration>
 			
 			
-			<Anchor>//api/name/name</Anchor>
+			<Anchor>//api/name/mockName</Anchor>
 		</Token>
 		
 		<Token>

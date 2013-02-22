@@ -1,47 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Protocols/KWContainmentCountMatcherTerminals.html">
+	<File path="Categories/NSValue+KiwiAdditions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intf/KWContainmentCountMatcherTerminals</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSValue(KiwiAdditions)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>KWHaveMatcher.h</DeclaredIn>
+			<DeclaredIn>NSValue+KiwiAdditions.h</DeclaredIn>
 			
 			<NodeRef refid="83"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/KWContainmentCountMatcherTerminals/objects</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSValue(KiwiAdditions)/dataValue</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>KWHaveMatcher.h</DeclaredIn>			
+			<DeclaredIn>NSValue+KiwiAdditions.h</DeclaredIn>			
 			
-			<Declaration>- (id)objects</Declaration>
-			
-			
-			<Anchor>//api/name/objects</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/KWContainmentCountMatcherTerminals/items</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>KWHaveMatcher.h</DeclaredIn>			
-			
-			<Declaration>- (id)items</Declaration>
+			<Declaration>- (NSData *)dataValue</Declaration>
 			
 			
-			<Anchor>//api/name/items</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/KWContainmentCountMatcherTerminals/elements</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>KWHaveMatcher.h</DeclaredIn>			
-			
-			<Declaration>- (id)elements</Declaration>
-			
-			
-			<Anchor>//api/name/elements</Anchor>
+			<Anchor>//api/name/dataValue</Anchor>
 		</Token>
 		
 	</File>
