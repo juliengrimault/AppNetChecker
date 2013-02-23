@@ -12,6 +12,9 @@
 #import "XIGNSURLRequestBuilder.h"
 #import <libextobjc/EXTScope.h>
 #import "XIGTwitterUser.h"
+#import "NSArray+JGSlice.h"
+
+static NSInteger const kDefaultMaxProfileFetchedPerRequest = 30;
 
 NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 @interface XIGTwitterClient () {
@@ -27,6 +30,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
     if (self) {
         self.parameterEncoding = AFJSONParameterEncoding;
         [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+        _maxProfileFetchedPerRequest = kDefaultMaxProfileFetchedPerRequest;
     }
     return self;
 }
@@ -134,11 +138,32 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 - (RACSignal*)profilesForIds:(NSArray*)ids
 {
     NSParameterAssert(self.account);
+    NSArray *slices = [ids sliceInChunkOfSize:self.maxProfileFetchedPerRequest];
+    __block NSInteger currentSlice = 0;
+    
+    return [[self _profilesForIds:slices[currentSlice]]
+            //map each next: to a new signal, should only receive 1
+            flattenMap:^RACStream *(NSArray *profiles) {
+                
+                //prepare the next request if needed
+                ++currentSlice;
+                RACSignal* nextProfiles = [RACSignal empty];
+                if (currentSlice < slices.count) {
+                    nextProfiles = [self _profilesForIds:slices[currentSlice]];
+                }
+                
+                //concatenate the result of this request with whatever comes from the next request
+                return [[RACSignal return:profiles] concat:nextProfiles];
+            }];
+}
+
+- (RACSignal*)_profilesForIds:(NSArray*)ids
+{
+    NSParameterAssert(ids.count <= self.maxProfileFetchedPerRequest);
     NSURL* url = [self profilesURL];
     NSURLRequest* request = [self.requestBuilder requestForURL:url parameters:@{ @"user_id" : [ids componentsJoinedByString:@","] }];
+    
     @weakify(self);
-    // Using this method instead of a subject ensures that we don't start the
-    // request until someone subscribes to the result.
     RACSignal* requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self);
         AFHTTPRequestOperation* operation = [self HTTPRequestOperationWithRequest:request
@@ -163,8 +188,6 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
         }];
     }];
     
-    // Kicks off this request only when subscribed to, and makes sure that
-    // a RACReplaySubject is used to buffer values.
     return [requestSignal replayLazily];
 }
 

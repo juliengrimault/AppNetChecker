@@ -18,6 +18,7 @@ OBJC_EXTERN NSString* const TwitterAPIBaseURL;
 
 @property (nonatomic, strong) ACAccount* account;
 @property (nonatomic, strong) XIGNSURLRequestBuilder* requestBuilder;
+@property (nonatomic) NSInteger maxProfileFetchedPerRequest;
 
 - (RACSignal*)friendsId;
 - (RACSignal*)profilesForIds:(NSArray*)ids;

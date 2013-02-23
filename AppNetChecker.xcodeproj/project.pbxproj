@@ -17,6 +17,8 @@
 		F90C201C16C8BC8600F29905 /* UIViewController+SLServiceHack.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */; };
 		F90C202016C8E09100F29905 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B555F16C79D4A005AD777 /* Social.framework */; };
 		F90C202316C8EF3100F29905 /* XIGAccountErrorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */; };
+		F951B82E16D8EA7E00BB4B32 /* XIGArraySliceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */; };
+		F951B83116D8EA9F00BB4B32 /* NSArray+JGSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */; };
 		F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
@@ -79,6 +81,9 @@
 		F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SLServiceHack.m"; sourceTree = "<group>"; };
 		F90C202116C8EF3100F29905 /* XIGAccountErrorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGAccountErrorCell.h; sourceTree = "<group>"; };
 		F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAccountErrorCell.m; sourceTree = "<group>"; };
+		F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGArraySliceSpec.m; sourceTree = "<group>"; };
+		F951B82F16D8EA9F00BB4B32 /* NSArray+JGSlice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JGSlice.h"; sourceTree = "<group>"; };
+		F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JGSlice.m"; sourceTree = "<group>"; };
 		F97B551216C7752A005AD777 /* AppNetChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B551516C7752A005AD777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F97B551716C7752A005AD777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -226,6 +231,8 @@
 				F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */,
 				F901A88816D7B91200F17C81 /* XIGTwitterUser.h */,
 				F901A88916D7B91200F17C81 /* XIGTwitterUser.m */,
+				F951B82F16D8EA9F00BB4B32 /* NSArray+JGSlice.h */,
+				F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 				F9D52EB716CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m */,
 				F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */,
 				F901A88B16D7B97F00F17C81 /* XIGTwitterUserSpec.m */,
+				F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */,
 			);
 			path = AppNetCheckerTests;
 			sourceTree = "<group>";
@@ -445,6 +453,7 @@
 				F9D52EBB16CA043700ABC885 /* XIGTwitterClient.m in Sources */,
 				F9BBFF6116CA77E300CEE372 /* XIGNSURLRequestBuilder.m in Sources */,
 				F901A88A16D7B91200F17C81 /* XIGTwitterUser.m in Sources */,
+				F951B83116D8EA9F00BB4B32 /* NSArray+JGSlice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +473,7 @@
 				F991A61916CB809C00BDB36F /* KWSpec+Fixture.m in Sources */,
 				F9C37F0B16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m in Sources */,
 				F901A88C16D7B97F00F17C81 /* XIGTwitterUserSpec.m in Sources */,
+				F951B82E16D8EA7E00BB4B32 /* XIGArraySliceSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
