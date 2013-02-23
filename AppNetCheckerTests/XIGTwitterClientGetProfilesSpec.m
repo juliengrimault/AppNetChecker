@@ -126,20 +126,45 @@ describe(@"Friends Profile Signal", ^{
                 withHeaders(@{@"Content-Type": @"application/json"}).
                 withBody([KWSpec stringFixtureInFile:@"lookup.json"]);
                 
-                profiles = [twitter profilesForIds:ids];
-                [profiles subscribeNext:^(id x) {
-                    receivedProfiles = x;
-                } error:^(NSError *error) {
-                    receivedError = error;
-                }];
             });
             
-            it(@"should send the ids received", ^{
-                [[expectFutureValue(receivedError) shouldEventually] beNil];
-                [[[expectFutureValue(receivedProfiles) shouldEventually] have:json.count] elements];
-                [receivedProfiles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                    [[obj should] beKindOfClass:[XIGTwitterUser class]];
-                }];
+            describe(@"requesting less than 1 page of profiles", ^{
+                beforeEach(^{
+                    profiles = [twitter profilesForIds:ids];
+                    [profiles subscribeNext:^(id x) {
+                        receivedProfiles = x;
+                    } error:^(NSError *error) {
+                        receivedError = error;
+                    }];
+                });
+                
+                it(@"should send the ids received", ^{
+                    [[expectFutureValue(receivedError) shouldEventually] beNil];
+                    [[[expectFutureValue(receivedProfiles) shouldEventually] have:json.count] elements];
+                    [receivedProfiles enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                        [[obj should] beKindOfClass:[XIGTwitterUser class]];
+                    }];
+                });
+            });
+            
+            describe(@"requesting more than 1 page of profiles ", ^{
+                __block NSInteger sendNextCount;
+                beforeEach(^{
+                    sendNextCount = 0;
+                    receivedProfiles = @[];
+                    
+                    profiles = [twitter profilesForIds:[ids arrayByAddingObjectsFromArray:ids]];
+                    [profiles subscribeNext:^(id x) {
+                        ++sendNextCount;
+                        receivedProfiles = [receivedProfiles arrayByAddingObjectsFromArray:x];
+                    } error:^(NSError *error) {
+                        receivedError = error;
+                    }];
+                });
+                
+                it(@"should receive the profiles split in 2 sendNext:", ^{
+                    [[@(sendNextCount) should] equal:@2];
+                });
             });
         });
     });

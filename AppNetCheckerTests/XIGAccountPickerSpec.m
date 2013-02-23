@@ -47,7 +47,7 @@ context(@"view is loaded", ^{
     });
     
     it(@"should start retrieving the accounts", ^{
-        [[vc.reactiveTwitter should] receive:@selector(twitterAccount)];
+        [[[vc.reactiveTwitter should] receive] twitterAccounts];
         [vc view];
     });
 });
@@ -63,7 +63,7 @@ context(@"Getting Twitter accounts", ^{
         RACSignal* signal = [RACSignal return:accounts];
         
         beforeEach(^{
-            [[fakeTwitter should] receive:@selector(twitterAccount) andReturn:signal];
+            [[fakeTwitter should] receive:@selector(twitterAccounts) andReturn:signal];
             [vc view];
         });
         
@@ -88,7 +88,7 @@ context(@"Getting Twitter accounts", ^{
         NSError* error = [NSError errorWithDomain:@"Test" code:123123 userInfo:nil];
         beforeEach(^{
             RACSignal* signal = [RACSignal error:error];
-            [[fakeTwitter should] receive:@selector(twitterAccount) andReturn:signal];
+            [[fakeTwitter should] receive:@selector(twitterAccounts) andReturn:signal];
             [vc view];
         });
         
