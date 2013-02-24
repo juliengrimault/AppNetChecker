@@ -19,6 +19,10 @@
 		F90C202316C8EF3100F29905 /* XIGAccountErrorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */; };
 		F951B82E16D8EA7E00BB4B32 /* XIGArraySliceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */; };
 		F951B83116D8EA9F00BB4B32 /* NSArray+JGSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */; };
+		F951B83316D9E99800BB4B32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83216D9E99800BB4B32 /* SystemConfiguration.framework */; };
+		F951B83416D9E9A700BB4B32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83216D9E99800BB4B32 /* SystemConfiguration.framework */; };
+		F951B83616D9E9C600BB4B32 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83516D9E9C600BB4B32 /* MobileCoreServices.framework */; };
+		F951B83716D9E9D100BB4B32 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83516D9E9C600BB4B32 /* MobileCoreServices.framework */; };
 		F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
@@ -84,6 +88,8 @@
 		F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGArraySliceSpec.m; sourceTree = "<group>"; };
 		F951B82F16D8EA9F00BB4B32 /* NSArray+JGSlice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JGSlice.h"; sourceTree = "<group>"; };
 		F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JGSlice.m"; sourceTree = "<group>"; };
+		F951B83216D9E99800BB4B32 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F951B83516D9E9C600BB4B32 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F97B551216C7752A005AD777 /* AppNetChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B551516C7752A005AD777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F97B551716C7752A005AD777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F951B83616D9E9C600BB4B32 /* MobileCoreServices.framework in Frameworks */,
+				F951B83316D9E99800BB4B32 /* SystemConfiguration.framework in Frameworks */,
 				F90C201916C8BC4F00F29905 /* Social.framework in Frameworks */,
 				F97B555916C78046005AD777 /* Accounts.framework in Frameworks */,
 				F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */,
@@ -163,6 +171,8 @@
 				F97B553E16C7752A005AD777 /* UIKit.framework in Frameworks */,
 				F97B553F16C7752A005AD777 /* Foundation.framework in Frameworks */,
 				7E6E481E263742F9A0C55CB8 /* libPods-AppNetCheckerTests.a in Frameworks */,
+				F951B83416D9E9A700BB4B32 /* SystemConfiguration.framework in Frameworks */,
+				F951B83716D9E9D100BB4B32 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +203,8 @@
 		F97B551416C7752A005AD777 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F951B83516D9E9C600BB4B32 /* MobileCoreServices.framework */,
+				F951B83216D9E99800BB4B32 /* SystemConfiguration.framework */,
 				F982C4CE16D0C3AD00B7B9A3 /* CFNetwork.framework */,
 				F97B555F16C79D4A005AD777 /* Social.framework */,
 				F97B555716C78034005AD777 /* Accounts.framework */,
