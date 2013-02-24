@@ -1,0 +1,7 @@
+{
+    "ids": [1, 2, 3, 4],
+    "next_cursor": 5,
+    "next_cursor_str": "4",
+    "previous_cursor": 0,
+    "previous_cursor_str": "0"
+}

@@ -23,6 +23,19 @@
 		F951B83416D9E9A700BB4B32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83216D9E99800BB4B32 /* SystemConfiguration.framework */; };
 		F951B83616D9E9C600BB4B32 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83516D9E9C600BB4B32 /* MobileCoreServices.framework */; };
 		F951B83716D9E9D100BB4B32 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83516D9E9C600BB4B32 /* MobileCoreServices.framework */; };
+		F951B83916D9EA3600BB4B32 /* XIGTwitterUserCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B83816D9EA3600BB4B32 /* XIGTwitterUserCellSpec.m */; };
+		F951B83C16D9EA5400BB4B32 /* XIGTwitterUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B83B16D9EA5400BB4B32 /* XIGTwitterUserCell.m */; };
+		F951B83F16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B83E16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m */; };
+		F951B84116D9ED0600BB4B32 /* XIGTwitterUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */; };
+		F951B84316D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B84216D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m */; };
+		F951B84616D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */; };
+		F951B84816D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B84716D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m */; };
+		F951B84C16D9FD7B00BB4B32 /* friendsIdPage1.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B84B16D9FD7B00BB4B32 /* friendsIdPage1.json */; };
+		F951B84E16D9FD9D00BB4B32 /* friendsIdPage2.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B84D16D9FD9D00BB4B32 /* friendsIdPage2.json */; };
+		F951B85016D9FE4100BB4B32 /* lookup12.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B84F16D9FE4100BB4B32 /* lookup12.json */; };
+		F951B85216D9FEE400BB4B32 /* lookup34.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B85116D9FEE400BB4B32 /* lookup34.json */; };
+		F951B85416D9FF1C00BB4B32 /* lookup56.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B85316D9FF1B00BB4B32 /* lookup56.json */; };
+		F951B85616D9FF4800BB4B32 /* lookup7.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B85516D9FF4800BB4B32 /* lookup7.json */; };
 		F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
@@ -90,6 +103,22 @@
 		F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JGSlice.m"; sourceTree = "<group>"; };
 		F951B83216D9E99800BB4B32 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F951B83516D9E9C600BB4B32 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F951B83816D9EA3600BB4B32 /* XIGTwitterUserCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUserCellSpec.m; sourceTree = "<group>"; };
+		F951B83A16D9EA5400BB4B32 /* XIGTwitterUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterUserCell.h; sourceTree = "<group>"; };
+		F951B83B16D9EA5400BB4B32 /* XIGTwitterUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUserCell.m; sourceTree = "<group>"; };
+		F951B83D16D9ECA800BB4B32 /* UIView+JGLoadFromNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JGLoadFromNib.h"; sourceTree = "<group>"; };
+		F951B83E16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JGLoadFromNib.m"; sourceTree = "<group>"; };
+		F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGTwitterUserCell.xib; sourceTree = "<group>"; };
+		F951B84216D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUserTableViewControllerSpec.m; sourceTree = "<group>"; };
+		F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterUsersTableViewController.h; sourceTree = "<group>"; };
+		F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUsersTableViewController.m; sourceTree = "<group>"; };
+		F951B84716D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClientGetFriendsSpec.m; sourceTree = "<group>"; };
+		F951B84B16D9FD7B00BB4B32 /* friendsIdPage1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsIdPage1.json; sourceTree = "<group>"; };
+		F951B84D16D9FD9D00BB4B32 /* friendsIdPage2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsIdPage2.json; sourceTree = "<group>"; };
+		F951B84F16D9FE4100BB4B32 /* lookup12.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lookup12.json; sourceTree = "<group>"; };
+		F951B85116D9FEE400BB4B32 /* lookup34.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lookup34.json; sourceTree = "<group>"; };
+		F951B85316D9FF1B00BB4B32 /* lookup56.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lookup56.json; sourceTree = "<group>"; };
+		F951B85516D9FF4800BB4B32 /* lookup7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lookup7.json; sourceTree = "<group>"; };
 		F97B551216C7752A005AD777 /* AppNetChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B551516C7752A005AD777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F97B551716C7752A005AD777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +208,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F951B84916D9FB9A00BB4B32 /* Twitter Client */ = {
+			isa = PBXGroup;
+			children = (
+				F991A61516CB802C00BDB36F /* friendsId.json */,
+				F901A88616D7B2EB00F17C81 /* lookup.json */,
+				F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */,
+				F901A88D16D7BAD900F17C81 /* twitterUser.json */,
+				F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */,
+				F9D52EB716CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m */,
+				F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */,
+				F951B84716D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m */,
+				F951B84B16D9FD7B00BB4B32 /* friendsIdPage1.json */,
+				F951B84D16D9FD9D00BB4B32 /* friendsIdPage2.json */,
+				F951B84F16D9FE4100BB4B32 /* lookup12.json */,
+				F951B85116D9FEE400BB4B32 /* lookup34.json */,
+				F951B85316D9FF1B00BB4B32 /* lookup56.json */,
+				F951B85516D9FF4800BB4B32 /* lookup7.json */,
+			);
+			name = "Twitter Client";
+			sourceTree = "<group>";
+		};
+		F951B84A16D9FBCA00BB4B32 /* Categories/Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F97B556F16C7ACB0005AD777 /* UIStoryboardSpec.m */,
+				F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */,
+			);
+			name = Categories/Helper;
+			sourceTree = "<group>";
+		};
 		F97B550916C7752A005AD777 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +280,8 @@
 		F97B551B16C7752A005AD777 /* AppNetChecker */ = {
 			isa = PBXGroup;
 			children = (
+				F951B83D16D9ECA800BB4B32 /* UIView+JGLoadFromNib.h */,
+				F951B83E16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m */,
 				F97B552416C7752A005AD777 /* XIGAppDelegate.h */,
 				F97B552516C7752A005AD777 /* XIGAppDelegate.m */,
 				F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */,
@@ -245,6 +306,11 @@
 				F901A88916D7B91200F17C81 /* XIGTwitterUser.m */,
 				F951B82F16D8EA9F00BB4B32 /* NSArray+JGSlice.h */,
 				F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */,
+				F951B83A16D9EA5400BB4B32 /* XIGTwitterUserCell.h */,
+				F951B83B16D9EA5400BB4B32 /* XIGTwitterUserCell.m */,
+				F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */,
+				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
+				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -266,25 +332,18 @@
 		F97B554216C7752A005AD777 /* AppNetCheckerTests */ = {
 			isa = PBXGroup;
 			children = (
-				F991A61716CB809C00BDB36F /* KWSpec+Fixture.h */,
-				F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */,
-				F991A61516CB802C00BDB36F /* friendsId.json */,
-				F901A88616D7B2EB00F17C81 /* lookup.json */,
-				F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */,
-				F901A88D16D7BAD900F17C81 /* twitterUser.json */,
+				F951B84A16D9FBCA00BB4B32 /* Categories/Helper */,
+				F951B84916D9FB9A00BB4B32 /* Twitter Client */,
 				F9BBFF6716CA7B3700CEE372 /* Spec Helpers */,
 				F97B554316C7752A005AD777 /* Supporting Files */,
 				F97B555C16C78F41005AD777 /* XIGTwitterAccountStoreSpec.m */,
 				F97B556D16C7AC5F005AD777 /* XIGAccountPickerSpec.m */,
-				F97B556F16C7ACB0005AD777 /* UIStoryboardSpec.m */,
 				F97B556216C7A469005AD777 /* FakeAccountStore.h */,
 				F97B556316C7A469005AD777 /* FakeAccountStore.m */,
 				F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */,
-				F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */,
-				F9D52EB716CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m */,
-				F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */,
 				F901A88B16D7B97F00F17C81 /* XIGTwitterUserSpec.m */,
-				F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */,
+				F951B83816D9EA3600BB4B32 /* XIGTwitterUserCellSpec.m */,
+				F951B84216D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m */,
 			);
 			path = AppNetCheckerTests;
 			sourceTree = "<group>";
@@ -301,6 +360,8 @@
 		F9BBFF6716CA7B3700CEE372 /* Spec Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F991A61716CB809C00BDB36F /* KWSpec+Fixture.h */,
+				F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */,
 				F9BBFF6416CA79D900CEE372 /* ACAccount+XIGTest.h */,
 				F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */,
 				F97B555E16C7917C005AD777 /* KiwiHack.h */,
@@ -389,6 +450,7 @@
 				F97B552A16C7752A005AD777 /* Default@2x.png in Resources */,
 				F97B552C16C7752A005AD777 /* Default-568h@2x.png in Resources */,
 				F97B552F16C7752A005AD777 /* MainStoryboard.storyboard in Resources */,
+				F951B84116D9ED0600BB4B32 /* XIGTwitterUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +463,12 @@
 				F991A61B16CBBF7B00BDB36F /* friendsIdWithNextPage.json in Resources */,
 				F901A88716D7B2EB00F17C81 /* lookup.json in Resources */,
 				F901A88E16D7BAD900F17C81 /* twitterUser.json in Resources */,
+				F951B84C16D9FD7B00BB4B32 /* friendsIdPage1.json in Resources */,
+				F951B84E16D9FD9D00BB4B32 /* friendsIdPage2.json in Resources */,
+				F951B85016D9FE4100BB4B32 /* lookup12.json in Resources */,
+				F951B85216D9FEE400BB4B32 /* lookup34.json in Resources */,
+				F951B85416D9FF1C00BB4B32 /* lookup56.json in Resources */,
+				F951B85616D9FF4800BB4B32 /* lookup7.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +534,9 @@
 				F9BBFF6116CA77E300CEE372 /* XIGNSURLRequestBuilder.m in Sources */,
 				F901A88A16D7B91200F17C81 /* XIGTwitterUser.m in Sources */,
 				F951B83116D8EA9F00BB4B32 /* NSArray+JGSlice.m in Sources */,
+				F951B83C16D9EA5400BB4B32 /* XIGTwitterUserCell.m in Sources */,
+				F951B83F16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m in Sources */,
+				F951B84616D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +557,9 @@
 				F9C37F0B16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m in Sources */,
 				F901A88C16D7B97F00F17C81 /* XIGTwitterUserSpec.m in Sources */,
 				F951B82E16D8EA7E00BB4B32 /* XIGArraySliceSpec.m in Sources */,
+				F951B83916D9EA3600BB4B32 /* XIGTwitterUserCellSpec.m in Sources */,
+				F951B84316D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m in Sources */,
+				F951B84816D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

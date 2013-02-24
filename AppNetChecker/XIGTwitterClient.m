@@ -24,7 +24,15 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 @end
 @implementation XIGTwitterClient
 
-- (id)init
++ (instancetype)sharedClient
+{
+    static dispatch_once_t once;
+    static XIGTwitterClient *__client;
+    dispatch_once(&once, ^ { __client = [[self alloc] init]; });
+    return __client;
+}
+
+- (instancetype)init
 {
     self = [super initWithBaseURL:[NSURL URLWithString:TwitterAPIBaseURL]];
     if (self) {
@@ -59,6 +67,18 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
     if (_account == account) return;
     _account = account;
     _requestBuilder.account = account;
+}
+
+#pragma mark - Friends
+- (RACSignal *)friends
+{
+    NSParameterAssert(self.account != nil);
+    @weakify(self);
+    return [[self friendsId]
+            flattenMap:^RACStream *(NSArray *ids) {
+                @strongify(self);
+                return [self profilesForIds:ids];
+            }];
 }
 
 #pragma mark - Friends id

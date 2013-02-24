@@ -11,15 +11,19 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <AFNetworking/AFNetworking.h>
 
-OBJC_EXTERN NSString* const TwitterAPIBaseURL;
+OBJC_EXTERN NSString *const TwitterAPIBaseURL;
 
 @class XIGNSURLRequestBuilder;
 @interface XIGTwitterClient : AFHTTPClient
 
-@property (nonatomic, strong) ACAccount* account;
-@property (nonatomic, strong) XIGNSURLRequestBuilder* requestBuilder;
+@property (nonatomic, strong) ACAccount *account;
+@property (nonatomic, strong) XIGNSURLRequestBuilder *requestBuilder;
 @property (nonatomic) NSInteger maxProfileFetchedPerRequest;
 
-- (RACSignal*)friendsId;
-- (RACSignal*)profilesForIds:(NSArray*)ids;
+
+- (RACSignal *)friends;
+- (RACSignal *)friendsId;
+- (RACSignal *)profilesForIds:(NSArray *)ids;
+
++ (instancetype)sharedClient;
 @end
