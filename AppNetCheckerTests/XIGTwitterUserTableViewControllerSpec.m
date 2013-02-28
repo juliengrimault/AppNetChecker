@@ -77,9 +77,35 @@ context(@"table view", ^{
     });
 });
 
-context(@"waiting for profile to come back", ^{
-    it(@"should show a loading indicator", ^{
+context(@"Toolbar", ^{
+    beforeEach(^{
+        mockSignal = [[RACSignal return:friends1] delay:0.5];
+        vc.twitterClient = [XIGTwitterClient mock];
+        [vc.twitterClient stub:@selector(friends) andReturn:mockSignal];
+        [vc view];
     });
+    
+    it(@"should have loading indicator outlet connected", ^{
+        [vc.activityIndicator shouldNotBeNil];
+    });
+    
+    it(@"should have an animating indicator", ^{
+        [[theValue([vc.activityIndicator isAnimating]) should] beTrue];
+    });
+    
+    it(@"should stop animating when the signal completes", ^{
+        [[expectFutureValue(@([vc.activityIndicator isAnimating])) shouldEventually] equal:@NO];
+    });
+    
+    it(@"should show the friends count", ^{
+        [vc.friendsCountLabel shouldNotBeNil];
+    });
+    
+    it(@"should show the friends count", ^{
+        NSString* expectedText = [NSString stringWithFormat:@"%d friends", friends1.count];
+        [[expectFutureValue(vc.friendsCountLabel.text) shouldEventually] equal:expectedText];
+    });
+    
 });
 
 SPEC_END

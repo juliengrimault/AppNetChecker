@@ -11,8 +11,11 @@
 
 @interface XIGTwitterUsersTableViewController : UITableViewController
 
+@property (nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, readonly) UILabel *friendsCountLabel;
+
 //lazyly loaded
 @property (nonatomic, strong) XIGTwitterClient *twitterClient;
-@property (nonatomic, readonly) NSArray* friends;
+@property (nonatomic, readonly) NSArray *friends;
 
 @end

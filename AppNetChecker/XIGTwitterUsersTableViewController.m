@@ -31,19 +31,23 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     return [self.mutableFriends copy];
 }
 
-- (NSMutableArray*)mutableFriends
+- (UIActivityIndicatorView *)activityIndicator
 {
-    if (!_mutableFriends) {
-        _mutableFriends = [[NSMutableArray alloc] init];
-    }
-    return _mutableFriends;
+    return (UIActivityIndicatorView *)[self.toolbarItems[0] customView];
+}
+
+- (UILabel *)friendsCountLabel
+{
+    return (UILabel *)[self.toolbarItems[1] customView];
 }
 
 #pragma mark - Life cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.mutableFriends = [NSMutableArray array];
     [self registerTableViewCell];
+    [self configureToolBar];
     [self fetchFriends];
 }
 
@@ -51,6 +55,18 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 {
     UINib *nib = [UINib nibWithNibName:@"XIGTwitterUserCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:CellIdentifier];
+}
+
+- (void)configureToolBar
+{
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [indicator startAnimating];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:indicator];
+    
+    UILabel *friendsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
+    friendsCountLabel.backgroundColor = [UIColor clearColor];
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:friendsCountLabel];
+    self.toolbarItems = @[item, item2];
 }
 
 - (void)fetchFriends
@@ -67,6 +83,13 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
         }
         [self.mutableFriends addObjectsFromArray:nextFriends];
         [self.tableView insertRowsAtIndexPaths:insertedIndexPath withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        self.friendsCountLabel.text = [NSString localizedStringWithFormat:@"%d friends", self.mutableFriends.count];
+    } completed:^{
+        @strongify(self);
+        [self.activityIndicator stopAnimating];
+        NSArray *newToolBarItems = @[self.toolbarItems[1]];
+        [self setToolbarItems:newToolBarItems animated:YES];
     }];
 }
 
