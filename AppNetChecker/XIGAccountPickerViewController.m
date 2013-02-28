@@ -11,6 +11,8 @@
 #import <libextobjc/EXTKeyPathCoding.h>
 #import "UIViewController+SLServiceHack.h"
 #import "XIGAccountErrorCell.h"
+#import "XIGTwitterUsersTableViewController.h"
+#import "XIGTwitterClient.h"
 
 @interface XIGAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
@@ -127,6 +129,20 @@
 {
     self.error = nil;
     [self retrieveTwitterAccounts];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"PushUsersTableViewController"]) {
+        XIGTwitterUsersTableViewController* vc = segue.destinationViewController;
+        
+        NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        if (selectedIndexPath) {
+            ACAccount* selectedAccount = self.accounts[selectedIndexPath.row];
+            vc.twitterClient = [XIGTwitterClient sharedClient];
+            vc.twitterClient.account = selectedAccount;
+        }
+    }
 }
 
 @end

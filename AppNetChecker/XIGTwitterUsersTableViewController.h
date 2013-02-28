@@ -13,5 +13,6 @@
 
 //lazyly loaded
 @property (nonatomic, strong) XIGTwitterClient *twitterClient;
+@property (nonatomic, readonly) NSArray* friends;
 
 @end

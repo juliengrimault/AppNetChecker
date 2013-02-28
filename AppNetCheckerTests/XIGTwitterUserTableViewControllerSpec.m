@@ -2,12 +2,24 @@
 #import "XIGTwitterUsersTableViewController.h"
 #import "UIStoryboard+AppNetChecker.h"
 #import "XIGTwitterClient.h"
+#import "XIGTwitterUser+XIGTest.h"
+#import "XIGTwitterUserCell.h"
 
 SPEC_BEGIN(XIGTwitterUserTableViewControllerSpec)
 __block XIGTwitterUsersTableViewController* vc;
-
+__block RACSignal* mockSignal;
+__block NSArray* friends1;
+__block NSArray* friends2;
 beforeEach(^{
     vc = [[UIStoryboard mainStoryboard] instantiateViewControllerOfClass:[XIGTwitterUsersTableViewController class]];
+    
+    friends1 = [XIGTwitterUser testUsers:NSMakeRange(0, 5)];
+    friends2 = [XIGTwitterUser testUsers:NSMakeRange(5, 5)];
+});
+
+afterEach(^{
+    vc = nil;
+    mockSignal = nil;
 });
 
 it(@"should load properly", ^{
@@ -20,14 +32,53 @@ it(@"should load twitter client lazyly", ^{
     [client shouldNotBeNil];
 });
 
-context(@"view is loaded", ^{
+context(@"loading friends", ^{
+    
     beforeEach(^{
+        mockSignal = [[RACSignal return:friends1] concat:[[RACSignal return:friends2] delay:.3]];
         vc.twitterClient = [XIGTwitterClient mock];
+        [vc.twitterClient stub:@selector(friends) andReturn:mockSignal];
     });
     
     it(@"should start retrieving the friends profiles", ^{
         [[[vc.twitterClient should] receive] friends];
         [vc view];
+    });
+
+    context(@"getting profiles back", ^{
+        it(@"should append the users received to the users array", ^{
+            [vc view];
+            [[expectFutureValue(vc.friends) shouldEventuallyBeforeTimingOutAfter(2)] haveCountOf:friends1.count + friends2.count];
+        });
+        
+        it(@"should have a number of rows equal to the sum of the profiles received", ^{
+            [vc view];
+            KWFutureObject* futureNumberOfRows = [KWFutureObject futureObjectWithBlock:^id{
+                return @([vc.tableView numberOfRowsInSection:0]);
+            }];
+            [[futureNumberOfRows shouldEventually] equal:@(friends1.count + friends2.count)];
+        });
+    });
+});
+
+context(@"table view", ^{
+    beforeEach(^{
+        mockSignal = [RACSignal return:friends1];
+        vc.twitterClient = [XIGTwitterClient mock];
+        [vc.twitterClient stub:@selector(friends) andReturn:mockSignal];
+    });
+    
+    it(@"should have cell of type XIGTwitterUserCell", ^{
+        [vc view];
+        [friends1 enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            UITableViewCell* cell = [vc tableView:vc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:idx inSection:0]];
+            [[cell should] beKindOfClass:[XIGTwitterUserCell class]];
+        }];
+    });
+});
+
+context(@"waiting for profile to come back", ^{
+    it(@"should show a loading indicator", ^{
     });
 });
 

@@ -4,6 +4,8 @@
 #import "XIGAccountPickerViewController.h"
 #import "UIViewController+SLServiceHack.h"
 #import "XIGAccountErrorCell.h"
+#import "XIGTwitterUsersTableViewController.h"
+#import "XIGTwitterClient.h"
 
 SPEC_BEGIN(XIGAccountPickerViewControllerSpec)
 
@@ -97,7 +99,6 @@ context(@"Getting Twitter accounts", ^{
             [[expectFutureValue(vc.error) shouldEventually] equal:error];
         });
     });
-
 });
 
 context(@"error binding to UI elements", ^{

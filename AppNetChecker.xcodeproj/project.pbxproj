@@ -72,6 +72,7 @@
 		F9D52EB816CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52EB716CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m */; };
 		F9D52EBB16CA043700ABC885 /* XIGTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */; };
 		F9D52ECB16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */; };
+		F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,8 @@
 		F9D52EBF16CA0C9E00ABC885 /* XIGTwitterClient+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterClient+Private.h"; sourceTree = "<group>"; };
 		F9D52EC916CA225700ABC885 /* NSObject+XIGKiwiMockAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XIGKiwiMockAddition.h"; sourceTree = "<group>"; };
 		F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XIGKiwiMockAddition.m"; sourceTree = "<group>"; };
+		F9FC0C6D16DCEABF00B45347 /* XIGTwitterUser+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterUser+XIGTest.h"; sourceTree = "<group>"; };
+		F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGTwitterUser+XIGTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +370,8 @@
 				F97B555E16C7917C005AD777 /* KiwiHack.h */,
 				F9D52EC916CA225700ABC885 /* NSObject+XIGKiwiMockAddition.h */,
 				F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */,
+				F9FC0C6D16DCEABF00B45347 /* XIGTwitterUser+XIGTest.h */,
+				F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */,
 			);
 			name = "Spec Helpers";
 			sourceTree = "<group>";
@@ -560,6 +565,7 @@
 				F951B83916D9EA3600BB4B32 /* XIGTwitterUserCellSpec.m in Sources */,
 				F951B84316D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m in Sources */,
 				F951B84816D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m in Sources */,
+				F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

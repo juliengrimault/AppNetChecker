@@ -65,13 +65,15 @@ describe(@"Friends Profile Signal", ^{
         it(@"should return a request signal", ^{
             [[[builder should] receive] requestForURL:[twitter profilesURL] parameters:any()];
             RACSignal* profiles = [twitter profilesForIds:ids];
+            [profiles subscribeNext:^(id x) {}];
             [profiles shouldNotBeNil];
         });
         
         it(@"should set the user_id looked up according to the input parameter", ^{
             NSDictionary* expected = @{ @"user_id" : [ids componentsJoinedByString:@","] };
             [[[builder should] receive] requestForURL:[twitter profilesURL] parameters:expected];
-            [twitter profilesForIds:ids];
+            RACSignal* profiles = [twitter profilesForIds:ids];
+            [profiles subscribeNext:^(id x) {}];
         });
         
         it(@"should enqueue the operation upon subscription to the signal", ^{

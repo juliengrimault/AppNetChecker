@@ -14,7 +14,7 @@
 #import "XIGTwitterUser.h"
 #import "NSArray+JGSlice.h"
 
-static NSInteger const kDefaultMaxProfileFetchedPerRequest = 30;
+static NSInteger const kDefaultMaxProfileFetchedPerRequest = 10;
 
 NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 @interface XIGTwitterClient () {
@@ -159,17 +159,21 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 {
     NSParameterAssert(self.account);
     NSArray *slices = [ids sliceInChunkOfSize:self.maxProfileFetchedPerRequest];
-    __block NSInteger currentSlice = 0;
-    
-    return [[self _profilesForIds:slices[currentSlice]]
+    return [self enqueueRequestForChunk:slices atIndex:0];
+}
+
+- (RACSignal*)enqueueRequestForChunk:(NSArray*)slices atIndex:(NSInteger)idx
+{
+    @weakify(self);
+    return [[self _profilesForIds:slices[idx]]
             //map each next: to a new signal, should only receive 1
             flattenMap:^RACStream *(NSArray *profiles) {
-                
+                @strongify(self);
                 //prepare the next request if needed
-                ++currentSlice;
                 RACSignal* nextProfiles = [RACSignal empty];
-                if (currentSlice < slices.count) {
-                    nextProfiles = [self _profilesForIds:slices[currentSlice]];
+                NSInteger nextIdx = idx + 1;
+                if (nextIdx < slices.count) {
+                    nextProfiles = [self enqueueRequestForChunk:slices atIndex:nextIdx];
                 }
                 
                 //concatenate the result of this request with whatever comes from the next request
@@ -180,18 +184,18 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 - (RACSignal*)_profilesForIds:(NSArray*)ids
 {
     NSParameterAssert(ids.count <= self.maxProfileFetchedPerRequest);
-    NSURL* url = [self profilesURL];
-    NSURLRequest* request = [self.requestBuilder requestForURL:url parameters:@{ @"user_id" : [ids componentsJoinedByString:@","] }];
-    
     @weakify(self);
     RACSignal* requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self);
+        NSURL* url = [self profilesURL];
+        NSURLRequest* request = [self.requestBuilder requestForURL:url parameters:@{ @"user_id" : [ids componentsJoinedByString:@","] }];
         AFHTTPRequestOperation* operation = [self HTTPRequestOperationWithRequest:request
                                                                           success:
                                              ^(AFHTTPRequestOperation *operation, id json)
                                              {
                                                  NSArray *users = [json mtl_mapUsingBlock:^id(NSDictionary* userJSON) {
-                                                     return [[XIGTwitterUser alloc] initWithExternalRepresentation:userJSON];
+                                                     XIGTwitterUser* user = [[XIGTwitterUser alloc] initWithExternalRepresentation:userJSON];
+                                                     return user;
                                                  }];
                                                  [subscriber sendNext:users];
                                                  [subscriber sendCompleted];
