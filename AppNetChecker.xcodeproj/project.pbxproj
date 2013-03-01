@@ -72,6 +72,10 @@
 		F9D52EB816CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52EB716CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m */; };
 		F9D52EBB16CA043700ABC885 /* XIGTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */; };
 		F9D52ECB16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */; };
+		F9D5E94216E0F11E00839FE5 /* XIGAppNetClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D5E94116E0F11E00839FE5 /* XIGAppNetClientSpec.m */; };
+		F9D5E94516E0F14B00839FE5 /* XIGAppNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */; };
+		F9D5E94C16E0FCA600839FE5 /* app.net.doesnotexist.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9D5E94A16E0FCA600839FE5 /* app.net.doesnotexist.txt */; };
+		F9D5E94D16E0FCA600839FE5 /* app.net.matt.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */; };
 		F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +175,11 @@
 		F9D52EBF16CA0C9E00ABC885 /* XIGTwitterClient+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterClient+Private.h"; sourceTree = "<group>"; };
 		F9D52EC916CA225700ABC885 /* NSObject+XIGKiwiMockAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XIGKiwiMockAddition.h"; sourceTree = "<group>"; };
 		F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XIGKiwiMockAddition.m"; sourceTree = "<group>"; };
+		F9D5E94116E0F11E00839FE5 /* XIGAppNetClientSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetClientSpec.m; sourceTree = "<group>"; };
+		F9D5E94316E0F14B00839FE5 /* XIGAppNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGAppNetClient.h; sourceTree = "<group>"; };
+		F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetClient.m; sourceTree = "<group>"; };
+		F9D5E94A16E0FCA600839FE5 /* app.net.doesnotexist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.net.doesnotexist.txt; sourceTree = "<group>"; };
+		F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.net.matt.txt; sourceTree = "<group>"; };
 		F9FC0C6D16DCEABF00B45347 /* XIGTwitterUser+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterUser+XIGTest.h"; sourceTree = "<group>"; };
 		F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGTwitterUser+XIGTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +323,8 @@
 				F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */,
 				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
 				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
+				F9D5E94316E0F14B00839FE5 /* XIGAppNetClient.h */,
+				F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -347,6 +358,9 @@
 				F901A88B16D7B97F00F17C81 /* XIGTwitterUserSpec.m */,
 				F951B83816D9EA3600BB4B32 /* XIGTwitterUserCellSpec.m */,
 				F951B84216D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m */,
+				F9D5E94116E0F11E00839FE5 /* XIGAppNetClientSpec.m */,
+				F9D5E94A16E0FCA600839FE5 /* app.net.doesnotexist.txt */,
+				F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */,
 			);
 			path = AppNetCheckerTests;
 			sourceTree = "<group>";
@@ -474,6 +488,8 @@
 				F951B85216D9FEE400BB4B32 /* lookup34.json in Resources */,
 				F951B85416D9FF1C00BB4B32 /* lookup56.json in Resources */,
 				F951B85616D9FF4800BB4B32 /* lookup7.json in Resources */,
+				F9D5E94C16E0FCA600839FE5 /* app.net.doesnotexist.txt in Resources */,
+				F9D5E94D16E0FCA600839FE5 /* app.net.matt.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +558,7 @@
 				F951B83C16D9EA5400BB4B32 /* XIGTwitterUserCell.m in Sources */,
 				F951B83F16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m in Sources */,
 				F951B84616D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m in Sources */,
+				F9D5E94516E0F14B00839FE5 /* XIGAppNetClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +583,7 @@
 				F951B84316D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m in Sources */,
 				F951B84816D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m in Sources */,
 				F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */,
+				F9D5E94216E0F11E00839FE5 /* XIGAppNetClientSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
