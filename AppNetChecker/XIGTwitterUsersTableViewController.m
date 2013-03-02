@@ -9,11 +9,14 @@
 #import "XIGTwitterUsersTableViewController.h"
 #import "XIGTwitterClient.h"
 #import "XIGTwitterUserCell.h"
+#import "XIGTwitterUser.h"
+#import "XIGAppNetClient.h"
+#import "XIGUserMatcher.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
 @interface XIGTwitterUsersTableViewController ()
-@property (nonatomic, strong) NSMutableArray* mutableFriends;
+@property (nonatomic, strong) NSMutableArray* userMatchers;
 @end
 
 @implementation XIGTwitterUsersTableViewController
@@ -26,26 +29,25 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     return _twitterClient;
 }
 
-- (NSArray*)friends
+- (XIGAppNetClient *)appNetClient
 {
-    return [self.mutableFriends copy];
+    if(!_appNetClient) {
+        _appNetClient = [XIGAppNetClient sharedClient];
+    }
+    return _appNetClient;
 }
 
-- (UIActivityIndicatorView *)activityIndicator
-{
-    return (UIActivityIndicatorView *)[self.toolbarItems[0] customView];
-}
 
-- (UILabel *)friendsCountLabel
+- (NSArray *)users
 {
-    return (UILabel *)[self.toolbarItems[1] customView];
+    return [self.userMatchers copy];
 }
 
 #pragma mark - Life cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.mutableFriends = [NSMutableArray array];
+    self.userMatchers = [NSMutableArray array];
     [self registerTableViewCell];
     [self configureToolBar];
     [self fetchFriends];
@@ -60,33 +62,35 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 - (void)configureToolBar
 {
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    _activityIndicator = indicator;
     [indicator startAnimating];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:indicator];
     
     UILabel *friendsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
     friendsCountLabel.backgroundColor = [UIColor clearColor];
+    _friendsCountLabel = friendsCountLabel;
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:friendsCountLabel];
     self.toolbarItems = @[item, item2];
 }
 
 - (void)fetchFriends
 {
-    RACSignal* friends = [self.twitterClient friends];
-    @weakify(self);
+    RACSignal* friends = [[self.twitterClient friends] deliverOn:[RACScheduler mainThreadScheduler]];
     [friends subscribeNext:^(NSArray* nextFriends) {
-        @strongify(self);
-        
         NSMutableArray* insertedIndexPath = [NSMutableArray arrayWithCapacity:nextFriends.count];
         for (int i = 0; i < nextFriends.count; ++i) {
-            NSIndexPath* path = [NSIndexPath indexPathForItem:i+self.mutableFriends.count  inSection:0];
+            NSIndexPath* path = [NSIndexPath indexPathForItem:i+self.userMatchers.count  inSection:0];
             [insertedIndexPath addObject:path];
         }
-        [self.mutableFriends addObjectsFromArray:nextFriends];
+        
+        NSArray* matchersToAdd = [nextFriends mtl_mapUsingBlock:^id(id obj) {
+            return [[XIGUserMatcher alloc] initWithTwitterUser:obj appNetClient:self.appNetClient];
+        }];
+        [self.userMatchers addObjectsFromArray:matchersToAdd];
         [self.tableView insertRowsAtIndexPaths:insertedIndexPath withRowAnimation:UITableViewRowAnimationAutomatic];
         
-        self.friendsCountLabel.text = [NSString localizedStringWithFormat:@"%d friends", self.mutableFriends.count];
+        self.friendsCountLabel.text = [NSString localizedStringWithFormat:@"%d friends", self.userMatchers.count];
     } completed:^{
-        @strongify(self);
         [self.activityIndicator stopAnimating];
         NSArray *newToolBarItems = @[self.toolbarItems[1]];
         [self setToolbarItems:newToolBarItems animated:YES];
@@ -107,14 +111,14 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.mutableFriends.count;
+    return self.userMatchers.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     XIGTwitterUserCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    XIGTwitterUser* user = self.mutableFriends[indexPath.row];
-    [cell bindUser:user];
+    XIGUserMatcher* userMatcher = self.userMatchers[indexPath.row];
+    [cell bindUserMatcher:userMatcher];
     return cell;
 }
 

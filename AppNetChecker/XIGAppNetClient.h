@@ -11,5 +11,7 @@
 
 @interface XIGAppNetClient : AFHTTPClient
 
-- (RACSignal *)isUsernameOnAppNet:(NSString *)username;
++(instancetype)sharedClient;
+
+- (RACSignal *)userWithScreenName:(NSString *)username;
 @end

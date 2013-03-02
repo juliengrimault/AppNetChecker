@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-@class XIGTwitterUser;
+@class XIGUserMatcher;
 @interface XIGTwitterUserCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *fullnameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIImageView *statusImageView;
 
-- (void)bindUser:(XIGTwitterUser *)user;
+- (void)bindUserMatcher:(XIGUserMatcher *)userMatcher;
 @end

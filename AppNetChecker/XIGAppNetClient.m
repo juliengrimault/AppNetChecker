@@ -7,15 +7,24 @@
 //
 
 #import "XIGAppNetClient.h"
+#import "XIGAppNetUser.h"
 
 @implementation XIGAppNetClient
+
++ (instancetype)sharedClient
+{
+    static dispatch_once_t once;
+    static XIGAppNetClient *client;
+    dispatch_once(&once, ^ { client = [[[self class] alloc] init]; });
+    return client;
+}
 
 - (id)init
 {
     return [self initWithBaseURL:[NSURL URLWithString:@"https://alpha.app.net"]];
 }
 
-- (RACSignal *)isUsernameOnAppNet:(NSString *)username
+- (RACSignal *)userWithScreenName:(NSString *)username
 {
     @weakify(self);
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -26,14 +35,16 @@
         AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                           success:
                                              ^(AFHTTPRequestOperation *operation, id responseObject) {
-                                                 [subscriber sendNext:@YES];
+                                                 XIGAppNetUser* user = [[XIGAppNetUser alloc] init];
+                                                 user.screenName = username;
+                                                 [subscriber sendNext:user];
                                                  [subscriber sendCompleted];
                                              }
                                                                           failure:
                                              ^(AFHTTPRequestOperation *operation, NSError *error) {
                                                  if (operation.response.statusCode == 404) {
                                                      //does not exist
-                                                     [subscriber sendNext:@NO];
+                                                     [subscriber sendNext:nil];
                                                      [subscriber sendCompleted];
                                                  } else {
                                                      [subscriber sendError:error];

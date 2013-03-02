@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.cocoapods.Nocilla-0.2</string>
+	<string>org.cocoapods.Nocilla-0.3</string>
 	<key>CFBundleName</key>
-	<string>Nocilla 0.2 Documentation</string>
+	<string>Nocilla 0.3 Documentation</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -18,7 +18,7 @@
 	<string>Stunning HTTP stubbing for iOS. Testing HTTP requests has never been easier.</string>
 	
 	<key>DocSetFeedName</key>
-	<string>Nocilla 0.2 Documentation</string>
+	<string>Nocilla 0.3 Documentation</string>
 	
 	<key>DocSetMinimumXcodeVersion</key>
 	<string>3.0</string>

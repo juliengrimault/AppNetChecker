@@ -17,15 +17,19 @@ PODS:
   - libextobjc/EXTScope (~> 0.2.5)
 - ReactiveCocoa/RACExtensions (0.17.1):
   - ReactiveCocoa/Core
-- libextobjc/EXTConcreteProtocol (0.2.5)
-- libextobjc/EXTKeyPathCoding (0.2.5)
-- libextobjc/EXTScope (0.2.5)
+- libextobjc/EXTConcreteProtocol (0.2.5):
+  - libextobjc/RuntimeExtensions
+- libextobjc/EXTKeyPathCoding (0.2.5):
+  - libextobjc/RuntimeExtensions
+- libextobjc/EXTScope (0.2.5):
+  - libextobjc/RuntimeExtensions
+- libextobjc/RuntimeExtensions (0.2.5)
 
 DEPENDENCIES:
 - AFNetworking (~> 1.1.0)
-- Kiwi (~> 2.0.2)
+- Kiwi (~> 2.0.5)
 - Mantle (~> 0.2.3)
-- Nocilla (~> 0.2)
+- Nocilla (= 0.2)
 - ReactiveCocoa (~> 0.17.1)
 
 SPEC CHECKSUMS:
@@ -35,9 +39,10 @@ SPEC CHECKSUMS:
   ReactiveCocoa: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
   ReactiveCocoa/Core: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
   ReactiveCocoa/RACExtensions: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
-  libextobjc/EXTConcreteProtocol: 4a286cdbe966b6685b20a0a1444188a104ed3f40
-  libextobjc/EXTKeyPathCoding: 4a286cdbe966b6685b20a0a1444188a104ed3f40
-  libextobjc/EXTScope: 4a286cdbe966b6685b20a0a1444188a104ed3f40
+  libextobjc/EXTConcreteProtocol: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  libextobjc/EXTKeyPathCoding: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  libextobjc/EXTScope: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
+  libextobjc/RuntimeExtensions: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
   Kiwi: 89ade77eb49c889178cb2779e02514a7b9b9449e
   Nocilla: f2bb30a66e09fb03426a084f095c5791d46e2e26
 

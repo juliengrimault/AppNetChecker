@@ -63,6 +63,11 @@
 		F991A61616CB802C00BDB36F /* friendsId.json in Resources */ = {isa = PBXBuildFile; fileRef = F991A61516CB802C00BDB36F /* friendsId.json */; };
 		F991A61916CB809C00BDB36F /* KWSpec+Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */; };
 		F991A61B16CBBF7B00BDB36F /* friendsIdWithNextPage.json in Resources */ = {isa = PBXBuildFile; fileRef = F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */; };
+		F9A4D0C816E1BC35005D3EE5 /* XIGAppNetUserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0C716E1BC35005D3EE5 /* XIGAppNetUserSpec.m */; };
+		F9A4D0CB16E1BC54005D3EE5 /* XIGAppNetUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */; };
+		F9A4D0CE16E1E497005D3EE5 /* XIGUserMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0CD16E1E497005D3EE5 /* XIGUserMatcher.m */; };
+		F9A4D0D116E1F3A1005D3EE5 /* invalid.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A4D0CF16E1F3A1005D3EE5 /* invalid.png */; };
+		F9A4D0D216E1F3A1005D3EE5 /* valid.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A4D0D016E1F3A1005D3EE5 /* valid.png */; };
 		F9ACF72616C8F99700539A23 /* XIGAccountErrorCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */; };
 		F9ACF72816C901FB00539A23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
 		F9BBFF6116CA77E300CEE372 /* XIGNSURLRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */; };
@@ -161,6 +166,13 @@
 		F991A61716CB809C00BDB36F /* KWSpec+Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KWSpec+Fixture.h"; sourceTree = "<group>"; };
 		F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KWSpec+Fixture.m"; sourceTree = "<group>"; };
 		F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsIdWithNextPage.json; sourceTree = "<group>"; };
+		F9A4D0C716E1BC35005D3EE5 /* XIGAppNetUserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetUserSpec.m; sourceTree = "<group>"; };
+		F9A4D0C916E1BC54005D3EE5 /* XIGAppNetUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGAppNetUser.h; sourceTree = "<group>"; };
+		F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetUser.m; sourceTree = "<group>"; };
+		F9A4D0CC16E1E497005D3EE5 /* XIGUserMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGUserMatcher.h; sourceTree = "<group>"; };
+		F9A4D0CD16E1E497005D3EE5 /* XIGUserMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGUserMatcher.m; sourceTree = "<group>"; };
+		F9A4D0CF16E1F3A1005D3EE5 /* invalid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invalid.png; sourceTree = "<group>"; };
+		F9A4D0D016E1F3A1005D3EE5 /* valid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valid.png; sourceTree = "<group>"; };
 		F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAccountErrorCellSpec.m; sourceTree = "<group>"; };
 		F9ACF72716C8FB8800539A23 /* XIGAccountError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XIGAccountError.h; sourceTree = "<group>"; };
 		F9BBFF5F16CA77E300CEE372 /* XIGNSURLRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGNSURLRequestBuilder.h; sourceTree = "<group>"; };
@@ -325,6 +337,12 @@
 				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
 				F9D5E94316E0F14B00839FE5 /* XIGAppNetClient.h */,
 				F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */,
+				F9A4D0C916E1BC54005D3EE5 /* XIGAppNetUser.h */,
+				F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */,
+				F9A4D0CC16E1E497005D3EE5 /* XIGUserMatcher.h */,
+				F9A4D0CD16E1E497005D3EE5 /* XIGUserMatcher.m */,
+				F9A4D0CF16E1F3A1005D3EE5 /* invalid.png */,
+				F9A4D0D016E1F3A1005D3EE5 /* valid.png */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -361,6 +379,7 @@
 				F9D5E94116E0F11E00839FE5 /* XIGAppNetClientSpec.m */,
 				F9D5E94A16E0FCA600839FE5 /* app.net.doesnotexist.txt */,
 				F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */,
+				F9A4D0C716E1BC35005D3EE5 /* XIGAppNetUserSpec.m */,
 			);
 			path = AppNetCheckerTests;
 			sourceTree = "<group>";
@@ -470,6 +489,8 @@
 				F97B552C16C7752A005AD777 /* Default-568h@2x.png in Resources */,
 				F97B552F16C7752A005AD777 /* MainStoryboard.storyboard in Resources */,
 				F951B84116D9ED0600BB4B32 /* XIGTwitterUserCell.xib in Resources */,
+				F9A4D0D116E1F3A1005D3EE5 /* invalid.png in Resources */,
+				F9A4D0D216E1F3A1005D3EE5 /* valid.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +580,8 @@
 				F951B83F16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m in Sources */,
 				F951B84616D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m in Sources */,
 				F9D5E94516E0F14B00839FE5 /* XIGAppNetClient.m in Sources */,
+				F9A4D0CB16E1BC54005D3EE5 /* XIGAppNetUser.m in Sources */,
+				F9A4D0CE16E1E497005D3EE5 /* XIGUserMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +607,7 @@
 				F951B84816D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m in Sources */,
 				F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */,
 				F9D5E94216E0F11E00839FE5 /* XIGAppNetClientSpec.m in Sources */,
+				F9A4D0C816E1BC35005D3EE5 /* XIGAppNetUserSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

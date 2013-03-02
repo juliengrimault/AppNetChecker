@@ -1,6 +1,7 @@
 #import "KiwiHack.h"
 #import "XIGAppNetClient.h"
 #import <Nocilla/Nocilla.h>
+#import "XIGAppNetUser.h"
 
 SPEC_BEGIN(XIGAppNetClientSpec)
 
@@ -24,7 +25,7 @@ context(@"checking User existance", ^{
     __block RACDisposable *disposable;
     
     beforeEach(^{
-        signal = [client isUsernameOnAppNet:@"julien"];
+        signal = [client userWithScreenName:@"julien"];
     });
     
     afterEach(^{
@@ -41,11 +42,11 @@ context(@"checking User existance", ^{
     });
     
     context(@"queerying app.net", ^{
-        __block NSNumber *receivedNext;
+        __block XIGAppNetUser *receivedUser;
         __block NSError *receivedError;
         
         beforeEach(^{
-            receivedNext = nil;
+            receivedUser = nil;
             receivedError = nil;
         });
         
@@ -55,16 +56,20 @@ context(@"checking User existance", ^{
                 stubRequest(@"GET", @"https://alpha.app.net/mattt").
                 andReturnRawResponse([NSData dataWithContentsOfFile:path]);
                 
-                signal = [client isUsernameOnAppNet:@"mattt"];
+                signal = [client userWithScreenName:@"mattt"];
                 disposable = [signal subscribeNext:^(id x) {
-                    receivedNext = x;
+                    receivedUser = x;
                 } error:^(NSError *error) {
                     receivedError = error;
                 }];
             });
             
-            it(@"should send YES", ^{
-                [[expectFutureValue(receivedNext) shouldEventually] equal:@YES];
+            it(@"should send a user back", ^{
+                [[expectFutureValue(receivedUser) shouldEventually] beNonNil];
+            });
+            
+            it(@"should send a user back", ^{
+                [[expectFutureValue(receivedUser.screenName) shouldEventually] equal:@"mattt"];
             });
             
             it(@"should have no error", ^{
@@ -78,16 +83,16 @@ context(@"checking User existance", ^{
                 stubRequest(@"GET", @"https://alpha.app.net/doesnotexist").
                 andReturnRawResponse([NSData dataWithContentsOfFile:path]);
                 
-                signal = [client isUsernameOnAppNet:@"doesnotexist"];
+                signal = [client userWithScreenName:@"doesnotexist"];
                 disposable = [signal subscribeNext:^(id x) {
-                    receivedNext = x;
+                    receivedUser = x;
                 } error:^(NSError *error) {
                     receivedError = error;
                 }];
             });
             
             it(@"should send YES", ^{
-                [[expectFutureValue(receivedNext) shouldEventually] equal:@NO];
+                [[expectFutureValue(receivedUser) shouldEventually] beNil];
             });
             
             it(@"should have no error", ^{
@@ -100,16 +105,16 @@ context(@"checking User existance", ^{
                 stubRequest(@"GET", @"https://alpha.app.net/doesnotexist").
                 andReturn(500);
                 
-                signal = [client isUsernameOnAppNet:@"whatever"];
+                signal = [client userWithScreenName:@"whatever"];
                 disposable = [signal subscribeNext:^(id x) {
-                    receivedNext = x;
+                    receivedUser = x;
                 } error:^(NSError *error) {
                     receivedError = error;
                 }];
             });
             
             it(@"should not send next", ^{
-                [[expectFutureValue(receivedNext) shouldEventually] beNil];
+                [[expectFutureValue(receivedUser) shouldEventually] beNil];
             });
             
             it(@"should have the error", ^{

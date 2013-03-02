@@ -1,6 +1,7 @@
 #import "KiwiHack.h"
 #import "XIGTwitterUser.h"
 #import "KWSpec+Fixture.h"
+#import "XIGAppNetUser.h"
 
 SPEC_BEGIN(XIGTwitterUserSpec)
 
@@ -27,6 +28,10 @@ describe(@"building a user from a dictionary", ^{
     
     it(@"should have the profile image URL set", ^{
         [[[user.profileImageURL absoluteString] should] equal:json[@"profile_image_url"]];
+    });
+    
+    it(@"should not have a associated AppNet user", ^{
+        [user.associatedAppNetUser shouldBeNil];
     });
 });
 SPEC_END

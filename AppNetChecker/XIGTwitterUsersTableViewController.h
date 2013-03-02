@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class XIGTwitterClient;
-
+@class XIGAppNetClient;
 @interface XIGTwitterUsersTableViewController : UITableViewController
 
 @property (nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
@@ -16,6 +16,7 @@
 
 //lazyly loaded
 @property (nonatomic, strong) XIGTwitterClient *twitterClient;
-@property (nonatomic, readonly) NSArray *friends;
+@property (nonatomic, strong) XIGAppNetClient *appNetClient;
+@property (nonatomic, readonly) NSArray *users;
 
 @end
