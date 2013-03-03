@@ -35,7 +35,7 @@
 
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher
 {
-    self.usernameLabel.text = userMatcher.twitterUser.screenName;
+    self.usernameLabel.text = [NSString stringWithFormat:@"@%@",userMatcher.twitterUser.screenName];
     self.fullnameLabel.text = userMatcher.twitterUser.name;
     [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL];
     
