@@ -12,11 +12,11 @@
 #import "XIGTwitterUser.h"
 #import "XIGAppNetClient.h"
 #import "XIGUserMatcher.h"
+#import "NSIndexPath+XIGRange.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
 @interface XIGTwitterUsersTableViewController ()
-@property (nonatomic, strong) NSMutableArray* userMatchers;
 @end
 
 @implementation XIGTwitterUsersTableViewController
@@ -37,10 +37,14 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     return _appNetClient;
 }
 
-
-- (NSArray *)users
+- (void)insertUserMatchers:(NSArray *)array atIndexes:(NSIndexSet *)indexes
 {
-    return [self.userMatchers copy];
+    [self.userMatchers insertObjects:array atIndexes:indexes];
+}
+
+- (void)removeUserMatchersAtIndexes:(NSIndexSet *)indexes
+{
+    [self.userMatchers removeObjectsAtIndexes:indexes];
 }
 
 #pragma mark - Life cycle
@@ -50,6 +54,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     self.userMatchers = [NSMutableArray array];
     [self registerTableViewCell];
     [self configureToolBar];
+    [self configureLabelsSignal];
     [self fetchFriends];
 }
 
@@ -70,29 +75,57 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     friendsCountLabel.backgroundColor = [UIColor clearColor];
     _friendsCountLabel = friendsCountLabel;
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:friendsCountLabel];
-    self.toolbarItems = @[item, item2];
+    
+    UILabel *friendsFoundCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
+    friendsFoundCountLabel.backgroundColor = [UIColor clearColor];
+    _friendsFoundCountLabel = friendsFoundCountLabel;
+    UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithCustomView:friendsFoundCountLabel];
+    
+    self.toolbarItems = @[item, item2,item4];
+}
+
+- (void)configureLabelsSignal
+{
+    RACSignal* userMatchers = RACAbleWithStart(self.userMatchers);
+    RAC(self.friendsCountLabel.text) = [userMatchers map:^id(NSArray* users) {
+            return [NSString localizedStringWithFormat:@"%d friends", users.count];
+    }];
+    
+    RACSignal *appNetUserCount = [userMatchers flattenMap:^RACStream *(id newUsers) {
+        NSArray *signals = [newUsers mtl_mapUsingBlock:^id(XIGUserMatcher *u) {
+            return u.appNetUser;
+        }];
+        return [[RACSignal combineLatest:signals] map:^id(RACTuple *tuple) {
+            NSArray *nonNilAppNetUsers = [[tuple allObjects] mtl_filterUsingBlock:^BOOL(id obj) {
+                return ![obj isEqual:[RACTupleNil tupleNil]];
+            }];
+            return @(nonNilAppNetUsers.count);
+        }];
+    }];
+    
+    RAC(self.friendsFoundCountLabel.text) = [appNetUserCount map:^id(NSNumber *count) {
+        return [NSString localizedStringWithFormat:@"%@ found.", count];
+    }];
 }
 
 - (void)fetchFriends
 {
     RACSignal* friends = [[self.twitterClient friends] deliverOn:[RACScheduler mainThreadScheduler]];
     [friends subscribeNext:^(NSArray* nextFriends) {
-        NSMutableArray* insertedIndexPath = [NSMutableArray arrayWithCapacity:nextFriends.count];
-        for (int i = 0; i < nextFriends.count; ++i) {
-            NSIndexPath* path = [NSIndexPath indexPathForItem:i+self.userMatchers.count  inSection:0];
-            [insertedIndexPath addObject:path];
-        }
-        
+        NSRange insertionRange = NSMakeRange(self.userMatchers.count, nextFriends.count);
+        NSIndexSet *insertionIndexes = [NSIndexSet indexSetWithIndexesInRange:insertionRange];
+
         NSArray* matchersToAdd = [nextFriends mtl_mapUsingBlock:^id(id obj) {
             return [[XIGUserMatcher alloc] initWithTwitterUser:obj appNetClient:self.appNetClient];
         }];
-        [self.userMatchers addObjectsFromArray:matchersToAdd];
-        [self.tableView insertRowsAtIndexPaths:insertedIndexPath withRowAnimation:UITableViewRowAnimationAutomatic];
+
+        [self insertUserMatchers:matchersToAdd atIndexes:insertionIndexes];//use this to trigger KVO notifications
         
-        self.friendsCountLabel.text = [NSString localizedStringWithFormat:@"%d friends", self.userMatchers.count];
+        NSArray* insertedIndexPaths = [NSIndexPath indexPathsInSection:0 range:insertionRange];
+        [self.tableView insertRowsAtIndexPaths:insertedIndexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     } completed:^{
         [self.activityIndicator stopAnimating];
-        NSArray *newToolBarItems = @[self.toolbarItems[1]];
+        NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
         [self setToolbarItems:newToolBarItems animated:YES];
     }];
 }

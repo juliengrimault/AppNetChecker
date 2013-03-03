@@ -13,27 +13,24 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface XIGTwitterUserCell()
-@property (nonatomic, strong) RACDisposable* disposable1;
-@property (nonatomic, strong) RACDisposable* disposable2;
-
+@property (nonatomic, strong) RACDisposable* disposable;
 @end
+
 @implementation XIGTwitterUserCell
 
 - (void)prepareForReuse
 {
     [super prepareForReuse];
     [self.profileImageView cancelImageRequestOperation];
-    self.imageView.hidden = YES;
+    self.statusImageView.hidden = YES;
     [self.activityIndicator startAnimating];
-    [self.disposable1 dispose];
-    [self.disposable2 dispose];
+    [self.disposable dispose];
 }
 
 - (void)dealloc
 {
     [self.profileImageView cancelImageRequestOperation];
-    [self.disposable1 dispose];
-    [self.disposable2 dispose];
+    [self.disposable dispose];
 }
 
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher
@@ -43,17 +40,11 @@
     [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL];
     
     @weakify(self);
-    self.disposable1 = [RACAbleWithStart(userMatcher, finishedCheckingAppNet) subscribeNext:^(id finished) {
+    self.disposable = [userMatcher.appNetUser subscribeNext:^(XIGAppNetUser *appNetUser) {
         @strongify(self);
-        if ([finished boolValue]) {
-            [self.activityIndicator stopAnimating];
-        }
-        self.statusImageView.hidden = ![finished boolValue];
-    }];
-    
-    self.disposable2 = [RACAbleWithStart(userMatcher, appNetUser) subscribeNext:^(id newuser) {
-        @strongify(self);
-        UIImage* image = newuser != nil ? [UIImage imageNamed:@"valid.png"] : [UIImage imageNamed:@"invalid.png"];
+        [self.activityIndicator stopAnimating];
+        self.statusImageView.hidden = NO;
+        UIImage* image = appNetUser != nil ? [UIImage imageNamed:@"valid.png"] : [UIImage imageNamed:@"invalid.png"];
         self.statusImageView.image = image;
     }];
 }

@@ -46,6 +46,7 @@ describe(@"loading from xib", ^{
     
     it(@"should have a status image view outlet",^{
         [cell.statusImageView shouldNotBeNil];
+        [[@(cell.statusImageView.hidden) should] equal:@YES];
     });
 });
 
@@ -90,8 +91,18 @@ describe(@"binding activity indicator", ^{
         [cell bindUserMatcher:matcher];
     });
     
+    afterEach(^{
+        [cell prepareForReuse];
+    });
+    
     it(@"should stop animating eventually", ^{
         [[expectFutureValue(@([cell.activityIndicator isAnimating])) shouldEventually] equal:@NO];
     });
+    
+    it(@"should show the status iamge", ^{
+        [[expectFutureValue(@(cell.statusImageView.hidden)) shouldEventually] equal:@NO];
+    });
+    
+    
 });
 SPEC_END

@@ -11,8 +11,7 @@
 #import "XIGAppNetClient.h"
 
 @interface XIGUserMatcher()
-@property (nonatomic, strong) XIGAppNetUser *appNetUser;
-@property (atomic) BOOL finishedCheckingAppNet; //atomic on purpose, the RACSignal might come back on another thread
+@property (nonatomic, strong) RACSignal *appNetUser;
 @end
 @implementation XIGUserMatcher
 
@@ -21,21 +20,9 @@
     self = [super init];
     if (self) {
         _twitterUser = twitterUser;
-        [self fetchAppNetUserWithClient:client];
+         self.appNetUser = [[client userWithScreenName:self.twitterUser.screenName] catchTo:[RACSignal return:nil]];
     }
     return self;
-}
-
-- (void)fetchAppNetUserWithClient:(XIGAppNetClient *)client
-{
-    @weakify(self);
-    [[[client userWithScreenName:self.twitterUser.screenName] catchTo:[RACSignal return:nil]] subscribeNext:^(id x) {
-        @strongify(self);
-        self.appNetUser = x;
-    } completed:^{
-        @strongify(self);
-        self.finishedCheckingAppNet = YES;
-    }];
 }
 
 

@@ -94,7 +94,7 @@
 								<string key="NSFrame">{{64, 34}, {236, 22}}</string>
 								<reference key="NSSuperview" ref="507339851"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="958652409"/>
+								<reference key="NSNextKeyView" ref="451163132"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -118,25 +118,24 @@
 								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
-							<object class="IBUIImageView" id="958652409">
+							<object class="IBUIImageView" id="451163132">
 								<reference key="NSNextResponder" ref="507339851"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">-2147483356</int>
 								<string key="NSFrame">{{235, 3}, {60, 60}}</string>
 								<reference key="NSSuperview" ref="507339851"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="525817922"/>
+								<reference key="NSNextKeyView" ref="442121825"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
-							<object class="IBUIActivityIndicatorView" id="525817922">
+							<object class="IBUIActivityIndicatorView" id="442121825">
 								<reference key="NSNextResponder" ref="507339851"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{247, 14}, {37, 37}}</string>
 								<reference key="NSSuperview" ref="507339851"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -206,7 +205,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">activityIndicator</string>
 						<reference key="source" ref="1041484335"/>
-						<reference key="destination" ref="525817922"/>
+						<reference key="destination" ref="442121825"/>
 					</object>
 					<int key="connectionID">14</int>
 				</object>
@@ -214,7 +213,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">statusImageView</string>
 						<reference key="source" ref="1041484335"/>
-						<reference key="destination" ref="958652409"/>
+						<reference key="destination" ref="451163132"/>
 					</object>
 					<int key="connectionID">16</int>
 				</object>
@@ -245,8 +244,8 @@
 							<reference ref="373451149"/>
 							<reference ref="628924670"/>
 							<reference ref="216430099"/>
-							<reference ref="525817922"/>
-							<reference ref="958652409"/>
+							<reference ref="442121825"/>
+							<reference ref="451163132"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -268,12 +267,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
-						<reference key="object" ref="525817922"/>
+						<reference key="object" ref="442121825"/>
 						<reference key="parent" ref="1041484335"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
-						<reference key="object" ref="958652409"/>
+						<reference key="object" ref="451163132"/>
 						<reference key="parent" ref="1041484335"/>
 					</object>
 				</array>

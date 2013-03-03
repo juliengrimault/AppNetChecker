@@ -81,6 +81,7 @@
 		F9D5E94516E0F14B00839FE5 /* XIGAppNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */; };
 		F9D5E94C16E0FCA600839FE5 /* app.net.doesnotexist.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9D5E94A16E0FCA600839FE5 /* app.net.doesnotexist.txt */; };
 		F9D5E94D16E0FCA600839FE5 /* app.net.matt.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */; };
+		F9E76F9B16E356A6003E1B26 /* NSIndexPath+XIGRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E76F9A16E356A6003E1B26 /* NSIndexPath+XIGRange.m */; };
 		F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,8 @@
 		F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetClient.m; sourceTree = "<group>"; };
 		F9D5E94A16E0FCA600839FE5 /* app.net.doesnotexist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.net.doesnotexist.txt; sourceTree = "<group>"; };
 		F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.net.matt.txt; sourceTree = "<group>"; };
+		F9E76F9916E356A6003E1B26 /* NSIndexPath+XIGRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+XIGRange.h"; sourceTree = "<group>"; };
+		F9E76F9A16E356A6003E1B26 /* NSIndexPath+XIGRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+XIGRange.m"; sourceTree = "<group>"; };
 		F9FC0C6D16DCEABF00B45347 /* XIGTwitterUser+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterUser+XIGTest.h"; sourceTree = "<group>"; };
 		F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGTwitterUser+XIGTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,43 +307,15 @@
 		F97B551B16C7752A005AD777 /* AppNetChecker */ = {
 			isa = PBXGroup;
 			children = (
-				F951B83D16D9ECA800BB4B32 /* UIView+JGLoadFromNib.h */,
-				F951B83E16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m */,
+				F9E76F9716E355EF003E1B26 /* Network */,
+				F9E76F9216E3559D003E1B26 /* Models */,
+				F9E76F9116E35598003E1B26 /* Controllers */,
+				F9E76F9016E35593003E1B26 /* Views */,
+				F9E76F8F16E3558A003E1B26 /* Categories */,
 				F97B552416C7752A005AD777 /* XIGAppDelegate.h */,
 				F97B552516C7752A005AD777 /* XIGAppDelegate.m */,
 				F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */,
 				F97B551C16C7752A005AD777 /* Supporting Files */,
-				F9ACF72716C8FB8800539A23 /* XIGAccountError.h */,
-				F97B555416C77FCB005AD777 /* XIGTwitterAccountStore.h */,
-				F97B555516C77FCB005AD777 /* XIGTwitterAccountStore.m */,
-				F97B556516C7AB2C005AD777 /* XIGAccountPickerViewController.h */,
-				F97B556616C7AB2C005AD777 /* XIGAccountPickerViewController.m */,
-				F97B557116C7AD5A005AD777 /* UIStoryboard+AppNetChecker.h */,
-				F97B557216C7AD5A005AD777 /* UIStoryboard+AppNetChecker.m */,
-				F90C201A16C8BC8600F29905 /* UIViewController+SLServiceHack.h */,
-				F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */,
-				F90C202116C8EF3100F29905 /* XIGAccountErrorCell.h */,
-				F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */,
-				F9D52EBF16CA0C9E00ABC885 /* XIGTwitterClient+Private.h */,
-				F9D52EB916CA043700ABC885 /* XIGTwitterClient.h */,
-				F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */,
-				F9BBFF5F16CA77E300CEE372 /* XIGNSURLRequestBuilder.h */,
-				F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */,
-				F901A88816D7B91200F17C81 /* XIGTwitterUser.h */,
-				F901A88916D7B91200F17C81 /* XIGTwitterUser.m */,
-				F951B82F16D8EA9F00BB4B32 /* NSArray+JGSlice.h */,
-				F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */,
-				F951B83A16D9EA5400BB4B32 /* XIGTwitterUserCell.h */,
-				F951B83B16D9EA5400BB4B32 /* XIGTwitterUserCell.m */,
-				F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */,
-				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
-				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
-				F9D5E94316E0F14B00839FE5 /* XIGAppNetClient.h */,
-				F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */,
-				F9A4D0C916E1BC54005D3EE5 /* XIGAppNetUser.h */,
-				F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */,
-				F9A4D0CC16E1E497005D3EE5 /* XIGUserMatcher.h */,
-				F9A4D0CD16E1E497005D3EE5 /* XIGUserMatcher.m */,
 				F9A4D0CF16E1F3A1005D3EE5 /* invalid.png */,
 				F9A4D0D016E1F3A1005D3EE5 /* valid.png */,
 			);
@@ -407,6 +382,116 @@
 				F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */,
 			);
 			name = "Spec Helpers";
+			sourceTree = "<group>";
+		};
+		F9E76F8F16E3558A003E1B26 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F9E76F9816E3567B003E1B26 /* NSIndexPath */,
+				F9E76F9616E355D8003E1B26 /* NSArray */,
+				F9E76F9516E355C7003E1B26 /* UIViewController */,
+				F9E76F9416E355BA003E1B26 /* UIStoryboard */,
+				F9E76F9316E355A7003E1B26 /* UIView */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		F9E76F9016E35593003E1B26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F951B83A16D9EA5400BB4B32 /* XIGTwitterUserCell.h */,
+				F951B83B16D9EA5400BB4B32 /* XIGTwitterUserCell.m */,
+				F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */,
+				F90C202116C8EF3100F29905 /* XIGAccountErrorCell.h */,
+				F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F9E76F9116E35598003E1B26 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F97B556516C7AB2C005AD777 /* XIGAccountPickerViewController.h */,
+				F97B556616C7AB2C005AD777 /* XIGAccountPickerViewController.m */,
+				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
+				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F9E76F9216E3559D003E1B26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F97B555416C77FCB005AD777 /* XIGTwitterAccountStore.h */,
+				F97B555516C77FCB005AD777 /* XIGTwitterAccountStore.m */,
+				F9ACF72716C8FB8800539A23 /* XIGAccountError.h */,
+				F9A4D0CC16E1E497005D3EE5 /* XIGUserMatcher.h */,
+				F9A4D0CD16E1E497005D3EE5 /* XIGUserMatcher.m */,
+				F9A4D0C916E1BC54005D3EE5 /* XIGAppNetUser.h */,
+				F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */,
+				F901A88816D7B91200F17C81 /* XIGTwitterUser.h */,
+				F901A88916D7B91200F17C81 /* XIGTwitterUser.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F9E76F9316E355A7003E1B26 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F951B83D16D9ECA800BB4B32 /* UIView+JGLoadFromNib.h */,
+				F951B83E16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		F9E76F9416E355BA003E1B26 /* UIStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				F97B557116C7AD5A005AD777 /* UIStoryboard+AppNetChecker.h */,
+				F97B557216C7AD5A005AD777 /* UIStoryboard+AppNetChecker.m */,
+			);
+			name = UIStoryboard;
+			sourceTree = "<group>";
+		};
+		F9E76F9516E355C7003E1B26 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F90C201A16C8BC8600F29905 /* UIViewController+SLServiceHack.h */,
+				F90C201B16C8BC8600F29905 /* UIViewController+SLServiceHack.m */,
+			);
+			name = UIViewController;
+			sourceTree = "<group>";
+		};
+		F9E76F9616E355D8003E1B26 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				F951B82F16D8EA9F00BB4B32 /* NSArray+JGSlice.h */,
+				F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */,
+			);
+			name = NSArray;
+			sourceTree = "<group>";
+		};
+		F9E76F9716E355EF003E1B26 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F9D52EBF16CA0C9E00ABC885 /* XIGTwitterClient+Private.h */,
+				F9D52EB916CA043700ABC885 /* XIGTwitterClient.h */,
+				F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */,
+				F9D5E94316E0F14B00839FE5 /* XIGAppNetClient.h */,
+				F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */,
+				F9BBFF5F16CA77E300CEE372 /* XIGNSURLRequestBuilder.h */,
+				F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		F9E76F9816E3567B003E1B26 /* NSIndexPath */ = {
+			isa = PBXGroup;
+			children = (
+				F9E76F9916E356A6003E1B26 /* NSIndexPath+XIGRange.h */,
+				F9E76F9A16E356A6003E1B26 /* NSIndexPath+XIGRange.m */,
+			);
+			name = NSIndexPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -582,6 +667,7 @@
 				F9D5E94516E0F14B00839FE5 /* XIGAppNetClient.m in Sources */,
 				F9A4D0CB16E1BC54005D3EE5 /* XIGAppNetUser.m in Sources */,
 				F9A4D0CE16E1E497005D3EE5 /* XIGUserMatcher.m in Sources */,
+				F9E76F9B16E356A6003E1B26 /* NSIndexPath+XIGRange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

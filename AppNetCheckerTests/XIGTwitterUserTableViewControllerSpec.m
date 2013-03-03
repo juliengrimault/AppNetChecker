@@ -72,7 +72,7 @@ context(@"loading friends", ^{
     context(@"getting profiles back", ^{
         it(@"should append the users received to the users array", ^{
             [vc view];
-            [[expectFutureValue(vc.users) shouldEventuallyBeforeTimingOutAfter(2)] haveCountOf:friends1.count + friends2.count];
+            [[expectFutureValue(vc.userMatchers) shouldEventuallyBeforeTimingOutAfter(2)] haveCountOf:friends1.count + friends2.count];
         });
         
         it(@"should have a number of rows equal to the sum of the profiles received", ^{
@@ -85,14 +85,14 @@ context(@"loading friends", ^{
         
         context(@"loading app net users", ^{
             it(@"should receive 1 call per twitter friend", ^{
-                [[expectFutureValue(vc.appNetClient) shouldEventually] receive:@selector(userWithScreenName:) withCount:friends1.count + friends2.count];
                 [vc view];
+                [[expectFutureValue(vc.appNetClient) shouldEventually] receive:@selector(userWithScreenName:) withCount:friends1.count + friends2.count];
             });
             
-            it(@"should assign the received App.net user to the associated user of the twitter user property", ^{
+            pending(@"should assign the received App.net user to the associated user of the twitter user property", ^{
                 [vc view];
                 KWFutureObject *future = [KWFutureObject futureObjectWithBlock:^id{
-                    return [vc.users mtl_filterUsingBlock:^BOOL(XIGUserMatcher *matcher) {
+                    return [vc.userMatchers mtl_filterUsingBlock:^BOOL(XIGUserMatcher *matcher) {
                         return [matcher appNetUser] != nil;
                     }];
                 }];
@@ -133,6 +133,11 @@ context(@"Toolbar", ^{
         [vc view];
         NSString* expectedText = [NSString stringWithFormat:@"%d friends", friends1.count];
         [[expectFutureValue(vc.friendsCountLabel.text) shouldEventually] equal:expectedText];
+    });
+    
+    it(@"should have a label for found friends count", ^{
+        [vc view];
+        [vc.friendsFoundCountLabel shouldNotBeNil];
     });
     
 });

@@ -13,10 +13,12 @@
 
 @property (nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, readonly) UILabel *friendsCountLabel;
+@property (nonatomic, readonly) UILabel *friendsFoundCountLabel;
+
+@property (nonatomic, strong) NSMutableArray* userMatchers;
 
 //lazyly loaded
 @property (nonatomic, strong) XIGTwitterClient *twitterClient;
 @property (nonatomic, strong) XIGAppNetClient *appNetClient;
-@property (nonatomic, readonly) NSArray *users;
 
 @end
