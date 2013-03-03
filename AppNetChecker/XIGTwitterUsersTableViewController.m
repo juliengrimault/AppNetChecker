@@ -13,6 +13,7 @@
 #import "XIGAppNetClient.h"
 #import "XIGUserMatcher.h"
 #import "NSIndexPath+XIGRange.h"
+#import "UIBarButtonItem+XIGItem.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
@@ -66,22 +67,25 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (void)configureToolBar
 {
-    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    _activityIndicator = indicator;
-    [indicator startAnimating];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:indicator];
+    UIBarButtonItem *item = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleGray];
+    _activityIndicator = (UIActivityIndicatorView*)item.customView;
+
     
     UILabel *friendsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
     friendsCountLabel.backgroundColor = [UIColor clearColor];
     _friendsCountLabel = friendsCountLabel;
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:friendsCountLabel];
     
+    
+    UIBarButtonItem *item3 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
     UILabel *friendsFoundCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
     friendsFoundCountLabel.backgroundColor = [UIColor clearColor];
     _friendsFoundCountLabel = friendsFoundCountLabel;
+    _friendsFoundCountLabel.textAlignment = NSTextAlignmentRight;
     UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithCustomView:friendsFoundCountLabel];
     
-    self.toolbarItems = @[item, item2,item4];
+    self.toolbarItems = @[item, item2, item3, item4];
 }
 
 - (void)configureLabelsSignal
@@ -97,7 +101,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
         }];
         return [[RACSignal combineLatest:signals] map:^id(RACTuple *tuple) {
             NSArray *nonNilAppNetUsers = [[tuple allObjects] mtl_filterUsingBlock:^BOOL(id obj) {
-                return ![obj isEqual:[RACTupleNil tupleNil]];
+                return ![obj isEqual:[NSNull null]];
             }];
             return @(nonNilAppNetUsers.count);
         }];
