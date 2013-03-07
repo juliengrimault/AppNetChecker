@@ -13,6 +13,7 @@
 #import "XIGAccountErrorCell.h"
 #import "XIGTwitterUsersTableViewController.h"
 #import "XIGTwitterClient.h"
+#import "XIGTwitterAccountCell.h"
 
 @interface XIGAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
@@ -109,9 +110,9 @@
         [cell bindError:self.error];
         return cell;
     } else {
-        UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+        XIGTwitterAccountCell *cell = (XIGTwitterAccountCell *)[tableView dequeueReusableCellWithIdentifier:@"Cell"];
         ACAccount* account = self.accounts[indexPath.row];
-        cell.textLabel.text = account.username;
+        [cell bindAccont:account];
         return cell;
     }
 }
@@ -121,7 +122,7 @@
     if (self.error) {
         return [XIGAccountErrorCell rowHeight];
     }
-    return 44.0f;
+    return [XIGTwitterAccountCell rowHeight];
 }
 
 #pragma mark - Retry

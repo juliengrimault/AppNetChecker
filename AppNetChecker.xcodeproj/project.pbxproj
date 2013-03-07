@@ -64,6 +64,9 @@
 		F991A61616CB802C00BDB36F /* friendsId.json in Resources */ = {isa = PBXBuildFile; fileRef = F991A61516CB802C00BDB36F /* friendsId.json */; };
 		F991A61916CB809C00BDB36F /* KWSpec+Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */; };
 		F991A61B16CBBF7B00BDB36F /* friendsIdWithNextPage.json in Resources */ = {isa = PBXBuildFile; fileRef = F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */; };
+		F99F64D016E8D32F00ABC8CC /* NavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F64CE16E8D32F00ABC8CC /* NavigationBar.png */; };
+		F99F64D116E8D32F00ABC8CC /* NavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F64CF16E8D32F00ABC8CC /* NavigationBar@2x.png */; };
+		F99F64D416E8D74800ABC8CC /* XIGTwitterAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F99F64D316E8D74800ABC8CC /* XIGTwitterAccountCell.m */; };
 		F9A4D0C816E1BC35005D3EE5 /* XIGAppNetUserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0C716E1BC35005D3EE5 /* XIGAppNetUserSpec.m */; };
 		F9A4D0CB16E1BC54005D3EE5 /* XIGAppNetUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */; };
 		F9A4D0CE16E1E497005D3EE5 /* XIGUserMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0CD16E1E497005D3EE5 /* XIGUserMatcher.m */; };
@@ -170,6 +173,10 @@
 		F991A61716CB809C00BDB36F /* KWSpec+Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KWSpec+Fixture.h"; sourceTree = "<group>"; };
 		F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KWSpec+Fixture.m"; sourceTree = "<group>"; };
 		F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsIdWithNextPage.json; sourceTree = "<group>"; };
+		F99F64CE16E8D32F00ABC8CC /* NavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBar.png; sourceTree = "<group>"; };
+		F99F64CF16E8D32F00ABC8CC /* NavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBar@2x.png"; sourceTree = "<group>"; };
+		F99F64D216E8D74800ABC8CC /* XIGTwitterAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterAccountCell.h; sourceTree = "<group>"; };
+		F99F64D316E8D74800ABC8CC /* XIGTwitterAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterAccountCell.m; sourceTree = "<group>"; };
 		F9A4D0C716E1BC35005D3EE5 /* XIGAppNetUserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetUserSpec.m; sourceTree = "<group>"; };
 		F9A4D0C916E1BC54005D3EE5 /* XIGAppNetUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGAppNetUser.h; sourceTree = "<group>"; };
 		F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetUser.m; sourceTree = "<group>"; };
@@ -282,6 +289,8 @@
 			children = (
 				F97B551B16C7752A005AD777 /* AppNetChecker */,
 				F97B554216C7752A005AD777 /* AppNetCheckerTests */,
+				F99F64CE16E8D32F00ABC8CC /* NavigationBar.png */,
+				F99F64CF16E8D32F00ABC8CC /* NavigationBar@2x.png */,
 				F97B551416C7752A005AD777 /* Frameworks */,
 				F97B551316C7752A005AD777 /* Products */,
 				77644BD0F970460FAC7B1976 /* Pods.xcconfig */,
@@ -417,6 +426,8 @@
 				F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */,
 				F90C202116C8EF3100F29905 /* XIGAccountErrorCell.h */,
 				F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */,
+				F99F64D216E8D74800ABC8CC /* XIGTwitterAccountCell.h */,
+				F99F64D316E8D74800ABC8CC /* XIGTwitterAccountCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -589,6 +600,8 @@
 				F951B84116D9ED0600BB4B32 /* XIGTwitterUserCell.xib in Resources */,
 				F9A4D0D116E1F3A1005D3EE5 /* invalid.png in Resources */,
 				F9A4D0D216E1F3A1005D3EE5 /* valid.png in Resources */,
+				F99F64D016E8D32F00ABC8CC /* NavigationBar.png in Resources */,
+				F99F64D116E8D32F00ABC8CC /* NavigationBar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +695,7 @@
 				F9A4D0CE16E1E497005D3EE5 /* XIGUserMatcher.m in Sources */,
 				F9E76F9B16E356A6003E1B26 /* NSIndexPath+XIGRange.m in Sources */,
 				F917B55B16E3715900A8ABE8 /* UIBarButtonItem+XIGItem.m in Sources */,
+				F99F64D416E8D74800ABC8CC /* XIGTwitterAccountCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
