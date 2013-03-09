@@ -63,16 +63,19 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 {
     UINib *nib = [UINib nibWithNibName:@"XIGTwitterUserCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:CellIdentifier];
+    self.tableView.rowHeight = [XIGTwitterUserCell rowHeight];
 }
 
 - (void)configureToolBar
 {
-    UIBarButtonItem *item = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleGray];
+    UIBarButtonItem *item = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
     _activityIndicator = (UIActivityIndicatorView*)item.customView;
 
     
     UILabel *friendsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
     friendsCountLabel.backgroundColor = [UIColor clearColor];
+    friendsCountLabel.textColor = [UIColor whiteColor];
+    friendsCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
     _friendsCountLabel = friendsCountLabel;
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:friendsCountLabel];
     
@@ -81,6 +84,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     
     UILabel *friendsFoundCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
     friendsFoundCountLabel.backgroundColor = [UIColor clearColor];
+    friendsFoundCountLabel.textColor = [UIColor whiteColor];
+    friendsFoundCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
     _friendsFoundCountLabel = friendsFoundCountLabel;
     _friendsFoundCountLabel.textAlignment = NSTextAlignmentRight;
     UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithCustomView:friendsFoundCountLabel];

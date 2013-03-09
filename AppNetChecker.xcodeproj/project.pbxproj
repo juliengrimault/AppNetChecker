@@ -78,6 +78,11 @@
 		F9BBFF6316CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */; };
 		F9BBFF6616CA79D900CEE372 /* ACAccount+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */; };
 		F9C37F0B16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */; };
+		F9D2E4D616EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */; };
+		F9D2E4DA16EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */; };
+		F9D2E4E116EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */; };
+		F9D2E4E216EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */; };
+		F9D2E4E316EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4E016EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf */; };
 		F9D52EB816CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52EB716CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m */; };
 		F9D52EBB16CA043700ABC885 /* XIGTwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */; };
 		F9D52ECB16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D52ECA16CA225700ABC885 /* NSObject+XIGKiwiMockAddition.m */; };
@@ -192,6 +197,12 @@
 		F9BBFF6416CA79D900CEE372 /* ACAccount+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccount+XIGTest.h"; sourceTree = "<group>"; };
 		F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccount+XIGTest.m"; sourceTree = "<group>"; };
 		F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClientGetProfilesSpec.m; sourceTree = "<group>"; };
+		F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Thin.ttf"; sourceTree = "<group>"; };
+		F9D2E4D816EADB0F006A1A06 /* UIFont+XIGAppNetChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+XIGAppNetChecker.h"; sourceTree = "<group>"; };
+		F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+XIGAppNetChecker.m"; sourceTree = "<group>"; };
+		F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Bold.ttf"; sourceTree = "<group>"; };
+		F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Light.ttf"; sourceTree = "<group>"; };
+		F9D2E4E016EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Regular.ttf"; sourceTree = "<group>"; };
 		F9D52EB716CA02B800ABC885 /* XIGTwitterClientGetIdsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClientGetIdsSpec.m; sourceTree = "<group>"; };
 		F9D52EB916CA043700ABC885 /* XIGTwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterClient.h; sourceTree = "<group>"; };
 		F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClient.m; sourceTree = "<group>"; };
@@ -338,6 +349,10 @@
 				F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */,
 				F97B551C16C7752A005AD777 /* Supporting Files */,
 				F9A4D0CF16E1F3A1005D3EE5 /* invalid.png */,
+				F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */,
+				F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */,
+				F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */,
+				F9D2E4E016EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf */,
 				F9A4D0D016E1F3A1005D3EE5 /* valid.png */,
 			);
 			path = AppNetChecker;
@@ -405,9 +420,19 @@
 			name = "Spec Helpers";
 			sourceTree = "<group>";
 		};
+		F9D2E4D716EADAFD006A1A06 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				F9D2E4D816EADB0F006A1A06 /* UIFont+XIGAppNetChecker.h */,
+				F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */,
+			);
+			name = UIFont;
+			sourceTree = "<group>";
+		};
 		F9E76F8F16E3558A003E1B26 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F9D2E4D716EADAFD006A1A06 /* UIFont */,
 				F917B55816E3713D00A8ABE8 /* UIBarButtonItem */,
 				F9E76F9816E3567B003E1B26 /* NSIndexPath */,
 				F9E76F9616E355D8003E1B26 /* NSArray */,
@@ -602,6 +627,10 @@
 				F9A4D0D216E1F3A1005D3EE5 /* valid.png in Resources */,
 				F99F64D016E8D32F00ABC8CC /* NavigationBar.png in Resources */,
 				F99F64D116E8D32F00ABC8CC /* NavigationBar@2x.png in Resources */,
+				F9D2E4D616EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf in Resources */,
+				F9D2E4E116EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf in Resources */,
+				F9D2E4E216EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf in Resources */,
+				F9D2E4E316EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +725,7 @@
 				F9E76F9B16E356A6003E1B26 /* NSIndexPath+XIGRange.m in Sources */,
 				F917B55B16E3715900A8ABE8 /* UIBarButtonItem+XIGItem.m in Sources */,
 				F99F64D416E8D74800ABC8CC /* XIGTwitterAccountCell.m in Sources */,
+				F9D2E4DA16EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

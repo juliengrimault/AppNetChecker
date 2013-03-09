@@ -22,7 +22,7 @@
 {
     [super prepareForReuse];
     [self.profileImageView cancelImageRequestOperation];
-    self.statusImageView.hidden = YES;
+    self.accessoryType = UITableViewCellAccessoryNone;
     [self.activityIndicator startAnimating];
     [self.disposable dispose];
 }
@@ -33,9 +33,16 @@
     [self.disposable dispose];
 }
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.usernameLabel.font = [UIFont xig_lightFontOfSize:self.usernameLabel.font.pointSize];
+    self.fullnameLabel.font = [UIFont xig_thinFontOfSize:self.fullnameLabel.font.pointSize];
+}
+
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher
 {
-    self.usernameLabel.text = [NSString stringWithFormat:@"@%@",userMatcher.twitterUser.screenName];
+    self.usernameLabel.text = [NSString stringWithFormat:@"@%@",[userMatcher.twitterUser.screenName uppercaseString]];
     self.fullnameLabel.text = userMatcher.twitterUser.name;
     [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL];
     
@@ -43,10 +50,15 @@
     self.disposable = [userMatcher.appNetUser subscribeNext:^(XIGAppNetUser *appNetUser) {
         @strongify(self);
         [self.activityIndicator stopAnimating];
-        self.statusImageView.hidden = NO;
-        UIImage* image = appNetUser != nil ? [UIImage imageNamed:@"valid.png"] : [UIImage imageNamed:@"invalid.png"];
-        self.statusImageView.image = image;
+        if (appNetUser != nil) {
+            self.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
     }];
+}
+
++ (CGFloat)rowHeight
+{
+    return 90;
 }
 
 @end

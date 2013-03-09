@@ -10,9 +10,16 @@
 
 @implementation XIGTwitterAccountCell
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.accountNameLabel.font = [UIFont xig_lightFontOfSize:self.accountNameLabel.font.pointSize];
+}
+
+
 - (void)bindAccont:(ACAccount *)account
 {
-    self.accountNameLabel.text = [account.username uppercaseString];
+    self.accountNameLabel.text = [NSString stringWithFormat:@"@%@",[account.username uppercaseString]];
 }
 
 + (CGFloat)rowHeight

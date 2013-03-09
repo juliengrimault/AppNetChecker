@@ -14,7 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *fullnameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-@property (weak, nonatomic) IBOutlet UIImageView *statusImageView;
 
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher;
+
++ (CGFloat)rowHeight;
 @end

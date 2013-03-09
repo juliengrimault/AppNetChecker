@@ -12,6 +12,11 @@
 @implementation XIGAccountErrorCell
 
 #pragma mark - Binding Error
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.errorLabel.font = [UIFont xig_regularFontOfSize:self.errorLabel.font.pointSize];
+}
 - (void)bindError:(NSError*)error
 {
     self.errorLabel.text = [self messageForError:error];
@@ -41,7 +46,7 @@
 
 +(CGFloat)rowHeight
 {
-    return 106.0f;
+    return 300;
 }
 
 @end
