@@ -47,15 +47,16 @@
 
 - (void)configureToolBar
 {
-    
-    UILabel *instructionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), CGRectGetHeight(self.navigationController.toolbar.frame))];
+    UIBarButtonItem *elasticLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *elasticRight = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UILabel *instructionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationController.toolbar.frame), CGRectGetHeight(self.navigationController.toolbar.frame))];
     instructionLabel.backgroundColor = [UIColor clearColor];
     instructionLabel.textColor = [UIColor whiteColor];
     instructionLabel.textAlignment = NSTextAlignmentCenter;
     instructionLabel.font = [UIFont xig_regularFontOfSize:[UIFont labelFontSize]];
     instructionLabel.text = NSLocalizedString(@"Find your Twitter friends on App.net", nil);
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:instructionLabel];
-    self.toolbarItems = @[item];
+    self.toolbarItems = @[elasticLeft, item, elasticRight];
 }
 
 - (void)retrieveTwitterAccounts
