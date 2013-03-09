@@ -64,8 +64,6 @@
 		F991A61616CB802C00BDB36F /* friendsId.json in Resources */ = {isa = PBXBuildFile; fileRef = F991A61516CB802C00BDB36F /* friendsId.json */; };
 		F991A61916CB809C00BDB36F /* KWSpec+Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */; };
 		F991A61B16CBBF7B00BDB36F /* friendsIdWithNextPage.json in Resources */ = {isa = PBXBuildFile; fileRef = F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */; };
-		F99F64D016E8D32F00ABC8CC /* NavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F64CE16E8D32F00ABC8CC /* NavigationBar.png */; };
-		F99F64D116E8D32F00ABC8CC /* NavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F99F64CF16E8D32F00ABC8CC /* NavigationBar@2x.png */; };
 		F99F64D416E8D74800ABC8CC /* XIGTwitterAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F99F64D316E8D74800ABC8CC /* XIGTwitterAccountCell.m */; };
 		F9A4D0C816E1BC35005D3EE5 /* XIGAppNetUserSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0C716E1BC35005D3EE5 /* XIGAppNetUserSpec.m */; };
 		F9A4D0CB16E1BC54005D3EE5 /* XIGAppNetUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F9A4D0CA16E1BC54005D3EE5 /* XIGAppNetUser.m */; };
@@ -91,6 +89,14 @@
 		F9D5E94C16E0FCA600839FE5 /* app.net.doesnotexist.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9D5E94A16E0FCA600839FE5 /* app.net.doesnotexist.txt */; };
 		F9D5E94D16E0FCA600839FE5 /* app.net.matt.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */; };
 		F9E76F9B16E356A6003E1B26 /* NSIndexPath+XIGRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E76F9A16E356A6003E1B26 /* NSIndexPath+XIGRange.m */; };
+		F9ED15AB16EB3A29008E8404 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ED15A616EB3A29008E8404 /* logo@2x.png */; };
+		F9ED15AC16EB3A29008E8404 /* NavigationBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ED15A716EB3A29008E8404 /* NavigationBar.png */; };
+		F9ED15AD16EB3A29008E8404 /* NavigationBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ED15A816EB3A29008E8404 /* NavigationBar@2x.png */; };
+		F9ED15AE16EB3A29008E8404 /* ToolBar.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ED15A916EB3A29008E8404 /* ToolBar.png */; };
+		F9ED15AF16EB3A29008E8404 /* ToolBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9ED15AA16EB3A29008E8404 /* ToolBar@2x.png */; };
+		F9ED15B316EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B216EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m */; };
+		F9ED15B716EB4131008E8404 /* UITableView+XIGBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B616EB4131008E8404 /* UITableView+XIGBackgroundView.m */; };
+		F9ED15BA16EB4185008E8404 /* XIGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B916EB4185008E8404 /* XIGTableViewController.m */; };
 		F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */; };
 /* End PBXBuildFile section */
 
@@ -178,8 +184,6 @@
 		F991A61716CB809C00BDB36F /* KWSpec+Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KWSpec+Fixture.h"; sourceTree = "<group>"; };
 		F991A61816CB809C00BDB36F /* KWSpec+Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KWSpec+Fixture.m"; sourceTree = "<group>"; };
 		F991A61A16CBBF7B00BDB36F /* friendsIdWithNextPage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsIdWithNextPage.json; sourceTree = "<group>"; };
-		F99F64CE16E8D32F00ABC8CC /* NavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBar.png; sourceTree = "<group>"; };
-		F99F64CF16E8D32F00ABC8CC /* NavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBar@2x.png"; sourceTree = "<group>"; };
 		F99F64D216E8D74800ABC8CC /* XIGTwitterAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterAccountCell.h; sourceTree = "<group>"; };
 		F99F64D316E8D74800ABC8CC /* XIGTwitterAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterAccountCell.m; sourceTree = "<group>"; };
 		F9A4D0C716E1BC35005D3EE5 /* XIGAppNetUserSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAppNetUserSpec.m; sourceTree = "<group>"; };
@@ -216,6 +220,17 @@
 		F9D5E94B16E0FCA600839FE5 /* app.net.matt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app.net.matt.txt; sourceTree = "<group>"; };
 		F9E76F9916E356A6003E1B26 /* NSIndexPath+XIGRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+XIGRange.h"; sourceTree = "<group>"; };
 		F9E76F9A16E356A6003E1B26 /* NSIndexPath+XIGRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+XIGRange.m"; sourceTree = "<group>"; };
+		F9ED15A616EB3A29008E8404 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		F9ED15A716EB3A29008E8404 /* NavigationBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationBar.png; sourceTree = "<group>"; };
+		F9ED15A816EB3A29008E8404 /* NavigationBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBar@2x.png"; sourceTree = "<group>"; };
+		F9ED15A916EB3A29008E8404 /* ToolBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ToolBar.png; sourceTree = "<group>"; };
+		F9ED15AA16EB3A29008E8404 /* ToolBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ToolBar@2x.png"; sourceTree = "<group>"; };
+		F9ED15B116EB3A4D008E8404 /* UIColor+XIGAppNetChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XIGAppNetChecker.h"; sourceTree = "<group>"; };
+		F9ED15B216EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XIGAppNetChecker.m"; sourceTree = "<group>"; };
+		F9ED15B516EB4131008E8404 /* UITableView+XIGBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XIGBackgroundView.h"; sourceTree = "<group>"; };
+		F9ED15B616EB4131008E8404 /* UITableView+XIGBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XIGBackgroundView.m"; sourceTree = "<group>"; };
+		F9ED15B816EB4185008E8404 /* XIGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTableViewController.h; sourceTree = "<group>"; };
+		F9ED15B916EB4185008E8404 /* XIGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTableViewController.m; sourceTree = "<group>"; };
 		F9FC0C6D16DCEABF00B45347 /* XIGTwitterUser+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterUser+XIGTest.h"; sourceTree = "<group>"; };
 		F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGTwitterUser+XIGTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,8 +315,6 @@
 			children = (
 				F97B551B16C7752A005AD777 /* AppNetChecker */,
 				F97B554216C7752A005AD777 /* AppNetCheckerTests */,
-				F99F64CE16E8D32F00ABC8CC /* NavigationBar.png */,
-				F99F64CF16E8D32F00ABC8CC /* NavigationBar@2x.png */,
 				F97B551416C7752A005AD777 /* Frameworks */,
 				F97B551316C7752A005AD777 /* Products */,
 				77644BD0F970460FAC7B1976 /* Pods.xcconfig */,
@@ -353,6 +366,11 @@
 				F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */,
 				F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */,
 				F9D2E4E016EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf */,
+				F9ED15A616EB3A29008E8404 /* logo@2x.png */,
+				F9ED15A716EB3A29008E8404 /* NavigationBar.png */,
+				F9ED15A816EB3A29008E8404 /* NavigationBar@2x.png */,
+				F9ED15A916EB3A29008E8404 /* ToolBar.png */,
+				F9ED15AA16EB3A29008E8404 /* ToolBar@2x.png */,
 				F9A4D0D016E1F3A1005D3EE5 /* valid.png */,
 			);
 			path = AppNetChecker;
@@ -432,6 +450,8 @@
 		F9E76F8F16E3558A003E1B26 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F9ED15B416EB40F2008E8404 /* UITableView */,
+				F9ED15B016EB3A3B008E8404 /* UIColor */,
 				F9D2E4D716EADAFD006A1A06 /* UIFont */,
 				F917B55816E3713D00A8ABE8 /* UIBarButtonItem */,
 				F9E76F9816E3567B003E1B26 /* NSIndexPath */,
@@ -464,6 +484,8 @@
 				F97B556616C7AB2C005AD777 /* XIGAccountPickerViewController.m */,
 				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
 				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
+				F9ED15B816EB4185008E8404 /* XIGTableViewController.h */,
+				F9ED15B916EB4185008E8404 /* XIGTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -541,6 +563,24 @@
 				F9E76F9A16E356A6003E1B26 /* NSIndexPath+XIGRange.m */,
 			);
 			name = NSIndexPath;
+			sourceTree = "<group>";
+		};
+		F9ED15B016EB3A3B008E8404 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED15B116EB3A4D008E8404 /* UIColor+XIGAppNetChecker.h */,
+				F9ED15B216EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		F9ED15B416EB40F2008E8404 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED15B516EB4131008E8404 /* UITableView+XIGBackgroundView.h */,
+				F9ED15B616EB4131008E8404 /* UITableView+XIGBackgroundView.m */,
+			);
+			name = UITableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,12 +665,15 @@
 				F951B84116D9ED0600BB4B32 /* XIGTwitterUserCell.xib in Resources */,
 				F9A4D0D116E1F3A1005D3EE5 /* invalid.png in Resources */,
 				F9A4D0D216E1F3A1005D3EE5 /* valid.png in Resources */,
-				F99F64D016E8D32F00ABC8CC /* NavigationBar.png in Resources */,
-				F99F64D116E8D32F00ABC8CC /* NavigationBar@2x.png in Resources */,
 				F9D2E4D616EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf in Resources */,
 				F9D2E4E116EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf in Resources */,
 				F9D2E4E216EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf in Resources */,
 				F9D2E4E316EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf in Resources */,
+				F9ED15AB16EB3A29008E8404 /* logo@2x.png in Resources */,
+				F9ED15AC16EB3A29008E8404 /* NavigationBar.png in Resources */,
+				F9ED15AD16EB3A29008E8404 /* NavigationBar@2x.png in Resources */,
+				F9ED15AE16EB3A29008E8404 /* ToolBar.png in Resources */,
+				F9ED15AF16EB3A29008E8404 /* ToolBar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +769,9 @@
 				F917B55B16E3715900A8ABE8 /* UIBarButtonItem+XIGItem.m in Sources */,
 				F99F64D416E8D74800ABC8CC /* XIGTwitterAccountCell.m in Sources */,
 				F9D2E4DA16EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m in Sources */,
+				F9ED15B316EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m in Sources */,
+				F9ED15B716EB4131008E8404 /* UITableView+XIGBackgroundView.m in Sources */,
+				F9ED15BA16EB4185008E8404 /* XIGTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

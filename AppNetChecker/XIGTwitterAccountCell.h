@@ -11,8 +11,6 @@
 
 @interface XIGTwitterAccountCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *accountNameLabel;
-
 - (void)bindAccont:(ACAccount *)account;
 + (CGFloat)rowHeight;
 @end

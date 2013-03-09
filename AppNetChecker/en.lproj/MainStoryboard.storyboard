@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-129" y="57"/>
         </scene>
-        <!--Account Picker View Controller-->
+        <!--Account Picker View Controller - TwittApp.net-->
         <scene sceneID="VRV-LF-1iO">
             <objects>
                 <tableViewController storyboardIdentifier="XIGAccountPickerViewController" id="CQQ-QI-cBz" customClass="XIGAccountPickerViewController" sceneMemberID="viewController">
@@ -33,26 +33,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="70" id="zid-an-Hun" customClass="XIGTwitterAccountCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="70" id="zid-an-Hun" customClass="XIGTwitterAccountCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="300" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TRADEHEROMOBILE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="72f-H7-MfU">
-                                            <rect key="frame" x="20" y="0.0" width="260" height="69"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="24"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="accountNameLabel" destination="72f-H7-MfU" id="hyG-y4-Fm8"/>
                                     <segue destination="R7k-M5-4E4" kind="push" identifier="PushUsersTableViewController" id="Nlt-Dk-0xQ"/>
                                 </connections>
                             </tableViewCell>
@@ -83,7 +73,7 @@
                             <outlet property="delegate" destination="CQQ-QI-cBz" id="AEm-kA-IeX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vBV-fB-HPl"/>
+                    <navigationItem key="navigationItem" title="TwittApp.net" id="vBV-fB-HPl"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="TIo-hF-L7J">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>

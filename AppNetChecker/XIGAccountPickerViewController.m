@@ -40,8 +40,22 @@
 {
     [super viewDidLoad];
     [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self configureToolBar];
     [self retrieveTwitterAccounts];
     [self bindUIToError];
+}
+
+- (void)configureToolBar
+{
+    
+    UILabel *instructionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), CGRectGetHeight(self.navigationController.toolbar.frame))];
+    instructionLabel.backgroundColor = [UIColor clearColor];
+    instructionLabel.textColor = [UIColor whiteColor];
+    instructionLabel.textAlignment = NSTextAlignmentCenter;
+    instructionLabel.font = [UIFont xig_regularFontOfSize:[UIFont labelFontSize]];
+    instructionLabel.text = NSLocalizedString(@"Find your Twitter friends on App.net", nil);
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:instructionLabel];
+    self.toolbarItems = @[item];
 }
 
 - (void)retrieveTwitterAccounts

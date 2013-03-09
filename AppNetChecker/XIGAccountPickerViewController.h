@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "XIGTwitterAccountStore.h"
+#import "XIGTableViewController.h"
 
-@interface XIGAccountPickerViewController : UITableViewController
+@interface XIGAccountPickerViewController : XIGTableViewController
 
 @property (nonatomic, strong) XIGTwitterAccountStore* reactiveTwitter;
 

@@ -11,9 +11,15 @@
 @implementation XIGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{   
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBar.png"] forBarMetrics:UIBarMetricsDefault];
-    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"NavigationBar.png"] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+{
+    UIImage *navBarImage = [UIImage imageNamed:@"NavigationBar.png"];
+    [[UINavigationBar appearance] setBackgroundImage:[navBarImage resizableImageWithCapInsets:UIEdgeInsetsMake(8, 8, 0, 8)]
+                                       forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     @{ UITextAttributeFont : [UIFont xig_regularFontOfSize:24]}];
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:-5 forBarMetrics:UIBarMetricsDefault];
+    
+    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"ToolBar.png"] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
     
     return YES;
 }

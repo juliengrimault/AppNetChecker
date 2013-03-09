@@ -16,4 +16,5 @@
     #import <SystemConfiguration/SystemConfiguration.h>
 
     #import "UIFont+XIGAppNetChecker.h"
+    #import "UIColor+XIGAppNetChecker.h"
 #endif
