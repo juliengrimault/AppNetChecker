@@ -76,6 +76,7 @@
                     <navigationItem key="navigationItem" title="TwittApp.net" id="vBV-fB-HPl"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="TIo-hF-L7J">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.14926437043795621" alpha="1" colorSpace="calibratedWhite"/>
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ud-hz-yWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
