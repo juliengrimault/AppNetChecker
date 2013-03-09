@@ -97,6 +97,7 @@
 		F9ED15B316EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B216EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m */; };
 		F9ED15B716EB4131008E8404 /* UITableView+XIGBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B616EB4131008E8404 /* UITableView+XIGBackgroundView.m */; };
 		F9ED15BA16EB4185008E8404 /* XIGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B916EB4185008E8404 /* XIGTableViewController.m */; };
+		F9ED15BD16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15BC16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m */; };
 		F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */; };
 /* End PBXBuildFile section */
 
@@ -231,6 +232,8 @@
 		F9ED15B616EB4131008E8404 /* UITableView+XIGBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XIGBackgroundView.m"; sourceTree = "<group>"; };
 		F9ED15B816EB4185008E8404 /* XIGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTableViewController.h; sourceTree = "<group>"; };
 		F9ED15B916EB4185008E8404 /* XIGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTableViewController.m; sourceTree = "<group>"; };
+		F9ED15BB16EB7FE6008E8404 /* UIColor+XIGColorManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XIGColorManipulation.h"; sourceTree = "<group>"; };
+		F9ED15BC16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XIGColorManipulation.m"; sourceTree = "<group>"; };
 		F9FC0C6D16DCEABF00B45347 /* XIGTwitterUser+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterUser+XIGTest.h"; sourceTree = "<group>"; };
 		F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGTwitterUser+XIGTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -570,6 +573,8 @@
 			children = (
 				F9ED15B116EB3A4D008E8404 /* UIColor+XIGAppNetChecker.h */,
 				F9ED15B216EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m */,
+				F9ED15BB16EB7FE6008E8404 /* UIColor+XIGColorManipulation.h */,
+				F9ED15BC16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m */,
 			);
 			name = UIColor;
 			sourceTree = "<group>";
@@ -772,6 +777,7 @@
 				F9ED15B316EB3A4D008E8404 /* UIColor+XIGAppNetChecker.m in Sources */,
 				F9ED15B716EB4131008E8404 /* UITableView+XIGBackgroundView.m in Sources */,
 				F9ED15BA16EB4185008E8404 /* XIGTableViewController.m in Sources */,
+				F9ED15BD16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
