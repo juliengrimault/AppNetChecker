@@ -43,11 +43,6 @@ describe(@"loading from xib", ^{
     it(@"should have activity outlet connected", ^{
         [cell.activityIndicator shouldNotBeNil];
     });
-    
-    it(@"should have a status image view outlet",^{
-        [cell.statusImageView shouldNotBeNil];
-        [[@(cell.statusImageView.hidden) should] equal:@YES];
-    });
 });
 
 describe(@"binding user", ^{
@@ -56,7 +51,7 @@ describe(@"binding user", ^{
     });
     
     it(@"should have the username set", ^{
-        [[cell.usernameLabel.text should] equal:user.screenName];
+        [[cell.usernameLabel.text should] equal:[NSString stringWithFormat:@"@%@",[user.screenName uppercaseString]]];
     });
     
     it(@"should have the name set", ^{
@@ -98,11 +93,5 @@ describe(@"binding activity indicator", ^{
     it(@"should stop animating eventually", ^{
         [[expectFutureValue(@([cell.activityIndicator isAnimating])) shouldEventually] equal:@NO];
     });
-    
-    it(@"should show the status iamge", ^{
-        [[expectFutureValue(@(cell.statusImageView.hidden)) shouldEventually] equal:@NO];
-    });
-    
-    
 });
 SPEC_END

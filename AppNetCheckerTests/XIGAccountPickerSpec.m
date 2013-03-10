@@ -6,6 +6,7 @@
 #import "XIGAccountErrorCell.h"
 #import "XIGTwitterUsersTableViewController.h"
 #import "XIGTwitterClient.h"
+#import "XIGTwitterAccountCell.h"
 
 SPEC_BEGIN(XIGAccountPickerViewControllerSpec)
 
@@ -77,10 +78,10 @@ context(@"Getting Twitter accounts", ^{
             NSInteger i = 0;
             for(ACAccount* account in accounts) {
                 KWFutureObject* future = [KWFutureObject futureObjectWithBlock:^id{
-                    UITableViewCell* c = [vc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
-                    return c.textLabel.text;
+                    XIGTwitterAccountCell* c = (XIGTwitterAccountCell *)[vc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
+                    return c.displayedUsername;
                 }];
-                [[future shouldEventually] equal:account.username];
+                [[future shouldEventually] equal:[NSString stringWithFormat:@"@%@",[account.username uppercaseString]]];
                 ++i;
             }
         });

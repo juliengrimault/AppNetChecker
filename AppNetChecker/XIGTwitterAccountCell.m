@@ -19,7 +19,7 @@
 
 @interface XIGTwitterAccountCell ()
 @property (nonatomic, strong) XIGTwitterAccountCellView *customView;
-@property (nonatomic, copy) NSString *accountName;
+@property (nonatomic, copy) NSString *displayedUsername;
 @end
 @implementation XIGTwitterAccountCell
 #pragma mark - Init
@@ -100,7 +100,7 @@
 
 - (void)bindAccont:(ACAccount *)account
 {
-    self.accountName = [NSString stringWithFormat:@"@%@",[account.username uppercaseString]];
+    self.displayedUsername = [NSString stringWithFormat:@"@%@",[account.username uppercaseString]];
     [self setNeedsDisplay];
 }
 
@@ -132,7 +132,7 @@
     //// Abstracted Attributes
     NSString* disclosureIndicatorContent = @">";
     UIFont* disclosureIndicatorFont = [UIFont xig_lightFontOfSize: 31];
-    NSString* twitterAccountLabelContent = self.cell.accountName;
+    NSString* twitterAccountLabelContent = self.cell.displayedUsername;
     UIFont* twitterAccountLabelFont = [UIFont xig_regularFontOfSize:31];
     
     

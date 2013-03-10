@@ -11,6 +11,7 @@
 
 @interface XIGTwitterAccountCell : UITableViewCell
 
+@property (nonatomic, copy, readonly) NSString *displayedUsername;
 - (void)bindAccont:(ACAccount *)account;
 + (CGFloat)rowHeight;
 @end
