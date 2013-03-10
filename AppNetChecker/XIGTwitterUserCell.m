@@ -25,6 +25,9 @@
     self.accessoryType = UITableViewCellAccessoryNone;
     [self.activityIndicator startAnimating];
     [self.disposable dispose];
+    self.statusLabel.text = nil;
+    self.appNetTitle.text = NSLocalizedString(@"searching...", nil);
+    self.appNetSubTitle.text = nil;
 }
 
 - (void)dealloc
@@ -36,14 +39,16 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.usernameLabel.font = [UIFont xig_lightFontOfSize:self.usernameLabel.font.pointSize];
-    self.fullnameLabel.font = [UIFont xig_thinFontOfSize:self.fullnameLabel.font.pointSize];
+    self.contentView.backgroundColor = [UIColor xig_tableviewCellBackgroundColor];
+    self.usernameLabel.font = [UIFont xig_regularFontOfSize:self.usernameLabel.font.pointSize];
+    self.appNetTitle.font = [UIFont xig_regularFontOfSize:self.appNetTitle.font.pointSize];
+    self.appNetSubTitle.font = [UIFont xig_regularFontOfSize:self.appNetSubTitle.font.pointSize];
+    self.statusLabel.font = [UIFont xig_iconFontWithSize:self.statusLabel.font.pointSize];
 }
 
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher
 {
     self.usernameLabel.text = [NSString stringWithFormat:@"@%@",[userMatcher.twitterUser.screenName uppercaseString]];
-    self.fullnameLabel.text = userMatcher.twitterUser.name;
     [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL];
     
     @weakify(self);
@@ -51,14 +56,22 @@
         @strongify(self);
         [self.activityIndicator stopAnimating];
         if (appNetUser != nil) {
-            self.accessoryType = UITableViewCellAccessoryCheckmark;
+            self.appNetTitle.text = NSLocalizedString(@"1,234 Posts", nil);
+            self.appNetSubTitle.text = NSLocalizedString(@"230 Followers", nil);
+            self.statusLabel.text = @"\U0000e010";
+            self.statusLabel.textColor = [UIColor xig_greenColor];
+        } else {
+            self.appNetTitle.text = NSLocalizedString(@"User Not Found", nil);
+            self.appNetSubTitle.text = NSLocalizedString(@"=(", nil);
+            self.statusLabel.text = @"\U0000e00d";
+            self.statusLabel.textColor = [UIColor xig_redColor];
         }
     }];
 }
 
 + (CGFloat)rowHeight
 {
-    return 90;
+    return 100;
 }
 
 @end

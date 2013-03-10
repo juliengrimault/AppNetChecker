@@ -14,4 +14,6 @@
 + (instancetype) xig_thinFontOfSize:(CGFloat)pointSize;
 + (instancetype) xig_lightFontOfSize:(CGFloat)pointSize;
 + (instancetype) xig_boldFontOfSize:(CGFloat)pointSize;
+
++ (instancetype) xig_iconFontWithSize:(CGFloat)pointSize;
 @end

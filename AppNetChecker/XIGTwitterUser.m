@@ -21,7 +21,17 @@
 
 + (NSValueTransformer*)profileImageURLTransformer
 {
-    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+    return [MTLValueTransformer
+            reversibleTransformerWithForwardBlock:^ id (NSString *str) {
+                if (![str isKindOfClass:NSString.class]) return nil;
+                
+                NSString *fullsizeImageURL = [str stringByReplacingOccurrencesOfString:@"_normal." withString:@"."];
+                return [NSURL URLWithString:fullsizeImageURL];
+            }
+            reverseBlock:^ id (NSURL *URL) {
+                if (![URL isKindOfClass:NSURL.class]) return nil;
+                return URL.absoluteString;
+            }];
 }
 
 @end

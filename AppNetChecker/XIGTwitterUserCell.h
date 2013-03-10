@@ -11,8 +11,11 @@
 @interface XIGTwitterUserCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *fullnameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *appNetTitle;
+@property (weak, nonatomic) IBOutlet UILabel *appNetSubTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher;

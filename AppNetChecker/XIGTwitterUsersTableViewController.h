@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XIGTableViewController.h"
 @class XIGTwitterClient;
 @class XIGAppNetClient;
-@interface XIGTwitterUsersTableViewController : UITableViewController
+@interface XIGTwitterUsersTableViewController : XIGTableViewController
 
 @property (nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, readonly) UILabel *friendsCountLabel;

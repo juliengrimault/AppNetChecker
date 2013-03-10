@@ -11,4 +11,8 @@
 @interface UIColor (XIGAppNetChecker)
 
 + (UIColor *)xig_tableViewBackgroundColor;
++ (UIColor *)xig_tableviewCellBackgroundColor;
+
++ (instancetype) xig_redColor;
++ (instancetype) xig_greenColor;
 @end

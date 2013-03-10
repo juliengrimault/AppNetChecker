@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="287" y="57"/>
         </scene>
-        <!--Twitter Users Table View Controller-->
+        <!--Twitter Users Table View Controller - Friends-->
         <scene sceneID="8q5-Ks-SyJ">
             <objects>
                 <tableViewController storyboardIdentifier="XIGTwitterUsersTableViewController" id="R7k-M5-4E4" customClass="XIGTwitterUsersTableViewController" sceneMemberID="viewController">
@@ -109,7 +109,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="aRh-Wm-fJu"/>
+                    <navigationItem key="navigationItem" title="Friends" id="aRh-Wm-fJu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9W-LN-RRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

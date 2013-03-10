@@ -125,7 +125,7 @@
 - (void)drawRect:(CGRect)frame
 {
     //// Color Declarations
-    UIColor* transparantBackgroundColor = [UIColor colorWithRed: 0.208 green: 0.286 blue: 0.365 alpha: 0.45];
+    UIColor* transparantBackgroundColor = [UIColor xig_tableviewCellBackgroundColor];
     UIColor* fillColor = [UIColor colorWithWhite:1 alpha:1];
     UIColor* selectedBackgroundColor = [transparantBackgroundColor darkenedColor:0.5];
 

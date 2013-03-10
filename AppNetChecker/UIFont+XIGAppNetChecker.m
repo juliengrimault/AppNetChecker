@@ -30,5 +30,8 @@
     return [UIFont fontWithName:@"YanoneKaffeesatz-Bold" size:pointSize];
 }
 
-
++ (instancetype) xig_iconFontWithSize:(CGFloat)pointSize
+{
+    return [UIFont fontWithName:@"Flat-UI-Icons-24" size:pointSize];
+}
 @end
