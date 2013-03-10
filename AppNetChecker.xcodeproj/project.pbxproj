@@ -41,6 +41,7 @@
 		F96CDC1816EC5DA900D03306 /* BackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F96CDC1616EC5DA900D03306 /* BackArrow@2x.png */; };
 		F96CDC2316EC652A00D03306 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = F96CDC2116EC652A00D03306 /* empty.png */; };
 		F96CDC2416EC652A00D03306 /* empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F96CDC2216EC652A00D03306 /* empty@2x.png */; };
+		F96CDC2A16ECA84800D03306 /* Flat-UI-Icons-24.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96CDC2916ECA84800D03306 /* Flat-UI-Icons-24.ttf */; };
 		F97B551616C7752A005AD777 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551516C7752A005AD777 /* UIKit.framework */; };
 		F97B551816C7752A005AD777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551716C7752A005AD777 /* Foundation.framework */; };
 		F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
@@ -156,6 +157,7 @@
 		F96CDC1616EC5DA900D03306 /* BackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackArrow@2x.png"; sourceTree = "<group>"; };
 		F96CDC2116EC652A00D03306 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
 		F96CDC2216EC652A00D03306 /* empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty@2x.png"; sourceTree = "<group>"; };
+		F96CDC2916ECA84800D03306 /* Flat-UI-Icons-24.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Flat-UI-Icons-24.ttf"; sourceTree = "<group>"; };
 		F97B551216C7752A005AD777 /* AppNetChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B551516C7752A005AD777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F97B551716C7752A005AD777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -321,6 +323,16 @@
 			name = Categories/Helper;
 			sourceTree = "<group>";
 		};
+		F96CDC2516ECA0EA00D03306 /* TwitterUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				F951B83A16D9EA5400BB4B32 /* XIGTwitterUserCell.h */,
+				F951B83B16D9EA5400BB4B32 /* XIGTwitterUserCell.m */,
+				F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */,
+			);
+			name = TwitterUserCell;
+			sourceTree = "<group>";
+		};
 		F97B550916C7752A005AD777 = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +389,7 @@
 				F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */,
 				F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */,
 				F9D2E4E016EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf */,
+				F96CDC2916ECA84800D03306 /* Flat-UI-Icons-24.ttf */,
 				F9ED15A616EB3A29008E8404 /* logo@2x.png */,
 				F9ED15A716EB3A29008E8404 /* NavigationBar.png */,
 				F9ED15A816EB3A29008E8404 /* NavigationBar@2x.png */,
@@ -481,9 +494,7 @@
 		F9E76F9016E35593003E1B26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F951B83A16D9EA5400BB4B32 /* XIGTwitterUserCell.h */,
-				F951B83B16D9EA5400BB4B32 /* XIGTwitterUserCell.m */,
-				F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */,
+				F96CDC2516ECA0EA00D03306 /* TwitterUserCell */,
 				F90C202116C8EF3100F29905 /* XIGAccountErrorCell.h */,
 				F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */,
 				F99F64D216E8D74800ABC8CC /* XIGTwitterAccountCell.h */,
@@ -695,6 +706,7 @@
 				F96CDC1816EC5DA900D03306 /* BackArrow@2x.png in Resources */,
 				F96CDC2316EC652A00D03306 /* empty.png in Resources */,
 				F96CDC2416EC652A00D03306 /* empty@2x.png in Resources */,
+				F96CDC2A16ECA84800D03306 /* Flat-UI-Icons-24.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

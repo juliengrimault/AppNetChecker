@@ -26,6 +26,7 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Flat-UI-Icons-24.ttf</string>
 		<string>YanoneKaffeesatz-Thin.ttf</string>
 		<string>YanoneKaffeesatz-Bold.ttf</string>
 		<string>YanoneKaffeesatz-Regular.ttf</string>
