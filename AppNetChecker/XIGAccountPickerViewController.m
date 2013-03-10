@@ -43,6 +43,11 @@
     [self configureToolBar];
     [self retrieveTwitterAccounts];
     [self bindUIToError];
+    
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"BackButton.png"]
+                                                             style:UIBarButtonItemStylePlain target:nil action:nil];
+    back.title = @"a";
+    self.navigationItem.backBarButtonItem = back;
 }
 
 - (void)configureToolBar
