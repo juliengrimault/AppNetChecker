@@ -46,7 +46,7 @@
     self.selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
     self.contentView.backgroundColor = [UIColor clearColor];
     self.customView = [[XIGTwitterAccountCellView alloc] initWithFrame:self.contentView.frame twitterAccountCell:self];
-    self.customView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
+    self.customView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.contentView addSubview:self.customView];
 }
 
