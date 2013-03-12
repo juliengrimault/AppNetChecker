@@ -81,6 +81,10 @@
 		F9A4D0D216E1F3A1005D3EE5 /* valid.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A4D0D016E1F3A1005D3EE5 /* valid.png */; };
 		F9ACF72616C8F99700539A23 /* XIGAccountErrorCellSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */; };
 		F9ACF72816C901FB00539A23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B551916C7752A005AD777 /* CoreGraphics.framework */; };
+		F9B29D6816EF7B9000D16434 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B29D6316EF7B9000D16434 /* TFHpple.m */; };
+		F9B29D6916EF7B9000D16434 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B29D6516EF7B9000D16434 /* TFHppleElement.m */; };
+		F9B29D6A16EF7B9000D16434 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B29D6716EF7B9000D16434 /* XPathQuery.m */; };
+		F9B29D6E16EF7CF500D16434 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B29D6D16EF7CF500D16434 /* libxml2.dylib */; };
 		F9BBFF6116CA77E300CEE372 /* XIGNSURLRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */; };
 		F9BBFF6316CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */; };
 		F9BBFF6616CA79D900CEE372 /* ACAccount+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */; };
@@ -214,6 +218,13 @@
 		F9A4D0D016E1F3A1005D3EE5 /* valid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = valid.png; sourceTree = "<group>"; };
 		F9ACF72516C8F99700539A23 /* XIGAccountErrorCellSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAccountErrorCellSpec.m; sourceTree = "<group>"; };
 		F9ACF72716C8FB8800539A23 /* XIGAccountError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XIGAccountError.h; sourceTree = "<group>"; };
+		F9B29D6216EF7B9000D16434 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHpple.h; path = Submodules/hpple/TFHpple.h; sourceTree = SOURCE_ROOT; };
+		F9B29D6316EF7B9000D16434 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHpple.m; path = Submodules/hpple/TFHpple.m; sourceTree = SOURCE_ROOT; };
+		F9B29D6416EF7B9000D16434 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHppleElement.h; path = Submodules/hpple/TFHppleElement.h; sourceTree = SOURCE_ROOT; };
+		F9B29D6516EF7B9000D16434 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleElement.m; path = Submodules/hpple/TFHppleElement.m; sourceTree = SOURCE_ROOT; };
+		F9B29D6616EF7B9000D16434 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPathQuery.h; path = Submodules/hpple/XPathQuery.h; sourceTree = SOURCE_ROOT; };
+		F9B29D6716EF7B9000D16434 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPathQuery.m; path = Submodules/hpple/XPathQuery.m; sourceTree = SOURCE_ROOT; };
+		F9B29D6D16EF7CF500D16434 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		F9BBFF5F16CA77E300CEE372 /* XIGNSURLRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGNSURLRequestBuilder.h; sourceTree = "<group>"; };
 		F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGNSURLRequestBuilder.m; sourceTree = "<group>"; };
 		F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGNSURLRequestBuilderSpec.m; sourceTree = "<group>"; };
@@ -261,6 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B29D6E16EF7CF500D16434 /* libxml2.dylib in Frameworks */,
 				F951B83616D9E9C600BB4B32 /* MobileCoreServices.framework in Frameworks */,
 				F951B83316D9E99800BB4B32 /* SystemConfiguration.framework in Frameworks */,
 				F90C201916C8BC4F00F29905 /* Social.framework in Frameworks */,
@@ -344,6 +356,7 @@
 		F97B550916C7752A005AD777 = {
 			isa = PBXGroup;
 			children = (
+				F9B29D6D16EF7CF500D16434 /* libxml2.dylib */,
 				F97B551B16C7752A005AD777 /* AppNetChecker */,
 				F97B554216C7752A005AD777 /* AppNetCheckerTests */,
 				F97B551416C7752A005AD777 /* Frameworks */,
@@ -383,35 +396,17 @@
 		F97B551B16C7752A005AD777 /* AppNetChecker */ = {
 			isa = PBXGroup;
 			children = (
+				F9B29D6116EF7B4900D16434 /* Vendor */,
 				F9E76F9716E355EF003E1B26 /* Network */,
 				F9E76F9216E3559D003E1B26 /* Models */,
 				F9E76F9116E35598003E1B26 /* Controllers */,
 				F9E76F9016E35593003E1B26 /* Views */,
 				F9E76F8F16E3558A003E1B26 /* Categories */,
+				F9B29D6016EF7B2E00D16434 /* Resources */,
 				F97B552416C7752A005AD777 /* XIGAppDelegate.h */,
 				F97B552516C7752A005AD777 /* XIGAppDelegate.m */,
 				F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */,
 				F97B551C16C7752A005AD777 /* Supporting Files */,
-				F9A4D0CF16E1F3A1005D3EE5 /* invalid.png */,
-				F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */,
-				F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */,
-				F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */,
-				F9D2E4E016EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf */,
-				F96CDC2916ECA84800D03306 /* Flat-UI-Icons-24.ttf */,
-				F9ED15A616EB3A29008E8404 /* logo@2x.png */,
-				F9ED15A716EB3A29008E8404 /* NavigationBar.png */,
-				F9ED15A816EB3A29008E8404 /* NavigationBar@2x.png */,
-				F9ED15A916EB3A29008E8404 /* ToolBar.png */,
-				F9ED15AA16EB3A29008E8404 /* ToolBar@2x.png */,
-				F96CDC1516EC5DA900D03306 /* BackArrow.png */,
-				F96CDC1616EC5DA900D03306 /* BackArrow@2x.png */,
-				F96CDC2116EC652A00D03306 /* empty.png */,
-				F96CDC2216EC652A00D03306 /* empty@2x.png */,
-				F9A4D0D016E1F3A1005D3EE5 /* valid.png */,
-				F96CDC2B16ECADD600D03306 /* app.net-logo.png */,
-				F96CDC2C16ECADD600D03306 /* app.net-logo@2x.png */,
-				F96CDC2D16ECADD600D03306 /* twitter-logo.png */,
-				F96CDC2E16ECADD600D03306 /* twitter-logo@2x.png */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -460,6 +455,46 @@
 				F97B554516C7752A005AD777 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9B29D6016EF7B2E00D16434 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9A4D0CF16E1F3A1005D3EE5 /* invalid.png */,
+				F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */,
+				F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */,
+				F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */,
+				F9D2E4E016EADD14006A1A06 /* YanoneKaffeesatz-Regular.ttf */,
+				F96CDC2916ECA84800D03306 /* Flat-UI-Icons-24.ttf */,
+				F9ED15A616EB3A29008E8404 /* logo@2x.png */,
+				F9ED15A716EB3A29008E8404 /* NavigationBar.png */,
+				F9ED15A816EB3A29008E8404 /* NavigationBar@2x.png */,
+				F9ED15A916EB3A29008E8404 /* ToolBar.png */,
+				F9ED15AA16EB3A29008E8404 /* ToolBar@2x.png */,
+				F96CDC1516EC5DA900D03306 /* BackArrow.png */,
+				F96CDC1616EC5DA900D03306 /* BackArrow@2x.png */,
+				F96CDC2116EC652A00D03306 /* empty.png */,
+				F96CDC2216EC652A00D03306 /* empty@2x.png */,
+				F9A4D0D016E1F3A1005D3EE5 /* valid.png */,
+				F96CDC2B16ECADD600D03306 /* app.net-logo.png */,
+				F96CDC2C16ECADD600D03306 /* app.net-logo@2x.png */,
+				F96CDC2D16ECADD600D03306 /* twitter-logo.png */,
+				F96CDC2E16ECADD600D03306 /* twitter-logo@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F9B29D6116EF7B4900D16434 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F9B29D6216EF7B9000D16434 /* TFHpple.h */,
+				F9B29D6316EF7B9000D16434 /* TFHpple.m */,
+				F9B29D6416EF7B9000D16434 /* TFHppleElement.h */,
+				F9B29D6516EF7B9000D16434 /* TFHppleElement.m */,
+				F9B29D6616EF7B9000D16434 /* XPathQuery.h */,
+				F9B29D6716EF7B9000D16434 /* XPathQuery.m */,
+			);
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 		F9BBFF6716CA7B3700CEE372 /* Spec Helpers */ = {
@@ -822,6 +857,9 @@
 				F9ED15B716EB4131008E8404 /* UITableView+XIGBackgroundView.m in Sources */,
 				F9ED15BA16EB4185008E8404 /* XIGTableViewController.m in Sources */,
 				F9ED15BD16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m in Sources */,
+				F9B29D6816EF7B9000D16434 /* TFHpple.m in Sources */,
+				F9B29D6916EF7B9000D16434 /* TFHppleElement.m in Sources */,
+				F9B29D6A16EF7B9000D16434 /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +952,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(inherited)",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -938,6 +980,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(inherited)",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -951,6 +997,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppNetChecker/AppNetChecker-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_HEADERS_SEARCH_PATHS}",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "AppNetChecker/AppNetChecker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -963,6 +1014,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppNetChecker/AppNetChecker-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_HEADERS_SEARCH_PATHS}",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "AppNetChecker/AppNetChecker-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

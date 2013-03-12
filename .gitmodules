@@ -1,0 +1,3 @@
+[submodule "Submodules/hpple"]
+	path = Submodules/hpple
+	url = git@github.com:topfunky/hpple.git
