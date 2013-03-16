@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007b55e9-732a-4c29-9a50-f706b3a930c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AppNetChecker/Localizable.strings" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.m" afterPath="$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.xib" afterPath="$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.xib" />
     </list>
     <ignored path="AppNetChecker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,83 +40,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.net.exists.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/app.net.exists.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="213" column="7" selection-start="45711" selection-end="45711" vertical-scroll-proportion="-56.708332">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XIGAppNetClientSpec.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGAppNetClientSpec.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XIGTwitterUserCell.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="80" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XIGTwitterUserCell.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="XIGTwitterUserCell.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="31" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+            <state line="61" column="26" selection-start="1942" selection-end="1958" vertical-scroll-proportion="1.6871036">
               <folding>
                 <element signature="e#1056#1095#0" expanded="true" />
                 <element signature="e#2781#2822#0" expanded="true" />
                 <element signature="e#2863#2892#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XIGAppNetUser.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGAppNetUser.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="4" selection-start="90" selection-end="90" vertical-scroll-proportion="0.16203703">
-              <folding>
-                <element signature="e#143#168#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KWSpec+Fixture.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/KWSpec+Fixture.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="11" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FakeAccountStore.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/FakeAccountStore.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="1" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XIGAppNetUserSpec.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGAppNetUserSpec.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="46" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -386,7 +314,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1394" height="860" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898173" sideWeight="0.4996353" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898173" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -394,11 +322,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24945295" sideWeight="0.6005222" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23267688" sideWeight="0.6005222" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3994778" sideWeight="0.58570385" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23267688" sideWeight="0.6710183" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994778" sideWeight="0.58570385" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23267688" sideWeight="0.27284595" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898173" sideWeight="0.45295405" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898173" sideWeight="0.54631656" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32898173" sideWeight="0.54631656" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.4996353" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -525,39 +453,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/KWSpec+Fixture.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="11" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGAppNetClientSpec.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/app.net.exists.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="7" selection-start="45711" selection-end="45711" vertical-scroll-proportion="-56.708332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/FakeAccountStore.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGAppNetUserSpec.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="46" selection-start="864" selection-end="864" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
@@ -578,22 +476,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.m">
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGAppNetUser.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="31" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+        <state line="5" column="4" selection-start="90" selection-end="90" vertical-scroll-proportion="0.09485095">
           <folding>
-            <element signature="e#1056#1095#0" expanded="true" />
-            <element signature="e#2781#2822#0" expanded="true" />
-            <element signature="e#2863#2892#0" expanded="true" />
+            <element signature="e#143#168#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGAppNetUser.m">
+    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/KWSpec+Fixture.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="90" selection-end="90" vertical-scroll-proportion="0.16203703">
+        <state line="12" column="11" selection-start="164" selection-end="164" vertical-scroll-proportion="0.22764228">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/FakeAccountStore.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="1" selection-start="498" selection-end="498" vertical-scroll-proportion="0.3089655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGAppNetUserSpec.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="46" selection-start="864" selection-end="864" vertical-scroll-proportion="0.5691057">
           <folding>
-            <element signature="e#143#168#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/app.net.exists.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="7" selection-start="45711" selection-end="45711" vertical-scroll-proportion="1.9415121">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="26" selection-start="1942" selection-end="1958" vertical-scroll-proportion="1.6871036">
+          <folding>
+            <element signature="e#1056#1095#0" expanded="true" />
+            <element signature="e#2781#2822#0" expanded="true" />
+            <element signature="e#2863#2892#0" expanded="true" />
           </folding>
         </state>
       </provider>
