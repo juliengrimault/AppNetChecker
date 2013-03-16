@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E6E481E263742F9A0C55CB8 /* libPods-AppNetCheckerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 164169FAEA284DC88A60012F /* libPods-AppNetCheckerTests.a */; };
 		BB8510D9E7755A6AAC92ECFC /* app.net.notexists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */; };
+		BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB851D89552ADE90B1155662 /* Localizable.strings */; };
 		BB851BC2F4B3989EFD77A9A7 /* app.net.exists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8511A1195712608D1ED2B7 /* app.net.exists.html */; };
 		C28CEACFFAEB49CD958D3A20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3C7EAB274B1BA845227F /* libPods.a */; };
 		F901A88716D7B2EB00F17C81 /* lookup.json in Resources */ = {isa = PBXBuildFile; fileRef = F901A88616D7B2EB00F17C81 /* lookup.json */; };
@@ -133,6 +134,7 @@
 		9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetCheckerTests.xcconfig"; path = "Pods/Pods-AppNetCheckerTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		BB8511A1195712608D1ED2B7 /* app.net.exists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.exists.html; sourceTree = "<group>"; };
 		BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.notexists.html; sourceTree = "<group>"; };
+		BB851D89552ADE90B1155662 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		F901A88616D7B2EB00F17C81 /* lookup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lookup.json; sourceTree = "<group>"; };
 		F901A88816D7B91200F17C81 /* XIGTwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterUser.h; sourceTree = "<group>"; };
 		F901A88916D7B91200F17C81 /* XIGTwitterUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUser.m; sourceTree = "<group>"; };
@@ -411,6 +413,7 @@
 				F97B552516C7752A005AD777 /* XIGAppDelegate.m */,
 				F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */,
 				F97B551C16C7752A005AD777 /* Supporting Files */,
+				BB851D89552ADE90B1155662 /* Localizable.strings */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				F96CDC3016ECADD600D03306 /* app.net-logo@2x.png in Resources */,
 				F96CDC3116ECADD600D03306 /* twitter-logo.png in Resources */,
 				F96CDC3216ECADD600D03306 /* twitter-logo@2x.png in Resources */,
+				BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,11 +12,21 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+static NSNumberFormatter *_decimalFormatter;
+
 @interface XIGTwitterUserCell()
 @property (nonatomic, strong) RACDisposable* disposable;
 @end
 
 @implementation XIGTwitterUserCell
+
++ (NSNumberFormatter *)decimalFormatter {
+    if (_decimalFormatter == nil) {
+        _decimalFormatter = [[NSNumberFormatter alloc] init];
+        _decimalFormatter.numberStyle = NSNumberFormatterDecimalStyle;
+    }
+    return _decimalFormatter;
+}
 
 - (void)prepareForReuse
 {
@@ -56,8 +66,9 @@
         @strongify(self);
         [self.activityIndicator stopAnimating];
         if (appNetUser != nil) {
-            self.appNetTitle.text = NSLocalizedString(@"1,234 Posts", nil);
-            self.appNetSubTitle.text = NSLocalizedString(@"230 Followers", nil);
+            NSNumberFormatter *formatter = [[self class] decimalFormatter];
+            self.appNetTitle.text = [NSString localizedStringWithFormat:@"%@ Following", [formatter stringFromNumber:appNetUser.followingCount]];
+            self.appNetSubTitle.text = [NSString localizedStringWithFormat:@"%@ Followers", [formatter stringFromNumber:appNetUser.followerCount]];
             self.statusLabel.text = @"\U0000e010";
             self.statusLabel.textColor = [UIColor xig_greenColor];
         } else {
