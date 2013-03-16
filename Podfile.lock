@@ -1,6 +1,7 @@
 
 PODS:
 - AFNetworking (1.1.0)
+- InflectorKit (0.0.1)
 - JRSwizzle (1.0)
 - Kiwi (2.0.5)
 - Mantle (0.2.3):
@@ -27,6 +28,7 @@ PODS:
 
 DEPENDENCIES:
 - AFNetworking (~> 1.1.0)
+- InflectorKit (~> 0.0.1)
 - Kiwi (~> 2.0.5)
 - Mantle (~> 0.2.3)
 - Nocilla (= 0.2)
@@ -34,6 +36,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  InflectorKit: 9dccab02f95541093995adac639342c9eb9e6c12
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
   Mantle: 4a20405b7aba3452007294badee2b3cb137825c3
   ReactiveCocoa: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d

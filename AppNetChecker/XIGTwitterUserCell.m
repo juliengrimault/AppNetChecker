@@ -9,6 +9,7 @@
 #import "XIGTwitterUserCell.h"
 #import "XIGUserMatcher.h"
 #import "XIGTwitterUser.h"
+#import "NSString+InflectorKit.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
@@ -68,7 +69,11 @@ static NSNumberFormatter *_decimalFormatter;
         if (appNetUser != nil) {
             NSNumberFormatter *formatter = [[self class] decimalFormatter];
             self.appNetTitle.text = [NSString localizedStringWithFormat:@"%@ Following", [formatter stringFromNumber:appNetUser.followingCount]];
-            self.appNetSubTitle.text = [NSString localizedStringWithFormat:@"%@ Followers", [formatter stringFromNumber:appNetUser.followerCount]];
+            NSString *followers = @"Follower";
+            if ([appNetUser.followerCount integerValue]  > 0) {
+                followers = [followers pluralizedString];
+            }
+            self.appNetSubTitle.text = [NSString localizedStringWithFormat:@"%@ %@", [formatter stringFromNumber:appNetUser.followerCount], followers];
             self.statusLabel.text = @"\U0000e010";
             self.statusLabel.textColor = [UIColor xig_greenColor];
         } else {

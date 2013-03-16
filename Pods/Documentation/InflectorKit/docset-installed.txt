@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/julien/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.InflectorKit-0.0.1.docset
+Time: 2013-03-16 14:02:13 +0000

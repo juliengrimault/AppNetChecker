@@ -17,4 +17,5 @@
 
     #import "UIFont+XIGAppNetChecker.h"
     #import "UIColor+XIGAppNetChecker.h"
+    #import "TTTStringInflector.h"
 #endif
