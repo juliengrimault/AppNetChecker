@@ -34,15 +34,15 @@
                                              parameters:nil];
         AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                           success:
-                                             ^(AFHTTPRequestOperation *operation, id responseObject) {
-                                                 XIGAppNetUser* user = [[XIGAppNetUser alloc] init];
-                                                 user.screenName = username;
+                                             ^(AFHTTPRequestOperation *requestOperation, id responseObject) {
+                                                 XIGAppNetUser* user = [[XIGAppNetUser alloc] initWithScreenName:username
+                                                                                                        htmlData:responseObject];
                                                  [subscriber sendNext:user];
                                                  [subscriber sendCompleted];
                                              }
                                                                           failure:
-                                             ^(AFHTTPRequestOperation *operation, NSError *error) {
-                                                 if (operation.response.statusCode == 404) {
+                                             ^(AFHTTPRequestOperation *requestOperation, NSError *error) {
+                                                 if (requestOperation.response.statusCode == 404) {
                                                      //does not exist
                                                      [subscriber sendNext:nil];
                                                      [subscriber sendCompleted];

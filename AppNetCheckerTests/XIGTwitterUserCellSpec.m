@@ -36,10 +36,6 @@ describe(@"loading from xib", ^{
         [cell.profileImageView shouldNotBeNil];
     });
     
-    it(@"should have user full name outlet connected", ^{
-        [cell.fullnameLabel shouldNotBeNil];
-    });
-    
     it(@"should have activity outlet connected", ^{
         [cell.activityIndicator shouldNotBeNil];
     });
@@ -52,10 +48,6 @@ describe(@"binding user", ^{
     
     it(@"should have the username set", ^{
         [[cell.usernameLabel.text should] equal:[NSString stringWithFormat:@"@%@",[user.screenName uppercaseString]]];
-    });
-    
-    it(@"should have the name set", ^{
-        [[cell.fullnameLabel.text should] equal:user.name];
     });
     
     it(@"should be animating", ^{

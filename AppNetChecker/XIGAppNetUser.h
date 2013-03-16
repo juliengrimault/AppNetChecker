@@ -10,4 +10,9 @@
 @interface XIGAppNetUser : MTLModel
 
 @property (nonatomic, copy) NSString* screenName;
+@property  (nonatomic, strong) NSNumber *followerCount;
+@property  (nonatomic, strong) NSNumber *followingCount;
+
+- (id)initWithScreenName:(NSString *)screenName htmlData:(NSData *)htmlData;
+
 @end
