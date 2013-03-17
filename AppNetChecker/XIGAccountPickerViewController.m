@@ -14,6 +14,7 @@
 #import "XIGTwitterUsersTableViewController.h"
 #import "XIGTwitterClient.h"
 #import "XIGTwitterAccountCell.h"
+#import "XIGSemiModalController.h"
 
 @interface XIGAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
@@ -40,28 +41,14 @@
 {
     [super viewDidLoad];
     [self.refreshControl addTarget:self action:@selector(refreshControlValueChanged:) forControlEvents:UIControlEventValueChanged];
-    [self configureToolBar];
     [self retrieveTwitterAccounts];
     [self bindUIToError];
-    
+
+    self.semiModalController.navigationItem.title = NSLocalizedString(@"TwitApp.net", nil);
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"BackButton.png"]
                                                              style:UIBarButtonItemStylePlain target:nil action:nil];
     back.title = @"a";
-    self.navigationItem.backBarButtonItem = back;
-}
-
-- (void)configureToolBar
-{
-    UIBarButtonItem *elasticLeft = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *elasticRight = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UILabel *instructionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.navigationController.toolbar.frame), CGRectGetHeight(self.navigationController.toolbar.frame))];
-    instructionLabel.backgroundColor = [UIColor clearColor];
-    instructionLabel.textColor = [UIColor whiteColor];
-    instructionLabel.textAlignment = NSTextAlignmentCenter;
-    instructionLabel.font = [UIFont xig_regularFontOfSize:[UIFont labelFontSize]];
-    instructionLabel.text = NSLocalizedString(@"Find your Twitter friends on App.net", nil);
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:instructionLabel];
-    self.toolbarItems = @[elasticLeft, item, elasticRight];
+    self.semiModalController.navigationItem.backBarButtonItem = back;
 }
 
 - (void)retrieveTwitterAccounts
@@ -156,7 +143,7 @@
 {
     if ([segue.identifier isEqualToString:@"PushUsersTableViewController"]) {
         XIGTwitterUsersTableViewController* vc = segue.destinationViewController;
-        
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
         NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
         if (selectedIndexPath) {
             ACAccount* selectedAccount = self.accounts[selectedIndexPath.row];

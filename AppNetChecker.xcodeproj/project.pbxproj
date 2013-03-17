@@ -10,7 +10,9 @@
 		7E6E481E263742F9A0C55CB8 /* libPods-AppNetCheckerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 164169FAEA284DC88A60012F /* libPods-AppNetCheckerTests.a */; };
 		BB8510D9E7755A6AAC92ECFC /* app.net.notexists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */; };
 		BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB851D89552ADE90B1155662 /* Localizable.strings */; };
+		BB8518E58BD63465DD4466CC /* XIGSemiModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */; };
 		BB851BC2F4B3989EFD77A9A7 /* app.net.exists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8511A1195712608D1ED2B7 /* app.net.exists.html */; };
+		BB851ECE45FDF6558A611194 /* XIGHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */; };
 		C28CEACFFAEB49CD958D3A20 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 773C3C7EAB274B1BA845227F /* libPods.a */; };
 		F901A88716D7B2EB00F17C81 /* lookup.json in Resources */ = {isa = PBXBuildFile; fileRef = F901A88616D7B2EB00F17C81 /* lookup.json */; };
 		F901A88A16D7B91200F17C81 /* XIGTwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F901A88916D7B91200F17C81 /* XIGTwitterUser.m */; };
@@ -132,8 +134,12 @@
 		773C3C7EAB274B1BA845227F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		77644BD0F970460FAC7B1976 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetCheckerTests.xcconfig"; path = "Pods/Pods-AppNetCheckerTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGSemiModalController.h; sourceTree = "<group>"; };
 		BB8511A1195712608D1ED2B7 /* app.net.exists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.exists.html; sourceTree = "<group>"; };
+		BB85127E2A70F3F80315323E /* XIGHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGHelpViewController.h; sourceTree = "<group>"; };
 		BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.notexists.html; sourceTree = "<group>"; };
+		BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGHelpViewController.m; sourceTree = "<group>"; };
+		BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGSemiModalController.m; sourceTree = "<group>"; };
 		BB851D89552ADE90B1155662 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		F901A88616D7B2EB00F17C81 /* lookup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lookup.json; sourceTree = "<group>"; };
 		F901A88816D7B91200F17C81 /* XIGTwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterUser.h; sourceTree = "<group>"; };
@@ -568,6 +574,10 @@
 				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
 				F9ED15B816EB4185008E8404 /* XIGTableViewController.h */,
 				F9ED15B916EB4185008E8404 /* XIGTableViewController.m */,
+				BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */,
+				BB85127E2A70F3F80315323E /* XIGHelpViewController.h */,
+				BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */,
+				BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -872,6 +882,8 @@
 				F9B29D6816EF7B9000D16434 /* TFHpple.m in Sources */,
 				F9B29D6916EF7B9000D16434 /* TFHppleElement.m in Sources */,
 				F9B29D6A16EF7B9000D16434 /* XPathQuery.m in Sources */,
+				BB851ECE45FDF6558A611194 /* XIGHelpViewController.m in Sources */,
+				BB8518E58BD63465DD4466CC /* XIGSemiModalController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
