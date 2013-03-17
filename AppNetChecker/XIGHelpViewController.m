@@ -31,7 +31,6 @@
 {
     self.view.backgroundColor = [UIColor xig_tableViewBackgroundColor];
     self.textView.attributedText = [self helpText];
-
 }
 
 - (IBAction)toggleButtonHandler:(id)sender

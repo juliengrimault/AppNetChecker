@@ -5,13 +5,19 @@
 //
 
 
+#import <CoreGraphics/CoreGraphics.h>
 #import "XIGSemiModalController.h"
 
 static CGFloat const kDefaultOpenedBottomOffset = 44;
+static CGFloat const kPanThreshold = 100;
+
+@interface  XIGSemiModalController()
+@property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
+@end
 
 @implementation XIGSemiModalController {
 }
-
+#pragma mark - Init
 - (id)initWithFrontViewController:(UIViewController *)frontViewController backViewController:(UIViewController *)backViewController {
     self = [super init];
     if (self) {
@@ -49,10 +55,12 @@ static CGFloat const kDefaultOpenedBottomOffset = 44;
 - (void)changeFrontViewControllerFrom:(UIViewController *)current to:(UIViewController *)new {
     [current willMoveToParentViewController:nil];
     [current.view removeFromSuperview];
+    [current.view removeGestureRecognizer:self.panGestureRecognizer];
 
     if (new != nil) {
         [self addChildViewController:new];
         new.view.frame = self.view.frame;
+        [new.view addGestureRecognizer:self.panGestureRecognizer];
         [self.view addSubview:new.view];
     }
 }
@@ -106,6 +114,43 @@ static CGFloat const kDefaultOpenedBottomOffset = 44;
     [super viewDidLayoutSubviews];
     self.frontViewController.view.frame = [self frontViewFrameForState:[self isOpen]];
     self.backViewController.view.frame = self.view.bounds;
+}
+
+#pragma mark - Pan Tracking
+- (UIPanGestureRecognizer *)panGestureRecognizer {
+    if (_panGestureRecognizer == nil) {
+        _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan:)];
+    }
+    return _panGestureRecognizer;
+}
+
+- (void)didPan:(UIPanGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
+        CGRect adjustedFrame = [self adjustedFrameForFrontView];
+        self.frontViewController.view.frame = adjustedFrame;
+    } else if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if (fabsf([recognizer translationInView:recognizer.view].y) > kPanThreshold ) {
+            [self toggleOpenAnimated:YES];
+        } else {
+            [UIView animateWithDuration:0.3
+                             animations:^{
+                                 self.frontViewController.view.frame = [self frontViewFrameForState:[self isOpen]];
+                             }];
+        }
+    }
+}
+
+- (CGRect)adjustedFrameForFrontView {
+    CGRect baseFrame = [self frontViewFrameForState:[self isOpen]];
+    CGFloat deltaY = [self.panGestureRecognizer translationInView:self.panGestureRecognizer.view].y;
+    CGRect pannedFrame = CGRectOffset(baseFrame, 0, deltaY);
+    if (pannedFrame.origin.y < 0) {
+        pannedFrame.origin.y = 0;
+    } else if (pannedFrame.origin.y > (CGRectGetHeight(self.view.frame) - self.openBottomOffset)) {
+        pannedFrame.origin.y = CGRectGetHeight(self.view.frame) - self.openBottomOffset;
+    }
+    return pannedFrame;
 }
 
 @end
