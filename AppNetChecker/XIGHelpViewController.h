@@ -6,10 +6,11 @@
 
 
 #import <Foundation/Foundation.h>
-
+#import "XIGHelpButton.h"
 
 @interface XIGHelpViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UIButton *toggleButton;
+@property (nonatomic, strong) IBOutlet XIGHelpButton *toggleButton;
+
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @end

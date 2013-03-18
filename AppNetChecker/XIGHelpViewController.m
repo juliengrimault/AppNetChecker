@@ -7,6 +7,7 @@
 
 #import "XIGHelpViewController.h"
 #import "XIGSemiModalController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation XIGHelpViewController {
 
@@ -19,12 +20,12 @@
 }
 
 - (void)configureToggleButton {
-    self.toggleButton.titleLabel.textColor = [UIColor whiteColor];
-    [self.toggleButton setBackgroundImage:[UIImage imageNamed:@"ToolBar.png"] forState:UIControlStateNormal];
-    self.toggleButton.adjustsImageWhenHighlighted = NO;
-    self.toggleButton.titleLabel.font = [UIFont xig_regularFontOfSize:[UIFont labelFontSize]];
-    [self.toggleButton setTitle:NSLocalizedString(@"Find your Twitter friends on App.net", nil) forState:UIControlStateNormal];
+    self.toggleButton.backgroundColor = [UIColor colorWithRed: 0.133 green: 0.624 blue: 0.522 alpha: 1];
+    self.toggleButton.font = [UIFont xig_regularFontOfSize:20];
+    self.toggleButton.titleColor = [UIColor whiteColor];
+    self.toggleButton.title = NSLocalizedString(@"Find your Twitter friends on App.net", nil);
     [self.toggleButton addTarget:self action:@selector(toggleButtonHandler:) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)configureView
@@ -35,7 +36,9 @@
 
 - (IBAction)toggleButtonHandler:(id)sender
 {
-    [self.semiModalController toggleOpenAnimated:YES];
+    CGFloat midHeight = self.view.frame.size.height * 0.1;
+    CAKeyframeAnimation* animation = [[self class] dockBounceAnimationWithViewHeight:midHeight];
+    [self.view.layer addAnimation:animation forKey:@"bouncing"];
 }
 
 - (NSAttributedString *)helpText
@@ -46,6 +49,34 @@
             NSForegroundColorAttributeName : [UIColor whiteColor]
     };
     return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+}
+
++ (CAKeyframeAnimation*)dockBounceAnimationWithViewHeight:(CGFloat)viewHeight
+{
+    NSUInteger const kNumFactors    = 22;
+    CGFloat const kFactorsPerSec    = 30.0f;
+    CGFloat const kFactorsMaxValue  = 128.0f;
+    CGFloat factors[kNumFactors]    = {0,  60, 83, 100, 114, 124, 128, 128, 124, 114, 100, 83, 60, 32, 0, 0, 18, 28, 32, 28, 18, 0};
+
+    NSMutableArray* transforms = [NSMutableArray array];
+
+    for(NSUInteger i = 0; i < kNumFactors; i++)
+    {
+        CGFloat positionOffset  = factors[i] / kFactorsMaxValue * viewHeight;
+        CATransform3D transform = CATransform3DMakeTranslation(0.0f, -positionOffset, 0.0f);
+
+        [transforms addObject:[NSValue valueWithCATransform3D:transform]];
+    }
+
+    CAKeyframeAnimation* animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.repeatCount           = 1;
+    animation.duration              = kNumFactors * 1.0f/kFactorsPerSec;
+    animation.fillMode              = kCAFillModeForwards;
+    animation.values                = transforms;
+    animation.removedOnCompletion   = YES; // final stage is equal to starting stage
+    animation.autoreverses          = NO;
+
+    return animation;
 }
 
 @end

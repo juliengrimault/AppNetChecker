@@ -12,18 +12,6 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m51-Ol-toh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Find your Twitter friends on App.net">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" image="logo.png" id="V6e-Io-dnz">
                                 <rect key="frame" x="0.0" y="52" width="320" height="496"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -56,11 +44,23 @@ For each of your friend, you will see a success or failure indicator depending o
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m51-Ol-toh" customClass="XIGHelpButton">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Find your Twitter friends on App.net">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="textView" destination="3lS-cN-dUo" id="xGe-bF-QXV"/>
-                        <outlet property="toggleButton" destination="m51-Ol-toh" id="j9g-nA-pYK"/>
+                        <outlet property="toggleButton" destination="m51-Ol-toh" id="7aQ-wB-Rsc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdP-l1-5FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,12 +175,14 @@ For each of your friend, you will see a success or failure indicator depending o
         <class className="XIGAccountPickerViewController" superclassName="XIGTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/XIGAccountPickerViewController.h"/>
         </class>
+        <class className="XIGHelpButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/XIGHelpButton.h"/>
+        </class>
         <class className="XIGHelpViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/XIGHelpViewController.h"/>
             <relationships>
-                <relationship kind="action" name="toggleButtonHandler:"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="toggleButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="toggleButton" candidateClass="XIGHelpButton"/>
             </relationships>
         </class>
         <class className="XIGTableViewController" superclassName="UITableViewController">
