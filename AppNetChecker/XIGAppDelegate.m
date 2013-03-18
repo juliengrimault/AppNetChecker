@@ -27,7 +27,7 @@
     XIGHelpViewController *helpViewController = [[UIStoryboard mainStoryboard] instantiateViewControllerWithIdentifier:@"XIGHelpViewController"];
     XIGSemiModalController *semiModalController = [[XIGSemiModalController alloc] initWithFrontViewController:helpViewController
                                                                                            backViewController:accountPickerViewController];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:semiModalController];
+    UINavigationController*navigationController = [[UINavigationController alloc] initWithRootViewController:semiModalController];
     semiModalController.open = YES;
 
     [RACAble(semiModalController, open) subscribeNext:^(id x) {

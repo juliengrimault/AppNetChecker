@@ -36,6 +36,21 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - Init
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+    }
+    return self;
+}
+
 #pragma mark - lifecycle
 - (void)viewDidLoad
 {
@@ -50,6 +65,17 @@
     back.title = @"a";
     self.semiModalController.navigationItem.backBarButtonItem = back;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setToolbarHidden:YES animated:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setToolbarHidden:NO animated:animated];
+}
+
 
 - (void)retrieveTwitterAccounts
 {
