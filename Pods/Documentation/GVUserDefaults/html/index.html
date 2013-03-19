@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>GVUserDefaults 0.9.0 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">GVUserDefaults 0.9.0 </a></h1>
+				<a id="developerHome" href="index.html">Kevin Renskers</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">GVUserDefaults 0.9.0 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">GVUserDefaults 0.9.0 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1><a href="Classes/GVUserDefaults.html">GVUserDefaults</a> &ndash; NSUserDefaults access via properties</h1>
+
+<p>Tired of writing all that code to get and set defaults in NSUserDefaults? Want to have code completion and compiler checks by using properties instead?</p>
+
+<h2>Usage</h2>
+
+<p>Create a category on <a href="Classes/GVUserDefaults.html"><code>GVUserDefaults</code></a>, add some properties in the .h file and make them <code>@dynamic</code> in the .m file.</p>
+
+<pre><code>// .h
+@interface GVUserDefaults (Properties)
+@property (nonatomic, weak) NSString *userName;
+@property (nonatomic, weak) NSNumber *userId;
+@property (nonatomic) NSInteger integerValue;
+@property (nonatomic) BOOL boolValue;
+@property (nonatomic) float floatValue;
+@end
+
+// .m
+@implementation GVUserDefaults (Properties)
+@dynamic userName;
+@dynamic userId;
+@dynamic integerValue;
+@dynamic boolValue;
+@dynamic floatValue;
+@end
+</code></pre>
+
+<p>Now, instead of using <code>[[NSUserDefaults standardUserDefaults] objectForKey:@"userName"]</code>, you can simply use <code>[</code>[GVUserDefaults standardUserDefaults]<code>](Classes/GVUserDefaults.html#//api/name/standardUserDefaults).userName</code>.</p>
+
+<p>You can even save defaults by setting the property:</p>
+
+<pre><code>[GVUserDefaults standardUserDefaults].userName = @"myusername";
+</code></pre>
+
+<h3>Key prefix</h3>
+
+<p>The keys in NSUserDefaults are the same name as your properties. If you&rsquo;d like to prefix or alter them, add a <code>transformKey:</code> method to your category. For example, to turn &ldquo;userName&rdquo; into &ldquo;NSUserDefaultUserName&rdquo;:</p>
+
+<pre><code>- (NSString *)transformKey:(NSString *)key {
+    key = [key stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:[[key substringToIndex:1] uppercaseString]];
+    return [NSString stringWithFormat:@"NSUserDefault%@", key];
+}
+</code></pre>
+
+<h3>Registering defaults</h3>
+
+<p>Registering defaults can be done as usual, on NSUserDefaults directly (use the same prefix, if any!).</p>
+
+<pre><code>NSDictionary *defaults = @{
+    @"NSUserDefaultUserName": @"default",
+    @"NSUserDefaultUserId": @1,
+    @"NSUserDefaultBoolValue": @YES
+};
+
+[[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+</code></pre>
+
+<p>However, it&rsquo;s a lot easier to create a setupDefaults method on the category, which takes care of the transformed keys automatically:</p>
+
+<pre><code>- (NSDictionary *)setupDefaults {
+    return @{
+        @"userName": @"default",
+        @"userId": @1,
+        @"boolValue": @YES
+    };
+}
+</code></pre>
+
+<h3>Performance</h3>
+
+<p>Performance is nearly identical to using NSUserDefaults directly. We&rsquo;re talking about a difference of 0.05 milliseconds or less.</p>
+
+<h2>Install</h2>
+
+<p>Install via <a href="http://cocoapods.org">CocoaPods</a> (<code>pod 'GVUserDefaults'</code>) or drag the code in the <a href="Classes/GVUserDefaults.html">GVUserDefaults</a> subfolder to your project.</p>
+
+<h2>Issues and questions</h2>
+
+<p>Have a bug? Please <a href="https://github.com/gangverk/GVUserDefaults/issues">create an issue on GitHub</a>!</p>
+
+<h2>Contributing</h2>
+
+<p><a href="Classes/GVUserDefaults.html">GVUserDefaults</a> is an open source project and your contribution is very much appreciated.</p>
+
+<ol>
+<li>Check for <a href="https://github.com/gangverk/GVUserDefaults/issues">open issues</a> or <a href="https://github.com/gangverk/GVUserDefaults/issues/new">open a fresh issue</a> to start a discussion around a feature idea or a bug.</li>
+<li>Fork the <a href="https://github.com/gangverk/GVUserDefaults">repository on Github</a> and make your changes on the <strong>develop</strong> branch (or branch off of it). Please retain the code style that is used in the project.</li>
+<li>Write tests, make sure everything passes.</li>
+<li>Make sure to add yourself to AUTHORS and send a pull request.</li>
+</ol>
+
+
+<h2>License</h2>
+
+<p><a href="Classes/GVUserDefaults.html">GVUserDefaults</a> is available under the MIT license. See the LICENSE file for more info.</p>
+
+<h2>Thanks</h2>
+
+<p>A huge thank you goes to <a href="https://github.com/advantis/ADVUserDefaults">ADVUserDefaults</a> for its method of creating accessors for primitive types.</p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/GVUserDefaults.html">GVUserDefaults</a></li>
+							
+						</ul>
+					</div>
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Kevin Renskers. All rights reserved. (Last updated: 2013-03-19)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

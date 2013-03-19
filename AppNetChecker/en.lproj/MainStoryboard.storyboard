@@ -60,7 +60,7 @@ For each of your friend, you will see a success or failure indicator depending o
                     </view>
                     <connections>
                         <outlet property="textView" destination="3lS-cN-dUo" id="xGe-bF-QXV"/>
-                        <outlet property="toggleButton" destination="m51-Ol-toh" id="7aQ-wB-Rsc"/>
+                        <outlet property="helpButton" destination="m51-Ol-toh" id="7aQ-wB-Rsc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdP-l1-5FH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@ For each of your friend, you will see a success or failure indicator depending o
             <source key="sourceIdentifier" type="project" relativePath="./Classes/XIGHelpViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="toggleButton" candidateClass="XIGHelpButton"/>
+                <relationship kind="outlet" name="helpButton" candidateClass="XIGHelpButton"/>
             </relationships>
         </class>
         <class className="XIGTableViewController" superclassName="UITableViewController">

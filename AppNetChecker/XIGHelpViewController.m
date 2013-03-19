@@ -7,6 +7,7 @@
 
 #import "XIGHelpViewController.h"
 #import "XIGSemiModalController.h"
+#import "RACBacktrace+Private.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation XIGHelpViewController {
@@ -18,13 +19,13 @@
     [self configureToggleButton];
     [self configureView];
 }
-
+#pragma mark - View Lifecycle
 - (void)configureToggleButton {
-    self.toggleButton.backgroundColor = [UIColor colorWithRed: 0.133 green: 0.624 blue: 0.522 alpha: 1];
-    self.toggleButton.font = [UIFont xig_regularFontOfSize:20];
-    self.toggleButton.titleColor = [UIColor whiteColor];
-    self.toggleButton.title = NSLocalizedString(@"Find your Twitter friends on App.net", nil);
-    [self.toggleButton addTarget:self action:@selector(toggleButtonHandler:) forControlEvents:UIControlEventTouchUpInside];
+    self.helpButton.backgroundColor = [UIColor colorWithRed: 0.133 green: 0.624 blue: 0.522 alpha: 1];
+    self.helpButton.font = [UIFont xig_regularFontOfSize:20];
+    self.helpButton.titleColor = [UIColor whiteColor];
+    self.helpButton.title = NSLocalizedString(@"Find your Twitter friends on App.net", nil);
+    [self.helpButton addTarget:self action:@selector(toggleButtonHandler:) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
@@ -33,6 +34,22 @@
     self.view.backgroundColor = [UIColor xig_tableViewBackgroundColor];
     self.textView.attributedText = [self helpText];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self showHelpOnFirstLaunch];
+}
+
+- (void)showHelpOnFirstLaunch {
+    if (![GVUserDefaults standardUserDefaults].showedHelpBarBounce) {
+        [GVUserDefaults standardUserDefaults].showedHelpBarBounce = YES;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self toggleButtonHandler:nil];
+        });
+    }
+}
+
+#pragma mark - Actions
 
 - (IBAction)toggleButtonHandler:(id)sender
 {

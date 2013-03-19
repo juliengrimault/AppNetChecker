@@ -1,6 +1,7 @@
 
 PODS:
 - AFNetworking (1.1.0)
+- GVUserDefaults (0.9.0)
 - InflectorKit (0.0.1)
 - JRSwizzle (1.0)
 - Kiwi (2.0.5)
@@ -28,6 +29,7 @@ PODS:
 
 DEPENDENCIES:
 - AFNetworking (~> 1.1.0)
+- GVUserDefaults (~> 0.9.0)
 - InflectorKit (~> 0.0.1)
 - Kiwi (~> 2.0.5)
 - Mantle (~> 0.2.3)
@@ -36,6 +38,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  GVUserDefaults: 7cbb1b5c05d565160b366b2d0a6d6a9f9c3753ce
   InflectorKit: 9dccab02f95541093995adac639342c9eb9e6c12
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
   Mantle: 4a20405b7aba3452007294badee2b3cb137825c3

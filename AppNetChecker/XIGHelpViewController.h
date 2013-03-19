@@ -10,7 +10,7 @@
 
 @interface XIGHelpViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet XIGHelpButton *toggleButton;
+@property (nonatomic, strong) IBOutlet XIGHelpButton *helpButton;
 
 @property (nonatomic, strong) IBOutlet UITextView *textView;
 @end
