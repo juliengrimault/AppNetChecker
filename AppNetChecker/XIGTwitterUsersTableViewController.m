@@ -139,20 +139,23 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (void)fetchFriends
 {
-    RACSignal* friends = [[self.twitterClient friends] deliverOn:[RACScheduler mainThreadScheduler]];
-    [friends subscribeNext:^(NSArray* nextFriends) {
-        NSRange insertionRange = NSMakeRange(self.userMatchers.count, nextFriends.count);
-        NSIndexSet *insertionIndexes = [NSIndexSet indexSetWithIndexesInRange:insertionRange];
-
+    RACSignal* userMatchers = [[self.twitterClient friends] map:^id(NSArray* nextFriends) {
         NSArray* matchersToAdd = [nextFriends mtl_mapUsingBlock:^id(id obj) {
             return [[XIGUserMatcher alloc] initWithTwitterUser:obj appNetClient:self.appNetClient];
         }];
+        return matchersToAdd;
+    }];
+
+    RACSignal *mainThreadUserMatchers = [userMatchers deliverOn:[RACScheduler mainThreadScheduler]];
+    [mainThreadUserMatchers subscribeNext:^(NSArray* matchersToAdd) {
+        NSRange insertionRange = NSMakeRange(self.userMatchers.count, matchersToAdd.count);
+        NSIndexSet *insertionIndexes = [NSIndexSet indexSetWithIndexesInRange:insertionRange];
 
         [self insertUserMatchers:matchersToAdd atIndexes:insertionIndexes];//use this to trigger KVO notifications
-        
+
         NSArray* insertedIndexPaths = [NSIndexPath indexPathsInSection:0 range:insertionRange];
-        [self.tableView insertRowsAtIndexPaths:insertedIndexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-    } completed:^{
+        [self.tableView insertRowsAtIndexPaths:insertedIndexPaths withRowAnimation:UITableViewRowAnimationNone];
+    } completed: ^{
         [self.activityIndicator stopAnimating];
         NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
         [self setToolbarItems:newToolBarItems animated:YES];
