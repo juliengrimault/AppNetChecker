@@ -139,8 +139,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (void)fetchFriends
 {
-    RACSignal* userMatchers = [[self.twitterClient friends] map:^id(NSArray* nextFriends) {
-        NSArray* matchersToAdd = [nextFriends mtl_mapUsingBlock:^id(id obj) {
+    RACSignal* userMatchers = [[self.twitterClient friends] map:^id(NSArray *nextFriends) {
+        NSArray *matchersToAdd = [nextFriends mtl_mapUsingBlock:^id(id obj) {
             return [[XIGUserMatcher alloc] initWithTwitterUser:obj appNetClient:self.appNetClient];
         }];
         return matchersToAdd;

@@ -63,7 +63,7 @@ static NSNumberFormatter *_decimalFormatter;
     [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL];
     
     @weakify(self);
-    self.disposable = [userMatcher.appNetUser subscribeNext:^(XIGAppNetUser *appNetUser) {
+    self.disposable = [[userMatcher.appNetUser deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(XIGAppNetUser *appNetUser) {
         @strongify(self);
         [self.activityIndicator stopAnimating];
         if (appNetUser != nil) {

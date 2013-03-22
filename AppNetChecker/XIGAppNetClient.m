@@ -50,6 +50,8 @@
                                                      [subscriber sendError:error];
                                                  }
                                              }];
+        operation.successCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        operation.failureCallbackQueue= dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         [self enqueueHTTPRequestOperation:operation];
         return [RACDisposable disposableWithBlock:^{
             [operation cancel];
