@@ -94,6 +94,8 @@
 		F9BBFF6116CA77E300CEE372 /* XIGNSURLRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */; };
 		F9BBFF6316CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */; };
 		F9BBFF6616CA79D900CEE372 /* ACAccount+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */; };
+		F9BC705016FC451C00BCF03B /* default-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BC704E16FC451C00BCF03B /* default-avatar.png */; };
+		F9BC705116FC451C00BCF03B /* default-avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BC704F16FC451C00BCF03B /* default-avatar@2x.png */; };
 		F9C37F0B16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */; };
 		F9D2E4D616EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */; };
 		F9D2E4DA16EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */; };
@@ -246,6 +248,8 @@
 		F9BBFF6216CA782A00CEE372 /* XIGNSURLRequestBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGNSURLRequestBuilderSpec.m; sourceTree = "<group>"; };
 		F9BBFF6416CA79D900CEE372 /* ACAccount+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ACAccount+XIGTest.h"; sourceTree = "<group>"; };
 		F9BBFF6516CA79D900CEE372 /* ACAccount+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ACAccount+XIGTest.m"; sourceTree = "<group>"; };
+		F9BC704E16FC451C00BCF03B /* default-avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar.png"; sourceTree = "<group>"; };
+		F9BC704F16FC451C00BCF03B /* default-avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar@2x.png"; sourceTree = "<group>"; };
 		F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClientGetProfilesSpec.m; sourceTree = "<group>"; };
 		F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Thin.ttf"; sourceTree = "<group>"; };
 		F9D2E4D816EADB0F006A1A06 /* UIFont+XIGAppNetChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+XIGAppNetChecker.h"; sourceTree = "<group>"; };
@@ -490,6 +494,8 @@
 		F9B29D6016EF7B2E00D16434 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F9BC704E16FC451C00BCF03B /* default-avatar.png */,
+				F9BC704F16FC451C00BCF03B /* default-avatar@2x.png */,
 				F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */,
 				F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */,
 				F9D2E4DF16EADD14006A1A06 /* YanoneKaffeesatz-Light.ttf */,
@@ -792,6 +798,8 @@
 				F96CDC3116ECADD600D03306 /* twitter-logo.png in Resources */,
 				F96CDC3216ECADD600D03306 /* twitter-logo@2x.png in Resources */,
 				BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */,
+				F9BC705016FC451C00BCF03B /* default-avatar.png in Resources */,
+				F9BC705116FC451C00BCF03B /* default-avatar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

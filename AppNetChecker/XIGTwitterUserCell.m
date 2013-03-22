@@ -60,7 +60,7 @@ static NSNumberFormatter *_decimalFormatter;
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher
 {
     self.usernameLabel.text = [NSString stringWithFormat:@"@%@",[userMatcher.twitterUser.screenName uppercaseString]];
-    [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL];
+    [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL placeholderImage:[UIImage imageNamed:@"default-avatar.png"]];
     
     @weakify(self);
     self.disposable = [[userMatcher.appNetUser deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(XIGAppNetUser *appNetUser) {
