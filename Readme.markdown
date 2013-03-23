@@ -20,7 +20,7 @@ Obviously, if you want to help out and fix some bugs or show me how things could
 
 ## License
 
-TwitApp.net is released under the [Simplified BSD License]().
+TwitApp.net is released under the [Simplified BSD License](https://github.com/juliengrimault/AppNetChecker/blob/master/License).
 
 While it is not strictly forbidden by the license, I would greatly appreciate it if you didn't redistribute this app exactly the way it is in the App Store. There's nothing stopping you, but please don't be a jerk.
 
