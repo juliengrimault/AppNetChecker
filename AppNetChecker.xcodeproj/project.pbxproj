@@ -10,7 +10,9 @@
 		7E6E481E263742F9A0C55CB8 /* libPods-AppNetCheckerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 164169FAEA284DC88A60012F /* libPods-AppNetCheckerTests.a */; };
 		BB8510936A1227409302F8C4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB85110C2A4E6C2116D6E14B /* QuartzCore.framework */; };
 		BB8510D9E7755A6AAC92ECFC /* app.net.notexists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */; };
+		BB851123F79980BDD4D04FB3 /* Readme.markdown in Resources */ = {isa = PBXBuildFile; fileRef = BB851E2B13AAD239DFCE95C6 /* Readme.markdown */; };
 		BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB851D89552ADE90B1155662 /* Localizable.strings */; };
+		BB8511C99B3B0ECC170E0C9B /* License in Resources */ = {isa = PBXBuildFile; fileRef = BB85157745C22FE53FBD48DC /* License */; };
 		BB85179529F415E85065EACC /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */; };
 		BB8518E58BD63465DD4466CC /* XIGSemiModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */; };
 		BB851BC2F4B3989EFD77A9A7 /* app.net.exists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8511A1195712608D1ED2B7 /* app.net.exists.html */; };
@@ -142,6 +144,7 @@
 		BB8511A1195712608D1ED2B7 /* app.net.exists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.exists.html; sourceTree = "<group>"; };
 		BB85127E2A70F3F80315323E /* XIGHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGHelpViewController.h; sourceTree = "<group>"; };
 		BB85144EB0015B9E950A1B82 /* XIGHelpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGHelpButton.m; sourceTree = "<group>"; };
+		BB85157745C22FE53FBD48DC /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 		BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.notexists.html; sourceTree = "<group>"; };
 		BB851A5B0F42847ABB7F337F /* XIGHelpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGHelpButton.h; sourceTree = "<group>"; };
 		BB851A8B33B2B14B0D2B76FC /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 		BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
 		BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGSemiModalController.m; sourceTree = "<group>"; };
 		BB851D89552ADE90B1155662 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		BB851E2B13AAD239DFCE95C6 /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.markdown; path = Readme.markdown; sourceTree = "<group>"; };
 		F901A88616D7B2EB00F17C81 /* lookup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lookup.json; sourceTree = "<group>"; };
 		F901A88816D7B91200F17C81 /* XIGTwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterUser.h; sourceTree = "<group>"; };
 		F901A88916D7B91200F17C81 /* XIGTwitterUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUser.m; sourceTree = "<group>"; };
@@ -393,6 +397,8 @@
 				F97B551316C7752A005AD777 /* Products */,
 				77644BD0F970460FAC7B1976 /* Pods.xcconfig */,
 				9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */,
+				BB851E2B13AAD239DFCE95C6 /* Readme.markdown */,
+				BB85157745C22FE53FBD48DC /* License */,
 			);
 			sourceTree = "<group>";
 		};
@@ -800,6 +806,8 @@
 				BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */,
 				F9BC705016FC451C00BCF03B /* default-avatar.png in Resources */,
 				F9BC705116FC451C00BCF03B /* default-avatar@2x.png in Resources */,
+				BB851123F79980BDD4D04FB3 /* Readme.markdown in Resources */,
+				BB8511C99B3B0ECC170E0C9B /* License in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
