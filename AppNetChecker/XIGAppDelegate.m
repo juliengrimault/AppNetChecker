@@ -46,7 +46,8 @@
 
     [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"ToolBar.png"] forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
 
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[UIImage imageNamed:@"empty.png"]
+    UIImage *backButtonBackground = [[UIImage imageNamed:@"BackArrow.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 1)];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonBackground
                                                       forState:UIControlStateNormal
                                                     barMetrics:UIBarMetricsDefault];
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -50) forBarMetrics:UIBarMetricsDefault];

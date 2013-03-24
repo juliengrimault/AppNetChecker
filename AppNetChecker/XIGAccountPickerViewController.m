@@ -62,9 +62,9 @@
     [self bindUIToError];
 
     self.semiModalController.navigationItem.title = NSLocalizedString(@"TwitApp.net", nil);
-    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"BackButton.png"]
+    UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"doesnotExit.png"]
                                                              style:UIBarButtonItemStylePlain target:nil action:nil];
-    back.title = @"a";
+    back.title = @" ";
     self.semiModalController.navigationItem.backBarButtonItem = back;
 }
 
