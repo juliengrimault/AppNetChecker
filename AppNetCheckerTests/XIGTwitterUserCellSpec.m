@@ -19,7 +19,7 @@ beforeEach(^{
     user.name = @"name surname";
     user.profileImageURL = [NSURL URLWithString:@"https://si0.twimg.com/profile_images/2554344631/59zr2d5mvh9ergt7c8fi.jpeg"];
     
-    matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetClient:nil];
+    matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetUserSignal:nil];
     cell = [XIGTwitterUserCell loadInstanceFromNib];
 });
 
@@ -57,7 +57,7 @@ describe(@"binding user", ^{
 
 describe(@"image loading", ^{
     it(@"should set the image url", ^{
-        [[[cell.profileImageView should] receive] setImageWithURL:user.profileImageURL];
+        [[[cell.profileImageView should] receive] setImageWithURL:user.profileImageURL placeholderImage:any()];
         [cell bindUserMatcher:matcher];
     });
     
@@ -70,11 +70,9 @@ describe(@"image loading", ^{
 
 describe(@"binding activity indicator", ^{
     beforeAll(^{
-        XIGAppNetClient *client = [XIGAppNetClient mock];
         XIGAppNetUser* appNetUser = [[XIGAppNetUser alloc] init];
         user.screenName = user.screenName;
-        [client stub:@selector(userWithScreenName:) andReturn:[RACSignal return:appNetUser]];
-        matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetClient:client];
+        matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetUserSignal:[RACSignal return:appNetUser]];
         [cell bindUserMatcher:matcher];
     });
     

@@ -10,12 +10,13 @@
 #import "XIGTwitterUser.h"
 #import "XIGAppNetUser.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+
 @class XIGAppNetClient;
 @interface XIGUserMatcher : NSObject
 
 @property (nonatomic, readonly, strong) XIGTwitterUser *twitterUser;
 @property (nonatomic, readonly, strong) RACSignal *appNetUser;
 
-- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetClient:(XIGAppNetClient *)client;
+- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetUserSignal:(RACSignal *)appNetUserSignal;
 
 @end

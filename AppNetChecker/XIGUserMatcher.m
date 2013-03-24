@@ -15,12 +15,12 @@
 @end
 @implementation XIGUserMatcher
 
-- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetClient:(XIGAppNetClient *)client
+- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetUserSignal:(RACSignal *)appNetUserSignal
 {
     self = [super init];
     if (self) {
         _twitterUser = twitterUser;
-         self.appNetUser = [[client userWithScreenName:self.twitterUser.screenName] catchTo:[RACSignal return:nil]];
+        _appNetUser = appNetUserSignal;
     }
     return self;
 }

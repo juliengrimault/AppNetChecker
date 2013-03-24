@@ -26,8 +26,10 @@ describe(@"building a user from a dictionary", ^{
         [[user.name should] equal:json[@"name"]];
     });
     
-    it(@"should have the profile image URL set", ^{
-        [[[user.profileImageURL absoluteString] should] equal:json[@"profile_image_url"]];
+    it(@"should have the profile image URL set to the original size image URL", ^{
+        NSString *normalURL = json[@"profile_image_url"];
+        NSString *expectedURL = [normalURL stringByReplacingOccurrencesOfString:@"_normal." withString:@"."];
+        [[[user.profileImageURL absoluteString] should] equal:expectedURL];
     });
     
     it(@"should not have a associated AppNet user", ^{

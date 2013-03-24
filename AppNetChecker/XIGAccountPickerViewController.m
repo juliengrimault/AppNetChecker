@@ -15,6 +15,8 @@
 #import "XIGTwitterClient.h"
 #import "XIGTwitterAccountCell.h"
 #import "XIGSemiModalController.h"
+#import "XIGAppNetClient.h"
+#import "XIGTwitAppClient.h"
 
 @interface XIGAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
@@ -171,11 +173,15 @@
         XIGTwitterUsersTableViewController* vc = segue.destinationViewController;
         [self.navigationController setNavigationBarHidden:NO animated:NO];
         NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
+
+        XIGTwitterClient *twitterClient = [XIGTwitterClient sharedClient];
+        XIGAppNetClient *appNetClient = [XIGAppNetClient sharedClient];
         if (selectedIndexPath) {
             ACAccount* selectedAccount = self.accounts[selectedIndexPath.row];
-            vc.twitterClient = [XIGTwitterClient sharedClient];
-            vc.twitterClient.account = selectedAccount;
+            twitterClient.account = selectedAccount;
         }
+        XIGTwitAppClient *client = [[XIGTwitAppClient alloc] initWithTwitterClient:twitterClient appNetClient:appNetClient];
+        vc.twittAppClient = client;
     }
 }
 

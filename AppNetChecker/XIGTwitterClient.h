@@ -21,7 +21,9 @@ OBJC_EXTERN NSString *const TwitterAPIBaseURL;
 @property (nonatomic) NSInteger maxProfileFetchedPerRequest;
 
 
+// wrap call to friendsId + profilesForIds
 - (RACSignal *)friends;
+
 - (RACSignal *)friendsId;
 - (RACSignal *)profilesForIds:(NSArray *)ids;
 

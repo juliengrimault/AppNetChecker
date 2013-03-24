@@ -14,6 +14,7 @@
 #import "XIGUserMatcher.h"
 #import "NSIndexPath+XIGRange.h"
 #import "UIBarButtonItem+XIGItem.h"
+#import "XIGTwitAppClient.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
@@ -22,21 +23,6 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 @implementation XIGTwitterUsersTableViewController
 #pragma mark - Properties
-- (XIGTwitterClient *)twitterClient
-{
-    if(!_twitterClient) {
-        _twitterClient = [XIGTwitterClient sharedClient];
-    }
-    return _twitterClient;
-}
-
-- (XIGAppNetClient *)appNetClient
-{
-    if(!_appNetClient) {
-        _appNetClient = [XIGAppNetClient sharedClient];
-    }
-    return _appNetClient;
-}
 
 - (void)insertUserMatchers:(NSArray *)array atIndexes:(NSIndexSet *)indexes
 {
@@ -139,12 +125,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (void)fetchFriends
 {
-    RACSignal* userMatchers = [[self.twitterClient friends] map:^id(NSArray *nextFriends) {
-        NSArray *matchersToAdd = [nextFriends mtl_mapUsingBlock:^id(id obj) {
-            return [[XIGUserMatcher alloc] initWithTwitterUser:obj appNetClient:self.appNetClient];
-        }];
-        return matchersToAdd;
-    }];
+    RACSignal* userMatchers = [self.twittAppClient userMatchers];
 
     RACSignal *mainThreadUserMatchers = [userMatchers deliverOn:[RACScheduler mainThreadScheduler]];
     [mainThreadUserMatchers subscribeNext:^(NSArray* matchersToAdd) {

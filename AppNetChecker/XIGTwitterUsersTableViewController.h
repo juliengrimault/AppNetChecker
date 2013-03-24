@@ -8,18 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "XIGTableViewController.h"
-@class XIGTwitterClient;
-@class XIGAppNetClient;
+@class XIGTwitAppClient;
 @interface XIGTwitterUsersTableViewController : XIGTableViewController
+
+//Must be set before presenting this controller
+@property (nonatomic, strong) XIGTwitAppClient *twittAppClient;
 
 @property (nonatomic, readonly) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, readonly) UILabel *friendsCountLabel;
 @property (nonatomic, readonly) UILabel *friendsFoundCountLabel;
 
 @property (nonatomic, strong) NSMutableArray* userMatchers;
-
-//lazyly loaded
-@property (nonatomic, strong) XIGTwitterClient *twitterClient;
-@property (nonatomic, strong) XIGAppNetClient *appNetClient;
 
 @end
