@@ -12,6 +12,7 @@
 #import "XIGAccountPickerViewController.h"
 #import "UIStoryboard+AppNetChecker.h"
 #import "XIGHelpViewController.h"
+#import "AFNetworkActivityIndicatorManager.h"
 
 @implementation XIGAppDelegate
 
@@ -22,7 +23,7 @@
     [self setupLoggers];
     [self setupCrashReporter];
 
-
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
                                                          diskCapacity:20 * 1024 * 1024
                                                              diskPath:nil];
