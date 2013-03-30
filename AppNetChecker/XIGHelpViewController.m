@@ -29,8 +29,7 @@
 
 }
 
-- (void)configureView
-{
+- (void)configureView {
     self.view.backgroundColor = [UIColor xig_tableViewBackgroundColor];
     self.textView.attributedText = [self helpText];
 }
@@ -53,9 +52,11 @@
 
 - (IBAction)toggleButtonHandler:(id)sender
 {
-    CGFloat midHeight = self.view.frame.size.height * 0.1;
-    CAKeyframeAnimation* animation = [[self class] dockBounceAnimationWithViewHeight:midHeight];
-    [self.view.layer addAnimation:animation forKey:@"bouncing"];
+    if([self.semiModalController isOpen]) {
+        CGFloat midHeight = self.view.frame.size.height * 0.1;
+        CAKeyframeAnimation* animation = [[self class] dockBounceAnimationWithViewHeight:midHeight];
+        [self.view.layer addAnimation:animation forKey:@"bouncing"];
+    }
 }
 
 - (NSAttributedString *)helpText

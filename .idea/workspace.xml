@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007b55e9-732a-4c29-9a50-f706b3a930c0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AppNetCheckerTests/NSObject+XIGKiwiMockAddition.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AppNetCheckerTests/NSObject+XIGKiwiMockAddition.m" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/KiwiHack.h" afterPath="$PROJECT_DIR$/AppNetChecker/KiwiHack.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m" afterPath="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m" afterPath="$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AppNetChecker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364640760790" ignored="false" />
+    <file path="/Dummy.txt" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364656067552" ignored="false" />
     <file path="/XIGAppNetUser.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363432902094" ignored="false" />
     <file path="/XIGAppNetUser.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364643478237" ignored="false" />
     <file path="/fragment.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364108001198" ignored="false" />
@@ -22,7 +19,7 @@
     <file path="/AppNetChecker-Prefix.pch" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364639740806" ignored="false" />
     <file path="/XIGAccountPickerViewController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364113179169" ignored="false" />
     <file path="/XIGHelpViewController.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363702307978" ignored="false" />
-    <file path="/XIGHelpViewController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363702281861" ignored="false" />
+    <file path="/XIGHelpViewController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364662619766" ignored="false" />
     <file path="/XIGSemiModalController.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363499875781" ignored="false" />
     <file path="/XIGSemiModalController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363516077488" ignored="false" />
     <file path="/XIGAppDelegate.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364641940498" ignored="false" />
@@ -76,12 +73,34 @@
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6.1_1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPHONE_b0ba6d0ac829298f746b7506d6d5834112b879c4" />
   <component name="FavoritesManager">
     <favorites_list name="AppNetChecker" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="XIGSemiModalController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGSemiModalController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGHelpViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="5" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.74285716">
+              <folding>
+                <element signature="e#714#777#0" expanded="true" />
+                <element signature="e#1924#2419#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -100,7 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/Utils/FileFunctionFormatter.h" />
         <option value="$PROJECT_DIR$/AppNetChecker/Utils/FileFunctionFormatter.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/Utils/Logging/CrashlyticsLogger.m" />
@@ -116,13 +134,13 @@
         <option value="$PROJECT_DIR$/AppNetCheckerTests/NSObject+XIGKiwiMockAddition.m" />
         <option value="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/KiwiHack.h" />
+        <option value="$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1874" />
-    <option name="height" value="1058" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -244,43 +262,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Supporting Files" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppNetChecker" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppNetChecker" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Network" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppNetChecker" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppNetChecker" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Models" />
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,18 +273,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="com.jetbrains.cidr.settings.OCExternalDocConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.h" />
+    <property name="options.lastSelected" value="com.jetbrains.cidr.settings.OCExternalDocConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.h" />
+    <property name="FullScreen" value="true" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="AppNetChecker" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
-  <component name="RunManager" selected="OCUnit.All Tests">
+  <component name="RunManager" selected="Application.AppNetChecker">
     <configuration default="false" name="All in XIGTwitterAccountStoreSpec" type="OCUnitRunConfiguration" factoryName="OCUnit" temporary="true" SCHEME_NAME="All in XIGTwitterAccountStoreSpec" PROJECT_NAME="AppNetChecker" TARGET_NAME="AppNetCheckerTests" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" TEST_CLASS="XIGTwitterAccountStoreSpec">
       <envs />
       <RunnerSettings RunnerId="AppRunner" />
@@ -440,16 +422,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1874" height="1058" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.4996353" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.4996353" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24945295" sideWeight="0.67232376" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23230687" sideWeight="0.6825726" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3174274" sideWeight="0.56382203" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20606916" sideWeight="0.68357486" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3164251" sideWeight="0.56382203" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23267688" sideWeight="0.19451697" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994778" sideWeight="0.43617797" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33713692" sideWeight="0.54631656" order="2" side_tool="false" content_ui="tabs" />
@@ -457,6 +438,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898173" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -580,7 +562,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="12" selection-start="699" selection-end="699" vertical-scroll-proportion="0.63829786">
           <folding>
-            <element signature="e#260#283#0" expanded="true" />
+            <element signature="e#260#283#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,9 +583,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pods/Headers/Kiwi/KiwiMacros.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="98" selection-start="2456" selection-end="2467" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="46" column="98" selection-start="2456" selection-end="2467" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGUserMatcher.m">
@@ -617,7 +597,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="49" selection-start="2251" selection-end="2251" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#0#20#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -640,15 +620,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="21" selection-start="203" selection-end="203" vertical-scroll-proportion="0.21774194">
           <folding>
-            <element signature="e#148#181#0" expanded="true" />
+            <element signature="e#148#181#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/NSObject+XIGKiwiMockAddition.m">
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGSemiModalController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="3" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.67741936">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="5" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.74285716">
+          <folding>
+            <element signature="e#714#777#0" expanded="true" />
+            <element signature="e#1924#2419#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
