@@ -25,7 +25,7 @@ This may be helpful to Logger classes for things like thread synchronization.</A
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/DDLog/log:level:flag:context:file:function:line:tag:format:</TokenIdentifier>
-			<Abstract type="html">Logging Primitive.</Abstract>
+			<Abstract type="html">Reporting Primitive.</Abstract>
 			<DeclaredIn>DDLog.h</DeclaredIn>			
 			
 			<Declaration>+ (void)log:(BOOL)synchronous level:(int)level flag:(int)flag context:(int)context file:(const char *)file function:(const char *)function line:(int)line tag:(id)tag format:(NSString *)format, ...</Declaration>
@@ -36,7 +36,7 @@ This may be helpful to Logger classes for things like thread synchronization.</A
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/DDLog/log:level:flag:context:file:function:line:tag:format:args:</TokenIdentifier>
-			<Abstract type="html">Logging Primitive.</Abstract>
+			<Abstract type="html">Reporting Primitive.</Abstract>
 			<DeclaredIn>DDLog.h</DeclaredIn>			
 			
 			<Declaration>+ (void)log:(BOOL)asynchronous level:(int)level flag:(int)flag context:(int)context file:(const char *)file function:(const char *)function line:(int)line tag:(id)tag format:(NSString *)format args:(va_list)argList</Declaration>
@@ -92,7 +92,7 @@ The framework invokes this automatically when the application quits.</Abstract>
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/DDLog/registeredClasses</TokenIdentifier>
-			<Abstract type="html">Registered Dynamic Logging</Abstract>
+			<Abstract type="html">Registered Dynamic Reporting</Abstract>
 			<DeclaredIn>DDLog.h</DeclaredIn>			
 			
 			<Declaration>+ (NSArray *)registeredClasses</Declaration>

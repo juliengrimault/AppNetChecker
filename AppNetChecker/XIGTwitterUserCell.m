@@ -78,7 +78,7 @@ static NSNumberFormatter *_decimalFormatter;
             self.statusLabel.textColor = [UIColor xig_greenColor];
         } else {
             self.appNetTitle.text = NSLocalizedString(@"User Not Found", nil);
-            self.appNetSubTitle.text = NSLocalizedString(@"=(", nil);
+            self.appNetSubTitle.text = nil;
             self.statusLabel.text = @"\U0000e00d";
             self.statusLabel.textColor = [UIColor xig_redColor];
         }

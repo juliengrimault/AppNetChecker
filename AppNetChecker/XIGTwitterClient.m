@@ -97,7 +97,8 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
             flattenMap:^RACStream *(id json) {
                 @strongify(self);
                 NSArray* ids = json[@"ids"];
-                
+                DDLogVerbose(@"twitter friends id count=%d", [ids count]);
+
                 // Prepare a signal representing the next page of results.
                 NSNumber* nextCursor = json[@"next_cursor"];
                 RACSignal* nextFriends = [RACSignal empty];
@@ -138,6 +139,8 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                                              }];
         operation.successCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         operation.failureCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+        DDLogVerbose(@"Enqueing twitter friends id lookup (cursor=%d)", cursor);
         [self enqueueHTTPRequestOperation:operation];
         
         return [RACDisposable disposableWithBlock:^{
@@ -195,6 +198,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                                                                           success:
                                              ^(AFHTTPRequestOperation *operation, id json)
                                              {
+                                                 DDLogVerbose(@"received twitter profile (ids=%@)", ids);
                                                  NSArray *users = [json mtl_mapUsingBlock:^id(NSDictionary* userJSON) {
                                                      XIGTwitterUser* user = [[XIGTwitterUser alloc] initWithExternalRepresentation:userJSON];
                                                      return user;
@@ -209,6 +213,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                                              }];
         operation.successCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         operation.failureCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        DDLogVerbose(@"Enqueing twitter profile lookup (ids=%@)", ids);
         [self enqueueHTTPRequestOperation:operation];
         
         return [RACDisposable disposableWithBlock:^{

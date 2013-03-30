@@ -8,6 +8,7 @@
 
 #import "XIGAppNetClient.h"
 #import "XIGAppNetUser.h"
+#import "DDLog.h"
 
 @implementation XIGAppNetClient
 
@@ -37,6 +38,7 @@
                                              ^(AFHTTPRequestOperation *requestOperation, id responseObject) {
                                                  XIGAppNetUser* user = [[XIGAppNetUser alloc] initWithScreenName:username
                                                                                                         htmlData:responseObject];
+                                                 DDLogVerbose(@"found app.net %@", user);
                                                  [subscriber sendNext:user];
                                                  [subscriber sendCompleted];
                                              }
@@ -45,6 +47,7 @@
                                                  if (requestOperation.response.statusCode == 404) {
                                                      //does not exist
                                                      [subscriber sendNext:nil];
+                                                     DDLogVerbose(@"NOT found app.net %@", username);
                                                      [subscriber sendCompleted];
                                                  } else {
                                                      [subscriber sendError:error];
@@ -52,6 +55,7 @@
                                              }];
         operation.successCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         operation.failureCallbackQueue= dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        DDLogVerbose(@"Lookup app.net %@", username);
         [self enqueueHTTPRequestOperation:operation];
         return [RACDisposable disposableWithBlock:^{
             [operation cancel];

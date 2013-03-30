@@ -4,6 +4,7 @@ pod 'ReactiveCocoa', '~>0.17.1'
 pod 'Mantle', '~>0.2.3'
 pod 'InflectorKit',  '~>0.0.1'
 pod 'GVUserDefaults', '~>0.9.0'
+pod 'CocoaLumberjack', '~>1.6'
 
 target :AppNetCheckerTests, :exclusive => true do
     pod 'Kiwi', '~> 2.0.5'

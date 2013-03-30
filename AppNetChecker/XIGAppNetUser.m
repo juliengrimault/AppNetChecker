@@ -44,5 +44,12 @@ static NSString *const followerXPathQuery = @"//strong[@data-follow-to-count]";
     return n;
 }
 
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
+    [description appendString:self.screenName];
+    [description appendString:@">"];
+    return description;
+}
+
 
 @end

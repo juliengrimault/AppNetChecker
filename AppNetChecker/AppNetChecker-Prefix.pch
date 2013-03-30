@@ -14,9 +14,18 @@
     #import <libextobjc/EXTScope.h>
     #import <MobileCoreServices/MobileCoreServices.h>
     #import <SystemConfiguration/SystemConfiguration.h>
+    #import <CocoaLumberjack/DDLog.h>
 
     #import "UIFont+XIGAppNetChecker.h"
     #import "UIColor+XIGAppNetChecker.h"
     #import "TTTStringInflector.h"
     #import "GVUserDefaults+Properties.h"
+#endif
+
+
+// log level
+#ifdef DEBUG
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #endif

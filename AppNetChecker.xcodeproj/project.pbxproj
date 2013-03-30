@@ -13,10 +13,13 @@
 		BB851123F79980BDD4D04FB3 /* Readme.markdown in Resources */ = {isa = PBXBuildFile; fileRef = BB851E2B13AAD239DFCE95C6 /* Readme.markdown */; };
 		BB851134A827C764A5603294 /* XIGUserMatcher+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851825F1EB11631663A473 /* XIGUserMatcher+XIGTest.m */; };
 		BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB851D89552ADE90B1155662 /* Localizable.strings */; };
+		BB8511AE5C3B8E546116510D /* FileFunctionFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8511FF8938C72160AA6324 /* FileFunctionFormatter.m */; };
 		BB8511C99B3B0ECC170E0C9B /* License in Resources */ = {isa = PBXBuildFile; fileRef = BB85157745C22FE53FBD48DC /* License */; };
+		BB85169ED39F9D52EDBE7497 /* CrashlyticsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851910CD85123AD4F9BFE7 /* CrashlyticsLogger.m */; };
 		BB85179529F415E85065EACC /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */; };
 		BB8518B5F890FF3A878242AF /* XIGAppNetUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB85158C5BC557D7715D81D4 /* XIGAppNetUser+XIGTest.m */; };
 		BB8518E58BD63465DD4466CC /* XIGSemiModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */; };
+		BB851A4DAC88557AE85BE2C5 /* XIGAppDelegate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */; };
 		BB851BC2F4B3989EFD77A9A7 /* app.net.exists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8511A1195712608D1ED2B7 /* app.net.exists.html */; };
 		BB851D83CCEFF02658259D63 /* XIGTwitAppClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851E0B9A7C114905446F89 /* XIGTwitAppClientSpec.m */; };
 		BB851EB2BD45427F2DE1C8FE /* XIGHelpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BB85144EB0015B9E950A1B82 /* XIGHelpButton.m */; };
@@ -125,6 +128,7 @@
 		F9ED15B716EB4131008E8404 /* UITableView+XIGBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B616EB4131008E8404 /* UITableView+XIGBackgroundView.m */; };
 		F9ED15BA16EB4185008E8404 /* XIGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15B916EB4185008E8404 /* XIGTableViewController.m */; };
 		F9ED15BD16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9ED15BC16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m */; };
+		F9FA7FCD1706FD8300A0292C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA7FCC1706FD8300A0292C /* Crashlytics.framework */; };
 		F9FC0C6F16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */; };
 /* End PBXBuildFile section */
 
@@ -146,16 +150,22 @@
 		BB85110C2A4E6C2116D6E14B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGSemiModalController.h; sourceTree = "<group>"; };
 		BB8511A1195712608D1ED2B7 /* app.net.exists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.exists.html; sourceTree = "<group>"; };
+		BB8511FF8938C72160AA6324 /* FileFunctionFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileFunctionFormatter.m; sourceTree = "<group>"; };
 		BB85127E2A70F3F80315323E /* XIGHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGHelpViewController.h; sourceTree = "<group>"; };
+		BB8513AE3FDBC6421FCA83AC /* XIGAppDelegate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGAppDelegate+Reporting.h"; sourceTree = "<group>"; };
 		BB85144EB0015B9E950A1B82 /* XIGHelpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGHelpButton.m; sourceTree = "<group>"; };
 		BB8514DE9236C3345E088389 /* XIGTwitAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitAppClient.h; sourceTree = "<group>"; };
 		BB85157745C22FE53FBD48DC /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 		BB85158C5BC557D7715D81D4 /* XIGAppNetUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGAppNetUser+XIGTest.m"; sourceTree = "<group>"; };
 		BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitAppClient.m; sourceTree = "<group>"; };
+		BB85172199681014FE2E1F39 /* FileFunctionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFunctionFormatter.h; sourceTree = "<group>"; };
+		BB85176BB474943628E79820 /* CrashlyticsLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashlyticsLogger.h; sourceTree = "<group>"; };
 		BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.notexists.html; sourceTree = "<group>"; };
 		BB851825F1EB11631663A473 /* XIGUserMatcher+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGUserMatcher+XIGTest.m"; sourceTree = "<group>"; };
+		BB851910CD85123AD4F9BFE7 /* CrashlyticsLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashlyticsLogger.m; sourceTree = "<group>"; };
 		BB851A5B0F42847ABB7F337F /* XIGHelpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGHelpButton.h; sourceTree = "<group>"; };
 		BB851A8B33B2B14B0D2B76FC /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
+		BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGAppDelegate+Reporting.m"; sourceTree = "<group>"; };
 		BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGHelpViewController.m; sourceTree = "<group>"; };
 		BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
 		BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGSemiModalController.m; sourceTree = "<group>"; };
@@ -298,6 +308,7 @@
 		F9ED15B916EB4185008E8404 /* XIGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTableViewController.m; sourceTree = "<group>"; };
 		F9ED15BB16EB7FE6008E8404 /* UIColor+XIGColorManipulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XIGColorManipulation.h"; sourceTree = "<group>"; };
 		F9ED15BC16EB7FE6008E8404 /* UIColor+XIGColorManipulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XIGColorManipulation.m"; sourceTree = "<group>"; };
+		F9FA7FCC1706FD8300A0292C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		F9FC0C6D16DCEABF00B45347 /* XIGTwitterUser+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGTwitterUser+XIGTest.h"; sourceTree = "<group>"; };
 		F9FC0C6E16DCEABF00B45347 /* XIGTwitterUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGTwitterUser+XIGTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,6 +328,7 @@
 				F97B551A16C7752A005AD777 /* CoreGraphics.framework in Frameworks */,
 				C28CEACFFAEB49CD958D3A20 /* libPods.a in Frameworks */,
 				BB8510936A1227409302F8C4 /* QuartzCore.framework in Frameworks */,
+				F9FA7FCD1706FD8300A0292C /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +352,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB851923847FD3ADC863566C /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				BB851910CD85123AD4F9BFE7 /* CrashlyticsLogger.m */,
+				BB85172199681014FE2E1F39 /* FileFunctionFormatter.h */,
+				BB85176BB474943628E79820 /* CrashlyticsLogger.h */,
+				BB8511FF8938C72160AA6324 /* FileFunctionFormatter.m */,
+				BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */,
+				BB8513AE3FDBC6421FCA83AC /* XIGAppDelegate+Reporting.h */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		BB8519818F78B6D0C239D0B5 /* GVUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +372,14 @@
 				BB851A8B33B2B14B0D2B76FC /* GVUserDefaults+Properties.h */,
 			);
 			name = GVUserDefaults;
+			sourceTree = "<group>";
+		};
+		BB851ED1D410EB9CB20181BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BB851923847FD3ADC863566C /* Logging */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F917B55816E3713D00A8ABE8 /* UIBarButtonItem */ = {
@@ -456,6 +489,7 @@
 				F97B552D16C7752A005AD777 /* MainStoryboard.storyboard */,
 				F97B551C16C7752A005AD777 /* Supporting Files */,
 				BB851D89552ADE90B1155662 /* Localizable.strings */,
+				BB851ED1D410EB9CB20181BA /* Utils */,
 			);
 			path = AppNetChecker;
 			sourceTree = "<group>";
@@ -539,6 +573,7 @@
 		F9B29D6116EF7B4900D16434 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F9FA7FCC1706FD8300A0292C /* Crashlytics.framework */,
 				F9B29D6216EF7B9000D16434 /* TFHpple.h */,
 				F9B29D6316EF7B9000D16434 /* TFHpple.m */,
 				F9B29D6416EF7B9000D16434 /* TFHppleElement.h */,
@@ -734,6 +769,7 @@
 				F97B550F16C7752A005AD777 /* Frameworks */,
 				F97B551016C7752A005AD777 /* Resources */,
 				88FDB60BEEEF4678B9CDC72C /* Copy Pods Resources */,
+				F9FA7FCB1706FD0400A0292C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -895,6 +931,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		F9FA7FCB1706FD0400A0292C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run db76fbc48d24d6043bbf9cc8399d7e52f972c0d8";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -935,6 +984,9 @@
 				BB851EB2BD45427F2DE1C8FE /* XIGHelpButton.m in Sources */,
 				BB85179529F415E85065EACC /* GVUserDefaults+Properties.m in Sources */,
 				BB851F3F58EE450FF8D3BB02 /* XIGTwitAppClient.m in Sources */,
+				BB85169ED39F9D52EDBE7497 /* CrashlyticsLogger.m in Sources */,
+				BB8511AE5C3B8E546116510D /* FileFunctionFormatter.m in Sources */,
+				BB851A4DAC88557AE85BE2C5 /* XIGAppDelegate+Reporting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1125,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77644BD0F970460FAC7B1976 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AppNetChecker\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppNetChecker/AppNetChecker-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1091,6 +1147,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77644BD0F970460FAC7B1976 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AppNetChecker\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppNetChecker/AppNetChecker-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

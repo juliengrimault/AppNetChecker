@@ -7,6 +7,7 @@
 //
 
 #import "XIGAppDelegate.h"
+#import "XIGAppDelegate+Reporting.h"
 #import "XIGSemiModalController.h"
 #import "XIGAccountPickerViewController.h"
 #import "UIStoryboard+AppNetChecker.h"
@@ -18,6 +19,14 @@
 {
     [self configureAppearance];
     [self setupViewControllerHierarchy];
+    [self setupLoggers];
+    [self setupCrashReporter];
+
+
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
+                                                         diskCapacity:20 * 1024 * 1024
+                                                             diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
     return YES;
 }
 
