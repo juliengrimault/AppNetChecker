@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <Kiwi/Kiwi.h>
-#import "NSObject+XIGKiwiMockAddition.h"
 
 #ifdef SPEC_END
 #undef SPEC_END

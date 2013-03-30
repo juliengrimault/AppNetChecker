@@ -1,10 +1,8 @@
 #import "KiwiHack.h"
 #import "XIGTwitterUserCell.h"
 #import "XIGUserMatcher.h"
-#import "XIGTwitterUser.h"
 #import "UIView+JGLoadFromNib.h"
 #import <AFNetworking/AFNetworking.h>
-#import "XIGAppNetClient.h"
 
 SPEC_BEGIN(XIGTwitterUserCellSpec)
 
@@ -71,7 +69,7 @@ describe(@"image loading", ^{
 describe(@"binding activity indicator", ^{
     beforeAll(^{
         XIGAppNetUser* appNetUser = [[XIGAppNetUser alloc] init];
-        user.screenName = user.screenName;
+        appNetUser.screenName = user.screenName;
         matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetUserSignal:[RACSignal return:appNetUser]];
         [cell bindUserMatcher:matcher];
     });
