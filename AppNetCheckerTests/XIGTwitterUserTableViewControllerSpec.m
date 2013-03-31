@@ -4,8 +4,6 @@
 #import "XIGTwitterClient.h"
 #import "XIGTwitterUser+XIGTest.h"
 #import "XIGTwitterUserCell.h"
-#import "XIGAppNetClient.h"
-#import "XIGAppNetUser.h"
 #import "XIGUserMatcher.h"
 #import "XIGTwitAppClient.h"
 #import "XIGUserMatcher+XIGTest.h"
@@ -67,16 +65,16 @@ context(@"Toolbar", ^{
     
     it(@"should have loading indicator outlet connected", ^{
         [vc view];
-        [vc.activityIndicator shouldNotBeNil];
+        [vc.twitterLoadingIndicator shouldNotBeNil];
     });
     
     it(@"should have an animating indicator", ^{
         [vc view];
-        [[theValue([vc.activityIndicator isAnimating]) should] beTrue];
+        [[theValue([vc.twitterLoadingIndicator isAnimating]) should] beTrue];
     });
     
     it(@"should stop animating when the signal completes", ^{
-        [[expectFutureValue(@([vc.activityIndicator isAnimating])) shouldEventually] equal:@NO];
+        [[expectFutureValue(@([vc.twitterLoadingIndicator isAnimating])) shouldEventually] equal:@NO];
         [vc view];
     });
     

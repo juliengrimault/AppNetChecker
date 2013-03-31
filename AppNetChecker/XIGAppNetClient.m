@@ -50,6 +50,7 @@
                                                      DDLogVerbose(@"NOT found app.net %@", username);
                                                      [subscriber sendCompleted];
                                                  } else {
+                                                     DDLogError(@"%@", error);
                                                      [subscriber sendError:error];
                                                  }
                                              }];

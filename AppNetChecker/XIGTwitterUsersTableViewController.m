@@ -10,11 +10,11 @@
 #import "XIGTwitterClient.h"
 #import "XIGTwitterUserCell.h"
 #import "XIGTwitterUser.h"
-#import "XIGAppNetClient.h"
 #import "XIGUserMatcher.h"
 #import "NSIndexPath+XIGRange.h"
 #import "UIBarButtonItem+XIGItem.h"
 #import "XIGTwitAppClient.h"
+#import "RACSignal+AggregateReporting.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
@@ -61,8 +61,10 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     self.userMatchers = [NSMutableArray array];
     [self registerTableViewCell];
     [self configureToolBar];
-    [self configureLabelsSignal];
-    [self fetchFriends];
+
+    RACSignal *userMatchersSignal = [[self.twittAppClient userMatchers] deliverOn:[RACScheduler mainThreadScheduler]];
+    [self configureLabelsSignal:userMatchersSignal];
+    [self configureTableView:userMatchersSignal];
 }
 
 - (void)registerTableViewCell
@@ -74,8 +76,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (void)configureToolBar
 {
-    UIBarButtonItem *item = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
-    _activityIndicator = (UIActivityIndicatorView*)item.customView;
+    UIBarButtonItem *twitterLoadingItem = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
+    _twitterLoadingIndicator = (UIActivityIndicatorView*) twitterLoadingItem.customView;
 
     
     UILabel *friendsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
@@ -95,52 +97,70 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     _friendsFoundCountLabel = friendsFoundCountLabel;
     _friendsFoundCountLabel.textAlignment = NSTextAlignmentRight;
     UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithCustomView:friendsFoundCountLabel];
+
+    UIBarButtonItem *appNetLoadingItem = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
+    _appNetLoadingIndicator = (UIActivityIndicatorView*) twitterLoadingItem.customView;
     
-    self.toolbarItems = @[item, item2, item3, item4];
+    self.toolbarItems = @[twitterLoadingItem, item2, item3, item4, appNetLoadingItem];
 }
 
-- (void)configureLabelsSignal
-{
-    RACSignal* userMatchers = RACAbleWithStart(self.userMatchers);
-    RAC(self.friendsCountLabel.text) = [userMatchers map:^id(NSArray* users) {
-            return [NSString localizedStringWithFormat:@"%d friends", users.count];
+- (void)configureLabelsSignal:(RACSignal *)userMatchersSignal {
+
+    // stop when all the twitter request have been made
+    RACSignal *stopTrigger = [userMatchersSignal sequenceNext:^RACSignal * {
+        return [RACSignal return:@YES];
     }];
-    
-    RACSignal *appNetUserCount = [userMatchers flattenMap:^RACStream *(id newUsers) {
-        NSArray *signals = [newUsers mtl_mapUsingBlock:^id(XIGUserMatcher *u) {
-            return u.appNetUser;
-        }];
-        return [[RACSignal combineLatest:signals] map:^id(RACTuple *tuple) {
-            NSArray *nonNilAppNetUsers = [[tuple allObjects] mtl_filterUsingBlock:^BOOL(id obj) {
-                return ![obj isEqual:[NSNull null]];
-            }];
-            return @(nonNilAppNetUsers.count);
-        }];
+    RACSignal * matchersArray = [RACAbleWithStart(self.userMatchers) takeUntil:stopTrigger];
+    RAC(self.friendsCountLabel.text) =[matchersArray map:^id(NSArray *users) {
+        return [NSString localizedStringWithFormat:@"%d friends", users.count];
     }];
-    
-    RAC(self.friendsFoundCountLabel.text) = [appNetUserCount map:^id(NSNumber *count) {
-        return [NSString localizedStringWithFormat:@"%@ found.", count];
+
+    RACSignal *appNetUsersSignal = [[[[userMatchersSignal flattenMap:^RACStream *(NSArray *newMatchers) {
+        NSArray *appNetUsers = [newMatchers mtl_mapUsingBlock:^id(XIGUserMatcher *m) {
+            return m.appNetUser;
+        }];
+        return [appNetUsers.rac_sequence signal];
+    }] flatten] setNameWithFormat:@"App.net Users"] logAll];
+
+    RACSignal *appNetUserCount = [[[[appNetUsersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGAppNetUser *u) {
+        NSUInteger count = [current unsignedIntegerValue];
+        if (u != nil) count++;
+        return @(count);
+    }] throttle:1] setNameWithFormat:@"App.net count"] logAll];
+
+//    RAC(self.friendsFoundCountLabel.text) = [[appNetUserCount throttle:1] map:^id(NSNumber *count) {
+//        return [NSString localizedStringWithFormat:@"%@ found.", count];
+//    }];
+    [appNetUserCount subscribeNext:^(NSNumber *count) {
+        self.friendsFoundCountLabel.text = [NSString localizedStringWithFormat:@"%@ found.", count];
+    } completed:^{
+        [self.appNetLoadingIndicator stopAnimating];
     }];
 }
 
-- (void)fetchFriends
+- (void)configureTableView:(RACSignal *)userMatchersSignal
 {
-    RACSignal* userMatchers = [self.twittAppClient userMatchers];
-
-    RACSignal *mainThreadUserMatchers = [userMatchers deliverOn:[RACScheduler mainThreadScheduler]];
-    [mainThreadUserMatchers subscribeNext:^(NSArray* matchersToAdd) {
+    @weakify(self);
+    [userMatchersSignal subscribeNext:^(NSArray *matchersToAdd) {
+        @strongify(self);
         NSRange insertionRange = NSMakeRange(self.userMatchers.count, matchersToAdd.count);
         NSIndexSet *insertionIndexes = [NSIndexSet indexSetWithIndexesInRange:insertionRange];
 
         [self insertUserMatchers:matchersToAdd atIndexes:insertionIndexes];//use this to trigger KVO notifications
 
-        NSArray* insertedIndexPaths = [NSIndexPath indexPathsInSection:0 range:insertionRange];
+        NSArray *insertedIndexPaths = [NSIndexPath indexPathsInSection:0 range:insertionRange];
         [self.tableView insertRowsAtIndexPaths:insertedIndexPaths withRowAnimation:UITableViewRowAnimationNone];
-    } completed: ^{
-        [self.activityIndicator stopAnimating];
-        NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
-        [self setToolbarItems:newToolBarItems animated:YES];
+
+    }                       completed:^{
+        @strongify(self);
+        [self stopLoadingIndicator];
     }];
+}
+
+- (void)stopLoadingIndicator {
+    [self.twitterLoadingIndicator stopAnimating];
+    NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
+    [self setToolbarItems:newToolBarItems animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

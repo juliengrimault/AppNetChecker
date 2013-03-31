@@ -135,6 +135,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                                                                           failure:
                                              ^(AFHTTPRequestOperation *operation, NSError *error)
                                              {
+                                                 DDLogError(@"%@", error);
                                                  [subscriber sendError:error];
                                              }];
         operation.successCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -209,6 +210,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                                                                           failure:
                                              ^(AFHTTPRequestOperation *operation, NSError *error)
                                              {
+                                                 DDLogError(@"%@", error);
                                                  [subscriber sendError:error];
                                              }];
         operation.successCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

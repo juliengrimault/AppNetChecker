@@ -396,7 +396,7 @@
 					<string key="className">XIGTwitterUserCell</string>
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="activityIndicator">UIActivityIndicatorView</string>
+						<string key="twitterLoadingIndicator">UIActivityIndicatorView</string>
 						<string key="appNetSubTitle">UILabel</string>
 						<string key="appNetTitle">UILabel</string>
 						<string key="profileImageView">UIImageView</string>
@@ -404,8 +404,8 @@
 						<string key="usernameLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="activityIndicator">
-							<string key="name">activityIndicator</string>
+						<object class="IBToOneOutletInfo" key="twitterLoadingIndicator">
+							<string key="name">twitterLoadingIndicator</string>
 							<string key="candidateClassName">UIActivityIndicatorView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="appNetSubTitle">
