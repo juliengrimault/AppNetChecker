@@ -12,13 +12,14 @@
 #import "XIGTwitterUser.h"
 #import "XIGUserMatcher.h"
 #import "NSIndexPath+XIGRange.h"
-#import "UIBarButtonItem+XIGItem.h"
 #import "XIGTwitAppClient.h"
 #import "RACSignal+AggregateReporting.h"
+#import "XIGUserMatchersToolbar.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
 @interface XIGTwitterUsersTableViewController ()
+@property (nonatomic, strong) XIGUserMatchersToolbar *toolbarHelper;
 @end
 
 @implementation XIGTwitterUsersTableViewController
@@ -53,13 +54,15 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (void)commonInit {
     _userMatchers = [[NSMutableArray alloc] init];
+    _toolbarHelper = [[XIGUserMatchersToolbar alloc] init];
 }
 
 #pragma mark - Life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.toolbarItems = self.toolbarHelper.toolbarItems;
     [self registerTableViewCell];
-    [self configureToolBar];
+
 
     RACSignal *userMatchersSignal = [[self.twittAppClient userMatchers] deliverOn:[RACScheduler mainThreadScheduler]];
     [self configureLabelsSignal:userMatchersSignal];
@@ -72,48 +75,6 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
         self.tableView.rowHeight = [XIGTwitterUserCell rowHeight];
     }
 
-    #pragma mark - ToolBar Config
-    - (void)configureToolBar {
-        UIBarButtonItem *twitterLoadingItem= [self createTwitterLoadingButtonItem];
-        UIBarButtonItem *friendCountItem = [self createFriendCountItem];
-        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        UIBarButtonItem *friendFoundCountItem = [self createFriendFoundCountItem];
-        UIBarButtonItem *appNetLoadingItem= [self createAppNetLoadingItem];
-        self.toolbarItems = @[twitterLoadingItem, friendCountItem, spaceItem, friendFoundCountItem, appNetLoadingItem];
-    }
-
-        - (UIBarButtonItem *)createTwitterLoadingButtonItem {
-            UIBarButtonItem *twitterLoadingItem = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
-            _twitterLoadingIndicator = (UIActivityIndicatorView*) twitterLoadingItem.customView;
-            return twitterLoadingItem;
-        }
-
-        - (UIBarButtonItem *)createFriendCountItem {
-            UILabel *friendsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
-            friendsCountLabel.backgroundColor = [UIColor clearColor];
-            friendsCountLabel.textColor = [UIColor whiteColor];
-            friendsCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
-            _friendsCountLabel = friendsCountLabel;
-            UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:friendsCountLabel];
-            return item2;
-        }
-
-        - (UIBarButtonItem *)createFriendFoundCountItem {
-            UILabel *friendsFoundCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, CGRectGetHeight(self.navigationController.toolbar.frame))];
-            friendsFoundCountLabel.backgroundColor = [UIColor clearColor];
-            friendsFoundCountLabel.textColor = [UIColor whiteColor];
-            friendsFoundCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
-            _friendsFoundCountLabel = friendsFoundCountLabel;
-            _friendsFoundCountLabel.textAlignment = NSTextAlignmentRight;
-            UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithCustomView:friendsFoundCountLabel];
-            return item4;
-        }
-
-        - (UIBarButtonItem *)createAppNetLoadingItem {
-            UIBarButtonItem *appNetLoadingItem = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
-            _appNetLoadingIndicator = (UIActivityIndicatorView*) appNetLoadingItem.customView;
-            return appNetLoadingItem;
-        }
 
     - (void)configureLabelsSignal:(RACSignal *)userMatchersSignal {
 
@@ -122,7 +83,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
             return [RACSignal return:@YES];
         }];
         RACSignal * matchersArray = [RACAbleWithStart(self.userMatchers) takeUntil:stopTrigger];
-        RAC(self.friendsCountLabel.text) =[matchersArray map:^id(NSArray *users) {
+        RAC(self.toolbarHelper.friendsCountLabel.text) =[matchersArray map:^id(NSArray *users) {
             return [NSString localizedStringWithFormat:@"%d friends", users.count];
         }];
 
@@ -143,10 +104,10 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
         @weakify(self);
         [appNetUserCount subscribeNext:^(NSNumber *count) {
             @strongify(self);
-            self.friendsFoundCountLabel.text = [NSString localizedStringWithFormat:@"%@ found.", count];
+            self.toolbarHelper.friendsFoundCountLabel.text = [NSString localizedStringWithFormat:@"%@ found.", count];
         } completed:^{
             @strongify(self);
-            [self.appNetLoadingIndicator stopAnimating];
+            [self.toolbarHelper.appNetLoadingIndicator stopAnimating];
         }];
     }
 
@@ -185,11 +146,16 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
             @weakify(self);
             [userMatchersSignal subscribeCompleted:^{
                 @strongify(self);
-                [self.twitterLoadingIndicator stopAnimating];
-                NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
-                [self setToolbarItems:newToolBarItems animated:YES];
+                self.toolbarHelper.friendsCountLabel.text = [NSString localizedStringWithFormat:@"%d friends", self.userMatchers.count];
+                [self removeTwitterLoadingIndicator];
             }];
         }
+
+            - (void)removeTwitterLoadingIndicator {
+                [self.toolbarHelper.twitterLoadingIndicator stopAnimating];
+                NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
+                [self setToolbarItems:newToolBarItems animated:YES];
+            }
 
         - (void)configureUserMatchersError:(RACSignal *)userMatchersSignal {
 

@@ -1,3 +1,4 @@
+#import "XIGUserMatchersToolbar.h"
 #import "KiwiHack.h"
 #import "XIGTwitterUsersTableViewController.h"
 #import "UIStoryboard+AppNetChecker.h"
@@ -66,33 +67,33 @@ context(@"Toolbar", ^{
     
     it(@"should have loading indicator outlet connected", ^{
         [vc view];
-        [vc.twitterLoadingIndicator shouldNotBeNil];
+        [vc.toolbarHelper.twitterLoadingIndicator shouldNotBeNil];
     });
     
     it(@"should have an animating indicator", ^{
         [vc view];
-        [[theValue([vc.twitterLoadingIndicator isAnimating]) should] beTrue];
+        [[theValue([vc.toolbarHelper.twitterLoadingIndicator isAnimating]) should] beTrue];
     });
     
     it(@"should stop animating when the signal completes", ^{
-        [[expectFutureValue(@([vc.twitterLoadingIndicator isAnimating])) shouldEventually] equal:@NO];
         [vc view];
+        [[expectFutureValue(@([vc.toolbarHelper.twitterLoadingIndicator isAnimating])) shouldEventually] equal:@NO];
     });
     
     it(@"should show the friends count", ^{
         [vc view];
-        [vc.friendsCountLabel shouldNotBeNil];
+        [vc.toolbarHelper.friendsCountLabel shouldNotBeNil];
     });
     
     it(@"should update the friends count", ^{
         [vc view];
         NSString* expectedText = [NSString stringWithFormat:@"%d friends", friends1.count];
-        [[expectFutureValue(vc.friendsCountLabel.text) shouldEventuallyBeforeTimingOutAfter(5)] equal:expectedText];
+        [[expectFutureValue(vc.toolbarHelper.friendsCountLabel.text) shouldEventually] equal:expectedText];
     });
     
     it(@"should have a label for found friends count", ^{
         [vc view];
-        [vc.friendsFoundCountLabel shouldNotBeNil];
+        [vc.toolbarHelper.friendsFoundCountLabel shouldNotBeNil];
     });
     
 });

@@ -19,6 +19,7 @@
 		BB85179529F415E85065EACC /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */; };
 		BB8518B5F890FF3A878242AF /* XIGAppNetUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB85158C5BC557D7715D81D4 /* XIGAppNetUser+XIGTest.m */; };
 		BB8518E58BD63465DD4466CC /* XIGSemiModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */; };
+		BB85197D02EC730D92363F1C /* XIGUserMatchersToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB85121B3282FDC8AC89FCE1 /* XIGUserMatchersToolbar.m */; };
 		BB851A004ABBBFD55A0B8BFD /* RACSignal+AggregateReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8513BC57147DB69C6F32DC /* RACSignal+AggregateReporting.m */; };
 		BB851A4DAC88557AE85BE2C5 /* XIGAppDelegate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */; };
 		BB851BC2F4B3989EFD77A9A7 /* app.net.exists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8511A1195712608D1ED2B7 /* app.net.exists.html */; };
@@ -152,11 +153,13 @@
 		BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGSemiModalController.h; sourceTree = "<group>"; };
 		BB8511A1195712608D1ED2B7 /* app.net.exists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.exists.html; sourceTree = "<group>"; };
 		BB8511FF8938C72160AA6324 /* FileFunctionFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileFunctionFormatter.m; sourceTree = "<group>"; };
+		BB85121B3282FDC8AC89FCE1 /* XIGUserMatchersToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGUserMatchersToolbar.m; sourceTree = "<group>"; };
 		BB85127E2A70F3F80315323E /* XIGHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGHelpViewController.h; sourceTree = "<group>"; };
 		BB8513AE3FDBC6421FCA83AC /* XIGAppDelegate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGAppDelegate+Reporting.h"; sourceTree = "<group>"; };
 		BB8513BC57147DB69C6F32DC /* RACSignal+AggregateReporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+AggregateReporting.m"; sourceTree = "<group>"; };
 		BB85144EB0015B9E950A1B82 /* XIGHelpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGHelpButton.m; sourceTree = "<group>"; };
 		BB8514DE9236C3345E088389 /* XIGTwitAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitAppClient.h; sourceTree = "<group>"; };
+		BB85152CA314A90BA0A514FB /* XIGUserMatchersToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGUserMatchersToolbar.h; sourceTree = "<group>"; };
 		BB85157745C22FE53FBD48DC /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 		BB85158C5BC557D7715D81D4 /* XIGAppNetUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGAppNetUser+XIGTest.m"; sourceTree = "<group>"; };
 		BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitAppClient.m; sourceTree = "<group>"; };
@@ -665,6 +668,8 @@
 				BB85127E2A70F3F80315323E /* XIGHelpViewController.h */,
 				BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */,
 				BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */,
+				BB85121B3282FDC8AC89FCE1 /* XIGUserMatchersToolbar.m */,
+				BB85152CA314A90BA0A514FB /* XIGUserMatchersToolbar.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 				BB8511AE5C3B8E546116510D /* FileFunctionFormatter.m in Sources */,
 				BB851A4DAC88557AE85BE2C5 /* XIGAppDelegate+Reporting.m in Sources */,
 				BB851A004ABBBFD55A0B8BFD /* RACSignal+AggregateReporting.m in Sources */,
+				BB85197D02EC730D92363F1C /* XIGUserMatchersToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

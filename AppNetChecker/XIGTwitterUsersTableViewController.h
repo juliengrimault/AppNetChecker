@@ -9,19 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "XIGTableViewController.h"
 @class XIGTwitAppClient;
+@class XIGUserMatchersToolbar;
+
 @interface XIGTwitterUsersTableViewController : XIGTableViewController {
-    UIActivityIndicatorView *_appNetLoadingIndicator;
 }
 
 //Must be set before presenting this controller
 @property (nonatomic, strong) XIGTwitAppClient *twittAppClient;
-
-@property (nonatomic, readonly) UIActivityIndicatorView *twitterLoadingIndicator;
-@property(nonatomic, strong) UIActivityIndicatorView *appNetLoadingIndicator;
-
-@property (nonatomic, readonly) UILabel *friendsCountLabel;
-@property (nonatomic, readonly) UILabel *friendsFoundCountLabel;
-
+@property (nonatomic, strong, readonly) XIGUserMatchersToolbar *toolbarHelper;
 @property (nonatomic, strong) NSMutableArray* userMatchers;
 
 @end
