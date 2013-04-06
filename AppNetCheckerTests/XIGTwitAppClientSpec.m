@@ -24,7 +24,8 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
                 [twitterClient stub:@selector(friends) andReturn:[RACSignal return:twitterFriends]];
                 signal = [client userMatchers];
 
-                [appNetClient stub:@selector(userWithScreenName:) andReturn:[[XIGAppNetUser alloc] initWithScreenName:@"Test" htmlData:nil]];
+                [appNetClient stub:@selector(userWithScreenName:)
+                         andReturn:[RACSignal return:[[XIGAppNetUser alloc] initWithScreenName:@"Test" htmlData:nil]]];
             });
 
             afterEach(^{
@@ -47,7 +48,7 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
                     [signal subscribeNext:^(id x) {
                         receivedMatchers = x;
                     } error:^(NSError *error) {
-                        receivedError = nil;
+                        receivedError = error;
                     }];
 
                     [[receivedMatchers should] haveCountOf:twitterFriends.count];
@@ -57,7 +58,7 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
                     [signal subscribeNext:^(id x) {
                         receivedMatchers = x;
                     } error:^(NSError *error) {
-                        receivedError = nil;
+                        receivedError = error;
                     }];
 
                     NSUInteger i = 0;
@@ -72,7 +73,7 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
                     [signal subscribeNext:^(id x) {
                         receivedMatchers = x;
                     } error:^(NSError *error) {
-                        receivedError = nil;
+                        receivedError = error;
                     }];
 
                     NSUInteger i = 0;

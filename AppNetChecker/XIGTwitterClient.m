@@ -14,7 +14,7 @@
 #import "XIGTwitterUser.h"
 #import "NSArray+JGSlice.h"
 
-static NSInteger const kDefaultMaxProfileFetchedPerRequest = 10;
+static NSInteger const kDefaultMaxProfileFetchedPerRequest = 100;
 
 NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
 @interface XIGTwitterClient () {

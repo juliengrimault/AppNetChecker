@@ -22,6 +22,7 @@ beforeEach(^{
 
 afterEach(^{
     mockSignal = nil;
+    vc = nil;
 });
 
 it(@"should load properly", ^{
@@ -58,7 +59,7 @@ context(@"loading friends", ^{
 
 context(@"Toolbar", ^{
     beforeEach(^{
-        mockSignal = [[RACSignal return:friends1] delay:0.1];
+        mockSignal = [RACSignal return:friends1];
         vc.twittAppClient = [XIGTwitAppClient mock];
         [vc.twittAppClient stub:@selector(userMatchers) andReturn:mockSignal];
     });
@@ -86,7 +87,7 @@ context(@"Toolbar", ^{
     it(@"should update the friends count", ^{
         [vc view];
         NSString* expectedText = [NSString stringWithFormat:@"%d friends", friends1.count];
-        [[expectFutureValue(vc.friendsCountLabel.text) shouldEventually] equal:expectedText];
+        [[expectFutureValue(vc.friendsCountLabel.text) shouldEventuallyBeforeTimingOutAfter(5)] equal:expectedText];
     });
     
     it(@"should have a label for found friends count", ^{

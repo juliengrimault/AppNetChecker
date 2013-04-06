@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007b55e9-732a-4c29-9a50-f706b3a930c0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitAppClientSpec.m" afterPath="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitAppClientSpec.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.m" afterPath="$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserTableViewControllerSpec.m" afterPath="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserTableViewControllerSpec.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.m" afterPath="$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AppNetChecker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364711168241" ignored="false" />
+    <file path="/Dummy.txt" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1365254089153" ignored="false" />
     <file path="/XIGAppNetUser.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363432902094" ignored="false" />
     <file path="/XIGAppNetUser.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364643478237" ignored="false" />
-    <file path="/fragment.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364108001198" ignored="false" />
+    <file path="/fragment.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1365255204952" ignored="false" />
     <file path="/XIGAppNetUserSpec.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363434776223" ignored="false" />
     <file path="/XIGAppNetClient.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364642733593" ignored="false" />
     <file path="/XIGTwitterUserCellSpec.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364644771205" ignored="false" />
-    <file path="/LLDB" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364722046796" ignored="false" />
+    <file path="/LLDB" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1365258349127" ignored="false" />
     <file path="/XIGTwitterUserCell.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364639081579" ignored="false" />
     <file path="/AppNetChecker-Prefix.pch" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364704735808" ignored="false" />
     <file path="/XIGAccountPickerViewController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364113179169" ignored="false" />
@@ -25,7 +30,7 @@
     <file path="/XIGAppDelegate.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363499158498" ignored="false" />
     <file path="/XIGHelpButton.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363615580118" ignored="false" />
     <file path="/XIGHelpButton.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363615719668" ignored="false" />
-    <file path="/XIGTwitterUsersTableViewController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364722025526" ignored="false" />
+    <file path="/XIGTwitterUsersTableViewController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1365258341143" ignored="false" />
     <file path="/XIGNavigationController.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363617150627" ignored="false" />
     <file path="/XIGNavigationController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363617921554" ignored="false" />
     <file path="/GVUserDefaults+Properties.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363701594532" ignored="false" />
@@ -36,16 +41,16 @@
     <file path="/fragment.mm" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364104435252" ignored="false" />
     <file path="/XIGTwitterUserSpec.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364104803639" ignored="false" />
     <file path="/XIGTwitAppClient.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364708742308" ignored="false" />
-    <file path="/XIGTwitAppClientSpec.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364108688982" ignored="false" />
+    <file path="/XIGTwitAppClientSpec.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1365256646230" ignored="false" />
     <file path="/XIGTwitAppClient.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364106414415" ignored="false" />
     <file path="/XIGTwitterClient.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364106722099" ignored="false" />
     <file path="/XIGUserMatcher.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364108017114" ignored="false" />
     <file path="/XIGAppNetUser+XIGTest.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364109496055" ignored="false" />
     <file path="/XIGTwitterUsersTableViewController.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364110635363" ignored="false" />
-    <file path="/XIGTwitterUserTableViewControllerSpec.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364111143434" ignored="false" />
+    <file path="/XIGTwitterUserTableViewControllerSpec.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1365257507321" ignored="false" />
     <file path="/XIGUserMatcher+XIGTest.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364109326721" ignored="false" />
     <file path="/XIGUserMatcher+XIGTest.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364110511754" ignored="false" />
-    <file path="/a.dummy" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364644132461" ignored="false" />
+    <file path="/a.dummy" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1365256127187" ignored="false" />
     <file path="/XIGUserMatcher.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364110164681" ignored="false" />
     <file path="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/julien.xcuserdatad/xcschemes/Pods.xcscheme" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364640155363" ignored="false" />
     <file path="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/julien.xcuserdatad/xcschemes/Pods-AppNetCheckerTests.xcscheme" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364640155363" ignored="false" />
@@ -80,12 +85,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="XIGTwitterUsersTableViewController.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="XIGTwitterClient.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="64" selection-start="426" selection-end="426" vertical-scroll-proportion="0.31914893">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGTwitterClient.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="32" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KiwiMacros.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Pods/Headers/Kiwi/KiwiMacros.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="14" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGTwitterUserTableViewControllerSpec.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserTableViewControllerSpec.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="95" selection-start="3107" selection-end="3107" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGTwitAppClient.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="15" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGTwitAppClientSpec.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitAppClientSpec.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="118" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGTwitterUserCellSpec.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="0" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGTwitterClient+Private.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient+Private.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGTwitterUsersTableViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="17" selection-start="4922" selection-end="4922" vertical-scroll-proportion="0.46385542">
+            <state line="164" column="0" selection-start="6848" selection-end="6848" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#!!doc" expanded="false" />
                 <element signature="e#165#211#0" expanded="true" />
               </folding>
             </state>
@@ -111,7 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AppNetChecker/XIGAppNetUser.m" />
         <option value="$PROJECT_DIR$/AppNetCheckerTests/NSObject+XIGKiwiMockAddition.h" />
         <option value="$PROJECT_DIR$/AppNetCheckerTests/NSObject+XIGKiwiMockAddition.m" />
         <option value="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m" />
@@ -121,18 +198,20 @@
         <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.h" />
         <option value="$PROJECT_DIR$/AppNetChecker/AppNetChecker-Prefix.pch" />
         <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.m" />
-        <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/XIGAppNetClient.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/RACSignal+AggregateReporting.h" />
-        <option value="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserTableViewControllerSpec.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/RACSignal+AggregateReporting.m" />
+        <option value="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitAppClientSpec.m" />
+        <option value="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserTableViewControllerSpec.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.m" />
+        <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="y" value="22" />
+    <option name="width" value="1394" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -294,25 +373,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Supporting Files" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppNetChecker" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppNetChecker" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="Network" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,7 +428,7 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.h" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="AppNetChecker" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -512,19 +573,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="22" width="1394" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.4996353" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32780612" sideWeight="0.4996353" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771084" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3265306" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24945295" sideWeight="0.67232376" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2695836" sideWeight="0.65096617" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3490338" sideWeight="0.5631616" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2436178" sideWeight="0.65178573" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3482143" sideWeight="0.5631616" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23267688" sideWeight="0.19451697" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3164251" sideWeight="0.43613267" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33695653" sideWeight="0.54631656" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3490338" sideWeight="0.43613267" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33673468" sideWeight="0.54631656" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32676348" sideWeight="0.4996353" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -594,93 +655,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m</url>
-          <line>81</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m</url>
-          <line>72</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.m</url>
-          <line>134</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="50" />
+      <option name="time" value="52" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="14" selection-start="1200" selection-end="1200" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="129" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGNSURLRequestBuilder.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="16" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACSignal+Operations.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="15" selection-start="5868" selection-end="5868" vertical-scroll-proportion="-6.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserTableViewControllerSpec.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="201" selection-end="201" vertical-scroll-proportion="-0.9099804">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGAppNetClient.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="98" selection-start="1317" selection-end="1317" vertical-scroll-proportion="1.0567515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGNSURLRequestBuilder.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="11" selection-start="228" selection-end="228" vertical-scroll-proportion="0.26418787">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGAppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -697,18 +678,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AppNetChecker/RACSignal+AggregateReporting.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="39" selection-start="117" selection-end="117" vertical-scroll-proportion="0.20547946">
-          <folding>
-            <element signature="e#44#77#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="7" column="39" selection-start="117" selection-end="117" vertical-scroll-proportion="0.20547946" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AppNetChecker/RACSignal+AggregateReporting.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="660" selection-end="660" vertical-scroll-proportion="0.5870842">
-          <folding />
-        </state>
+        <state line="20" column="35" selection-start="660" selection-end="660" vertical-scroll-proportion="0.5870842" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.h">
@@ -725,13 +700,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="15" selection-start="647" selection-end="647" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGAppNetClient.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="15" selection-start="561" selection-end="561" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitAppClientSpec.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="118" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Headers/Kiwi/KiwiMacros.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="14" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserTableViewControllerSpec.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="95" selection-start="3107" selection-end="3107" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterUsersTableViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="17" selection-start="4922" selection-end="4922" vertical-scroll-proportion="0.46385542">
+        <state line="164" column="0" selection-start="6848" selection-end="6848" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="false" />
             <element signature="e#165#211#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient+Private.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="32" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGTwitterClient.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="64" selection-start="426" selection-end="426" vertical-scroll-proportion="0.31914893">
+          <folding />
         </state>
       </provider>
     </entry>
