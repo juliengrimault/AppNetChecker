@@ -68,17 +68,6 @@
     self.semiModalController.navigationItem.backBarButtonItem = back;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController setToolbarHidden:YES animated:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.navigationController setToolbarHidden:NO animated:animated];
-}
-
-
 - (void)retrieveTwitterAccounts
 {
     [self.refreshControl beginRefreshing];
@@ -171,7 +160,6 @@
 {
     if ([segue.identifier isEqualToString:@"PushUsersTableViewController"]) {
         XIGTwitterUsersTableViewController* vc = segue.destinationViewController;
-        [self.navigationController setNavigationBarHidden:NO animated:NO];
         NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
 
         XIGTwitterClient *twitterClient = [XIGTwitterClient sharedClient];

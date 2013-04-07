@@ -15,4 +15,6 @@
 
 + (instancetype) xig_redColor;
 + (instancetype) xig_greenColor;
+
++ (instancetype) xig_toolbarColor;
 @end

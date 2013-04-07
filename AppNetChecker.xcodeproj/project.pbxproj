@@ -24,6 +24,7 @@
 		BB851A4DAC88557AE85BE2C5 /* XIGAppDelegate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */; };
 		BB851BC2F4B3989EFD77A9A7 /* app.net.exists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8511A1195712608D1ED2B7 /* app.net.exists.html */; };
 		BB851D83CCEFF02658259D63 /* XIGTwitAppClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851E0B9A7C114905446F89 /* XIGTwitAppClientSpec.m */; };
+		BB851E4575D6EA8A43862039 /* JGTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8518F48CC82C164111BA3F /* JGTableViewController.m */; };
 		BB851EB2BD45427F2DE1C8FE /* XIGHelpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BB85144EB0015B9E950A1B82 /* XIGHelpButton.m */; };
 		BB851ECE45FDF6558A611194 /* XIGHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */; };
 		BB851F3F58EE450FF8D3BB02 /* XIGTwitAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */; };
@@ -148,6 +149,7 @@
 		773C3C7EAB274B1BA845227F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		77644BD0F970460FAC7B1976 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetCheckerTests.xcconfig"; path = "Pods/Pods-AppNetCheckerTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		BB85104DD3E0353CA8734120 /* JGTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGTableViewController.h; sourceTree = "<group>"; };
 		BB85106E81D1CF106801044B /* RACSignal+AggregateReporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+AggregateReporting.h"; sourceTree = "<group>"; };
 		BB85110C2A4E6C2116D6E14B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGSemiModalController.h; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		BB85176BB474943628E79820 /* CrashlyticsLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashlyticsLogger.h; sourceTree = "<group>"; };
 		BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.notexists.html; sourceTree = "<group>"; };
 		BB851825F1EB11631663A473 /* XIGUserMatcher+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGUserMatcher+XIGTest.m"; sourceTree = "<group>"; };
+		BB8518F48CC82C164111BA3F /* JGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGTableViewController.m; sourceTree = "<group>"; };
 		BB851910CD85123AD4F9BFE7 /* CrashlyticsLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashlyticsLogger.m; sourceTree = "<group>"; };
 		BB851A5B0F42847ABB7F337F /* XIGHelpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGHelpButton.h; sourceTree = "<group>"; };
 		BB851A8B33B2B14B0D2B76FC /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
@@ -644,6 +647,8 @@
 		F9E76F9016E35593003E1B26 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BB85121B3282FDC8AC89FCE1 /* XIGUserMatchersToolbar.m */,
+				BB85152CA314A90BA0A514FB /* XIGUserMatchersToolbar.h */,
 				F96CDC2516ECA0EA00D03306 /* TwitterUserCell */,
 				F90C202116C8EF3100F29905 /* XIGAccountErrorCell.h */,
 				F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */,
@@ -668,8 +673,8 @@
 				BB85127E2A70F3F80315323E /* XIGHelpViewController.h */,
 				BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */,
 				BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */,
-				BB85121B3282FDC8AC89FCE1 /* XIGUserMatchersToolbar.m */,
-				BB85152CA314A90BA0A514FB /* XIGUserMatchersToolbar.h */,
+				BB85104DD3E0353CA8734120 /* JGTableViewController.h */,
+				BB8518F48CC82C164111BA3F /* JGTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1002,6 +1007,7 @@
 				BB851A4DAC88557AE85BE2C5 /* XIGAppDelegate+Reporting.m in Sources */,
 				BB851A004ABBBFD55A0B8BFD /* RACSignal+AggregateReporting.m in Sources */,
 				BB85197D02EC730D92363F1C /* XIGUserMatchersToolbar.m in Sources */,
+				BB851E4575D6EA8A43862039 /* JGTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

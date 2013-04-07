@@ -30,4 +30,8 @@
     return [UIColor colorWithRed:0.09 green:0.63 blue:0.52 alpha:1.0];
 }
 
++ (instancetype)xig_toolbarColor {
+    return [UIColor colorWithRed: 0.133 green: 0.624 blue: 0.522 alpha: 1];
+}
+
 @end

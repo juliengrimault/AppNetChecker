@@ -21,7 +21,7 @@
 }
 #pragma mark - View Lifecycle
 - (void)configureToggleButton {
-    self.helpButton.backgroundColor = [UIColor colorWithRed: 0.133 green: 0.624 blue: 0.522 alpha: 1];
+    self.helpButton.backgroundColor = [UIColor xig_toolbarColor];
     self.helpButton.font = [UIFont xig_regularFontOfSize:20];
     self.helpButton.titleColor = [UIColor whiteColor];
     self.helpButton.title = NSLocalizedString(@"Find your Twitter friends on App.net", nil);

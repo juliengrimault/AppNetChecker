@@ -15,11 +15,11 @@
 #import "XIGTwitAppClient.h"
 #import "RACSignal+AggregateReporting.h"
 #import "XIGUserMatchersToolbar.h"
+#import "UITableView+XIGBackgroundView.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
 @interface XIGTwitterUsersTableViewController ()
-@property (nonatomic, strong) XIGUserMatchersToolbar *toolbarHelper;
 @end
 
 @implementation XIGTwitterUsersTableViewController
@@ -54,68 +54,75 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 - (void)commonInit {
     _userMatchers = [[NSMutableArray alloc] init];
-    _toolbarHelper = [[XIGUserMatchersToolbar alloc] init];
+    self.title = NSLocalizedString(@"Friends", nil);
 }
 
 #pragma mark - Life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.toolbarItems = self.toolbarHelper.toolbarItems;
-    [self registerTableViewCell];
-
+    [self configureTableView];
 
     RACSignal *userMatchersSignal = [[self.twittAppClient userMatchers] deliverOn:[RACScheduler mainThreadScheduler]];
-    [self configureLabelsSignal:userMatchersSignal];
-    [self configureTableView:userMatchersSignal];
+    [self bindToolbarToSignal:userMatchersSignal];
+    [self bindTableViewDataSourceToSignal:userMatchersSignal];
 }
 
-    - (void)registerTableViewCell {
+#pragma mark - UI Setup
+
+    - (void)configureTableView {
+        [self.tableView xig_configureBackgroundView];
         UINib *nib = [UINib nibWithNibName:@"XIGTwitterUserCell" bundle:nil];
         [self.tableView registerNib:nib forCellReuseIdentifier:CellIdentifier];
         self.tableView.rowHeight = [XIGTwitterUserCell rowHeight];
     }
 
-
-    - (void)configureLabelsSignal:(RACSignal *)userMatchersSignal {
-
-        // stop when all the twitter request have been made
-        RACSignal *stopTrigger = [userMatchersSignal sequenceNext:^RACSignal * {
-            return [RACSignal return:@YES];
-        }];
-        RACSignal * matchersArray = [RACAbleWithStart(self.userMatchers) takeUntil:stopTrigger];
-        RAC(self.toolbarHelper.friendsCountLabel.text) =[matchersArray map:^id(NSArray *users) {
-            return [NSString localizedStringWithFormat:@"%d friends", users.count];
-        }];
-
-        RACSignal *appNetUsersSignal = [[[[userMatchersSignal flattenMap:^RACStream *(NSArray *newMatchers) {
-            NSArray *appNetUsers = [newMatchers mtl_mapUsingBlock:^id(XIGUserMatcher *m) {
-                return m.appNetUser;
-            }];
-            return [appNetUsers.rac_sequence signal];
-        }] flatten] setNameWithFormat:@"App.net Users"] logAll];
-
-        RACSignal *appNetUserCount = [[[[appNetUsersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGAppNetUser *u) {
-            NSUInteger count = [current unsignedIntegerValue];
-            if (u != nil) count++;
-            return @(count);
-        }] throttle:1] setNameWithFormat:@"App.net count"] logAll];
-
-
-        @weakify(self);
-        [appNetUserCount subscribeNext:^(NSNumber *count) {
-            @strongify(self);
-            self.toolbarHelper.friendsFoundCountLabel.text = [NSString localizedStringWithFormat:@"%@ found.", count];
-        } completed:^{
-            @strongify(self);
-            [self.toolbarHelper.appNetLoadingIndicator stopAnimating];
-        }];
+#pragma mark - Toolbar Setup
+    - (void)bindToolbarToSignal:(RACSignal *)userMatchersSignal {
+        [self bindFriendCountLabel];
+        [self bindFriendFoundCountLabel:userMatchersSignal];
     }
 
+        - (void)bindFriendCountLabel {
+            RACSignal * matchersArray = RACAbleWithStart(self.userMatchers);
+            RAC(self.userMatchersToolbar.friendsCountLabel.text) =[matchersArray map:^id(NSArray *users) {
+                    return [NSString localizedStringWithFormat:@"%d friends", users.count];
+                }];
+        }
 
-    #pragma mark - User Matchers Insertion
-    - (void)configureTableView:(RACSignal *)userMatchersSignal {
+        - (void)bindFriendFoundCountLabel:(RACSignal *)userMatchersSignal {
+            RACSignal *appNetUserCount= [[self foundFriendsCountSignal:userMatchersSignal] deliverOn:[RACScheduler mainThreadScheduler]];
+
+            RAC(self.userMatchersToolbar.friendsFoundCountLabel.text) = [appNetUserCount map:^id(NSNumber *count) {
+                return [NSString localizedStringWithFormat:@"%@ found", count];
+            }];
+
+            @weakify(self);
+            [appNetUserCount subscribeCompleted:^{
+                @strongify(self);
+                [self.userMatchersToolbar.loadingIndicator stopAnimating];
+            }];
+        }
+
+            - (RACSignal *)foundFriendsCountSignal:(RACSignal *)userMatchersSignal {
+                RACSignal *appNetUsersSignal = [[[userMatchersSignal flattenMap:^RACStream *(NSArray *newMatchers) {
+                    NSArray *appNetUsers = [newMatchers mtl_mapUsingBlock:^id(XIGUserMatcher *m) {
+                        return m.appNetUser;
+                    }];
+                    return [appNetUsers.rac_sequence signal];
+                }] flatten] setNameWithFormat:@"App.net Users"];
+
+                RACSignal *appNetUserCount = [[[appNetUsersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGAppNetUser *u) {
+                    NSUInteger count = [current unsignedIntegerValue];
+                    if (u != nil) count++;
+                    return @(count);
+                }] setNameWithFormat:@"App.net count"] logAll];
+                return appNetUserCount;
+            }
+
+
+#pragma mark - Data Source Setup
+    - (void)bindTableViewDataSourceToSignal:(RACSignal *)userMatchersSignal {
         [self configureUserMatchersNext:userMatchersSignal];
-        [self configureUserMatchersCompletion:userMatchersSignal];
         [self configureUserMatchersError:userMatchersSignal];
     }
 
@@ -136,29 +143,26 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
                 return insertionRange;
             }
 
-            - (void)insertNewRowsInTableView:(NSRange)insertionRange{
+            - (void)insertNewRowsInTableView:(NSRange)insertionRange {
                 NSArray *insertedIndexPaths = [NSIndexPath indexPathsInSection:0 range:insertionRange];
                 [self.tableView insertRowsAtIndexPaths:insertedIndexPaths withRowAnimation:UITableViewRowAnimationNone];
             }
 
-
-        - (void)configureUserMatchersCompletion:(RACSignal *)userMatchersSignal {
-            @weakify(self);
-            [userMatchersSignal subscribeCompleted:^{
-                @strongify(self);
-                self.toolbarHelper.friendsCountLabel.text = [NSString localizedStringWithFormat:@"%d friends", self.userMatchers.count];
-                [self removeTwitterLoadingIndicator];
-            }];
-        }
-
             - (void)removeTwitterLoadingIndicator {
-                [self.toolbarHelper.twitterLoadingIndicator stopAnimating];
+                [self.userMatchersToolbar.loadingIndicator stopAnimating];
                 NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
                 [self setToolbarItems:newToolBarItems animated:YES];
             }
 
         - (void)configureUserMatchersError:(RACSignal *)userMatchersSignal {
-
+            [userMatchersSignal subscribeError:^(NSError *error) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Something Went Wrong...", nil)
+                                                                message:[error localizedDescription]
+                                                               delegate:nil
+                                                      cancelButtonTitle:NSLocalizedString(@"Ok", nil)
+                                                      otherButtonTitles:nil];
+                [alert show];
+            }];
         }
 
 #pragma mark - Table view data source

@@ -10,54 +10,48 @@
 
 
 @interface XIGUserMatchersToolbar()
-@property (nonatomic, strong) NSArray *toolbarItems;
 @end
 
 @implementation XIGUserMatchersToolbar
 
-- (id)init {
-    self = [super init];
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     if (self) {
-        UIBarButtonItem *twitterLoadingItem= [self createTwitterLoadingButtonItem];
-        UIBarButtonItem *friendCountItem = [self createFriendCountItem];
-        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        UIBarButtonItem *friendFoundCountItem = [self createFriendFoundCountItem];
-        UIBarButtonItem *appNetLoadingItem= [self createAppNetLoadingItem];
-        self.toolbarItems = @[twitterLoadingItem, friendCountItem, spaceItem, friendFoundCountItem, appNetLoadingItem];
     }
     return self;
 }
 
-- (UIBarButtonItem *)createTwitterLoadingButtonItem {
-    UIBarButtonItem *twitterLoadingItem = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
-    _twitterLoadingIndicator = (UIActivityIndicatorView*) twitterLoadingItem.customView;
-    return twitterLoadingItem;
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
 }
 
-- (UIBarButtonItem *)createFriendCountItem {
-    UILabel *friendsCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-    friendsCountLabel.backgroundColor = [UIColor clearColor];
-    friendsCountLabel.textColor = [UIColor whiteColor];
-    friendsCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
-    _friendsCountLabel = friendsCountLabel;
-    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:friendsCountLabel];
-    return item2;
+- (void)awakeFromNib {
+    [self commonInit];
 }
 
-- (UIBarButtonItem *)createFriendFoundCountItem {
-    UILabel *friendsFoundCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
-    friendsFoundCountLabel.backgroundColor = [UIColor clearColor];
-    friendsFoundCountLabel.textColor = [UIColor whiteColor];
-    friendsFoundCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
-    _friendsFoundCountLabel = friendsFoundCountLabel;
-    _friendsFoundCountLabel.textAlignment = NSTextAlignmentRight;
-    UIBarButtonItem *item4 = [[UIBarButtonItem alloc] initWithCustomView:friendsFoundCountLabel];
-    return item4;
+- (void)commonInit {
+    [self configureFriendCountLabel];
+    [self configureFriendFoundCountLabel];
+    self.backgroundColor = [UIColor xig_toolbarColor];
 }
 
-- (UIBarButtonItem *)createAppNetLoadingItem {
-    UIBarButtonItem *appNetLoadingItem = [UIBarButtonItem loadingIndicatorBarButtonItemWithStyle:UIActivityIndicatorViewStyleWhite];
-    _appNetLoadingIndicator = (UIActivityIndicatorView*) appNetLoadingItem.customView;
-    return appNetLoadingItem;
-}
+    - (void)configureFriendCountLabel {
+        _friendsCountLabel.text = nil;
+        _friendsCountLabel.backgroundColor = [UIColor clearColor];
+        _friendsCountLabel.textColor = [UIColor whiteColor];
+        _friendsCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
+    }
+
+    - (void)configureFriendFoundCountLabel {
+        _friendsFoundCountLabel.text = nil;
+        _friendsFoundCountLabel.backgroundColor = [UIColor clearColor];
+        _friendsFoundCountLabel.textColor = [UIColor whiteColor];
+        _friendsFoundCountLabel.font = [UIFont xig_thinFontOfSize:[UIFont labelFontSize]];
+        _friendsFoundCountLabel.textAlignment = NSTextAlignmentRight;
+    }
+
 @end

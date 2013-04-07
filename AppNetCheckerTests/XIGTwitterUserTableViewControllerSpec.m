@@ -67,33 +67,33 @@ context(@"Toolbar", ^{
     
     it(@"should have loading indicator outlet connected", ^{
         [vc view];
-        [vc.toolbarHelper.twitterLoadingIndicator shouldNotBeNil];
+        [vc.userMatchersToolbar.loadingIndicator shouldNotBeNil];
     });
     
     it(@"should have an animating indicator", ^{
         [vc view];
-        [[theValue([vc.toolbarHelper.twitterLoadingIndicator isAnimating]) should] beTrue];
+        [[theValue([vc.userMatchersToolbar.loadingIndicator isAnimating]) should] beTrue];
     });
     
     it(@"should stop animating when the signal completes", ^{
         [vc view];
-        [[expectFutureValue(@([vc.toolbarHelper.twitterLoadingIndicator isAnimating])) shouldEventually] equal:@NO];
+        [[expectFutureValue(@([vc.userMatchersToolbar.loadingIndicator isAnimating])) shouldEventually] equal:@NO];
     });
     
     it(@"should show the friends count", ^{
         [vc view];
-        [vc.toolbarHelper.friendsCountLabel shouldNotBeNil];
+        [vc.userMatchersToolbar.friendsCountLabel shouldNotBeNil];
     });
     
     it(@"should update the friends count", ^{
         [vc view];
         NSString* expectedText = [NSString stringWithFormat:@"%d friends", friends1.count];
-        [[expectFutureValue(vc.toolbarHelper.friendsCountLabel.text) shouldEventually] equal:expectedText];
+        [[expectFutureValue(vc.userMatchersToolbar.friendsCountLabel.text) shouldEventually] equal:expectedText];
     });
     
     it(@"should have a label for found friends count", ^{
         [vc view];
-        [vc.toolbarHelper.friendsFoundCountLabel shouldNotBeNil];
+        [vc.userMatchersToolbar.friendsFoundCountLabel shouldNotBeNil];
     });
     
 });

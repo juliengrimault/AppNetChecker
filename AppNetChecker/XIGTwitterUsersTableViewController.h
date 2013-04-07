@@ -11,12 +11,13 @@
 @class XIGTwitAppClient;
 @class XIGUserMatchersToolbar;
 
-@interface XIGTwitterUsersTableViewController : XIGTableViewController {
+@interface XIGTwitterUsersTableViewController : JGTableViewController {
 }
 
 //Must be set before presenting this controller
 @property (nonatomic, strong) XIGTwitAppClient *twittAppClient;
-@property (nonatomic, strong, readonly) XIGUserMatchersToolbar *toolbarHelper;
+
+@property (nonatomic, weak) IBOutlet XIGUserMatchersToolbar *userMatchersToolbar;
 @property (nonatomic, strong) NSMutableArray* userMatchers;
 
 @end

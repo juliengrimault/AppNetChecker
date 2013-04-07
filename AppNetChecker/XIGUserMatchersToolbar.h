@@ -7,13 +7,10 @@
 #import <Foundation/Foundation.h>
 
 
-@interface XIGUserMatchersToolbar : NSObject
+@interface XIGUserMatchersToolbar : UIView
 
-@property (nonatomic, readonly, strong) NSArray *toolbarItems;
-
-@property (nonatomic, readonly, strong) UIActivityIndicatorView *twitterLoadingIndicator;
-@property (nonatomic, readonly, strong) UILabel *friendsCountLabel;
-@property (nonatomic, readonly, strong) UILabel *friendsFoundCountLabel;
-@property (nonatomic, readonly, strong) UIActivityIndicatorView *appNetLoadingIndicator;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *loadingIndicator;
+@property (nonatomic, weak) IBOutlet UILabel *friendsCountLabel;
+@property (nonatomic, weak) IBOutlet UILabel *friendsFoundCountLabel;
 
 @end
