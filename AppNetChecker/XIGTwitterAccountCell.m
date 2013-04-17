@@ -43,6 +43,7 @@
 
 - (void)commonInit
 {
+    self.accessoryType = UITableViewCellAccessoryNone;
     self.selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
     self.contentView.backgroundColor = [UIColor clearColor];
     self.customView = [[XIGTwitterAccountCellView alloc] initWithFrame:self.contentView.frame twitterAccountCell:self];
