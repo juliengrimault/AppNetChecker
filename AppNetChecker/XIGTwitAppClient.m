@@ -26,11 +26,10 @@
 
 - (RACSignal *)userMatchers {
     RACSignal *friends = [self.twitterClient friends];
-    return [friends map:^id(NSArray *friends) {
-        return [friends mtl_mapUsingBlock:^id(XIGTwitterUser *twitterUser) {
-            RACSignal *appNetUser = [[self.appNetClient userWithScreenName:twitterUser.screenName] catchTo:[RACSignal return:nil]];
-            return [[XIGUserMatcher alloc] initWithTwitterUser:twitterUser appNetUserSignal:appNetUser];
-        }];
+    return [friends map:^id(XIGTwitterUser *twitterUser) {
+        RACSignal *appNetUser = [[self.appNetClient userWithScreenName:twitterUser.screenName] catchTo:[RACSignal return:nil]];
+        return [[XIGUserMatcher alloc] initWithTwitterUser:twitterUser appNetUserSignal:appNetUser];
     }];
 }
+
 @end

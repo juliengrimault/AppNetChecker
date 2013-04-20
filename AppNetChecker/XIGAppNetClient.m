@@ -51,6 +51,7 @@
                                                      [subscriber sendCompleted];
                                                  } else {
                                                      DDLogError(@"%@", error);
+                                                     DDLogError(@"response: %@", requestOperation);
                                                      [subscriber sendError:error];
                                                  }
                                              }];

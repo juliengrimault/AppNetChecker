@@ -89,12 +89,12 @@ describe(@"Friends Profile Signal", ^{
         __block RACSignal* profiles;
         __block RACDisposable* disposable;
         __block NSError* receivedError;
-        __block NSArray* receivedProfiles;
+        __block NSMutableArray* receivedProfiles;
         __block NSString* path;
         
         beforeEach(^{
             profiles = nil;
-            receivedProfiles = nil;
+            receivedProfiles = [NSMutableArray array];
             receivedError = nil;
             NSString* encodedComma = @"%2C";
             path = [NSString stringWithFormat:@"https://api.twitter.com/1.1/users/lookup.json?adc=phone&user_id=%@",[ids componentsJoinedByString:encodedComma]];
@@ -112,7 +112,7 @@ describe(@"Friends Profile Signal", ^{
                 
                 profiles = [twitter profilesForIds:ids];
                 disposable = [profiles subscribeNext:^(id x) {
-                    receivedProfiles = x;
+                    [receivedProfiles addObject:x];
                 } error:^(NSError *error) {
                     receivedError = error;
                 }];
@@ -120,7 +120,7 @@ describe(@"Friends Profile Signal", ^{
             
             it(@"should send an error to the subscriber", ^{
                 [[expectFutureValue(receivedError) shouldEventually] beNonNil];
-                [[expectFutureValue(receivedProfiles) shouldEventually] beNil];
+                [[expectFutureValue(receivedProfiles) shouldEventually] haveCountOf:0];
             });
         });
         
@@ -139,7 +139,7 @@ describe(@"Friends Profile Signal", ^{
                 beforeEach(^{
                     profiles = [twitter profilesForIds:ids];
                     disposable = [profiles subscribeNext:^(id x) {
-                        receivedProfiles = x;
+                        [receivedProfiles addObject:x];
                     } error:^(NSError *error) {
                         receivedError = error;
                     }];
@@ -155,16 +155,12 @@ describe(@"Friends Profile Signal", ^{
             });
             
             describe(@"requesting more than 1 page of profiles ", ^{
-                __block NSInteger sendNextCount;
-                beforeEach(^{    
-                    sendNextCount = 0;
-                    receivedProfiles = @[];
+                beforeEach(^{
                     twitter.maxProfileFetchedPerRequest = ids.count;
                     
                     profiles = [twitter profilesForIds:[ids arrayByAddingObjectsFromArray:ids]];
                     disposable = [profiles subscribeNext:^(id x) {
-                        ++sendNextCount;
-                        receivedProfiles = [receivedProfiles arrayByAddingObjectsFromArray:x];
+                        [receivedProfiles addObject:x];
                     } error:^(NSError *error) {
                         receivedError = error;
                     }];
@@ -173,7 +169,6 @@ describe(@"Friends Profile Signal", ^{
                 it(@"should receive the profiles split in 2 sendNext:", ^{
                     [[expectFutureValue(receivedError) shouldEventually] beNil];
                     [[[expectFutureValue(receivedProfiles) shouldEventually] have:json.count * 2] elements];
-                    [[expectFutureValue(@(sendNextCount)) shouldEventually] equal:@2];
                 });
             });
         });

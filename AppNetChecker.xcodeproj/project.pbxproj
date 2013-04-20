@@ -21,6 +21,7 @@
 		BB8518E58BD63465DD4466CC /* XIGSemiModalController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */; };
 		BB85197D02EC730D92363F1C /* XIGUserMatchersToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = BB85121B3282FDC8AC89FCE1 /* XIGUserMatchersToolbar.m */; };
 		BB851A004ABBBFD55A0B8BFD /* RACSignal+AggregateReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8513BC57147DB69C6F32DC /* RACSignal+AggregateReporting.m */; };
+		BB851A46480D2C46B77DC7D2 /* RACSignal+XIGBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851797596A1700D296E0B2 /* RACSignal+XIGBuffer.m */; };
 		BB851A4DAC88557AE85BE2C5 /* XIGAppDelegate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */; };
 		BB851BC2F4B3989EFD77A9A7 /* app.net.exists.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8511A1195712608D1ED2B7 /* app.net.exists.html */; };
 		BB851D83CCEFF02658259D63 /* XIGTwitAppClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851E0B9A7C114905446F89 /* XIGTwitAppClientSpec.m */; };
@@ -169,6 +170,7 @@
 		BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitAppClient.m; sourceTree = "<group>"; };
 		BB85172199681014FE2E1F39 /* FileFunctionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFunctionFormatter.h; sourceTree = "<group>"; };
 		BB85176BB474943628E79820 /* CrashlyticsLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashlyticsLogger.h; sourceTree = "<group>"; };
+		BB851797596A1700D296E0B2 /* RACSignal+XIGBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+XIGBuffer.m"; sourceTree = "<group>"; };
 		BB8517A0667A6E7C6ABDC303 /* app.net.notexists.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = app.net.notexists.html; sourceTree = "<group>"; };
 		BB851825F1EB11631663A473 /* XIGUserMatcher+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGUserMatcher+XIGTest.m"; sourceTree = "<group>"; };
 		BB8518F48CC82C164111BA3F /* JGTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGTableViewController.m; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGAppDelegate+Reporting.m"; sourceTree = "<group>"; };
 		BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGHelpViewController.m; sourceTree = "<group>"; };
 		BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
+		BB851C3F84CF9E18099B98DA /* RACSignal+XIGBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+XIGBuffer.h"; sourceTree = "<group>"; };
 		BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGSemiModalController.m; sourceTree = "<group>"; };
 		BB851D23F870B8743FF15EC4 /* XIGUserMatcher+XIGTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGUserMatcher+XIGTest.h"; sourceTree = "<group>"; };
 		BB851D89552ADE90B1155662 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -225,7 +228,7 @@
 		F96CDC2C16ECADD600D03306 /* app.net-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app.net-logo@2x.png"; sourceTree = "<group>"; };
 		F96CDC2D16ECADD600D03306 /* twitter-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-logo.png"; sourceTree = "<group>"; };
 		F96CDC2E16ECADD600D03306 /* twitter-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter-logo@2x.png"; sourceTree = "<group>"; };
-		F97B551216C7752A005AD777 /* AppNetChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F97B551216C7752A005AD777 /* Twittapp.net.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twittapp.net.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97B551516C7752A005AD777 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F97B551716C7752A005AD777 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F97B551916C7752A005AD777 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -397,6 +400,8 @@
 			children = (
 				BB8513BC57147DB69C6F32DC /* RACSignal+AggregateReporting.m */,
 				BB85106E81D1CF106801044B /* RACSignal+AggregateReporting.h */,
+				BB851797596A1700D296E0B2 /* RACSignal+XIGBuffer.m */,
+				BB851C3F84CF9E18099B98DA /* RACSignal+XIGBuffer.h */,
 			);
 			name = "RACSignal+XIGOperations";
 			sourceTree = "<group>";
@@ -470,7 +475,7 @@
 		F97B551316C7752A005AD777 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F97B551216C7752A005AD777 /* AppNetChecker.app */,
+				F97B551216C7752A005AD777 /* Twittapp.net.app */,
 				F97B553B16C7752A005AD777 /* AppNetCheckerTests.octest */,
 			);
 			name = Products;
@@ -801,7 +806,7 @@
 			);
 			name = AppNetChecker;
 			productName = AppNetChecker;
-			productReference = F97B551216C7752A005AD777 /* AppNetChecker.app */;
+			productReference = F97B551216C7752A005AD777 /* Twittapp.net.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F97B553A16C7752A005AD777 /* AppNetCheckerTests */ = {
@@ -1016,6 +1021,7 @@
 				BB851A004ABBBFD55A0B8BFD /* RACSignal+AggregateReporting.m in Sources */,
 				BB85197D02EC730D92363F1C /* XIGUserMatchersToolbar.m in Sources */,
 				BB851E4575D6EA8A43862039 /* JGTableViewController.m in Sources */,
+				BB851A46480D2C46B77DC7D2 /* RACSignal+XIGBuffer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,5 +25,7 @@
     return self;
 }
 
-
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<%@ %@>",self.class, self.twitterUser.screenName];
+}
 @end

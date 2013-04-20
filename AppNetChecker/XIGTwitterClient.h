@@ -22,10 +22,10 @@ OBJC_EXTERN NSString *const TwitterAPIBaseURL;
 
 
 // wrap call to friendsId + profilesForIds
-- (RACSignal *)friends;
+- (RACSignal/*<TwitterUser>*/ *)friends;
 
-- (RACSignal *)friendsId;
-- (RACSignal *)profilesForIds:(NSArray *)ids;
+- (RACSignal/*<NSArray<NSInteger>>*/ *)friendsId;
+- (RACSignal/*<TwitterUser>*/ *)profilesForIds:(NSArray *)ids;
 
 + (instancetype)sharedClient;
 @end

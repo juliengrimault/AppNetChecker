@@ -74,12 +74,12 @@ describe(@"fetching all friend", ^{
     __block RACSignal* friends;
     __block RACDisposable* disposable;
     __block NSInteger numberOfNext;
-    __block NSArray* receivedFriends;
+    __block NSMutableArray* receivedFriends;
     __block NSError* errorReceived;
     
     beforeEach(^{
         numberOfNext = 0;
-        receivedFriends = @[];
+        receivedFriends = [NSMutableArray array];
         errorReceived = nil;
         
         twitter.maxProfileFetchedPerRequest = 2;
@@ -123,7 +123,7 @@ describe(@"fetching all friend", ^{
         
         friends = [twitter friends];
         disposable = [friends subscribeNext:^(id x) {
-            receivedFriends = [receivedFriends arrayByAddingObjectsFromArray:x];
+            [receivedFriends addObject:x];
             ++numberOfNext;
         } error:^(NSError *error) {
             errorReceived = error;
@@ -142,7 +142,7 @@ describe(@"fetching all friend", ^{
     
     it(@"should receive 4 next:", ^{
         [[expectFutureValue(errorReceived) shouldEventuallyBeforeTimingOutAfter(2.0)] beNil];
-        [[expectFutureValue(@(numberOfNext)) shouldEventuallyBeforeTimingOutAfter(2.0)] equal:@4];
+        [[expectFutureValue(@(numberOfNext)) shouldEventuallyBeforeTimingOutAfter(2.0)] equal:@7];
     });
     
     it(@"should receive 7 objects back", ^{

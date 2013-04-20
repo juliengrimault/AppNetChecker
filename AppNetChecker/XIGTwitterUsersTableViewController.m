@@ -16,6 +16,7 @@
 #import "RACSignal+AggregateReporting.h"
 #import "XIGUserMatchersToolbar.h"
 #import "UITableView+XIGBackgroundView.h"
+#import "RACSignal+XIGBuffer.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
@@ -99,31 +100,33 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
             @weakify(self);
             [appNetUserCount subscribeCompleted:^{
                 @strongify(self);
+                DDLogInfo(@"appNetUserCount completed - %@", self.userMatchersToolbar.friendsCountLabel.text);
                 [self.userMatchersToolbar.loadingIndicator stopAnimating];
             }];
         }
 
             - (RACSignal *)foundFriendsCountSignal:(RACSignal *)userMatchersSignal {
-                RACSignal *appNetUsersSignal = [[[userMatchersSignal flattenMap:^RACStream *(NSArray *newMatchers) {
-                    NSArray *appNetUsers = [newMatchers mtl_mapUsingBlock:^id(XIGUserMatcher *m) {
-                        return m.appNetUser;
-                    }];
-                    return [appNetUsers.rac_sequence signal];
-                }] flatten] setNameWithFormat:@"App.net Users"];
+                RACSignal *appNetUsersSignal = [[userMatchersSignal flattenMap:^RACStream *(XIGUserMatcher *matcher) {
+                    return matcher.appNetUser;
+                }] setNameWithFormat:@"App.net Users"];
 
-                RACSignal *appNetUserCount = [[[appNetUsersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGAppNetUser *u) {
+                RACSignal *appNetUserCount = [[appNetUsersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGAppNetUser *u) {
                     NSUInteger count = [current unsignedIntegerValue];
-                    if (u != nil) count++;
+                    if (u != nil) ++count;
                     return @(count);
-                }] setNameWithFormat:@"App.net count"] logAll];
+                }] setNameWithFormat:@"App.net count"];
                 return appNetUserCount;
             }
 
 
 #pragma mark - Data Source Setup
     - (void)bindTableViewDataSourceToSignal:(RACSignal *)userMatchersSignal {
-        [self configureUserMatchersNext:userMatchersSignal];
-        [self configureUserMatchersError:userMatchersSignal];
+        RACSignal *bufferedMatchers = [[userMatchersSignal xig_buffer:100] map:^id(RACTuple *tuple) {
+           return tuple.allObjects;
+        }];
+
+        [self configureUserMatchersNext:bufferedMatchers];
+        [self configureUserMatchersError:bufferedMatchers];
     }
 
         - (void)configureUserMatchersNext:(RACSignal *)userMatchersSignal {

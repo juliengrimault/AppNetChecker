@@ -183,7 +183,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                 }
                 
                 //concatenate the result of this request with whatever comes from the next request
-                return [[RACSignal return:profiles] concat:nextProfiles];
+                return [[profiles.rac_sequence signal] concat:nextProfiles];
             }];
 }
 
@@ -211,6 +211,7 @@ NSString* const TwitterAPIBaseURL = @"https://api.twitter.com/1.1/";
                                              ^(AFHTTPRequestOperation *operation, NSError *error)
                                              {
                                                  DDLogError(@"%@", error);
+                                                 DDLogError(@"response: %@", operation);
                                                  [subscriber sendError:error];
                                              }];
         operation.successCallbackQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
