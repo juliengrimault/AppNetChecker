@@ -80,14 +80,15 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 #pragma mark - Toolbar Setup
     - (void)bindToolbarToSignal:(RACSignal *)userMatchersSignal {
         [self bindFriendCountLabel];
-        [self bindFriendFoundCountLabel:userMatchersSignal];
+        RACSignal *matchersWithoutErrors = [userMatchersSignal catchTo:[RACSignal empty]];
+        [self bindFriendFoundCountLabel:matchersWithoutErrors];
     }
 
         - (void)bindFriendCountLabel {
             RACSignal * matchersArray = RACAbleWithStart(self.userMatchers);
             RAC(self.userMatchersToolbar.friendsCountLabel.text) =[matchersArray map:^id(NSArray *users) {
-                    return [NSString localizedStringWithFormat:@"%d friends", users.count];
-                }];
+                return [NSString localizedStringWithFormat:@"%d friends", users.count];
+            }];
         }
 
         - (void)bindFriendFoundCountLabel:(RACSignal *)userMatchersSignal {

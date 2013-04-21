@@ -59,43 +59,57 @@ context(@"loading friends", ^{
 });
 
 context(@"Toolbar", ^{
-    beforeEach(^{
-        mockSignal = [friends1.rac_sequence signalWithScheduler:[RACScheduler immediateScheduler]];
-        vc.twittAppClient = [XIGTwitAppClient mock];
-        [vc.twittAppClient stub:@selector(userMatchers) andReturn:mockSignal];
+    context(@"No Error", ^{
+        beforeEach(^{
+            mockSignal = [friends1.rac_sequence signalWithScheduler:[RACScheduler immediateScheduler]];
+            vc.twittAppClient = [XIGTwitAppClient mock];
+            [vc.twittAppClient stub:@selector(userMatchers) andReturn:mockSignal];
+        });
+
+        it(@"should have loading indicator outlet connected", ^{
+            [vc view];
+            [vc.userMatchersToolbar.loadingIndicator shouldNotBeNil];
+        });
+
+        it(@"should have an animating indicator", ^{
+            [vc view];
+            [[theValue([vc.userMatchersToolbar.loadingIndicator isAnimating]) should] beTrue];
+        });
+
+        it(@"should stop animating when the signal completes", ^{
+            [vc view];
+            [[expectFutureValue(@([vc.userMatchersToolbar.loadingIndicator isAnimating])) shouldEventually] equal:@NO];
+        });
+
+        it(@"should show the friends count", ^{
+            [vc view];
+            [vc.userMatchersToolbar.friendsCountLabel shouldNotBeNil];
+        });
+
+        it(@"should update the friends count", ^{
+            [vc view];
+            NSString* expectedText = [NSString stringWithFormat:@"%d friends", friends1.count];
+            [[expectFutureValue(vc.userMatchersToolbar.friendsCountLabel.text) shouldEventually] equal:expectedText];
+        });
+
+        it(@"should have a label for found friends count", ^{
+            [vc view];
+            [vc.userMatchersToolbar.friendsFoundCountLabel shouldNotBeNil];
+        });
     });
-    
-    it(@"should have loading indicator outlet connected", ^{
-        [vc view];
-        [vc.userMatchersToolbar.loadingIndicator shouldNotBeNil];
+
+    context(@"UserMatchers send 1+ errors", ^{
+        beforeEach(^{
+            mockSignal = [RACSignal error:[NSError errorWithDomain:@"Test" code:101 userInfo:nil]];
+            vc.twittAppClient = [XIGTwitAppClient mock];
+            [vc.twittAppClient stub:@selector(userMatchers) andReturn:mockSignal];
+        });
+
+        it(@"should not crash", ^{
+            [vc view];
+            [[expectFutureValue(vc.userMatchersToolbar.friendsCountLabel.text) shouldEventually] beNonNil];
+        });
     });
-    
-    it(@"should have an animating indicator", ^{
-        [vc view];
-        [[theValue([vc.userMatchersToolbar.loadingIndicator isAnimating]) should] beTrue];
-    });
-    
-    it(@"should stop animating when the signal completes", ^{
-        [vc view];
-        [[expectFutureValue(@([vc.userMatchersToolbar.loadingIndicator isAnimating])) shouldEventually] equal:@NO];
-    });
-    
-    it(@"should show the friends count", ^{
-        [vc view];
-        [vc.userMatchersToolbar.friendsCountLabel shouldNotBeNil];
-    });
-    
-    it(@"should update the friends count", ^{
-        [vc view];
-        NSString* expectedText = [NSString stringWithFormat:@"%d friends", friends1.count];
-        [[expectFutureValue(vc.userMatchersToolbar.friendsCountLabel.text) shouldEventually] equal:expectedText];
-    });
-    
-    it(@"should have a label for found friends count", ^{
-        [vc view];
-        [vc.userMatchersToolbar.friendsFoundCountLabel shouldNotBeNil];
-    });
-    
 });
 
 SPEC_END
