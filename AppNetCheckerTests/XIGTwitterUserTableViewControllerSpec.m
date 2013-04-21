@@ -32,7 +32,7 @@ it(@"should load properly", ^{
 
 context(@"loading friends", ^{
     beforeEach(^{
-        mockSignal = [[RACSignal return:friends1] concat:[RACSignal return:friends2]];
+        mockSignal = [[friends1.rac_sequence signalWithScheduler:[RACScheduler immediateScheduler]] concat:[friends2.rac_sequence signalWithScheduler:[RACScheduler immediateScheduler]]];
         vc.twittAppClient= [XIGTwitAppClient mock];
         [vc.twittAppClient stub:@selector(userMatchers) andReturn:mockSignal];
     });
@@ -60,7 +60,7 @@ context(@"loading friends", ^{
 
 context(@"Toolbar", ^{
     beforeEach(^{
-        mockSignal = [RACSignal return:friends1];
+        mockSignal = [friends1.rac_sequence signalWithScheduler:[RACScheduler immediateScheduler]];
         vc.twittAppClient = [XIGTwitAppClient mock];
         [vc.twittAppClient stub:@selector(userMatchers) andReturn:mockSignal];
     });

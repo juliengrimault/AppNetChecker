@@ -1206,7 +1206,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppNetChecker.app/AppNetChecker";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Twittapp.net.app/Twittapp.net";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -1224,7 +1224,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DDEF45281FD4CE59F75EA06 /* Pods-AppNetCheckerTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AppNetChecker.app/AppNetChecker";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Twittapp.net.app/Twittapp.net";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",

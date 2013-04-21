@@ -10,6 +10,5 @@
 @interface XIGAppNetUser (XIGTest)
 
 + (instancetype)testUser:(NSInteger)n;
-+(NSArray*)testUsers:(NSRange)range;
 
 @end

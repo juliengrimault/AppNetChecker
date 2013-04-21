@@ -21,7 +21,7 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
             __block NSArray *twitterFriends;
             beforeEach(^{
                 twitterFriends = [XIGTwitterUser testUsers:NSMakeRange(0, 10)];
-                [twitterClient stub:@selector(friends) andReturn:[RACSignal return:twitterFriends]];
+                [twitterClient stub:@selector(friends) andReturn:[twitterFriends.rac_sequence signalWithScheduler:[RACScheduler immediateScheduler]]];
                 signal = [client userMatchers];
 
                 [appNetClient stub:@selector(userWithScreenName:)
@@ -37,16 +37,16 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
             });
 
             describe(@"building UserMatchers from twitter friends",^{
-                __block NSArray *receivedMatchers;
-                __block NSArray *receivedError;
+                __block NSMutableArray *receivedMatchers;
+                __block NSError *receivedError;
                 beforeEach(^{
                     receivedError = nil;
-                    receivedMatchers = nil;
+                    receivedMatchers = [NSMutableArray array];
                 });
 
                 it(@"should receive the same number of UserMatchers as the number of friends", ^{
                     [signal subscribeNext:^(id x) {
-                        receivedMatchers = x;
+                        [receivedMatchers addObject:x];
                     } error:^(NSError *error) {
                         receivedError = error;
                     }];
@@ -56,7 +56,7 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
 
                 it(@"each user matcher should have the twitter user", ^{
                     [signal subscribeNext:^(id x) {
-                        receivedMatchers = x;
+                        [receivedMatchers addObject:x];
                     } error:^(NSError *error) {
                         receivedError = error;
                     }];
@@ -71,7 +71,7 @@ SPEC_BEGIN(XIGTwitAppClientSpec)
 
                 it(@"each user matcher should have a app.net user signal", ^{
                     [signal subscribeNext:^(id x) {
-                        receivedMatchers = x;
+                        [receivedMatchers addObject:x];
                     } error:^(NSError *error) {
                         receivedError = error;
                     }];
