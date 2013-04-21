@@ -17,10 +17,13 @@
 #import "XIGUserMatchersToolbar.h"
 #import "UITableView+XIGBackgroundView.h"
 #import "RACSignal+XIGBuffer.h"
+#import "XIGSemiModalController.h"
+#import "XIGUserFilterViewController.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
 @interface XIGTwitterUsersTableViewController ()
+    @property (nonatomic, readonly) XIGUserFilterViewController *filterViewController;
 @end
 
 @implementation XIGTwitterUsersTableViewController
@@ -34,6 +37,11 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 - (void)removeUserMatchersAtIndexes:(NSIndexSet *)indexes
 {
     [self.userMatchers removeObjectsAtIndexes:indexes];
+}
+
+
+- (XIGUserFilterViewController *)filterViewController {
+    return (XIGUserFilterViewController *)self.semiModalController.frontViewController;
 }
 
 #pragma mark - Init
@@ -63,7 +71,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     [super viewDidLoad];
     [self configureTableView];
 
-    RACSignal *userMatchersSignal = [[self.twittAppClient userMatchers] deliverOn:[RACScheduler mainThreadScheduler]];
+    RACSignal *userMatchersSignal = [[[self.twittAppClient userMatchers] deliverOn:[RACScheduler mainThreadScheduler]] logAll];
     [self bindToolbarToSignal:userMatchersSignal];
     [self bindTableViewDataSourceToSignal:userMatchersSignal];
 }
@@ -75,6 +83,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
         UINib *nib = [UINib nibWithNibName:@"XIGTwitterUserCell" bundle:nil];
         [self.tableView registerNib:nib forCellReuseIdentifier:CellIdentifier];
         self.tableView.rowHeight = [XIGTwitterUserCell rowHeight];
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
 
 #pragma mark - Toolbar Setup
@@ -85,24 +94,20 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     }
 
         - (void)bindFriendCountLabel {
-            RACSignal * matchersArray = RACAbleWithStart(self.userMatchers);
-            RAC(self.userMatchersToolbar.friendsCountLabel.text) =[matchersArray map:^id(NSArray *users) {
-                return [NSString localizedStringWithFormat:@"%d friends", users.count];
+            RAC(self.filterViewController.friendCount) =[RACAbleWithStart(self.userMatchers) map:^id(NSArray *users) {
+                return @(users.count);
             }];
         }
 
         - (void)bindFriendFoundCountLabel:(RACSignal *)userMatchersSignal {
             RACSignal *appNetUserCount= [[self foundFriendsCountSignal:userMatchersSignal] deliverOn:[RACScheduler mainThreadScheduler]];
-
-            RAC(self.userMatchersToolbar.friendsFoundCountLabel.text) = [appNetUserCount map:^id(NSNumber *count) {
-                return [NSString localizedStringWithFormat:@"%@ found", count];
-            }];
+            RAC(self.filterViewController.friendFoundCount) = appNetUserCount;
 
             @weakify(self);
             [appNetUserCount subscribeCompleted:^{
                 @strongify(self);
-                DDLogInfo(@"appNetUserCount completed - %@", self.userMatchersToolbar.friendsCountLabel.text);
-                [self.userMatchersToolbar.loadingIndicator stopAnimating];
+                DDLogInfo(@"appNetUserCount completed - %d", self.filterViewController.friendFoundCount);
+                [self.filterViewController.activityIndicator stopAnimating];
             }];
         }
 
@@ -118,7 +123,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 #pragma mark - Data Source Setup
     - (void)bindTableViewDataSourceToSignal:(RACSignal *)userMatchersSignal {
-        RACSignal *bufferedMatchers = [[userMatchersSignal xig_buffer:5] map:^id(RACTuple *tuple) {
+        RACSignal *bufferedMatchers = [[userMatchersSignal xig_buffer:2] map:^id(RACTuple *tuple) {
            return tuple.allObjects;
         }];
 
@@ -146,12 +151,6 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
             - (void)insertNewRowsInTableView:(NSRange)insertionRange {
                 NSArray *insertedIndexPaths = [NSIndexPath indexPathsInSection:0 range:insertionRange];
                 [self.tableView insertRowsAtIndexPaths:insertedIndexPaths withRowAnimation:UITableViewRowAnimationNone];
-            }
-
-            - (void)removeTwitterLoadingIndicator {
-                [self.userMatchersToolbar.loadingIndicator stopAnimating];
-                NSArray *newToolBarItems = [self.toolbarItems mtl_arrayByRemovingFirstObject]; // remove the loading indicator
-                [self setToolbarItems:newToolBarItems animated:YES];
             }
 
         - (void)configureUserMatchersError:(RACSignal *)userMatchersSignal {

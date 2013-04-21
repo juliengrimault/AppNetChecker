@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UIViewController *backViewController;
 @property (nonatomic, strong) UIViewController *frontViewController;
 
+@property (nonatomic) CGFloat closedTopOffset;
 @property (nonatomic) CGFloat openBottomOffset;
 
 @property (nonatomic, getter=isOpen) BOOL open;

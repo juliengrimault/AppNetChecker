@@ -17,6 +17,7 @@
 #import "XIGSemiModalController.h"
 #import "XIGAppNetClient.h"
 #import "XIGTwitAppClient.h"
+#import "XIGUserFilterViewController.h"
 
 @interface XIGAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
@@ -159,18 +160,24 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"PushUsersTableViewController"]) {
-        XIGTwitterUsersTableViewController* vc = segue.destinationViewController;
-        NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
 
-        XIGTwitterClient *twitterClient = [XIGTwitterClient sharedClient];
-        XIGAppNetClient *appNetClient = [XIGAppNetClient sharedClient];
-        if (selectedIndexPath) {
-            ACAccount* selectedAccount = self.accounts[selectedIndexPath.row];
-            twitterClient.account = selectedAccount;
-        }
-        XIGTwitAppClient *client = [[XIGTwitAppClient alloc] initWithTwitterClient:twitterClient appNetClient:appNetClient];
-        vc.twittAppClient = client;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ACAccount* selectedAccount = self.accounts[indexPath.row];
+    [XIGTwitterClient sharedClient].account = selectedAccount;
+
+    XIGTwitterUsersTableViewController* vc = [[XIGTwitterUsersTableViewController alloc] init];
+    vc.twittAppClient = [[XIGTwitAppClient alloc] initWithTwitterClient:[XIGTwitterClient sharedClient] appNetClient:[XIGAppNetClient sharedClient]];
+
+    XIGUserFilterViewController *filterVC = [[XIGUserFilterViewController alloc] init];
+    XIGSemiModalController *semiModal = [[XIGSemiModalController alloc] initWithFrontViewController:filterVC
+                                                                                 backViewController:vc];
+    semiModal.title = NSLocalizedString(@"Friends", nil);
+    semiModal.open = YES;
+    semiModal.closedTopOffset = CGRectGetHeight(self.semiModalController.view.frame) - 176;
+    [self.navigationController pushViewController:semiModal animated:YES];
 }
 
 @end

@@ -15,6 +15,7 @@
 		BB85116024DD5A6AF11B6718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB851D89552ADE90B1155662 /* Localizable.strings */; };
 		BB8511AE5C3B8E546116510D /* FileFunctionFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8511FF8938C72160AA6324 /* FileFunctionFormatter.m */; };
 		BB8511C99B3B0ECC170E0C9B /* License in Resources */ = {isa = PBXBuildFile; fileRef = BB85157745C22FE53FBD48DC /* License */; };
+		BB851234AC1088E53845992F /* CAKeyframeAnimation+XIGBouncing.m in Sources */ = {isa = PBXBuildFile; fileRef = BB8516AE0E8BB26631B76F67 /* CAKeyframeAnimation+XIGBouncing.m */; };
 		BB85169ED39F9D52EDBE7497 /* CrashlyticsLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851910CD85123AD4F9BFE7 /* CrashlyticsLogger.m */; };
 		BB85179529F415E85065EACC /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */; };
 		BB8518B5F890FF3A878242AF /* XIGAppNetUser+XIGTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BB85158C5BC557D7715D81D4 /* XIGAppNetUser+XIGTest.m */; };
@@ -110,6 +111,10 @@
 		F9BC705016FC451C00BCF03B /* default-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BC704E16FC451C00BCF03B /* default-avatar.png */; };
 		F9BC705116FC451C00BCF03B /* default-avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BC704F16FC451C00BCF03B /* default-avatar@2x.png */; };
 		F9C37F0B16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */; };
+		F9C9435D1723D25F00C3835F /* XIGUserFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9435B1723D25F00C3835F /* XIGUserFilterViewController.m */; };
+		F9C9435E1723D25F00C3835F /* XIGUserFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C9435C1723D25F00C3835F /* XIGUserFilterViewController.xib */; };
+		F9C943601723D34B00C3835F /* XIGTwitterUsersTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C9435F1723D34B00C3835F /* XIGTwitterUsersTableViewController.xib */; };
+		F9C943621723D45500C3835F /* XIGHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C943611723D45500C3835F /* XIGHelpViewController.xib */; };
 		F9D2E4D616EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */; };
 		F9D2E4DA16EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */; };
 		F9D2E4E116EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */; };
@@ -168,6 +173,7 @@
 		BB85157745C22FE53FBD48DC /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
 		BB85158C5BC557D7715D81D4 /* XIGAppNetUser+XIGTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGAppNetUser+XIGTest.m"; sourceTree = "<group>"; };
 		BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitAppClient.m; sourceTree = "<group>"; };
+		BB8516AE0E8BB26631B76F67 /* CAKeyframeAnimation+XIGBouncing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAKeyframeAnimation+XIGBouncing.m"; sourceTree = "<group>"; };
 		BB85172199681014FE2E1F39 /* FileFunctionFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFunctionFormatter.h; sourceTree = "<group>"; };
 		BB85176BB474943628E79820 /* CrashlyticsLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashlyticsLogger.h; sourceTree = "<group>"; };
 		BB851797596A1700D296E0B2 /* RACSignal+XIGBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+XIGBuffer.m"; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 		BB851A8B33B2B14B0D2B76FC /* GVUserDefaults+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GVUserDefaults+Properties.h"; sourceTree = "<group>"; };
 		BB851AE7D3542258AE28CDA3 /* XIGAppDelegate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGAppDelegate+Reporting.m"; sourceTree = "<group>"; };
 		BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGHelpViewController.m; sourceTree = "<group>"; };
+		BB851B3DEF1B6FB21E9CA523 /* CAKeyframeAnimation+XIGBouncing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAKeyframeAnimation+XIGBouncing.h"; sourceTree = "<group>"; };
 		BB851B587C270DC4A1943609 /* GVUserDefaults+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GVUserDefaults+Properties.m"; sourceTree = "<group>"; };
 		BB851C3F84CF9E18099B98DA /* RACSignal+XIGBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+XIGBuffer.h"; sourceTree = "<group>"; };
 		BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGSemiModalController.m; sourceTree = "<group>"; };
@@ -289,6 +296,11 @@
 		F9BC704E16FC451C00BCF03B /* default-avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar.png"; sourceTree = "<group>"; };
 		F9BC704F16FC451C00BCF03B /* default-avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar@2x.png"; sourceTree = "<group>"; };
 		F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClientGetProfilesSpec.m; sourceTree = "<group>"; };
+		F9C9435A1723D25F00C3835F /* XIGUserFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGUserFilterViewController.h; sourceTree = "<group>"; };
+		F9C9435B1723D25F00C3835F /* XIGUserFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGUserFilterViewController.m; sourceTree = "<group>"; };
+		F9C9435C1723D25F00C3835F /* XIGUserFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGUserFilterViewController.xib; sourceTree = "<group>"; };
+		F9C9435F1723D34B00C3835F /* XIGTwitterUsersTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGTwitterUsersTableViewController.xib; sourceTree = "<group>"; };
+		F9C943611723D45500C3835F /* XIGHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGHelpViewController.xib; sourceTree = "<group>"; };
 		F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Thin.ttf"; sourceTree = "<group>"; };
 		F9D2E4D816EADB0F006A1A06 /* UIFont+XIGAppNetChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+XIGAppNetChecker.h"; sourceTree = "<group>"; };
 		F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+XIGAppNetChecker.m"; sourceTree = "<group>"; };
@@ -365,6 +377,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB85144FE0B4ACA2E2F3088D /* CAKeyFrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				BB8516AE0E8BB26631B76F67 /* CAKeyframeAnimation+XIGBouncing.m */,
+				BB851B3DEF1B6FB21E9CA523 /* CAKeyframeAnimation+XIGBouncing.h */,
+			);
+			name = CAKeyFrameAnimation;
+			sourceTree = "<group>";
+		};
 		BB851923847FD3ADC863566C /* Logging */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +672,7 @@
 				F9E76F9316E355A7003E1B26 /* UIView */,
 				BB8519818F78B6D0C239D0B5 /* GVUserDefaults */,
 				BB851FA14199FF6A5CC289FC /* RACSignal+XIGOperations */,
+				BB85144FE0B4ACA2E2F3088D /* CAKeyFrameAnimation */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -678,14 +700,19 @@
 				F97B556616C7AB2C005AD777 /* XIGAccountPickerViewController.m */,
 				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
 				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
+				F9C9435F1723D34B00C3835F /* XIGTwitterUsersTableViewController.xib */,
 				F9ED15B816EB4185008E8404 /* XIGTableViewController.h */,
 				F9ED15B916EB4185008E8404 /* XIGTableViewController.m */,
 				BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */,
 				BB85127E2A70F3F80315323E /* XIGHelpViewController.h */,
+				F9C943611723D45500C3835F /* XIGHelpViewController.xib */,
 				BB851CBF1C8FE6C4C8DD6D1F /* XIGSemiModalController.m */,
 				BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */,
 				BB85104DD3E0353CA8734120 /* JGTableViewController.h */,
 				BB8518F48CC82C164111BA3F /* JGTableViewController.m */,
+				F9C9435A1723D25F00C3835F /* XIGUserFilterViewController.h */,
+				F9C9435B1723D25F00C3835F /* XIGUserFilterViewController.m */,
+				F9C9435C1723D25F00C3835F /* XIGUserFilterViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -893,6 +920,9 @@
 				BB8511C99B3B0ECC170E0C9B /* License in Resources */,
 				F9F16EE217196CF300B81057 /* Icon.png in Resources */,
 				F9F16EE417196CF700B81057 /* Icon@2x.png in Resources */,
+				F9C9435E1723D25F00C3835F /* XIGUserFilterViewController.xib in Resources */,
+				F9C943601723D34B00C3835F /* XIGTwitterUsersTableViewController.xib in Resources */,
+				F9C943621723D45500C3835F /* XIGHelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,6 +1052,8 @@
 				BB85197D02EC730D92363F1C /* XIGUserMatchersToolbar.m in Sources */,
 				BB851E4575D6EA8A43862039 /* JGTableViewController.m in Sources */,
 				BB851A46480D2C46B77DC7D2 /* RACSignal+XIGBuffer.m in Sources */,
+				F9C9435D1723D25F00C3835F /* XIGUserFilterViewController.m in Sources */,
+				BB851234AC1088E53845992F /* CAKeyframeAnimation+XIGBouncing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

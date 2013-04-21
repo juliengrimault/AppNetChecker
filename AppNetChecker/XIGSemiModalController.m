@@ -9,7 +9,8 @@
 #import "XIGSemiModalController.h"
 
 static CGFloat const kDefaultOpenedBottomOffset = 44;
-static CGFloat const kPanThreshold = 100;
+static CGFloat const kDefaultClosedTopOffset = 0;
+static CGFloat const kPanThresholdMultiplier = 0.2;
 
 @interface  XIGSemiModalController()
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
@@ -22,6 +23,7 @@ static CGFloat const kPanThreshold = 100;
     self = [super init];
     if (self) {
         _openBottomOffset = kDefaultOpenedBottomOffset;
+        _closedTopOffset = kDefaultClosedTopOffset;
         _frontViewController = frontViewController;
         _backViewController = backViewController;
     }
@@ -77,12 +79,18 @@ static CGFloat const kPanThreshold = 100;
 }
 
 - (CGRect)frontViewFrameForState:(BOOL)opened {
+    CGRect f = self.view.bounds;
     if (opened) {
-        CGRect f = self.view.bounds;
         return CGRectOffset(f, 0, CGRectGetHeight(f) - self.openBottomOffset);
     } else {
-        return self.view.bounds;
+        return CGRectOffset(f, 0, self.closedTopOffset);
     }
+}
+
+- (CGFloat)panThreshold {
+    CGRect closeFrame = [self frontViewFrameForState:NO];
+    CGRect openFrame = [self frontViewFrameForState:YES];
+    return fabsf(closeFrame.origin.y - openFrame.origin.y) * kPanThresholdMultiplier;
 }
 
 #pragma mark - Open/Close state
@@ -130,7 +138,7 @@ static CGFloat const kPanThreshold = 100;
         CGRect adjustedFrame = [self adjustedFrameForFrontView];
         self.frontViewController.view.frame = adjustedFrame;
     } else if (recognizer.state == UIGestureRecognizerStateEnded) {
-        if (fabsf([recognizer translationInView:recognizer.view].y) > kPanThreshold ) {
+        if (fabsf([recognizer translationInView:recognizer.view].y) > [self panThreshold] ) {
             [self toggleOpenAnimated:YES];
         } else {
             [UIView animateWithDuration:0.3
