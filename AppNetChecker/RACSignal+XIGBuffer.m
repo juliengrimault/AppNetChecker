@@ -5,6 +5,7 @@
 
 
 
+#import <c++/4.2.1/ext/algorithm>
 #import "RACSignal+XIGBuffer.h"
 
 
@@ -15,7 +16,7 @@
         NSMutableArray *values = [NSMutableArray arrayWithCapacity:count];
         RACDisposable *disposable = [self subscribeNext:^(id x) {
             [values addObject:x ? : [RACTupleNil tupleNil]];
-            if (values.count % 100 == 0) {
+            if (values.count % count == 0) {
                 [subscriber sendNext:[RACTuple tupleWithObjectsFromArray:values convertNullsToNils:NO]];
                 [values removeAllObjects];
             }
