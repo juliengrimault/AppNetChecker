@@ -15,8 +15,8 @@
 @interface XIGUserMatcher : NSObject
 
 @property (nonatomic, readonly, strong) XIGTwitterUser *twitterUser;
-@property (nonatomic, readonly, strong) RACSignal *appNetUser;
+@property (nonatomic, readonly, strong) XIGAppNetUser *appNetUser;
 
-- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetUserSignal:(RACSignal *)appNetUserSignal;
+- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetUser:(XIGAppNetUser *)appNetUser;
 
 @end

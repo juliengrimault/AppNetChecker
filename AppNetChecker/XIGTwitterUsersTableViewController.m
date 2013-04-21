@@ -107,13 +107,9 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
         }
 
             - (RACSignal *)foundFriendsCountSignal:(RACSignal *)userMatchersSignal {
-                RACSignal *appNetUsersSignal = [[userMatchersSignal flattenMap:^RACStream *(XIGUserMatcher *matcher) {
-                    return matcher.appNetUser;
-                }] setNameWithFormat:@"App.net Users"];
-
-                RACSignal *appNetUserCount = [[appNetUsersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGAppNetUser *u) {
+                RACSignal *appNetUserCount = [[userMatchersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGUserMatcher *u) {
                     NSUInteger count = [current unsignedIntegerValue];
-                    if (u != nil) ++count;
+                    if (u.appNetUser != nil) ++count;
                     return @(count);
                 }] setNameWithFormat:@"App.net count"];
                 return appNetUserCount;
@@ -122,7 +118,7 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 #pragma mark - Data Source Setup
     - (void)bindTableViewDataSourceToSignal:(RACSignal *)userMatchersSignal {
-        RACSignal *bufferedMatchers = [[userMatchersSignal xig_buffer:100] map:^id(RACTuple *tuple) {
+        RACSignal *bufferedMatchers = [[userMatchersSignal xig_buffer:5] map:^id(RACTuple *tuple) {
            return tuple.allObjects;
         }];
 

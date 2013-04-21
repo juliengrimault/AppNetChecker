@@ -14,7 +14,7 @@
 + (instancetype)testUserMatcher:(NSInteger)n
 {
     XIGUserMatcher *matcher = [[XIGUserMatcher alloc] initWithTwitterUser:[XIGTwitterUser testUser:n]
-                                                         appNetUserSignal:[RACSignal return:[XIGAppNetUser testUser:n]]];
+                                                               appNetUser:[XIGAppNetUser testUser:n]];
     return matcher;
 }
 +(NSArray*)testUserMatchers:(NSRange)range

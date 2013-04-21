@@ -17,7 +17,7 @@ beforeEach(^{
     user.name = @"name surname";
     user.profileImageURL = [NSURL URLWithString:@"https://si0.twimg.com/profile_images/2554344631/59zr2d5mvh9ergt7c8fi.jpeg"];
     
-    matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetUserSignal:nil];
+    matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetUser:nil];
     cell = [XIGTwitterUserCell loadInstanceFromNib];
 });
 
@@ -33,10 +33,6 @@ describe(@"loading from xib", ^{
     it(@"should have user profile image outlet connected", ^{
         [cell.profileImageView shouldNotBeNil];
     });
-    
-    it(@"should have activity outlet connected", ^{
-        [cell.activityIndicator shouldNotBeNil];
-    });
 });
 
 describe(@"binding user", ^{
@@ -46,10 +42,6 @@ describe(@"binding user", ^{
     
     it(@"should have the username set", ^{
         [[cell.usernameLabel.text should] equal:[NSString stringWithFormat:@"@%@",[user.screenName uppercaseString]]];
-    });
-    
-    it(@"should be animating", ^{
-        [[@([cell.activityIndicator isAnimating]) should] equal:@YES];
     });
 });
 
@@ -64,22 +56,5 @@ describe(@"image loading", ^{
         [cell prepareForReuse];
     });
     
-});
-
-describe(@"binding activity indicator", ^{
-    beforeAll(^{
-        XIGAppNetUser* appNetUser = [[XIGAppNetUser alloc] init];
-        appNetUser.screenName = user.screenName;
-        matcher = [[XIGUserMatcher alloc] initWithTwitterUser:user appNetUserSignal:[RACSignal return:appNetUser]];
-        [cell bindUserMatcher:matcher];
-    });
-    
-    afterEach(^{
-        [cell prepareForReuse];
-    });
-    
-    it(@"should stop animating eventually", ^{
-        [[expectFutureValue(@([cell.activityIndicator isAnimating])) shouldEventually] equal:@NO];
-    });
 });
 SPEC_END
