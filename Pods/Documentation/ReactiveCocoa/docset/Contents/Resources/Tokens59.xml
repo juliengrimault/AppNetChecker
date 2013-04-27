@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UITextView+RACSignalSupport.html">
+	<File path="Categories/NSSet+RACSequenceAdditions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UITextView(RACSignalSupport)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSSet(RACSequenceAdditions)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>UITextView+RACSignalSupport.h</DeclaredIn>
+			<DeclaredIn>NSSet+RACSequenceAdditions.h</DeclaredIn>
 			
 			<NodeRef refid="59"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UITextView(RACSignalSupport)/rac_signalForDelegateMethod:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSSet(RACSequenceAdditions)/setRac_sequence:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>UITextView+RACSignalSupport.h</DeclaredIn>			
+			<DeclaredIn>NSSet+RACSequenceAdditions.h</DeclaredIn>			
 			
-			<Declaration>- (RACSignal *)rac_signalForDelegateMethod:(SEL)method</Declaration>
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
 			
 			
-			<Anchor>//api/name/rac_signalForDelegateMethod:</Anchor>
+			<Anchor>//api/name/rac_sequence</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UITextView(RACSignalSupport)/rac_textSignal</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSSet(RACSequenceAdditions)/rac_sequence</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>UITextView+RACSignalSupport.h</DeclaredIn>			
+			<DeclaredIn>NSSet+RACSequenceAdditions.h</DeclaredIn>			
 			
-			<Declaration>- (RACSignal *)rac_textSignal</Declaration>
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
 			
 			
-			<Anchor>//api/name/rac_textSignal</Anchor>
+			<Anchor>//api/name/rac_sequence</Anchor>
 		</Token>
 		
 	</File>

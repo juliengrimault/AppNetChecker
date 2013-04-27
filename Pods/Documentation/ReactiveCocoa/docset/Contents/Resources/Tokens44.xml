@@ -1,36 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSEnumerator+RACSequenceAdditions.html">
+	<File path="Categories/NSData+RACSupport.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSEnumerator(RACSequenceAdditions)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSData(RACSupport)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSEnumerator+RACSequenceAdditions.h</DeclaredIn>
+			<DeclaredIn>NSData+RACSupport.h</DeclaredIn>
 			
 			<NodeRef refid="44"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSEnumerator(RACSequenceAdditions)/setRac_sequence:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSData(RACSupport)/rac_readContentsOfURL:options:scheduler:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSEnumerator+RACSequenceAdditions.h</DeclaredIn>			
+			<DeclaredIn>NSData+RACSupport.h</DeclaredIn>			
 			
-			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
-			
-			
-			<Anchor>//api/name/rac_sequence</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfp/NSEnumerator(RACSequenceAdditions)/rac_sequence</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSEnumerator+RACSequenceAdditions.h</DeclaredIn>			
-			
-			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
+			<Declaration>+ (RACSignal *)rac_readContentsOfURL:(NSURL *)URL options:(NSDataReadingOptions)options scheduler:(RACScheduler *)scheduler</Declaration>
 			
 			
-			<Anchor>//api/name/rac_sequence</Anchor>
+			<Anchor>//api/name/rac_readContentsOfURL:options:scheduler:</Anchor>
 		</Token>
 		
 	</File>

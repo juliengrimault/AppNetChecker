@@ -2,19 +2,308 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007b55e9-732a-4c29-9a50-f706b3a930c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AppNetChecker/CAKeyframeAnimation+XIGBouncing.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AppNetChecker/CAKeyframeAnimation+XIGBouncing.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m" afterPath="$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.h" afterPath="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.m" afterPath="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.xib" afterPath="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker/XIGUserMatchersToolbar.h" afterPath="$PROJECT_DIR$/AppNetChecker/XIGUserMatchersToolbar.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/AppNetChecker.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSControl+RACCommandSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSControl+RACCommandSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSControl+RACTextSignalSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSControl+RACTextSignalSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACAppKitBindings.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACAppKitBindings.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/BuildHeaders/ReactiveCocoa/ReactiveCocoa/NSObject+RACDeallocating.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSObject+RACDeallocating.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACDeallocating.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACDeallocating.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACDeallocating.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACDeallocating.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/BuildHeaders/ReactiveCocoa/ReactiveCocoa/NSObject+RACSelectorSignal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSObject+RACSelectorSignal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACSelectorSignal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACSelectorSignal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACSelectorSignal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACSelectorSignal.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSTask+RACSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSTask+RACSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSText+RACSignalSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSText+RACSignalSupport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens62.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens63.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/BuildHeaders/CocoaLumberjack/ContextFilterLogFormatter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/BuildHeaders/CocoaLumberjack/DispatchQueueLogFormatter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/Extensions/ContextFilterLogFormatter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/Extensions/ContextFilterLogFormatter.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/Extensions/DispatchQueueLogFormatter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/Extensions/DispatchQueueLogFormatter.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/ContextBlacklistFilterLogFormatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/ContextWhitelistFilterLogFormatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DispatchQueueLogFormatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens17.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/ContextBlacklistFilterLogFormatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/ContextWhitelistFilterLogFormatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DispatchQueueLogFormatter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/CocoaLumberjack/ContextFilterLogFormatter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/CocoaLumberjack/DispatchQueueLogFormatter.h" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens10.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens8.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens11.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens9.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens12.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens10.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens14.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens11.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens3.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens4.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens2.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens5.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens3.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens6.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens4.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens7.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens5.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens8.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens6.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens9.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens7.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens42.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens44.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens43.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens45.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens44.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens46.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens45.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens47.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens46.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens48.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens47.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens49.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens48.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens52.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens49.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens53.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens50.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens54.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens51.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens55.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens52.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens56.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens53.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens58.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens54.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens59.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens55.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens60.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens56.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens61.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens57.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens64.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens58.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens65.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens59.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens66.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens60.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens67.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/docSet.dsidx" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/docSet.dsidx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/docSet.dsidx" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/docSet.dsidx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/docSet.skidx" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/docSet.skidx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/docSet.skidx" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/docSet.skidx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/docSet.toc" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/docSet.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/docSet.toc" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/docSet.toc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDASLLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDASLLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDASLLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDASLLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDASLLogger.m" afterPath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDASLLogger.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDAbstractDatabaseLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDAbstractDatabaseLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDAbstractDatabaseLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDAbstractDatabaseLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDAbstractDatabaseLogger.m" afterPath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDAbstractDatabaseLogger.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDAbstractLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDAbstractLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDAbstractLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDAbstractLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDFileLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDFileLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDFileLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDFileLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDFileLogger.m" afterPath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDFileLogger.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDLog.h" afterPath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDLog.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLog.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLog.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDLog.m" afterPath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDLog.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogFileFormatterDefault.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogFileFormatterDefault.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogFileFormatterDefault.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogFileFormatterDefault.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogFileInfo.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogFileInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogFileInfo.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogFileInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDLogFileManager.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDLogFileManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDLogFileManager.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDLogFileManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogFileManagerDefault.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogFileManagerDefault.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogFileManagerDefault.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogFileManagerDefault.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDLogFormatter.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDLogFormatter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDLogFormatter.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDLogFormatter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogMessage.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDLogMessage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogMessage.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDLogMessage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDRegisteredDynamicLogging.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Protocols/DDRegisteredDynamicLogging.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDRegisteredDynamicLogging.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Protocols/DDRegisteredDynamicLogging.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDTTYLogger.h" afterPath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDTTYLogger.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDTTYLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/Classes/DDTTYLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDTTYLogger.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/Classes/DDTTYLogger.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDTTYLogger.m" afterPath="$PROJECT_DIR$/Pods/CocoaLumberjack/Lumberjack/DDTTYLogger.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Info.plist" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Info.plist" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSArray+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSArray+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSArray+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSArray+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSData+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSData+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSData+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSData+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSDictionary+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSDictionary+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSDictionary+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSDictionary+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSEnumerator+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSEnumerator+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSEnumerator+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSEnumerator+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSFileHandle+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSFileHandle+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSFileHandle+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSFileHandle+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSInvocation+RACTypeParsing.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSInvocation+RACTypeParsing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSInvocation+RACTypeParsing.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSInvocation+RACTypeParsing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSNotificationCenter+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSNotificationCenter+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSNotificationCenter+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSNotificationCenter+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/RACExtensions/NSNotificationCenter+RACSupport.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/RACExtensions/NSNotificationCenter+RACSupport.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACKVOWrapper.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACKVOWrapper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACKVOWrapper.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACKVOWrapper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACKVOWrapperPrivate.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACKVOWrapperPrivate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACKVOWrapperPrivate.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACKVOWrapperPrivate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACLifting.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACLifting.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACLifting.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACLifting.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACLifting.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACLifting.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACObservablePropertySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACObservablePropertySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACObservablePropertySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACObservablePropertySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACPropertySubscribing.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACPropertySubscribing.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACPropertySubscribing.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSObject+RACPropertySubscribing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACPropertySubscribing.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSObject+RACPropertySubscribing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACPropertySubscribing.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSObject+RACPropertySubscribing.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSOrderedSet+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSOrderedSet+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSOrderedSet+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSOrderedSet+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSSet+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSSet+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSSet+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSSet+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSString+RACSequenceAdditions.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/NSString+RACSequenceAdditions.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSString+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSString+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSString+RACSequenceAdditions.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSString+RACSequenceAdditions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSString+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/NSString+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSString+RACSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/NSString+RACSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Nodes.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Nodes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Nodes.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Nodes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACArraySequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACArraySequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACArraySequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACArraySequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBacktrace.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBacktrace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBacktrace.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBacktrace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBehaviorSubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBehaviorSubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBehaviorSubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBehaviorSubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBinding.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBinding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBinding.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBinding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACBlockTrampoline.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACBlockTrampoline.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBlockTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACBlockTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBlockTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACBlockTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACBlockTrampoline.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACBlockTrampoline.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACCommand.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACCommand.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACCommand.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACCommand.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACCompoundDisposable.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACCompoundDisposable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACCompoundDisposable.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACCompoundDisposable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACDelegateProxy.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACDelegateProxy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACDelegateProxy.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACDelegateProxy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACDisposable.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACDisposable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACDisposable.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACDisposable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACDynamicSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACDynamicSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACDynamicSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACDynamicSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEagerSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEagerSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEagerSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEagerSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACEagerSequence.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACEagerSequence.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEmptySequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEmptySequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEmptySequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEmptySequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEvent.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEvent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEvent.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEvent.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEventTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACEventTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEventTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACEventTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACEventTrampoline.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACEventTrampoline.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACGroupedSignal.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACGroupedSignal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACGroupedSignal.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACGroupedSignal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACImmediateScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACImmediateScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACImmediateScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACImmediateScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACKVOTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACKVOTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACKVOTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACKVOTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACMulticastConnection.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACMulticastConnection.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACMulticastConnection.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACMulticastConnection.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACObjCRuntime.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACObjCRuntime.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACObjCRuntime.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACObjCRuntime.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACObservablePropertySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACObservablePropertySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACObservablePropertySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACObservablePropertySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACPropertySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACPropertySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACPropertySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACPropertySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACPropertySubject.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACPropertySubject.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACQueueScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACQueueScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACQueueScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACQueueScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACReplaySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACReplaySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACReplaySubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACReplaySubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACScheduler.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACScheduler.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACScheduler.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACScheduler.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACScopedDisposable.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACScopedDisposable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACScopedDisposable.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACScopedDisposable.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSequence.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSequence.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSequence.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSequence.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal+Operations.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal+Operations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal+Operations.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal+Operations.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal+Private.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal+Private.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSignal.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSignal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSignal.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSignal.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSignal.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSignalSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSignalSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSignalSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSignalSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACStream.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACStream.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACStream.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACStream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACStream.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACStream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACStream.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACStream.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACStringSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACStringSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACStringSequence.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACStringSequence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACStringSequence.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACStringSequence.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubject.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubject.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSubscriber.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSubscriber.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriber.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriber.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Protocols/RACSubscriber.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Protocols/RACSubscriber.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriber.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriber.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Protocols/RACSubscriber.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Protocols/RACSubscriber.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriptingAssignmentObjectKeyPathPair.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriptingAssignmentObjectKeyPathPair.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriptingAssignmentObjectKeyPathPair.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriptingAssignmentObjectKeyPathPair.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSubscriptingAssignmentTrampoline.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSubscriptingAssignmentTrampoline.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriptingAssignmentTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriptingAssignmentTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriptingAssignmentTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriptingAssignmentTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSubscriptingAssignmentTrampoline.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACSubscriptingAssignmentTrampoline.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriptionScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACSubscriptionScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriptionScheduler.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACSubscriptionScheduler.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACTuple.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACTuple.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACTuple.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACTuple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACTuple.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACTuple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACTuple.m" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACTuple.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACTupleNil.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACTupleNil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACTupleNil.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACTupleNil.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACTupleUnpackingTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACTupleUnpackingTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACTupleUnpackingTrampoline.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACTupleUnpackingTrampoline.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACUnit.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACUnit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACUnit.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACUnit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACValueTransformer.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Classes/RACValueTransformer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACValueTransformer.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Classes/RACValueTransformer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/README.md" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/ReactiveCocoa.h" afterPath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/ReactiveCocoa.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens12.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens13.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens13.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens14.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Tokens14.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens24.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens24.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens26.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens26.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens27.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens27.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens29.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens29.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens34.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens34.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens36.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens36.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens42.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens42.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens43.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens43.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens5.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens50.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens50.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens51.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens51.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens57.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens57.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens6.xml" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Tokens6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/UIControl+RACSignalSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/UIControl+RACSignalSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/UIControl+RACSignalSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/UIControl+RACSignalSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/UITextField+RACSignalSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/UITextField+RACSignalSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/UITextField+RACSignalSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/UITextField+RACSignalSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/UITextView+RACSignalSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/Categories/UITextView+RACSignalSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/UITextView+RACSignalSupport.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/Categories/UITextView+RACSignalSupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset-installed.txt" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset-installed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset-installed.txt" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset-installed.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/hierarchy.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/hierarchy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/hierarchy.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/hierarchy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/hierarchy.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/hierarchy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/hierarchy.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/hierarchy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/index.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/docset/Contents/Resources/Documents/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/index.html" afterPath="$PROJECT_DIR$/Pods/Documentation/CocoaLumberjack/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/index.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/docset/Contents/Resources/Documents/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/index.html" afterPath="$PROJECT_DIR$/Pods/Documentation/ReactiveCocoa/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AppNetChecker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367050765536" ignored="false" />
+    <file path="/Dummy.txt" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053145552" ignored="false" />
     <file path="/XIGAppNetUser.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1363432902094" ignored="false" />
     <file path="/XIGAppNetUser.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364643478237" ignored="false" />
     <file path="/fragment.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1366530413011" ignored="false" />
@@ -55,7 +344,6 @@
     <file path="/XIGUserMatcher+XIGTest.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1366526718303" ignored="false" />
     <file path="/a.dummy" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1366536608391" ignored="false" />
     <file path="/XIGUserMatcher.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1366526248074" ignored="false" />
-    <file path="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/julien.xcuserdatad/xcschemes/Pods.xcscheme" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364640155363" ignored="false" />
     <file path="/FileFunctionFormatter.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364640395316" ignored="false" />
     <file path="/FileFunctionFormatter.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364640445187" ignored="false" />
     <file path="/XIGAppDelegate+Logging.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1364640812373" ignored="false" />
@@ -75,7 +363,45 @@
     <file path="/RACSignal+XIGBuffer.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1366470043645" ignored="false" />
     <file path="/XIGUserFilterViewController.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367051726652" ignored="false" />
     <file path="/XIGUserFilterViewController.m" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367051863338" ignored="false" />
-    <file path="$PROJECT_DIR$/AppNetChecker/XIGHelpButton.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367051617637" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACEvent.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124477" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACSubscriber.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124481" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSSet+RACSequenceAdditions.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124482" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSObject+RACPropertySubscribing.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124483" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSOrderedSet+RACSequenceAdditions.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124484" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124485" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACScheduler.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124486" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Pods-AppNetCheckerTests-prefix.pch" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124487" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACTuple.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124488" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACSignal+Operations.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124489" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSDictionary+RACSequenceAdditions.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124490" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACGroupedSignal.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124491" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACBinding.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124492" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSObject+RACKVOWrapper.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124494" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACSequence.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124495" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSString+RACSequenceAdditions.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124496" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSObject+RACObservablePropertySubject.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124497" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACCompoundDisposable.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124498" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACSignal.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124500" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/UIControl+RACSignalSupport.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124501" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACObservablePropertySubject.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124502" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACMulticastConnection.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124503" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSEnumerator+RACSequenceAdditions.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124504" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACStream.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124505" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/BuildHeaders/ReactiveCocoa/ReactiveCocoa/NSObject+RACKVOWrapper.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124509" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSArray+RACSequenceAdditions.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124510" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACBehaviorSubject.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124511" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/UITextField+RACSignalSupport.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124513" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACScopedDisposable.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124515" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACUnit.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124517" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/UITextView+RACSignalSupport.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124517" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACSubject.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124518" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACReplaySubject.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124519" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACPropertySubject.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124520" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACDisposable.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124521" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACSubscriptingAssignmentTrampoline.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124523" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/NSObject+RACLifting.h" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053124524" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/julien.xcuserdatad/xcschemes/Pods.xcscheme" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053146049" ignored="false" />
+    <file path="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/julien.xcuserdatad/xcschemes/Pods-AppNetCheckerTests.xcscheme" changelist="007b55e9-732a-4c29-9a50-f706b3a930c0" time="1367053146050" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,30 +421,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="XIGHelpViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m">
+      <file leaf-file-name="XIGUserFilterViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1544" selection-end="1880" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#114#147#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RACCommand.h" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACCommand.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="107" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.4732906">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RACCommand.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="16" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+            <state line="44" column="31" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,13 +439,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XIGUserFilterViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.m">
+      <file leaf-file-name="RACCommand.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="31" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
+            <state line="78" column="0" selection-start="2053" selection-end="2053" vertical-scroll-proportion="1.964687">
               <folding>
-                <element signature="e#158#197#0" expanded="true" />
+                <marker date="1367053049000" expanded="true" signature="5201:5203" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XIGHelpViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="0" selection-start="1544" selection-end="1880" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,7 +478,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitterUserCell.h" />
         <option value="$PROJECT_DIR$/AppNetCheckerTests/XIGTwitterUserCellSpec.m" />
         <option value="$PROJECT_DIR$/AppNetCheckerTests/XIGUserMatcher+XIGTest.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.m" />
@@ -179,6 +493,7 @@
         <option value="$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m" />
         <option value="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.h" />
         <option value="$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.m" />
+        <option value="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.m" />
       </list>
     </option>
   </component>
@@ -229,7 +544,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="DirectoryView.Xcode" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,20 +654,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.cidr.settings.OCExternalDocConfigurable" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/AppNetChecker/XIGTwitAppClient.h" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="AppNetChecker" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.AppNetChecker">
     <configuration default="true" type="OCUnitRunConfiguration" factoryName="OCUnit" PROJECT_NAME="AppNetChecker" TARGET_NAME="AppNetCheckerTests" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE">
@@ -459,13 +774,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1874" height="1058" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3246888" sideWeight="0.53376555" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3246888" sideWeight="0.53376555" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883817" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24945295" sideWeight="0.67232376" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20475419" sideWeight="0.6473029" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20475419" sideWeight="0.6753112" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3526971" sideWeight="0.5631616" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23267688" sideWeight="0.19451697" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32572615" sideWeight="0.46623448" order="7" side_tool="true" content_ui="tabs" />
@@ -627,18 +942,14 @@
     <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGHelpViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="0" selection-start="1544" selection-end="1880" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#114#147#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AppNetChecker/XIGUserFilterViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="31" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#158#197#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -649,17 +960,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.m">
+    <entry file="file://$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACCommand.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+        <state line="44" column="9" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.58226496">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pods/Headers/ReactiveCocoa/ReactiveCocoa/RACCommand.h">
+    <entry file="file://$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa/RACCommand.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="107" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.4732906">
-          <folding />
+        <state line="78" column="0" selection-start="2053" selection-end="2053" vertical-scroll-proportion="1.964687">
+          <folding>
+            <marker date="1367053049000" expanded="true" signature="5201:5203" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

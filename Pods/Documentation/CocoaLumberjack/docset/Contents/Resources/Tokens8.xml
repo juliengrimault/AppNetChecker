@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DDLogFileFormatterDefault.html">
+	<File path="Classes/DDLogFileManagerDefault.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DDLogFileFormatterDefault</TokenIdentifier>
-			<Abstract type="html">Most users will want file log messages to be prepended with the date and time.
-Rather than forcing the majority of users to write their own formatter,
-we will supply a logical default formatter.
-Users can easily replace this formatter with their own by invoking the setLogFormatter method.
-It can also be removed by calling setLogFormatter, and passing a nil parameter.</Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/DDLogFileManagerDefault</TokenIdentifier>
+			<Abstract type="html">Default log file manager.</Abstract>
 			<DeclaredIn>DDFileLogger.h</DeclaredIn>
 			
 			<NodeRef refid="8"/>
@@ -16,7 +12,7 @@ It can also be removed by calling setLogFormatter, and passing a nil parameter.<
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileFormatterDefault/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileManagerDefault/init</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
@@ -27,14 +23,14 @@ It can also be removed by calling setLogFormatter, and passing a nil parameter.<
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileFormatterDefault/initWithDateFormatter:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileManagerDefault/initWithLogsDirectory:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithDateFormatter:(NSDateFormatter *)dateFormatter</Declaration>
+			<Declaration>- (id)initWithLogsDirectory:(NSString *)logsDirectory</Declaration>
 			
 			
-			<Anchor>//api/name/initWithDateFormatter:</Anchor>
+			<Anchor>//api/name/initWithLogsDirectory:</Anchor>
 		</Token>
 		
 	</File>

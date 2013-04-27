@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSObject+RACKVOWrapper.html">
+	<File path="Categories/NSInvocation+RACTypeParsing.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSObject(RACKVOWrapper)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSInvocation(RACTypeParsing)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSObject+RACKVOWrapper.h</DeclaredIn>
+			<DeclaredIn>NSInvocation+RACTypeParsing.h</DeclaredIn>
 			
 			<NodeRef refid="48"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACKVOWrapper)/rac_addObserver:forKeyPath:options:block:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSInvocation(RACTypeParsing)/rac_setArgument:atIndex:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSObject+RACKVOWrapper.h</DeclaredIn>			
+			<DeclaredIn>NSInvocation+RACTypeParsing.h</DeclaredIn>			
 			
-			<Declaration>- (RACKVOTrampoline *)rac_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(RACKVOBlock)block</Declaration>
+			<Declaration>- (void)rac_setArgument:(id)object atIndex:(NSUInteger)index</Declaration>
 			
 			
-			<Anchor>//api/name/rac_addObserver:forKeyPath:options:block:</Anchor>
+			<Anchor>//api/name/rac_setArgument:atIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSInvocation(RACTypeParsing)/rac_returnValue</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSInvocation+RACTypeParsing.h</DeclaredIn>			
+			
+			<Declaration>- (id)rac_returnValue</Declaration>
+			
+			
+			<Anchor>//api/name/rac_returnValue</Anchor>
 		</Token>
 		
 	</File>

@@ -1,159 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DDLog.html">
+	<File path="Classes/DDLogFileInfo.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DDLog</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/DDLogFileInfo</TokenIdentifier>
+			<Abstract type="html">DDLogFileInfo is a simple class that provides access to various file attributes.
+It provides good performance as it only fetches the information if requested,
+and it caches the information to prevent duplicate fetches.</Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>
 			
 			<NodeRef refid="7"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/loggingQueue</TokenIdentifier>
-			<Abstract type="html">Provides access to the underlying logging queue.
-This may be helpful to Logger classes for things like thread synchronization.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
-			
-			<Declaration>+ (dispatch_queue_t)loggingQueue</Declaration>
-			
-			
-			<Anchor>//api/name/loggingQueue</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/log:level:flag:context:file:function:line:tag:format:</TokenIdentifier>
-			<Abstract type="html">Reporting Primitive.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
-			
-			<Declaration>+ (void)log:(BOOL)synchronous level:(int)level flag:(int)flag context:(int)context file:(const char *)file function:(const char *)function line:(int)line tag:(id)tag format:(NSString *)format, ...</Declaration>
-			
-			
-			<Anchor>//api/name/log:level:flag:context:file:function:line:tag:format:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/log:level:flag:context:file:function:line:tag:format:args:</TokenIdentifier>
-			<Abstract type="html">Reporting Primitive.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
-			
-			<Declaration>+ (void)log:(BOOL)asynchronous level:(int)level flag:(int)flag context:(int)context file:(const char *)file function:(const char *)function line:(int)line tag:(id)tag format:(NSString *)format args:(va_list)argList</Declaration>
-			
-			
-			<Anchor>//api/name/log:level:flag:context:file:function:line:tag:format:args:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/flushLog</TokenIdentifier>
-			<Abstract type="html">Since logging can be asynchronous, there may be times when you want to flush the logs.
-The framework invokes this automatically when the application quits.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
-			
-			<Declaration>+ (void)flushLog</Declaration>
-			
-			
-			<Anchor>//api/name/flushLog</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/addLogger:</TokenIdentifier>
-			<Abstract type="html">Loggers</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
-			
-			<Declaration>+ (void)addLogger:(id&lt;DDLogger&gt;)logger</Declaration>
-			
-			
-			<Anchor>//api/name/addLogger:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/removeLogger:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setFilePath:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>+ (void)removeLogger:(id&lt;DDLogger&gt;)logger</Declaration>
+			<Declaration>@property (strong, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
-			<Anchor>//api/name/removeLogger:</Anchor>
+			<Anchor>//api/name/filePath</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/removeAllLoggers</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/filePath</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>+ (void)removeAllLoggers</Declaration>
+			<Declaration>@property (strong, nonatomic, readonly) NSString *filePath</Declaration>
 			
 			
-			<Anchor>//api/name/removeAllLoggers</Anchor>
+			<Anchor>//api/name/filePath</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/registeredClasses</TokenIdentifier>
-			<Abstract type="html">Registered Dynamic Reporting</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
-			
-			<Declaration>+ (NSArray *)registeredClasses</Declaration>
-			
-			
-			<Anchor>//api/name/registeredClasses</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/registeredClassNames</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setFileName:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>+ (NSArray *)registeredClassNames</Declaration>
+			<Declaration>@property (strong, nonatomic, readonly) NSString *fileName</Declaration>
 			
 			
-			<Anchor>//api/name/registeredClassNames</Anchor>
+			<Anchor>//api/name/fileName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/logLevelForClass:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/fileName</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>+ (int)logLevelForClass:(Class)aClass</Declaration>
+			<Declaration>@property (strong, nonatomic, readonly) NSString *fileName</Declaration>
 			
 			
-			<Anchor>//api/name/logLevelForClass:</Anchor>
+			<Anchor>//api/name/fileName</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/logLevelForClassWithName:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setFileAttributes:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>+ (int)logLevelForClassWithName:(NSString *)aClassName</Declaration>
+			<Declaration>@property (strong, nonatomic, readonly) NSDictionary *fileAttributes</Declaration>
 			
 			
-			<Anchor>//api/name/logLevelForClassWithName:</Anchor>
+			<Anchor>//api/name/fileAttributes</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/setLogLevel:forClass:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/fileAttributes</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>+ (void)setLogLevel:(int)logLevel forClass:(Class)aClass</Declaration>
+			<Declaration>@property (strong, nonatomic, readonly) NSDictionary *fileAttributes</Declaration>
 			
 			
-			<Anchor>//api/name/setLogLevel:forClass:</Anchor>
+			<Anchor>//api/name/fileAttributes</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/DDLog/setLogLevel:forClassWithName:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setCreationDate:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>+ (void)setLogLevel:(int)logLevel forClassWithName:(NSString *)aClassName</Declaration>
+			<Declaration>@property (strong, nonatomic, readonly) NSDate *creationDate</Declaration>
 			
 			
-			<Anchor>//api/name/setLogLevel:forClassWithName:</Anchor>
+			<Anchor>//api/name/creationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/creationDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic, readonly) NSDate *creationDate</Declaration>
+			
+			
+			<Anchor>//api/name/creationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setModificationDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic, readonly) NSDate *modificationDate</Declaration>
+			
+			
+			<Anchor>//api/name/modificationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/modificationDate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (strong, nonatomic, readonly) NSDate *modificationDate</Declaration>
+			
+			
+			<Anchor>//api/name/modificationDate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setFileSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) unsigned long long fileSize</Declaration>
+			
+			
+			<Anchor>//api/name/fileSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/fileSize</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) unsigned long long fileSize</Declaration>
+			
+			
+			<Anchor>//api/name/fileSize</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setAge:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSTimeInterval age</Declaration>
+			
+			
+			<Anchor>//api/name/age</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/age</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSTimeInterval age</Declaration>
+			
+			
+			<Anchor>//api/name/age</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/setIsArchived:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isArchived</Declaration>
+			
+			
+			<Anchor>//api/name/isArchived</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DDLogFileInfo/isArchived</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readwrite) BOOL isArchived</Declaration>
+			
+			
+			<Anchor>//api/name/isArchived</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DDLogFileInfo/logFileWithPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>+ (id)logFileWithPath:(NSString *)filePath</Declaration>
+			
+			
+			<Anchor>//api/name/logFileWithPath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/initWithFilePath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFilePath:(NSString *)filePath</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFilePath:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/reset</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)reset</Declaration>
+			
+			
+			<Anchor>//api/name/reset</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/renameFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)renameFile:(NSString *)newFileName</Declaration>
+			
+			
+			<Anchor>//api/name/renameFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/hasExtensionAttributeWithName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)hasExtensionAttributeWithName:(NSString *)attrName</Declaration>
+			
+			
+			<Anchor>//api/name/hasExtensionAttributeWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/addExtensionAttributeWithName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)addExtensionAttributeWithName:(NSString *)attrName</Declaration>
+			
+			
+			<Anchor>//api/name/addExtensionAttributeWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/removeExtensionAttributeWithName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeExtensionAttributeWithName:(NSString *)attrName</Declaration>
+			
+			
+			<Anchor>//api/name/removeExtensionAttributeWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/hasExtendedAttributeWithName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)hasExtendedAttributeWithName:(NSString *)attrName</Declaration>
+			
+			
+			<Anchor>//api/name/hasExtendedAttributeWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/addExtendedAttributeWithName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)addExtendedAttributeWithName:(NSString *)attrName</Declaration>
+			
+			
+			<Anchor>//api/name/addExtendedAttributeWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/removeExtendedAttributeWithName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeExtendedAttributeWithName:(NSString *)attrName</Declaration>
+			
+			
+			<Anchor>//api/name/removeExtendedAttributeWithName:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/reverseCompareByCreationDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSComparisonResult)reverseCompareByCreationDate:(DDLogFileInfo *)another</Declaration>
+			
+			
+			<Anchor>//api/name/reverseCompareByCreationDate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileInfo/reverseCompareByModificationDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSComparisonResult)reverseCompareByModificationDate:(DDLogFileInfo *)another</Declaration>
+			
+			
+			<Anchor>//api/name/reverseCompareByModificationDate:</Anchor>
 		</Token>
 		
 	</File>

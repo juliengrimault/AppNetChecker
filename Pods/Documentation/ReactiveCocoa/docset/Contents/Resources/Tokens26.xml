@@ -166,6 +166,61 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RACSequence/foldLeftWithStart:combine:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RACSequence.h</DeclaredIn>			
+			
+			<Declaration>- (id)foldLeftWithStart:(id)start combine:(id ( ^ ) ( id accumulator , id value ))combine</Declaration>
+			
+			
+			<Anchor>//api/name/foldLeftWithStart:combine:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RACSequence/foldRightWithStart:combine:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RACSequence.h</DeclaredIn>			
+			
+			<Declaration>- (id)foldRightWithStart:(id)start combine:(id ( ^ ) ( id first , RACSequence *rest ))combine</Declaration>
+			
+			
+			<Anchor>//api/name/foldRightWithStart:combine:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RACSequence/any:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RACSequence.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)any:(BOOL ( ^ ) ( id value ))block</Declaration>
+			
+			
+			<Anchor>//api/name/any:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RACSequence/all:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RACSequence.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)all:(BOOL ( ^ ) ( id value ))block</Declaration>
+			
+			
+			<Anchor>//api/name/all:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RACSequence/objectPassingTest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RACSequence.h</DeclaredIn>			
+			
+			<Declaration>- (id)objectPassingTest:(BOOL ( ^ ) ( id value ))block</Declaration>
+			
+			
+			<Anchor>//api/name/objectPassingTest:</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/RACSequence/sequenceWithHeadBlock:tailBlock:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>RACSequence.h</DeclaredIn>			

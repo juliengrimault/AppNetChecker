@@ -147,40 +147,20 @@
 		setNameWithFormat:@"[%@] -concat: %@", self.name, stream];
 }
 
-+ (instancetype)zip:(id<NSFastEnumeration>)sequences reduce:(id)reduceBlock {
-	NSMutableArray *sequencesArray = [NSMutableArray array];
-	for (RACSequence *sequence in sequences) {
-		[sequencesArray addObject:sequence];
-	}
-	if (sequencesArray.count == 0) return self.empty;
+- (instancetype)zipWith:(RACSequence *)sequence {
+	NSParameterAssert(sequence != nil);
 
-	RACSequence *sequence = [RACSequence sequenceWithHeadBlock:^ id {
-		NSMutableArray *heads = [NSMutableArray arrayWithCapacity:sequencesArray.count];
-		for (RACSequence *sequence in sequencesArray) {
-			id head = sequence.head;
-			if (head == nil) {
-				return nil;
-			}
-			[heads addObject:head];
-		}
-		if (reduceBlock == NULL) {
-			return [RACTuple tupleWithObjectsFromArray:heads];
-		} else {
-			return [RACBlockTrampoline invokeBlock:reduceBlock withArguments:heads];
-		}
-	} tailBlock:^ RACSequence * {
-		NSMutableArray *tails = [NSMutableArray arrayWithCapacity:sequencesArray.count];
-		for (RACSequence *sequence in sequencesArray) {
-			RACSequence *tail = sequence.tail;
-			if (tail == nil || tail == RACSequence.empty) {
-				return tail;
-			}
-			[tails addObject:tail];
-		}
-		return [RACSequence zip:tails reduce:reduceBlock];
-	}];
+	return [[RACSequence
+		sequenceWithHeadBlock:^ id {
+			if (self.head == nil || sequence.head == nil) return nil;
+			return RACTuplePack(self.head, sequence.head);
+		} tailBlock:^ id {
+			if (self.tail == nil || [[RACSequence empty] isEqual:self.tail]) return nil;
+			if (sequence.tail == nil || [[RACSequence empty] isEqual:sequence.tail]) return nil;
 
-	return [sequence setNameWithFormat:@"+zip: %@ reduce:", sequencesArray];
+			return [self.tail zipWith:sequence.tail];
+		}]
+		setNameWithFormat:@"[%@] -zipWith: %@", self.name, sequence];
 }
 
 #pragma mark Extended methods
@@ -220,6 +200,64 @@
 			reschedule();
 		}];
 	}] setNameWithFormat:@"[%@] -signalWithScheduler:", self.name];
+}
+
+- (id)foldLeftWithStart:(id)start combine:(id (^)(id, id))combine {
+	NSParameterAssert(combine != NULL);
+
+	if (self.head == nil) return start;
+	
+	for (id value in self.objectEnumerator) {
+		start = combine(start, value);
+	}
+	
+	return start;
+}
+
+- (id)foldRightWithStart:(id)start combine:(id (^)(id, RACSequence *))combine {
+	NSParameterAssert(combine != NULL);
+
+	if (self.head == nil) return start;
+	
+	RACSequence *rest = [RACSequence sequenceWithHeadBlock:^{
+		return [self.tail foldRightWithStart:start combine:combine];
+	} tailBlock:nil];
+	
+	return combine(self.head, rest);
+}
+
+- (BOOL)any:(BOOL (^)(id))block {
+	NSParameterAssert(block != NULL);
+	
+	NSNumber *result = [self foldLeftWithStart:@NO combine:^(NSNumber *accumulator, id value) {
+		return @(accumulator.boolValue || block(value));
+	}];
+	
+	return result.boolValue;
+}
+
+- (BOOL)all:(BOOL (^)(id))block {
+	NSParameterAssert(block != NULL);
+	
+	NSNumber *result = [self foldLeftWithStart:@YES combine:^(NSNumber *accumulator, id value) {
+		return @(accumulator.boolValue && block(value));
+	}];
+	
+	return result.boolValue;
+}
+
+- (id)objectPassingTest:(BOOL (^)(id))block {
+	NSParameterAssert(block != NULL);
+	
+	return [self foldLeftWithStart:nil combine:^ id (id accumulator, id value) {
+		if (accumulator != nil) {
+			return accumulator;
+		} else if (block(value)) {
+			return value;
+		} else {
+			return nil;
+		}
+	}];
 }
 
 - (RACSequence *)eagerSequence {

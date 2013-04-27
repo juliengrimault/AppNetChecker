@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">ReactiveCocoa 0.17.1 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">ReactiveCocoa 1.5.0 </a></h1>
 				<a id="developerHome" href="../index.html">Josh Abernathy</a>
 			</div>
 			
@@ -61,6 +61,16 @@
 	
 	
 	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/all:">&nbsp;&nbsp;&nbsp;&nbsp;- all:</option>
+	
+	<option value="//api/name/any:">&nbsp;&nbsp;&nbsp;&nbsp;- any:</option>
+	
+	<option value="//api/name/foldLeftWithStart:combine:">&nbsp;&nbsp;&nbsp;&nbsp;- foldLeftWithStart:combine:</option>
+	
+	<option value="//api/name/foldRightWithStart:combine:">&nbsp;&nbsp;&nbsp;&nbsp;- foldRightWithStart:combine:</option>
+	
+	<option value="//api/name/objectPassingTest:">&nbsp;&nbsp;&nbsp;&nbsp;- objectPassingTest:</option>
 	
 	<option value="//api/name/signal">&nbsp;&nbsp;&nbsp;&nbsp;- signal</option>
 	
@@ -113,6 +123,16 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/all:">all:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/any:">any:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/foldLeftWithStart:combine:">foldLeftWithStart:combine:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/foldRightWithStart:combine:">foldRightWithStart:combine:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectPassingTest:">objectPassingTest:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/signal">signal</a></span></li>
 	
@@ -218,6 +238,41 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/signalWithScheduler:">&ndash;&nbsp;signalWithScheduler:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/foldLeftWithStart:combine:">&ndash;&nbsp;foldLeftWithStart:combine:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/foldRightWithStart:combine:">&ndash;&nbsp;foldRightWithStart:combine:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/any:">&ndash;&nbsp;any:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/all:">&ndash;&nbsp;all:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectPassingTest:">&ndash;&nbsp;objectPassingTest:</a></code>
 		
 	</span>
 	
@@ -336,6 +391,61 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/all:" title="all:"></a>
+	<h3 class="subsubtitle method-title">all:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)all:(BOOL ( ^ ) ( id value ))<em>block</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/any:" title="any:"></a>
+	<h3 class="subsubtitle method-title">any:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)any:(BOOL ( ^ ) ( id value ))<em>block</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/foldLeftWithStart:combine:" title="foldLeftWithStart:combine:"></a>
+	<h3 class="subsubtitle method-title">foldLeftWithStart:combine:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)foldLeftWithStart:(id)<em>start</em> combine:(id ( ^ ) ( id accumulator , id value ))<em>combine</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/foldRightWithStart:combine:" title="foldRightWithStart:combine:"></a>
+	<h3 class="subsubtitle method-title">foldRightWithStart:combine:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)foldRightWithStart:(id)<em>start</em> combine:(id ( ^ ) ( id first , RACSequence *rest ))<em>combine</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectPassingTest:" title="objectPassingTest:"></a>
+	<h3 class="subsubtitle method-title">objectPassingTest:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)objectPassingTest:(BOOL ( ^ ) ( id value ))<em>block</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/signal" title="signal"></a>
 	<h3 class="subsubtitle method-title">signal</h3>
 	
@@ -370,7 +480,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-02-17)</span><br />
+						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-04-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

@@ -1,6 +1,6 @@
 PODS:
   - AFNetworking (1.1.0)
-  - CocoaLumberjack (1.6)
+  - CocoaLumberjack (1.6.2)
   - GVUserDefaults (0.9.0)
   - InflectorKit (0.0.1)
   - JRSwizzle (1.0)
@@ -16,15 +16,15 @@ PODS:
     - libextobjc/EXTKeyPathCoding
     - libextobjc/EXTScope
   - Nocilla (0.2)
-  - ReactiveCocoa (0.17.1):
+  - ReactiveCocoa (1.5.0):
     - ReactiveCocoa/Core
     - ReactiveCocoa/RACExtensions
-  - ReactiveCocoa/Core (0.17.1):
+  - ReactiveCocoa/Core (1.5.0):
     - JRSwizzle (~> 1.0)
     - libextobjc/EXTConcreteProtocol (~> 0.2.5)
     - libextobjc/EXTKeyPathCoding (~> 0.2.5)
     - libextobjc/EXTScope (~> 0.2.5)
-  - ReactiveCocoa/RACExtensions (0.17.1):
+  - ReactiveCocoa/RACExtensions (1.5.0):
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
@@ -35,11 +35,11 @@ DEPENDENCIES:
   - Kiwi (~> 2.0.5)
   - Mantle (~> 0.2.3)
   - Nocilla (= 0.2)
-  - ReactiveCocoa (~> 0.17.1)
+  - ReactiveCocoa (~> 1.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
-  CocoaLumberjack: 0f2fa7090a23f13261072d882e017c688300efbe
+  CocoaLumberjack: d73e1e317ced14ab930797dda6c17156ff17aaa1
   GVUserDefaults: 7cbb1b5c05d565160b366b2d0a6d6a9f9c3753ce
   InflectorKit: 9dccab02f95541093995adac639342c9eb9e6c12
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
@@ -47,6 +47,6 @@ SPEC CHECKSUMS:
   libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
   Mantle: 4a20405b7aba3452007294badee2b3cb137825c3
   Nocilla: f2bb30a66e09fb03426a084f095c5791d46e2e26
-  ReactiveCocoa: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
+  ReactiveCocoa: 67e6f96f1aee091ead8306be7ba8da53d2d3671c
 
-COCOAPODS: 0.17.0
+COCOAPODS: 0.18.1
