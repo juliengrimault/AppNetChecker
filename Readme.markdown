@@ -1,5 +1,7 @@
 # TwitApp.net
 
+TwitApp.net is a simple iOS app that let you find who among your twitter friends are also on app.net
+
 This project was originally a playground that I was using to learn about [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) and put in practise some TDD methodology using [Kiwi](https://github.com/allending/Kiwi).
 It turned out that I managed to build something vaguely useful so I decided that I would polish it and put it in the App Store once I am happy with it.
 
