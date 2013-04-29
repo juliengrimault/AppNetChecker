@@ -113,7 +113,6 @@
 		F9C37F0B16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */; };
 		F9C9435D1723D25F00C3835F /* XIGUserFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C9435B1723D25F00C3835F /* XIGUserFilterViewController.m */; };
 		F9C9435E1723D25F00C3835F /* XIGUserFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C9435C1723D25F00C3835F /* XIGUserFilterViewController.xib */; };
-		F9C943601723D34B00C3835F /* XIGTwitterUsersTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C9435F1723D34B00C3835F /* XIGTwitterUsersTableViewController.xib */; };
 		F9C943621723D45500C3835F /* XIGHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C943611723D45500C3835F /* XIGHelpViewController.xib */; };
 		F9D2E4D616EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */; };
 		F9D2E4DA16EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */; };
@@ -299,7 +298,6 @@
 		F9C9435A1723D25F00C3835F /* XIGUserFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGUserFilterViewController.h; sourceTree = "<group>"; };
 		F9C9435B1723D25F00C3835F /* XIGUserFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGUserFilterViewController.m; sourceTree = "<group>"; };
 		F9C9435C1723D25F00C3835F /* XIGUserFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGUserFilterViewController.xib; sourceTree = "<group>"; };
-		F9C9435F1723D34B00C3835F /* XIGTwitterUsersTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGTwitterUsersTableViewController.xib; sourceTree = "<group>"; };
 		F9C943611723D45500C3835F /* XIGHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGHelpViewController.xib; sourceTree = "<group>"; };
 		F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Thin.ttf"; sourceTree = "<group>"; };
 		F9D2E4D816EADB0F006A1A06 /* UIFont+XIGAppNetChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+XIGAppNetChecker.h"; sourceTree = "<group>"; };
@@ -700,7 +698,6 @@
 				F97B556616C7AB2C005AD777 /* XIGAccountPickerViewController.m */,
 				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
 				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
-				F9C9435F1723D34B00C3835F /* XIGTwitterUsersTableViewController.xib */,
 				F9ED15B816EB4185008E8404 /* XIGTableViewController.h */,
 				F9ED15B916EB4185008E8404 /* XIGTableViewController.m */,
 				BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */,
@@ -921,7 +918,6 @@
 				F9F16EE217196CF300B81057 /* Icon.png in Resources */,
 				F9F16EE417196CF700B81057 /* Icon@2x.png in Resources */,
 				F9C9435E1723D25F00C3835F /* XIGUserFilterViewController.xib in Resources */,
-				F9C943601723D34B00C3835F /* XIGTwitterUsersTableViewController.xib in Resources */,
 				F9C943621723D45500C3835F /* XIGHelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

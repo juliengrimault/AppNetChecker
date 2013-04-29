@@ -67,6 +67,20 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 }
 
 #pragma mark - Life cycle
+- (void)loadView {
+    self.view = [[UIView alloc] initWithFrame:CGRectZero];
+    UITableView *table = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.tableView = table;
+    [self.view addSubview:table];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    CGRect f = self.view.frame;
+    f.size.height -=44;
+    self.tableView.frame = f;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureTableView];
