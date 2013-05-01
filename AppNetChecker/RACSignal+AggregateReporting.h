@@ -12,4 +12,5 @@
 - (RACSignal *)aggregateProgressWithStartFactory:(id (^)(void))startFactory combine:(id (^)(id running, id next))combineBlock;
 - (RACSignal *)aggregateProgressWithStart:(id)start combine:(id (^)(id running, id next))combineBlock;
 
+- (RACSignal *)progressiveCount;
 @end

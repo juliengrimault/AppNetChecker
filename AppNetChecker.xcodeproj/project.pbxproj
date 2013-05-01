@@ -40,6 +40,8 @@
 		F90C202016C8E09100F29905 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F97B555F16C79D4A005AD777 /* Social.framework */; };
 		F90C202316C8EF3100F29905 /* XIGAccountErrorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */; };
 		F917B55B16E3715900A8ABE8 /* UIBarButtonItem+XIGItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F917B55A16E3715900A8ABE8 /* UIBarButtonItem+XIGItem.m */; };
+		F939F4061731035B00B7BEA1 /* XIGMultiViewControllerContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F939F4051731035B00B7BEA1 /* XIGMultiViewControllerContainer.m */; };
+		F939F40C17310EC400B7BEA1 /* XIGSemiModalController+FriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F939F40B17310EC400B7BEA1 /* XIGSemiModalController+FriendsVC.m */; };
 		F951B82E16D8EA7E00BB4B32 /* XIGArraySliceSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */; };
 		F951B83116D8EA9F00BB4B32 /* NSArray+JGSlice.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */; };
 		F951B83316D9E99800BB4B32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F951B83216D9E99800BB4B32 /* SystemConfiguration.framework */; };
@@ -51,7 +53,7 @@
 		F951B83F16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B83E16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m */; };
 		F951B84116D9ED0600BB4B32 /* XIGTwitterUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */; };
 		F951B84316D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B84216D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m */; };
-		F951B84616D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */; };
+		F951B84616D9F5E000BB4B32 /* XIGUserMatcherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B84516D9F5E000BB4B32 /* XIGUserMatcherTableViewController.m */; };
 		F951B84816D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F951B84716D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m */; };
 		F951B84C16D9FD7B00BB4B32 /* friendsIdPage1.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B84B16D9FD7B00BB4B32 /* friendsIdPage1.json */; };
 		F951B84E16D9FD9D00BB4B32 /* friendsIdPage2.json in Resources */ = {isa = PBXBuildFile; fileRef = F951B84D16D9FD9D00BB4B32 /* friendsIdPage2.json */; };
@@ -204,6 +206,10 @@
 		F90C202216C8EF3100F29905 /* XIGAccountErrorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGAccountErrorCell.m; sourceTree = "<group>"; };
 		F917B55916E3715900A8ABE8 /* UIBarButtonItem+XIGItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XIGItem.h"; sourceTree = "<group>"; };
 		F917B55A16E3715900A8ABE8 /* UIBarButtonItem+XIGItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XIGItem.m"; sourceTree = "<group>"; };
+		F939F4041731035B00B7BEA1 /* XIGMultiViewControllerContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGMultiViewControllerContainer.h; sourceTree = "<group>"; };
+		F939F4051731035B00B7BEA1 /* XIGMultiViewControllerContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGMultiViewControllerContainer.m; sourceTree = "<group>"; };
+		F939F40A17310EC400B7BEA1 /* XIGSemiModalController+FriendsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XIGSemiModalController+FriendsVC.h"; sourceTree = "<group>"; };
+		F939F40B17310EC400B7BEA1 /* XIGSemiModalController+FriendsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XIGSemiModalController+FriendsVC.m"; sourceTree = "<group>"; };
 		F951B82D16D8EA7E00BB4B32 /* XIGArraySliceSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGArraySliceSpec.m; sourceTree = "<group>"; };
 		F951B82F16D8EA9F00BB4B32 /* NSArray+JGSlice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JGSlice.h"; sourceTree = "<group>"; };
 		F951B83016D8EA9F00BB4B32 /* NSArray+JGSlice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JGSlice.m"; sourceTree = "<group>"; };
@@ -216,8 +222,8 @@
 		F951B83E16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JGLoadFromNib.m"; sourceTree = "<group>"; };
 		F951B84016D9ED0600BB4B32 /* XIGTwitterUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XIGTwitterUserCell.xib; sourceTree = "<group>"; };
 		F951B84216D9F59900BB4B32 /* XIGTwitterUserTableViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUserTableViewControllerSpec.m; sourceTree = "<group>"; };
-		F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGTwitterUsersTableViewController.h; sourceTree = "<group>"; };
-		F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterUsersTableViewController.m; sourceTree = "<group>"; };
+		F951B84416D9F5E000BB4B32 /* XIGUserMatcherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIGUserMatcherTableViewController.h; sourceTree = "<group>"; };
+		F951B84516D9F5E000BB4B32 /* XIGUserMatcherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGUserMatcherTableViewController.m; sourceTree = "<group>"; };
 		F951B84716D9FB6800BB4B32 /* XIGTwitterClientGetFriendsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClientGetFriendsSpec.m; sourceTree = "<group>"; };
 		F951B84B16D9FD7B00BB4B32 /* friendsIdPage1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsIdPage1.json; sourceTree = "<group>"; };
 		F951B84D16D9FD9D00BB4B32 /* friendsIdPage2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = friendsIdPage2.json; sourceTree = "<group>"; };
@@ -696,8 +702,8 @@
 			children = (
 				F97B556516C7AB2C005AD777 /* XIGAccountPickerViewController.h */,
 				F97B556616C7AB2C005AD777 /* XIGAccountPickerViewController.m */,
-				F951B84416D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.h */,
-				F951B84516D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m */,
+				F951B84416D9F5E000BB4B32 /* XIGUserMatcherTableViewController.h */,
+				F951B84516D9F5E000BB4B32 /* XIGUserMatcherTableViewController.m */,
 				F9ED15B816EB4185008E8404 /* XIGTableViewController.h */,
 				F9ED15B916EB4185008E8404 /* XIGTableViewController.m */,
 				BB851AF3B1825446C7E0E96C /* XIGHelpViewController.m */,
@@ -710,6 +716,10 @@
 				F9C9435A1723D25F00C3835F /* XIGUserFilterViewController.h */,
 				F9C9435B1723D25F00C3835F /* XIGUserFilterViewController.m */,
 				F9C9435C1723D25F00C3835F /* XIGUserFilterViewController.xib */,
+				F939F4041731035B00B7BEA1 /* XIGMultiViewControllerContainer.h */,
+				F939F4051731035B00B7BEA1 /* XIGMultiViewControllerContainer.m */,
+				F939F40A17310EC400B7BEA1 /* XIGSemiModalController+FriendsVC.h */,
+				F939F40B17310EC400B7BEA1 /* XIGSemiModalController+FriendsVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1021,7 +1031,7 @@
 				F951B83116D8EA9F00BB4B32 /* NSArray+JGSlice.m in Sources */,
 				F951B83C16D9EA5400BB4B32 /* XIGTwitterUserCell.m in Sources */,
 				F951B83F16D9ECA800BB4B32 /* UIView+JGLoadFromNib.m in Sources */,
-				F951B84616D9F5E000BB4B32 /* XIGTwitterUsersTableViewController.m in Sources */,
+				F951B84616D9F5E000BB4B32 /* XIGUserMatcherTableViewController.m in Sources */,
 				F9D5E94516E0F14B00839FE5 /* XIGAppNetClient.m in Sources */,
 				F9A4D0CB16E1BC54005D3EE5 /* XIGAppNetUser.m in Sources */,
 				F9A4D0CE16E1E497005D3EE5 /* XIGUserMatcher.m in Sources */,
@@ -1050,6 +1060,8 @@
 				BB851A46480D2C46B77DC7D2 /* RACSignal+XIGBuffer.m in Sources */,
 				F9C9435D1723D25F00C3835F /* XIGUserFilterViewController.m in Sources */,
 				BB851234AC1088E53845992F /* CAKeyframeAnimation+XIGBouncing.m in Sources */,
+				F939F4061731035B00B7BEA1 /* XIGMultiViewControllerContainer.m in Sources */,
+				F939F40C17310EC400B7BEA1 /* XIGSemiModalController+FriendsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

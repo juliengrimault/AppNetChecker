@@ -5,7 +5,7 @@
 
 
 #import "UIBarButtonItem+XIGItem.h"
-#import "XIGTwitterUsersTableViewController.h"
+#import "XIGUserMatcherTableViewController.h"
 #import "XIGUserMatchersToolbar.h"
 
 

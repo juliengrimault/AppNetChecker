@@ -35,4 +35,12 @@
     return [signal setNameWithFormat:@"[%@] -aggregateWithStart: %@ combine:", self.name, start];
 }
 
+- (RACSignal *)progressiveCount
+{
+    return [self aggregateProgressWithStart:@0 combine:^id(NSNumber *current, id x) {
+        NSUInteger count = [current unsignedIntegerValue];
+        ++count;
+        return @(count);
+    }];
+}
 @end

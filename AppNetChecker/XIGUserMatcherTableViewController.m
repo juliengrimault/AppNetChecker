@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 XiaoGou. All rights reserved.
 //
 
-#import "XIGTwitterUsersTableViewController.h"
+#import "XIGUserMatcherTableViewController.h"
 #import "XIGTwitterClient.h"
 #import "XIGTwitterUserCell.h"
 #import "XIGTwitterUser.h"
@@ -22,12 +22,12 @@
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
-@interface XIGTwitterUsersTableViewController ()
+@interface XIGUserMatcherTableViewController ()
 @property (nonatomic, strong) RACSignal *userMatchersSignal;
 @property (nonatomic, readonly) XIGUserFilterViewController *filterViewController;
 @end
 
-@implementation XIGTwitterUsersTableViewController
+@implementation XIGUserMatcherTableViewController
 #pragma mark - Properties
 
 - (void)insertUserMatchers:(NSArray *)array atIndexes:(NSIndexSet *)indexes
@@ -51,9 +51,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     self = [super init];
     if (self) {
         [self commonInit];
-        _userMatchersSignal = [[[userMatcherSignal catchTo:[RACSignal empty]]
-                                deliverOn:[RACScheduler mainThreadScheduler]]
-                               logAll];
+        _userMatchersSignal = [[userMatcherSignal catchTo:[RACSignal empty]]
+                                deliverOn:[RACScheduler mainThreadScheduler]];
     }
     return self;
 }
@@ -98,7 +97,6 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     [super viewDidLoad];
     [self configureTableView];
 
-    [self bindToolbarToSignal];
     [self bindTableViewDataSourceToSignal];
 }
 
@@ -111,40 +109,6 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
         self.tableView.rowHeight = [XIGTwitterUserCell rowHeight];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
-
-#pragma mark - Toolbar Setup
-    - (void)bindToolbarToSignal {
-        [self bindFriendCountLabel];
-        [self bindFriendFoundCountLabel];
-    }
-
-        - (void)bindFriendCountLabel {
-            RAC(self.filterViewController.friendCount) =[RACAbleWithStart(self.userMatchers) map:^id(NSArray *users) {
-                return @(users.count);
-            }];
-        }
-
-        - (void)bindFriendFoundCountLabel {
-            RACSignal *appNetUserCount= [self foundFriendsCountSignal];
-            RAC(self.filterViewController.friendFoundCount) = appNetUserCount;
-
-            @weakify(self);
-            [appNetUserCount subscribeCompleted:^{
-                @strongify(self);
-                DDLogInfo(@"appNetUserCount completed - %d", self.filterViewController.friendFoundCount);
-                [self.filterViewController.activityIndicator stopAnimating];
-            }];
-        }
-
-            - (RACSignal *)foundFriendsCountSignal {
-                RACSignal *appNetUserCount = [[self.userMatchersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGUserMatcher *u) {
-                    NSUInteger count = [current unsignedIntegerValue];
-                    if (u.appNetUser != nil) ++count;
-                    return @(count);
-                }] setNameWithFormat:@"App.net count"];
-                return appNetUserCount;
-            }
-
 
 #pragma mark - Data Source Setup
     - (void)bindTableViewDataSourceToSignal {

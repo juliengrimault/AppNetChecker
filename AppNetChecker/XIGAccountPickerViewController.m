@@ -11,10 +11,10 @@
 #import <libextobjc/EXTKeyPathCoding.h>
 #import "UIViewController+SLServiceHack.h"
 #import "XIGAccountErrorCell.h"
-#import "XIGTwitterUsersTableViewController.h"
+#import "XIGUserMatcherTableViewController.h"
 #import "XIGTwitterClient.h"
 #import "XIGTwitterAccountCell.h"
-#import "XIGSemiModalController.h"
+#import "XIGSemiModalController+FriendsVC.h"
 #import "XIGAppNetClient.h"
 #import "XIGTwitAppClient.h"
 #import "XIGUserFilterViewController.h"
@@ -165,21 +165,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ACAccount* selectedAccount = self.accounts[indexPath.row];
-    [XIGTwitterClient sharedClient].account = selectedAccount;
+    ACAccount *account = self.accounts[indexPath.row];
+    RACSignal *userMatchersSignal = [self userMatchersSignalForAccount:account];
+    
+    XIGSemiModalController *semiModal = [XIGSemiModalController friendsVCWithUserMatcherSignal:userMatchersSignal];
+    semiModal.closedTopOffset = CGRectGetHeight(self.semiModalController.view.frame) - 176;
+    
+    [self.navigationController pushViewController:semiModal animated:YES];
+}
+
+- (RACSignal *)userMatchersSignalForAccount:(ACAccount *)account
+{
+    [XIGTwitterClient sharedClient].account = account;
     XIGTwitAppClient *twittAppClient = [[XIGTwitAppClient alloc] initWithTwitterClient:[XIGTwitterClient sharedClient] appNetClient:[XIGAppNetClient sharedClient]];
     RACSignal *userMatchersSignal = [twittAppClient userMatchers];
-    
-    XIGTwitterUsersTableViewController* vc = [[XIGTwitterUsersTableViewController alloc] initWithUserMatchersSignal:userMatchersSignal];
-
-
-    XIGUserFilterViewController *filterVC = [[XIGUserFilterViewController alloc] init];
-    XIGSemiModalController *semiModal = [[XIGSemiModalController alloc] initWithFrontViewController:filterVC
-                                                                                 backViewController:vc];
-    semiModal.title = NSLocalizedString(@"Friends", nil);
-    semiModal.open = YES;
-    semiModal.closedTopOffset = CGRectGetHeight(self.semiModalController.view.frame) - 176;
-    [self.navigationController pushViewController:semiModal animated:YES];
+    return userMatchersSignal;
 }
 
 @end

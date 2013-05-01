@@ -8,16 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "XIGTableViewController.h"
-#import "XIGUserFilterViewController.h"
-@class XIGTwitAppClient;
-@class XIGUserMatchersToolbar;
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface XIGTwitterUsersTableViewController : JGTableViewController {
+@interface XIGUserMatcherTableViewController : JGTableViewController {
 }
-
-@property (nonatomic) XIGUserFilter filter;
-
-@property (nonatomic, strong) NSMutableArray* userMatchers;
+@property (nonatomic, strong, readonly) RACSignal *userMatchersSignal;
+@property (nonatomic, strong, readonly) NSMutableArray* userMatchers;
 
 - (instancetype)initWithUserMatchersSignal:(RACSignal *)userMatcherSignal;
 

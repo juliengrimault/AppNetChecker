@@ -1,6 +1,6 @@
 #import "XIGUserMatchersToolbar.h"
 #import "KiwiHack.h"
-#import "XIGTwitterUsersTableViewController.h"
+#import "XIGUserMatcherTableViewController.h"
 #import "UIStoryboard+AppNetChecker.h"
 #import "XIGTwitterClient.h"
 #import "XIGTwitterUser+XIGTest.h"
@@ -10,12 +10,12 @@
 #import "XIGUserMatcher+XIGTest.h"
 
 SPEC_BEGIN(XIGTwitterUserTableViewControllerSpec)
-__block XIGTwitterUsersTableViewController* vc;
+__block XIGUserMatcherTableViewController* vc;
 __block RACSignal* mockSignal;
 __block NSArray* friends1;
 __block NSArray* friends2;
 beforeEach(^{
-    vc = [[UIStoryboard mainStoryboard] instantiateViewControllerOfClass:[XIGTwitterUsersTableViewController class]];
+    vc = [[UIStoryboard mainStoryboard] instantiateViewControllerOfClass:[XIGUserMatcherTableViewController class]];
     
     friends1 = [XIGUserMatcher testUserMatchers:NSMakeRange(0, 5)];
     friends2 = [XIGUserMatcher testUserMatchers:NSMakeRange(5, 5)];
