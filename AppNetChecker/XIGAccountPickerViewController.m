@@ -167,9 +167,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ACAccount* selectedAccount = self.accounts[indexPath.row];
     [XIGTwitterClient sharedClient].account = selectedAccount;
+    XIGTwitAppClient *twittAppClient = [[XIGTwitAppClient alloc] initWithTwitterClient:[XIGTwitterClient sharedClient] appNetClient:[XIGAppNetClient sharedClient]];
+    RACSignal *userMatchersSignal = [twittAppClient userMatchers];
+    
+    XIGTwitterUsersTableViewController* vc = [[XIGTwitterUsersTableViewController alloc] initWithUserMatchersSignal:userMatchersSignal];
 
-    XIGTwitterUsersTableViewController* vc = [[XIGTwitterUsersTableViewController alloc] init];
-    vc.twittAppClient = [[XIGTwitAppClient alloc] initWithTwitterClient:[XIGTwitterClient sharedClient] appNetClient:[XIGAppNetClient sharedClient]];
 
     XIGUserFilterViewController *filterVC = [[XIGUserFilterViewController alloc] init];
     XIGSemiModalController *semiModal = [[XIGSemiModalController alloc] initWithFrontViewController:filterVC

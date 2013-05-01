@@ -15,11 +15,10 @@
 @interface XIGTwitterUsersTableViewController : JGTableViewController {
 }
 
-//Must be set before presenting this controller
-@property (nonatomic, strong) XIGTwitAppClient *twittAppClient;
-
 @property (nonatomic) XIGUserFilter filter;
 
 @property (nonatomic, strong) NSMutableArray* userMatchers;
+
+- (instancetype)initWithUserMatchersSignal:(RACSignal *)userMatcherSignal;
 
 @end

@@ -23,7 +23,8 @@
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
 @interface XIGTwitterUsersTableViewController ()
-    @property (nonatomic, readonly) XIGUserFilterViewController *filterViewController;
+@property (nonatomic, strong) RACSignal *userMatchersSignal;
+@property (nonatomic, readonly) XIGUserFilterViewController *filterViewController;
 @end
 
 @implementation XIGTwitterUsersTableViewController
@@ -45,6 +46,18 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 }
 
 #pragma mark - Init
+- (instancetype)initWithUserMatchersSignal:(RACSignal *)userMatcherSignal
+{
+    self = [super init];
+    if (self) {
+        [self commonInit];
+        _userMatchersSignal = [[[userMatcherSignal catchTo:[RACSignal empty]]
+                                deliverOn:[RACScheduler mainThreadScheduler]]
+                               logAll];
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -85,9 +98,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     [super viewDidLoad];
     [self configureTableView];
 
-    RACSignal *userMatchersSignal = [[[self.twittAppClient userMatchers] deliverOn:[RACScheduler mainThreadScheduler]] logAll];
-    [self bindToolbarToSignal:userMatchersSignal];
-    [self bindTableViewDataSourceToSignal:userMatchersSignal];
+    [self bindToolbarToSignal];
+    [self bindTableViewDataSourceToSignal];
 }
 
 #pragma mark - UI Setup
@@ -101,10 +113,9 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
     }
 
 #pragma mark - Toolbar Setup
-    - (void)bindToolbarToSignal:(RACSignal *)userMatchersSignal {
+    - (void)bindToolbarToSignal {
         [self bindFriendCountLabel];
-        RACSignal *matchersWithoutErrors = [userMatchersSignal catchTo:[RACSignal empty]];
-        [self bindFriendFoundCountLabel:matchersWithoutErrors];
+        [self bindFriendFoundCountLabel];
     }
 
         - (void)bindFriendCountLabel {
@@ -113,8 +124,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
             }];
         }
 
-        - (void)bindFriendFoundCountLabel:(RACSignal *)userMatchersSignal {
-            RACSignal *appNetUserCount= [[self foundFriendsCountSignal:userMatchersSignal] deliverOn:[RACScheduler mainThreadScheduler]];
+        - (void)bindFriendFoundCountLabel {
+            RACSignal *appNetUserCount= [self foundFriendsCountSignal];
             RAC(self.filterViewController.friendFoundCount) = appNetUserCount;
 
             @weakify(self);
@@ -125,8 +136,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
             }];
         }
 
-            - (RACSignal *)foundFriendsCountSignal:(RACSignal *)userMatchersSignal {
-                RACSignal *appNetUserCount = [[userMatchersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGUserMatcher *u) {
+            - (RACSignal *)foundFriendsCountSignal {
+                RACSignal *appNetUserCount = [[self.userMatchersSignal aggregateProgressWithStart:@0 combine:^id(NSNumber *current, XIGUserMatcher *u) {
                     NSUInteger count = [current unsignedIntegerValue];
                     if (u.appNetUser != nil) ++count;
                     return @(count);
@@ -136,18 +147,18 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 
 
 #pragma mark - Data Source Setup
-    - (void)bindTableViewDataSourceToSignal:(RACSignal *)userMatchersSignal {
-        RACSignal *bufferedMatchers = [[userMatchersSignal xig_buffer:2] map:^id(RACTuple *tuple) {
+    - (void)bindTableViewDataSourceToSignal {
+        RACSignal *bufferedMatchers = [[self.userMatchersSignal xig_buffer:2] map:^id(RACTuple *tuple) {
            return tuple.allObjects;
         }];
 
         [self configureUserMatchersNext:bufferedMatchers];
-        [self configureUserMatchersError:bufferedMatchers];
+        [self configureUserMatchersError];
     }
 
-        - (void)configureUserMatchersNext:(RACSignal *)userMatchersSignal {
+        - (void)configureUserMatchersNext:(RACSignal *)bufferedSignal {
             @weakify(self);
-            [userMatchersSignal subscribeNext:^(NSArray *matchersToAdd) {
+            [bufferedSignal subscribeNext:^(NSArray *matchersToAdd) {
                 @strongify(self);
                 NSRange insertionRange = [self insertUserMatchersInDataSource:matchersToAdd];
                 [self insertNewRowsInTableView:insertionRange];
@@ -167,8 +178,8 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
                 [self.tableView insertRowsAtIndexPaths:insertedIndexPaths withRowAnimation:UITableViewRowAnimationNone];
             }
 
-        - (void)configureUserMatchersError:(RACSignal *)userMatchersSignal {
-            [userMatchersSignal subscribeError:^(NSError *error) {
+        - (void)configureUserMatchersError {
+            [self.userMatchersSignal subscribeError:^(NSError *error) {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Something Went Wrong...", nil)
                                                                 message:[error localizedDescription]
                                                                delegate:nil
