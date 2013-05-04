@@ -745,6 +745,8 @@
 		F9E76F9716E355EF003E1B26 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */,
+				BB8514DE9236C3345E088389 /* XIGTwitAppClient.h */,
 				F9D52EBF16CA0C9E00ABC885 /* XIGTwitterClient+Private.h */,
 				F9D52EB916CA043700ABC885 /* XIGTwitterClient.h */,
 				F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */,
@@ -752,8 +754,6 @@
 				F9D5E94416E0F14B00839FE5 /* XIGAppNetClient.m */,
 				F9BBFF5F16CA77E300CEE372 /* XIGNSURLRequestBuilder.h */,
 				F9BBFF6016CA77E300CEE372 /* XIGNSURLRequestBuilder.m */,
-				BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */,
-				BB8514DE9236C3345E088389 /* XIGTwitAppClient.h */,
 			);
 			name = Network;
 			sourceTree = "<group>";

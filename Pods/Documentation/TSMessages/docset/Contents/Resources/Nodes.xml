@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>TSMessages 0.9.1</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="3"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>TSMessage</Name>
+			<Path>Classes/TSMessage.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>TSMessageView</Name>
+			<Path>Classes/TSMessageView.html</Path>
+		</Node>
+		
+		<Node id="3">
+			<Name>UIColor(MLColorAdditions)</Name>
+			<Path>Categories/UIColor+MLColorAdditions.html</Path>
+		</Node>
+		
+		
+	</Library>
+</DocSetNodes>

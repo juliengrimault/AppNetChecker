@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSMessageView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSMessageView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSMessageView/setTitle:</TokenIdentifier>
+			<Abstract type="html">The displayed title of this message</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSMessageView/title</TokenIdentifier>
+			<Abstract type="html">The displayed title of this message</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSMessageView/setContent:</TokenIdentifier>
+			<Abstract type="html">The displayed content of this message (optional)</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSMessageView/content</TokenIdentifier>
+			<Abstract type="html">The displayed content of this message (optional)</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) NSString *content</Declaration>
+			
+			
+			<Anchor>//api/name/content</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSMessageView/setViewController:</TokenIdentifier>
+			<Abstract type="html">The view controller this message is displayed in</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) UIViewController *viewController</Declaration>
+			
+			
+			<Anchor>//api/name/viewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSMessageView/viewController</TokenIdentifier>
+			<Abstract type="html">The view controller this message is displayed in</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) UIViewController *viewController</Declaration>
+			
+			
+			<Anchor>//api/name/viewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSMessageView/setDuration:</TokenIdentifier>
+			<Abstract type="html">The duration of the displayed message. If it is 0.0, it will automatically be calculated</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) CGFloat duration</Declaration>
+			
+			
+			<Anchor>//api/name/duration</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSMessageView/duration</TokenIdentifier>
+			<Abstract type="html">The duration of the displayed message. If it is 0.0, it will automatically be calculated</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, assign) CGFloat duration</Declaration>
+			
+			
+			<Anchor>//api/name/duration</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSMessageView/initWithTitle:withContent:withType:withDuration:inViewController:withCallback:</TokenIdentifier>
+			<Abstract type="html">Inits the notification view. Do not call this from outisde this library.</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithTitle:(NSString *)title withContent:(NSString *)content withType:(TSMessageNotificationType)notificationType withDuration:(CGFloat)duration inViewController:(UIViewController *)viewController withCallback:(void ( ^ ) ( ))callback</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The title of the notification view</Abstract>
+				</Parameter><Parameter>
+					<Name>content</Name>
+					<Abstract type="html">The subtitle/content of the notification view (optional)</Abstract>
+				</Parameter><Parameter>
+					<Name>notificationType</Name>
+					<Abstract type="html">The type (color) of the notification view</Abstract>
+				</Parameter><Parameter>
+					<Name>duration</Name>
+					<Abstract type="html">The duration this notification should be displayed (optional)</Abstract>
+				</Parameter><Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller this message should be displayed in</Abstract>
+				</Parameter><Parameter>
+					<Name>callback</Name>
+					<Abstract type="html">The block that should be executed, when the user tapped on the message</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithTitle:withContent:withType:withDuration:inViewController:withCallback:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSMessageView/fadeMeOut</TokenIdentifier>
+			<Abstract type="html">Fades out this notification view</Abstract>
+			<DeclaredIn>TSMessageView.h</DeclaredIn>			
+			
+			<Declaration>- (void)fadeMeOut</Declaration>
+			
+			
+			<Anchor>//api/name/fadeMeOut</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

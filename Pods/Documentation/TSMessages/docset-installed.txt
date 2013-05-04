@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/julien/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.tsmessages.TSMessages-0.9.1.docset
+Time: 2013-05-04 12:56:35 +0000

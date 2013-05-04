@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>TSMessages 0.9.1 Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">TSMessages 0.9.1 </a></h1>
+				<a id="developerHome" href="index.html">Felix Krause</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">TSMessages 0.9.1 Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">TSMessages 0.9.1 Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>TSMessages</h1>
+
+<p>This framework provides an easy to use class to show little notification views on the top of the screen. (à la Tweetbot).</p>
+
+<p>The notification moves from the top of the screen underneath the navigation bar and stays there for a few seconds, depending on the length of the displayed text. To dismiss a notification before the time runs out, the user can swipe it to the top or just tap it.</p>
+
+<p>There are 4 different types already set up for you: Success, Error, Warning, Message (take a look at the screenshots)</p>
+
+<p>It is very easy to add new notification types with a different design. Add the new type to the notificationType enum, add the needed design properties to the configuration file and set the name of the theme (used in the config file and images) in TSMessagesView.m inside the switch case.</p>
+
+<p><strong>Take a look at the Example project to see how to use this library.</strong> You have to open the workspace, not the project file, since the Example project uses cocoapods.</p>
+
+<h2>Installation</h2>
+
+<h3>From CocoaPods</h3>
+
+<p>Add <code>pod 'TSMessages'</code> to your Podfile.</p>
+
+<h3>Manually</h3>
+
+<p>Drag the whole folder into your project and remove the example project. This library required ARC.</p>
+
+<h2>To show notifications use the following code:</h2>
+
+<p>```objective-c</p>
+
+<pre><code>[TSMessage showNotificationInViewController:self
+                                  withTitle:notificationTitle
+                                withMessage:notificationDescription
+                                   withType:TSMessageNotificationTypeError];
+
+
+[TSMessage showNotificationInViewController:self
+                                  withTitle:title
+                                withMessage:message
+                                   withType:TSMessageNotificationTypeSuccess
+                               withDuration:15.0
+                               withCallback:^{
+                                   // user dismissed callback
+                               }];
+</code></pre>
+
+<p>```</p>
+
+<p>The following properties can be set:</p>
+
+<ul>
+<li><strong>viewController</strong>: The view controller to show the notification in. This might be the navigation controller.</li>
+<li><strong>title</strong>: The title of the notification view</li>
+<li><strong>message</strong>: The message that is displayed underneath the title.</li>
+<li><strong>type</strong>: The notification type (Message, Warning, Error, Success)</li>
+<li><strong>duration</strong>: The duration the notification should be displayed</li>
+<li><strong>callback</strong>: The block that should be executed, when the user dismissed the message by tapping on it or swiping it to the top.</li>
+</ul>
+
+
+<p>Except the title and the notification type all of the lists values are optional</p>
+
+<p>You don&rsquo;t need to do anything with <a href="Classes/TSMessageView.html">TSMessageView</a>, except you want to modify the behavior or the types of the notification itself.</p>
+
+<p>If you don&rsquo;t want a detailed description (the text underneath the title) you don&rsquo;t need to set one. The notification will automatically resize itself properly. There are different initializer available.</p>
+
+<p>!<a href="http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationWarning.png">Warning</a>
+!<a href="http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationSuccess.png">Success</a>
+!<a href="http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationError.png">Error</a>
+!<a href="http://www.toursprung.com/wp-content/uploads/2013/04/iNotificationMessage.png">Message</a></p>
+
+<p>This project requires ARC.</p>
+
+<p>If you have ideas how to improve this library please let me know or send a pull request.</p>
+
+<h2>TODOs</h2>
+
+<p>Currently empty</p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/TSMessage.html">TSMessage</a></li>
+							
+							<li><a href="Classes/TSMessageView.html">TSMessageView</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						
+						<h2 class="index-title">Category References</h2>
+						<ul>
+							
+							<li><a href="Categories/UIColor+MLColorAdditions.html">UIColor(MLColorAdditions)</a></li>
+							
+						</ul>
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Felix Krause. All rights reserved. (Last updated: 2013-05-04)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

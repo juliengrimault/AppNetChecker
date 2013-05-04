@@ -2,5 +2,5 @@
 #import <UIKit/UIKit.h>
 #endif
 
-#import "Pods-AppNetCheckerTests-header.h"
+#import "Pods-AppNetCheckerTests-environment.h"
 

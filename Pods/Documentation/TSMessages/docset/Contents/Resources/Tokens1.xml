@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSMessage.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSMessage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/sharedMessage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)sharedMessage</Declaration>
+			
+			
+			<Anchor>//api/name/sharedMessage</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/showNotificationWithMessage:withType:</TokenIdentifier>
+			<Abstract type="html">Shows a notification message</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (void)showNotificationWithMessage:(NSString *)message withType:(TSMessageNotificationType)type</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The title of the notification view</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract type="html">The notification type (Message, Warning, Error, Success)</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/showNotificationWithMessage:withType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/showNotificationWithTitle:withMessage:withType:</TokenIdentifier>
+			<Abstract type="html">Shows a notification message</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (void)showNotificationWithTitle:(NSString *)title withMessage:(NSString *)message withType:(TSMessageNotificationType)type</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The title of the notification view</Abstract>
+				</Parameter><Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message that is displayed underneath the title</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract type="html">The notification type (Message, Warning, Error, Success)</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/showNotificationWithTitle:withMessage:withType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/showNotificationInViewController:withTitle:withMessage:withType:</TokenIdentifier>
+			<Abstract type="html">Shows a notification message in a specific view controller</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (void)showNotificationInViewController:(UIViewController *)viewController withTitle:(NSString *)title withMessage:(NSString *)message withType:(TSMessageNotificationType)type</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller to show the notification in.</Abstract>
+				</Parameter><Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The title of the notification view</Abstract>
+				</Parameter><Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message that is displayed underneath the title</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract type="html">The notification type (Message, Warning, Error, Success)</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/showNotificationInViewController:withTitle:withMessage:withType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/showNotificationInViewController:withTitle:withMessage:withType:withDuration:</TokenIdentifier>
+			<Abstract type="html">Shows a notification message in a specific view controller</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (void)showNotificationInViewController:(UIViewController *)viewController withTitle:(NSString *)title withMessage:(NSString *)message withType:(TSMessageNotificationType)type withDuration:(NSTimeInterval)duration</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller to show the notification in.</Abstract>
+				</Parameter><Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The title of the notification view</Abstract>
+				</Parameter><Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message that is displayed underneath the title</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract type="html">The notification type (Message, Warning, Error, Success)</Abstract>
+				</Parameter><Parameter>
+					<Name>duration</Name>
+					<Abstract type="html">The duration of the notification being displayed</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:</TokenIdentifier>
+			<Abstract type="html">Shows a notification message in a specific view controller</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (void)showNotificationInViewController:(UIViewController *)viewController withTitle:(NSString *)title withMessage:(NSString *)message withType:(TSMessageNotificationType)type withDuration:(NSTimeInterval)duration withCallback:(void ( ^ ) ( ))callback</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>viewController</Name>
+					<Abstract type="html">The view controller to show the notification in.</Abstract>
+				</Parameter><Parameter>
+					<Name>title</Name>
+					<Abstract type="html">The title of the notification view</Abstract>
+				</Parameter><Parameter>
+					<Name>message</Name>
+					<Abstract type="html">The message that is displayed underneath the title</Abstract>
+				</Parameter><Parameter>
+					<Name>type</Name>
+					<Abstract type="html">The notification type (Message, Warning, Error, Success)</Abstract>
+				</Parameter><Parameter>
+					<Name>duration</Name>
+					<Abstract type="html">The duration of the notification being displayed</Abstract>
+				</Parameter><Parameter>
+					<Name>callback</Name>
+					<Abstract type="html">The block that should be executed, when the user tapped on the message</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/showInternetError</TokenIdentifier>
+			<Abstract type="html">Shows a predefined error message, that is displayed, when this action requires an internet connection</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (void)showInternetError</Declaration>
+			
+			
+			<Anchor>//api/name/showInternetError</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/showLocationError</TokenIdentifier>
+			<Abstract type="html">Shows a predefined error message, that is displayed, when this action requires location services</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (void)showLocationError</Declaration>
+			
+			
+			<Anchor>//api/name/showLocationError</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/defaultViewController</TokenIdentifier>
+			<Abstract type="html">Implement this in subclass to set a default view controller</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (UIViewController *)defaultViewController</Declaration>
+			
+			
+			<Anchor>//api/name/defaultViewController</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSMessage/navigationbarBottomOfViewController:</TokenIdentifier>
+			<Abstract type="html">Can be implemented differently in subclass. Is used to define the top position from which the notification flies in from</Abstract>
+			<DeclaredIn>TSMessage.h</DeclaredIn>			
+			
+			<Declaration>+ (CGFloat)navigationbarBottomOfViewController:(UIViewController *)viewController</Declaration>
+			
+			
+			<Anchor>//api/name/navigationbarBottomOfViewController:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

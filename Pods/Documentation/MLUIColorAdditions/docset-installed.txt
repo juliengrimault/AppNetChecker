@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/julien/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.mluicoloradditions.MLUIColorAdditions-1.0.0.docset
+Time: 2013-05-04 12:56:27 +0000

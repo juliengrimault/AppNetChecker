@@ -15,6 +15,7 @@ PODS:
   - Mantle (0.2.3):
     - libextobjc/EXTKeyPathCoding
     - libextobjc/EXTScope
+  - MLUIColorAdditions (1.0.0)
   - Nocilla (0.2)
   - ReactiveCocoa (0.17.1):
     - ReactiveCocoa/Core
@@ -26,6 +27,8 @@ PODS:
     - libextobjc/EXTScope (~> 0.2.5)
   - ReactiveCocoa/RACExtensions (0.17.1):
     - ReactiveCocoa/Core
+  - TSMessages (0.9.1):
+    - MLUIColorAdditions
 
 DEPENDENCIES:
   - AFNetworking (~> 1.1.0)
@@ -36,6 +39,7 @@ DEPENDENCIES:
   - Mantle (~> 0.2.3)
   - Nocilla (= 0.2)
   - ReactiveCocoa (~> 0.17.1)
+  - TSMessages (~> 0.9)
 
 SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
@@ -46,7 +50,9 @@ SPEC CHECKSUMS:
   Kiwi: 56082a80f942de4d10423d8d8a599ab30cf50228
   libextobjc: 2cbc74caf8bdc74a86fdf24673f773c83424ea98
   Mantle: 4a20405b7aba3452007294badee2b3cb137825c3
+  MLUIColorAdditions: c128da8c87b724cdc6c9a1b4cfe8832ca62b8d2a
   Nocilla: f2bb30a66e09fb03426a084f095c5791d46e2e26
   ReactiveCocoa: c4b15968904b2e3aa1fce4f1efc8f36df1b4073d
+  TSMessages: 916e168ec96b90fbe2756bc4e28c555a2abc83fc
 
-COCOAPODS: 0.17.0
+COCOAPODS: 0.19.0

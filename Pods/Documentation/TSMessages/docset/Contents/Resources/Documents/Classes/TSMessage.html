@@ -1,0 +1,861 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>TSMessage Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">TSMessages 0.9.1 </a></h1>
+				<a id="developerHome" href="../index.html">Felix Krause</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">TSMessage Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/defaultViewController">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultViewController</option>
+	
+	<option value="//api/name/navigationbarBottomOfViewController:">&nbsp;&nbsp;&nbsp;&nbsp;+ navigationbarBottomOfViewController:</option>
+	
+	<option value="//api/name/sharedMessage">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedMessage</option>
+	
+	<option value="//api/name/showInternetError">&nbsp;&nbsp;&nbsp;&nbsp;+ showInternetError</option>
+	
+	<option value="//api/name/showLocationError">&nbsp;&nbsp;&nbsp;&nbsp;+ showLocationError</option>
+	
+	<option value="//api/name/showNotificationInViewController:withTitle:withMessage:withType:">&nbsp;&nbsp;&nbsp;&nbsp;+ showNotificationInViewController:withTitle:withMessage:withType:</option>
+	
+	<option value="//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:">&nbsp;&nbsp;&nbsp;&nbsp;+ showNotificationInViewController:withTitle:withMessage:withType:withDuration:</option>
+	
+	<option value="//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:">&nbsp;&nbsp;&nbsp;&nbsp;+ showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:</option>
+	
+	<option value="//api/name/showNotificationWithMessage:withType:">&nbsp;&nbsp;&nbsp;&nbsp;+ showNotificationWithMessage:withType:</option>
+	
+	<option value="//api/name/showNotificationWithTitle:withMessage:withType:">&nbsp;&nbsp;&nbsp;&nbsp;+ showNotificationWithTitle:withMessage:withType:</option>
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultViewController">defaultViewController</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/navigationbarBottomOfViewController:">navigationbarBottomOfViewController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedMessage">sharedMessage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showInternetError">showInternetError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showLocationError">showLocationError</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showNotificationInViewController:withTitle:withMessage:withType:">showNotificationInViewController:withTitle:withMessage:withType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:">showNotificationInViewController:withTitle:withMessage:withType:withDuration:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:">showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showNotificationWithMessage:withType:">showNotificationWithMessage:withType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showNotificationWithTitle:withMessage:withType:">showNotificationWithTitle:withMessage:withType:</a></span></li>
+	
+</ul></li>
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="TSMessage Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">TSMessage Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">TSMessage.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedMessage">+&nbsp;sharedMessage</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showNotificationWithMessage:withType:">+&nbsp;showNotificationWithMessage:withType:</a></code>
+		<span class="tooltip"><p>Shows a notification message</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showNotificationWithTitle:withMessage:withType:">+&nbsp;showNotificationWithTitle:withMessage:withType:</a></code>
+		<span class="tooltip"><p>Shows a notification message</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showNotificationInViewController:withTitle:withMessage:withType:">+&nbsp;showNotificationInViewController:withTitle:withMessage:withType:</a></code>
+		<span class="tooltip"><p>Shows a notification message in a specific view controller</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:">+&nbsp;showNotificationInViewController:withTitle:withMessage:withType:withDuration:</a></code>
+		<span class="tooltip"><p>Shows a notification message in a specific view controller</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:">+&nbsp;showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:</a></code>
+		<span class="tooltip"><p>Shows a notification message in a specific view controller</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showInternetError">+&nbsp;showInternetError</a></code>
+		<span class="tooltip"><p>Shows a predefined error message, that is displayed, when this action requires an internet connection</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showLocationError">+&nbsp;showLocationError</a></code>
+		<span class="tooltip"><p>Shows a predefined error message, that is displayed, when this action requires location services</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultViewController">+&nbsp;defaultViewController</a></code>
+		<span class="tooltip"><p>Implement this in subclass to set a default view controller</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/navigationbarBottomOfViewController:">+&nbsp;navigationbarBottomOfViewController:</a></code>
+		<span class="tooltip"><p>Can be implemented differently in subclass. Is used to define the top position from which the notification flies in from</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultViewController" title="defaultViewController"></a>
+	<h3 class="subsubtitle method-title">defaultViewController</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Implement this in subclass to set a default view controller</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (UIViewController *)defaultViewController</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Implement this in subclass to set a default view controller</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/navigationbarBottomOfViewController:" title="navigationbarBottomOfViewController:"></a>
+	<h3 class="subsubtitle method-title">navigationbarBottomOfViewController:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Can be implemented differently in subclass. Is used to define the top position from which the notification flies in from</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (CGFloat)navigationbarBottomOfViewController:(UIViewController *)<em>viewController</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Can be implemented differently in subclass. Is used to define the top position from which the notification flies in from</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedMessage" title="sharedMessage"></a>
+	<h3 class="subsubtitle method-title">sharedMessage</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)sharedMessage</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showInternetError" title="showInternetError"></a>
+	<h3 class="subsubtitle method-title">showInternetError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows a predefined error message, that is displayed, when this action requires an internet connection</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)showInternetError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Shows a predefined error message, that is displayed, when this action requires an internet connection</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showLocationError" title="showLocationError"></a>
+	<h3 class="subsubtitle method-title">showLocationError</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows a predefined error message, that is displayed, when this action requires location services</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)showLocationError</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Shows a predefined error message, that is displayed, when this action requires location services</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showNotificationInViewController:withTitle:withMessage:withType:" title="showNotificationInViewController:withTitle:withMessage:withType:"></a>
+	<h3 class="subsubtitle method-title">showNotificationInViewController:withTitle:withMessage:withType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows a notification message in a specific view controller</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)showNotificationInViewController:(UIViewController *)<em>viewController</em> withTitle:(NSString *)<em>title</em> withMessage:(NSString *)<em>message</em> withType:(TSMessageNotificationType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>The view controller to show the notification in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>The title of the notification view</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The message that is displayed underneath the title</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The notification type (Message, Warning, Error, Success)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Shows a notification message in a specific view controller</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:" title="showNotificationInViewController:withTitle:withMessage:withType:withDuration:"></a>
+	<h3 class="subsubtitle method-title">showNotificationInViewController:withTitle:withMessage:withType:withDuration:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows a notification message in a specific view controller</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)showNotificationInViewController:(UIViewController *)<em>viewController</em> withTitle:(NSString *)<em>title</em> withMessage:(NSString *)<em>message</em> withType:(TSMessageNotificationType)<em>type</em> withDuration:(NSTimeInterval)<em>duration</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>The view controller to show the notification in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>The title of the notification view</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The message that is displayed underneath the title</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The notification type (Message, Warning, Error, Success)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>duration</em></dt>
+			<dd><p>The duration of the notification being displayed</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Shows a notification message in a specific view controller</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:" title="showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:"></a>
+	<h3 class="subsubtitle method-title">showNotificationInViewController:withTitle:withMessage:withType:withDuration:withCallback:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows a notification message in a specific view controller</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)showNotificationInViewController:(UIViewController *)<em>viewController</em> withTitle:(NSString *)<em>title</em> withMessage:(NSString *)<em>message</em> withType:(TSMessageNotificationType)<em>type</em> withDuration:(NSTimeInterval)<em>duration</em> withCallback:(void ( ^ ) ( ))<em>callback</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>The view controller to show the notification in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>The title of the notification view</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The message that is displayed underneath the title</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The notification type (Message, Warning, Error, Success)</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>duration</em></dt>
+			<dd><p>The duration of the notification being displayed</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>callback</em></dt>
+			<dd><p>The block that should be executed, when the user tapped on the message</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Shows a notification message in a specific view controller</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showNotificationWithMessage:withType:" title="showNotificationWithMessage:withType:"></a>
+	<h3 class="subsubtitle method-title">showNotificationWithMessage:withType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows a notification message</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)showNotificationWithMessage:(NSString *)<em>message</em> withType:(TSMessageNotificationType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The title of the notification view</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The notification type (Message, Warning, Error, Success)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Shows a notification message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showNotificationWithTitle:withMessage:withType:" title="showNotificationWithTitle:withMessage:withType:"></a>
+	<h3 class="subsubtitle method-title">showNotificationWithTitle:withMessage:withType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows a notification message</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)showNotificationWithTitle:(NSString *)<em>title</em> withMessage:(NSString *)<em>message</em> withType:(TSMessageNotificationType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>title</em></dt>
+			<dd><p>The title of the notification view</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>message</em></dt>
+			<dd><p>The message that is displayed underneath the title</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The notification type (Message, Warning, Error, Success)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Shows a notification message</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSMessage.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Felix Krause. All rights reserved. (Last updated: 2013-05-04)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
