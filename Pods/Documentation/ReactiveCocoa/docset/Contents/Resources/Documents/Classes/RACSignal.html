@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">ReactiveCocoa 0.17.1 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">ReactiveCocoa 1.5.0 </a></h1>
 				<a id="developerHome" href="../index.html">Josh Abernathy</a>
 			</div>
 			
@@ -79,8 +79,6 @@
 	
 	<option value="//api/name/startWithScheduler:subjectBlock:">&nbsp;&nbsp;&nbsp;&nbsp;+ startWithScheduler:subjectBlock:</option>
 	
-	<option value="//api/name/zip:reduce:">&nbsp;&nbsp;&nbsp;&nbsp;+ zip:reduce:</option>
-	
 	
 	
 	
@@ -96,6 +94,10 @@
 	
 	<option value="//api/name/any:">&nbsp;&nbsp;&nbsp;&nbsp;- any:</option>
 	
+	<option value="//api/name/asynchronousFirstOrDefault:success:error:">&nbsp;&nbsp;&nbsp;&nbsp;- asynchronousFirstOrDefault:success:error:</option>
+	
+	<option value="//api/name/asynchronouslyWaitUntilCompleted:">&nbsp;&nbsp;&nbsp;&nbsp;- asynchronouslyWaitUntilCompleted:</option>
+	
 	<option value="//api/name/buffer:">&nbsp;&nbsp;&nbsp;&nbsp;- buffer:</option>
 	
 	<option value="//api/name/bufferWithTime:">&nbsp;&nbsp;&nbsp;&nbsp;- bufferWithTime:</option>
@@ -105,6 +107,8 @@
 	<option value="//api/name/catchTo:">&nbsp;&nbsp;&nbsp;&nbsp;- catchTo:</option>
 	
 	<option value="//api/name/collect">&nbsp;&nbsp;&nbsp;&nbsp;- collect</option>
+	
+	<option value="//api/name/combineLatestWith:">&nbsp;&nbsp;&nbsp;&nbsp;- combineLatestWith:</option>
 	
 	<option value="//api/name/concat">&nbsp;&nbsp;&nbsp;&nbsp;- concat</option>
 	
@@ -123,6 +127,8 @@
 	<option value="//api/name/doError:">&nbsp;&nbsp;&nbsp;&nbsp;- doError:</option>
 	
 	<option value="//api/name/doNext:">&nbsp;&nbsp;&nbsp;&nbsp;- doNext:</option>
+	
+	<option value="//api/name/executeCommand:">&nbsp;&nbsp;&nbsp;&nbsp;- executeCommand:</option>
 	
 	<option value="//api/name/finally:">&nbsp;&nbsp;&nbsp;&nbsp;- finally:</option>
 	
@@ -153,6 +159,8 @@
 	<option value="//api/name/materialize">&nbsp;&nbsp;&nbsp;&nbsp;- materialize</option>
 	
 	<option value="//api/name/multicast:">&nbsp;&nbsp;&nbsp;&nbsp;- multicast:</option>
+	
+	<option value="//api/name/not">&nbsp;&nbsp;&nbsp;&nbsp;- not</option>
 	
 	<option value="//api/name/performBlockOnEachSubscriber:">&nbsp;&nbsp;&nbsp;&nbsp;- performBlockOnEachSubscriber:</option>
 	
@@ -198,8 +206,6 @@
 	
 	<option value="//api/name/takeUntil:">&nbsp;&nbsp;&nbsp;&nbsp;- takeUntil:</option>
 	
-	<option value="//api/name/tearDown">&nbsp;&nbsp;&nbsp;&nbsp;- tearDown</option>
-	
 	<option value="//api/name/throttle:">&nbsp;&nbsp;&nbsp;&nbsp;- throttle:</option>
 	
 	<option value="//api/name/timeout:">&nbsp;&nbsp;&nbsp;&nbsp;- timeout:</option>
@@ -208,7 +214,11 @@
 	
 	<option value="//api/name/toProperty:onObject:">&nbsp;&nbsp;&nbsp;&nbsp;- toProperty:onObject:</option>
 	
+	<option value="//api/name/waitUntilCompleted:">&nbsp;&nbsp;&nbsp;&nbsp;- waitUntilCompleted:</option>
+	
 	<option value="//api/name/windowWithStart:close:">&nbsp;&nbsp;&nbsp;&nbsp;- windowWithStart:close:</option>
+	
+	<option value="//api/name/zipWith:">&nbsp;&nbsp;&nbsp;&nbsp;- zipWith:</option>
 	
 	
 	
@@ -224,15 +234,17 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_RACStream Methods">RACStream Methods</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Debugging Methods">Debugging Methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Operations Methods">Operations Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Subscription Methods">Subscription Methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Extension Methods">Extension Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Testing Methods">Testing Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_RACStream Methods">RACStream Methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Debugging Methods">Debugging Methods</a></span></li>
 	
 </ul></li>
 
@@ -284,8 +296,6 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startWithScheduler:subjectBlock:">startWithScheduler:subjectBlock:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zip:reduce:">zip:reduce:</a></span></li>
-	
 </ul></li>
 
 
@@ -302,6 +312,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/any:">any:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/asynchronousFirstOrDefault:success:error:">asynchronousFirstOrDefault:success:error:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/asynchronouslyWaitUntilCompleted:">asynchronouslyWaitUntilCompleted:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buffer:">buffer:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bufferWithTime:">bufferWithTime:</a></span></li>
@@ -311,6 +325,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/catchTo:">catchTo:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collect">collect</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/combineLatestWith:">combineLatestWith:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/concat">concat</a></span></li>
 	
@@ -329,6 +345,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/doError:">doError:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/doNext:">doNext:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/executeCommand:">executeCommand:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/finally:">finally:</a></span></li>
 	
@@ -359,6 +377,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/materialize">materialize</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/multicast:">multicast:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/not">not</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/performBlockOnEachSubscriber:">performBlockOnEachSubscriber:</a></span></li>
 	
@@ -404,8 +424,6 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/takeUntil:">takeUntil:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tearDown">tearDown</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/throttle:">throttle:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timeout:">timeout:</a></span></li>
@@ -414,7 +432,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/toProperty:onObject:">toProperty:onObject:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/waitUntilCompleted:">waitUntilCompleted:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/windowWithStart:close:">windowWithStart:close:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/zipWith:">zipWith:</a></span></li>
 	
 </ul></li>
 
@@ -507,78 +529,6 @@
 						</ul>
 						
 						
-						<a title="RACStream Methods" name="task_RACStream Methods"></a>
-						<h3 class="subsubtitle task-title">RACStream Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/return:">+&nbsp;return:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/empty">+&nbsp;empty</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/concat:">&ndash;&nbsp;concat:</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/zip:reduce:">+&nbsp;zip:reduce:</a></code>
-		
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Debugging Methods" name="task_Debugging Methods"></a>
-						<h3 class="subsubtitle task-title">Debugging Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/logAll">&ndash;&nbsp;logAll</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/logNext">&ndash;&nbsp;logNext</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/logError">&ndash;&nbsp;logError</a></code>
-		
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/logCompleted">&ndash;&nbsp;logCompleted</a></code>
-		
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
 						<a title="Operations Methods" name="task_Operations Methods"></a>
 						<h3 class="subsubtitle task-title">Operations Methods</h3>
 
@@ -663,6 +613,13 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/takeLast:">&ndash;&nbsp;takeLast:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/combineLatestWith:">&ndash;&nbsp;combineLatestWith:</a></code>
 		
 	</span>
 	
@@ -782,6 +739,13 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/firstOrDefault:success:error:">&ndash;&nbsp;firstOrDefault:success:error:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/waitUntilCompleted:">&ndash;&nbsp;waitUntilCompleted:</a></code>
 		
 	</span>
 	
@@ -968,6 +932,20 @@
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/not">&ndash;&nbsp;not</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/executeCommand:">&ndash;&nbsp;executeCommand:</a></code>
+		
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -1061,9 +1039,96 @@
 	</span>
 	
 	
+</li>
+						</ul>
+						
+						
+						<a title="Testing Methods" name="task_Testing Methods"></a>
+						<h3 class="subsubtitle task-title">Testing Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/asynchronousFirstOrDefault:success:error:">&ndash;&nbsp;asynchronousFirstOrDefault:success:error:</a></code>
+		
+	</span>
+	
+	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/tearDown">&ndash;&nbsp;tearDown</a></code>
+		<code><a href="#//api/name/asynchronouslyWaitUntilCompleted:">&ndash;&nbsp;asynchronouslyWaitUntilCompleted:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="RACStream Methods" name="task_RACStream Methods"></a>
+						<h3 class="subsubtitle task-title">RACStream Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/return:">+&nbsp;return:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/empty">+&nbsp;empty</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/concat:">&ndash;&nbsp;concat:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/zipWith:">&ndash;&nbsp;zipWith:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Debugging Methods" name="task_Debugging Methods"></a>
+						<h3 class="subsubtitle task-title">Debugging Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logAll">&ndash;&nbsp;logAll</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logNext">&ndash;&nbsp;logNext</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logError">&ndash;&nbsp;logError</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logCompleted">&ndash;&nbsp;logCompleted</a></code>
 		
 	</span>
 	
@@ -1287,17 +1352,6 @@
     
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/zip:reduce:" title="zip:reduce:"></a>
-	<h3 class="subsubtitle method-title">zip:reduce:</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>+ (RACSignal *)zip:(id&lt;NSFastEnumeration&gt;)<em>signals</em> reduce:(id)<em>reduceBlock</em></code></div>
-
-    
-</div>
-						
 					</div>
 					
 					
@@ -1362,6 +1416,28 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/asynchronousFirstOrDefault:success:error:" title="asynchronousFirstOrDefault:success:error:"></a>
+	<h3 class="subsubtitle method-title">asynchronousFirstOrDefault:success:error:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)asynchronousFirstOrDefault:(id)<em>defaultValue</em> success:(BOOL *)<em>success</em> error:(NSError **)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/asynchronouslyWaitUntilCompleted:" title="asynchronouslyWaitUntilCompleted:"></a>
+	<h3 class="subsubtitle method-title">asynchronouslyWaitUntilCompleted:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)asynchronouslyWaitUntilCompleted:(NSError **)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/buffer:" title="buffer:"></a>
 	<h3 class="subsubtitle method-title">buffer:</h3>
 	
@@ -1412,6 +1488,17 @@
 	
 
 	<div class="method-subsection method-declaration"><code>- (RACSignal *)collect</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/combineLatestWith:" title="combineLatestWith:"></a>
+	<h3 class="subsubtitle method-title">combineLatestWith:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (RACSignal *)combineLatestWith:(RACSignal *)<em>signal</em></code></div>
 
     
 </div>
@@ -1511,6 +1598,17 @@
 	
 
 	<div class="method-subsection method-declaration"><code>- (RACSignal *)doNext:(void ( ^ ) ( id x ))<em>block</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/executeCommand:" title="executeCommand:"></a>
+	<h3 class="subsubtitle method-title">executeCommand:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (RACDisposable *)executeCommand:(RACCommand *)<em>command</em></code></div>
 
     
 </div>
@@ -1676,6 +1774,17 @@
 	
 
 	<div class="method-subsection method-declaration"><code>- (RACMulticastConnection *)multicast:(RACSubject *)<em>subject</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/not" title="not"></a>
+	<h3 class="subsubtitle method-title">not</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (RACSignal *)not</code></div>
 
     
 </div>
@@ -1923,17 +2032,6 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/tearDown" title="tearDown"></a>
-	<h3 class="subsubtitle method-title">tearDown</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>- (void)tearDown</code></div>
-
-    
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/throttle:" title="throttle:"></a>
 	<h3 class="subsubtitle method-title">throttle:</h3>
 	
@@ -1978,12 +2076,34 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/waitUntilCompleted:" title="waitUntilCompleted:"></a>
+	<h3 class="subsubtitle method-title">waitUntilCompleted:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)waitUntilCompleted:(NSError **)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/windowWithStart:close:" title="windowWithStart:close:"></a>
 	<h3 class="subsubtitle method-title">windowWithStart:close:</h3>
 	
 	
 
 	<div class="method-subsection method-declaration"><code>- (RACSignal *)windowWithStart:(RACSignal *)<em>openSignal</em> close:(RACSignal *( ^ ) ( RACSignal *start ))<em>closeBlock</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/zipWith:" title="zipWith:"></a>
+	<h3 class="subsubtitle method-title">zipWith:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (RACSignal *)zipWith:(RACSignal *)<em>signal</em></code></div>
 
     
 </div>
@@ -2001,7 +2121,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-02-17)</span><br />
+						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-04-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

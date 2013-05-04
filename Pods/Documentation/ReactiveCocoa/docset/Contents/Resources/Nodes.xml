@@ -2,7 +2,7 @@
 <DocSetNodes version="1.0">
     <TOC>
         <Node type="folder">
-            <Name>ReactiveCocoa 0.17.1</Name>
+            <Name>ReactiveCocoa 1.5.0</Name>
             <Path>index.html</Path>
 			<Subnodes>
                 
@@ -79,6 +79,13 @@
 						<NodeRef refid="57"/>
 						<NodeRef refid="58"/>
 						<NodeRef refid="59"/>
+						<NodeRef refid="60"/>
+						<NodeRef refid="61"/>
+						<NodeRef refid="62"/>
+						<NodeRef refid="63"/>
+						<NodeRef refid="64"/>
+						<NodeRef refid="65"/>
+						<NodeRef refid="66"/>
 						
 					</Subnodes>
 				</Node>
@@ -88,7 +95,7 @@
 					<Name>Protocols</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="60"/>
+						<NodeRef refid="67"/>
 						
 					</Subnodes>
 				</Node>
@@ -264,79 +271,107 @@
 			<Path>Categories/NSArray+RACSequenceAdditions.html</Path>
 		</Node>
 		<Node id="42">
+			<Name>NSControl(RACCommandSupport)</Name>
+			<Path>Categories/NSControl+RACCommandSupport.html</Path>
+		</Node>
+		<Node id="43">
+			<Name>NSControl(RACTextSignalSupport)</Name>
+			<Path>Categories/NSControl+RACTextSignalSupport.html</Path>
+		</Node>
+		<Node id="44">
 			<Name>NSData(RACSupport)</Name>
 			<Path>Categories/NSData+RACSupport.html</Path>
 		</Node>
-		<Node id="43">
+		<Node id="45">
 			<Name>NSDictionary(RACSequenceAdditions)</Name>
 			<Path>Categories/NSDictionary+RACSequenceAdditions.html</Path>
 		</Node>
-		<Node id="44">
+		<Node id="46">
 			<Name>NSEnumerator(RACSequenceAdditions)</Name>
 			<Path>Categories/NSEnumerator+RACSequenceAdditions.html</Path>
 		</Node>
-		<Node id="45">
+		<Node id="47">
 			<Name>NSFileHandle(RACSupport)</Name>
 			<Path>Categories/NSFileHandle+RACSupport.html</Path>
 		</Node>
-		<Node id="46">
+		<Node id="48">
 			<Name>NSInvocation(RACTypeParsing)</Name>
 			<Path>Categories/NSInvocation+RACTypeParsing.html</Path>
 		</Node>
-		<Node id="47">
+		<Node id="49">
 			<Name>NSNotificationCenter(RACSupport)</Name>
 			<Path>Categories/NSNotificationCenter+RACSupport.html</Path>
 		</Node>
-		<Node id="48">
+		<Node id="50">
+			<Name>NSObject(RACAppKitBindings)</Name>
+			<Path>Categories/NSObject+RACAppKitBindings.html</Path>
+		</Node>
+		<Node id="51">
+			<Name>NSObject(RACDeallocating)</Name>
+			<Path>Categories/NSObject+RACDeallocating.html</Path>
+		</Node>
+		<Node id="52">
 			<Name>NSObject(RACKVOWrapper)</Name>
 			<Path>Categories/NSObject+RACKVOWrapper.html</Path>
 		</Node>
-		<Node id="49">
+		<Node id="53">
 			<Name>NSObject(RACKVOWrapperPrivate)</Name>
 			<Path>Categories/NSObject+RACKVOWrapperPrivate.html</Path>
 		</Node>
-		<Node id="50">
+		<Node id="54">
 			<Name>NSObject(RACLifting)</Name>
 			<Path>Categories/NSObject+RACLifting.html</Path>
 		</Node>
-		<Node id="51">
+		<Node id="55">
 			<Name>NSObject(RACObservablePropertySubject)</Name>
 			<Path>Categories/NSObject+RACObservablePropertySubject.html</Path>
 		</Node>
-		<Node id="52">
+		<Node id="56">
 			<Name>NSObject(RACPropertySubscribing)</Name>
 			<Path>Categories/NSObject+RACPropertySubscribing.html</Path>
 		</Node>
-		<Node id="53">
+		<Node id="57">
+			<Name>NSObject(RACSelectorSignal)</Name>
+			<Path>Categories/NSObject+RACSelectorSignal.html</Path>
+		</Node>
+		<Node id="58">
 			<Name>NSOrderedSet(RACSequenceAdditions)</Name>
 			<Path>Categories/NSOrderedSet+RACSequenceAdditions.html</Path>
 		</Node>
-		<Node id="54">
+		<Node id="59">
 			<Name>NSSet(RACSequenceAdditions)</Name>
 			<Path>Categories/NSSet+RACSequenceAdditions.html</Path>
 		</Node>
-		<Node id="55">
+		<Node id="60">
 			<Name>NSString(RACSequenceAdditions)</Name>
 			<Path>Categories/NSString+RACSequenceAdditions.html</Path>
 		</Node>
-		<Node id="56">
+		<Node id="61">
 			<Name>NSString(RACSupport)</Name>
 			<Path>Categories/NSString+RACSupport.html</Path>
 		</Node>
-		<Node id="57">
+		<Node id="62">
+			<Name>NSTask(RACSupport)</Name>
+			<Path>Categories/NSTask+RACSupport.html</Path>
+		</Node>
+		<Node id="63">
+			<Name>NSText(RACSignalSupport)</Name>
+			<Path>Categories/NSText+RACSignalSupport.html</Path>
+		</Node>
+		<Node id="64">
 			<Name>UIControl(RACSignalSupport)</Name>
 			<Path>Categories/UIControl+RACSignalSupport.html</Path>
 		</Node>
-		<Node id="58">
+		<Node id="65">
 			<Name>UITextField(RACSignalSupport)</Name>
 			<Path>Categories/UITextField+RACSignalSupport.html</Path>
 		</Node>
-		<Node id="59">
+		<Node id="66">
 			<Name>UITextView(RACSignalSupport)</Name>
 			<Path>Categories/UITextView+RACSignalSupport.html</Path>
 		</Node>
 		
-		<Node id="60">
+		<Node id="67">
 			<Name>RACSubscriber</Name>
 			<Path>Protocols/RACSubscriber.html</Path>
 		</Node>

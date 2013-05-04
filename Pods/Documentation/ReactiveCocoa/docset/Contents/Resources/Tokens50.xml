@@ -1,36 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSObject+RACLifting.html">
+	<File path="Categories/NSObject+RACAppKitBindings.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSObject(RACLifting)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSObject(RACAppKitBindings)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSObject+RACLifting.h</DeclaredIn>
+			<DeclaredIn>NSObject+RACAppKitBindings.h</DeclaredIn>
 			
 			<NodeRef refid="50"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACLifting)/rac_liftSelector:withObjects:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACAppKitBindings)/rac_bind:toObject:withKeyPath:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSObject+RACLifting.h</DeclaredIn>			
+			<DeclaredIn>NSObject+RACAppKitBindings.h</DeclaredIn>			
 			
-			<Declaration>- (RACSignal *)rac_liftSelector:(SEL)selector withObjects:(id)arg, ...</Declaration>
+			<Declaration>- (void)rac_bind:(NSString *)binding toObject:(id)object withKeyPath:(NSString *)keyPath</Declaration>
 			
 			
-			<Anchor>//api/name/rac_liftSelector:withObjects:</Anchor>
+			<Anchor>//api/name/rac_bind:toObject:withKeyPath:</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACLifting)/rac_liftBlock:withArguments:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACAppKitBindings)/rac_bind:toObject:withKeyPath:nilValue:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSObject+RACLifting.h</DeclaredIn>			
+			<DeclaredIn>NSObject+RACAppKitBindings.h</DeclaredIn>			
 			
-			<Declaration>- (RACSignal *)rac_liftBlock:(id)block withArguments:(id)arg, ...</Declaration>
+			<Declaration>- (void)rac_bind:(NSString *)binding toObject:(id)object withKeyPath:(NSString *)keyPath nilValue:(id)nilValue</Declaration>
 			
 			
-			<Anchor>//api/name/rac_liftBlock:withArguments:</Anchor>
+			<Anchor>//api/name/rac_bind:toObject:withKeyPath:nilValue:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACAppKitBindings)/rac_bind:toObject:withKeyPath:transform:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSObject+RACAppKitBindings.h</DeclaredIn>			
+			
+			<Declaration>- (void)rac_bind:(NSString *)binding toObject:(id)object withKeyPath:(NSString *)keyPath transform:(id ( ^ ) ( id value ))transformBlock</Declaration>
+			
+			
+			<Anchor>//api/name/rac_bind:toObject:withKeyPath:transform:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACAppKitBindings)/rac_bind:toObject:withNegatedKeyPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSObject+RACAppKitBindings.h</DeclaredIn>			
+			
+			<Declaration>- (void)rac_bind:(NSString *)binding toObject:(id)object withNegatedKeyPath:(NSString *)keyPath</Declaration>
+			
+			
+			<Anchor>//api/name/rac_bind:toObject:withNegatedKeyPath:</Anchor>
 		</Token>
 		
 	</File>

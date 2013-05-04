@@ -11,12 +11,13 @@
 #import <libextobjc/EXTKeyPathCoding.h>
 #import "UIViewController+SLServiceHack.h"
 #import "XIGAccountErrorCell.h"
-#import "XIGTwitterUsersTableViewController.h"
+#import "XIGUserMatcherTableViewController.h"
 #import "XIGTwitterClient.h"
 #import "XIGTwitterAccountCell.h"
-#import "XIGSemiModalController.h"
+#import "XIGSemiModalController+FriendsVC.h"
 #import "XIGAppNetClient.h"
 #import "XIGTwitAppClient.h"
+#import "XIGUserFilterViewController.h"
 
 @interface XIGAccountPickerViewController ()
 @property (nonatomic, copy) NSArray* accounts;
@@ -159,18 +160,26 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"PushUsersTableViewController"]) {
-        XIGTwitterUsersTableViewController* vc = segue.destinationViewController;
-        NSIndexPath* selectedIndexPath = [self.tableView indexPathForSelectedRow];
 
-        XIGTwitterClient *twitterClient = [XIGTwitterClient sharedClient];
-        XIGAppNetClient *appNetClient = [XIGAppNetClient sharedClient];
-        if (selectedIndexPath) {
-            ACAccount* selectedAccount = self.accounts[selectedIndexPath.row];
-            twitterClient.account = selectedAccount;
-        }
-        XIGTwitAppClient *client = [[XIGTwitAppClient alloc] initWithTwitterClient:twitterClient appNetClient:appNetClient];
-        vc.twittAppClient = client;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ACAccount *account = self.accounts[indexPath.row];
+    RACSignal *userMatchersSignal = [self userMatchersSignalForAccount:account];
+    
+    XIGSemiModalController *semiModal = [XIGSemiModalController friendsVCWithUserMatcherSignal:userMatchersSignal];
+    semiModal.closedTopOffset = CGRectGetHeight(self.semiModalController.view.frame) - 176;
+    
+    [self.navigationController pushViewController:semiModal animated:YES];
+}
+
+- (RACSignal *)userMatchersSignalForAccount:(ACAccount *)account
+{
+    [XIGTwitterClient sharedClient].account = account;
+    XIGTwitAppClient *twittAppClient = [[XIGTwitAppClient alloc] initWithTwitterClient:[XIGTwitterClient sharedClient] appNetClient:[XIGAppNetClient sharedClient]];
+    RACSignal *userMatchersSignal = [twittAppClient userMatchers];
+    return userMatchersSignal;
 }
 
 @end

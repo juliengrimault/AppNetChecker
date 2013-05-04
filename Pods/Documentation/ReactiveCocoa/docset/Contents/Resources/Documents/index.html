@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>ReactiveCocoa 0.17.1 Reference</title>
+		<title>ReactiveCocoa 1.5.0 Reference</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
 		<meta name="generator" content="appledoc 2.1 (build 840)" />
@@ -10,12 +10,12 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="index.html">ReactiveCocoa 0.17.1 </a></h1>
+				<h1><a id="libraryTitle" href="index.html">ReactiveCocoa 1.5.0 </a></h1>
 				<a id="developerHome" href="index.html">Josh Abernathy</a>
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ReactiveCocoa 0.17.1 Reference</h1>
+				<h1 class="hideInXcode">ReactiveCocoa 1.5.0 Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar"></ul>
 		</header>
@@ -26,7 +26,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ReactiveCocoa 0.17.1 Reference</h1>
+						<h1 class="title title-header">ReactiveCocoa 1.5.0 Reference</h1>
 					</div>		
 				</div>
 				<div id="container">
@@ -40,40 +40,22 @@
 Programming</a>. It provides APIs for <strong>composing and transforming streams of
 values</strong>.</p>
 
-<h2>Getting Started</h2>
+<p>If you&rsquo;re already familiar with functional reactive programming or know the basic
+premise of ReactiveCocoa, check out the <a href="Documentation">Documentation</a> folder for a framework
+overview and more in-depth information about how it all works in practice.</p>
 
-<p>To add RAC to your application:</p>
+<p><strong>Table of Contents</strong></p>
 
 <ol>
-<li>Add the ReactiveCocoa repository as a submodule of your application&rsquo;s
-repository.</li>
-<li>Drag and drop <code>ReactiveCocoaFramework/ReactiveCocoa.xcodeproj</code> into your
-application&rsquo;s Xcode project or workspace.</li>
-<li>On the &ldquo;Build Phases&rdquo; tab of your application target, add RAC to the &ldquo;Link
-Binary With Libraries&rdquo; phase.
-
-<ul>
-<li><strong>On iOS</strong>, add <code>libReactiveCocoa-iOS.a</code>.</li>
-<li><strong>On OS X</strong>, add <code>ReactiveCocoa.framework</code>. RAC must also be added to any
-&ldquo;Copy Frameworks&rdquo; build phase. If you don&rsquo;t already have one, simply add
-a &ldquo;Copy Files&rdquo; build phase and target the &ldquo;Frameworks&rdquo; destination.</li>
-</ul>
-</li>
-<li><strong>If you added RAC to a project (not a workspace)</strong>, you will also need to
-add the appropriate RAC target to the &ldquo;Target Dependencies&rdquo; of your
-application.</li>
+<li><a href="#functional-reactive-programming">Functional reactive programming</a></li>
+<li><a href="#frp-with-reactivecocoa">FRP with ReactiveCocoa</a></li>
+<li><a href="#when-to-use-reactivecocoa">When to use ReactiveCocoa</a></li>
+<li><a href="#importing-reactivecocoa">Importing ReactiveCocoa</a></li>
+<li><a href="#more-info">More Info</a></li>
 </ol>
 
 
-<p>If you would prefer to use <a href="http://cocoapods.org">CocoaPods</a>, there are some
-~!@<a href="https://github.com/CocoaPods/Specs/tree/master/ReactiveCocoa">ReactiveCocoa
-podspecs</a>@!~ that
-have been generously contributed by third parties.</p>
-
-<p>To see a project already set up with RAC, check out the <a href="[https://github.com/ReactiveCocoa/GHAPIDemo](https://github.com/ReactiveCocoa/GHAPIDemo)">Mac</a> or
-<a href="[https://github.com/ReactiveCocoa/RACiOSDemo](https://github.com/ReactiveCocoa/RACiOSDemo)">iOS</a> demos.</p>
-
-<h2>Functional Reactive Programming</h2>
+<h2>Functional reactive programming</h2>
 
 <p>Functional Reactive Programming (FRP) is a programming paradigm for writing
 software that reacts to change.</p>
@@ -102,6 +84,8 @@ approach to dealing with different types of reactive, asynchronous behaviors.</p
 <li><a href="http://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming/1030631#1030631">What is Functional Reactive Programming &ndash; Stack Overflow</a></li>
 </ul>
 
+
+<p><a href="https://github.com/joshaber">Josh Abernathy</a> also has <a href="http://blog.maybeapps.com/post/42894317939/input-and-output">a blog post about FRP</a>.</p>
 
 <h2>FRP with ReactiveCocoa</h2>
 
@@ -197,43 +181,36 @@ self.button.rac_command = <a href="Classes/RACCommand.html#//api/name/command">[
 <p>Or asynchronous network operations:</p>
 
 <p>```objc
-// Hook up a &ldquo;Log in&rdquo; button to log in over the network and log a message when
-// it was successful.
+// Hook up a &ldquo;Log in&rdquo; button to log in over the network.
 //
-// loginCommand does the actual work of logging in. loginResult sends a value
-// whenever the async work is done.
-self.loginCommand = [RACAsyncCommand command];</p>
+// loginCommand sends a value whenever it is executed.
+self.loginCommand = <a href="Classes/RACCommand.html#//api/name/command">[RACCommand command]</a>;</p>
 
-<p>// This block will execute whenever the login command sends a value.
+<p>// This block will execute whenever the login command sends a value, starting
+// the login process.
 //
-// -sequenceMany: will return a signal that represents the combination of all
-// the signals returned from this block. In this case, the login result will
-// send a value whenever a login attempt sends a value, completes, or errors
-// out.
-self.loginResult  = [self.loginCommand sequenceMany:^{</p>
+// -addSignalBlock: will return a signal that includes the signals returned from
+// this block, one for each time the command is executed.
+self.loginSignals = [self.loginCommand addSignalBlock:^(id sender) {</p>
 
 <pre><code>// The hypothetical -logIn method returns a signal that sends a value when
 // the network request finishes.
-//
-// -materialize wraps up values, completions, and errors in RACEvents so errors won't
-// close the login result signal.
-return [[client logIn] materialize];
+return [client logIn];
 </code></pre>
 
 <p>}];</p>
 
-<p>[[self.loginResult</p>
+<p>// Log a message whenever we log in successfully.
+[self.loginSignals subscribeNext:^(<a href="Classes/RACSignal.html">RACSignal</a> *loginSignal) {</p>
 
-<pre><code>// Filter out everything but successful logins.
-filter:^(RACEvent *x) {
-    return x.eventType == RACEventTypeCompleted;
-}]
-subscribeNext:^(id _) {
+<pre><code>[loginSignal subscribeCompleted:^(id _) {
     NSLog(@"Logged in successfully!");
 }];
 </code></pre>
 
-<p>// Execute the login command when the button is pressed
+<p>}];</p>
+
+<p>// Execute the login command when the button is pressed.
 self.loginButton.rac_command = self.loginCommand;
 ```</p>
 
@@ -288,7 +265,10 @@ flattenMap:^(NSArray *messages) {
     // Return a signal that fetches any remaining messages.
     return [client fetchMessagesAfterMessage:messages.lastObject];
 }]
-subscribeCompleted:^{
+subscribeNext:(NSArray *newMessages) {
+    NSLog(@"New messages: %@", newMessages);
+} 
+completed:^{
     NSLog(@"Fetched all messages.");
 }];
 </code></pre>
@@ -309,7 +289,7 @@ subscribeCompleted:^{
 //
 // -map: calls its block with each user that&rsquo;s fetched and returns a new
 // RACSignal that sends values returned from the block.
-RAC(self.imageView.image) = [[[[client fetchUserWithUsername:@&ldquo;joshaber&rdquo;]</p>
+RAC(self.imageView, image) = [[[[client fetchUserWithUsername:@&ldquo;joshaber&rdquo;]</p>
 
 <pre><code>deliverOn:[RACScheduler scheduler]]
 map:^(User *user) {
@@ -330,18 +310,306 @@ locality, and better expression of intent.</p>
 <p>For more sample code, check out the <a href="[https://github.com/ReactiveCocoa/GHAPIDemo](https://github.com/ReactiveCocoa/GHAPIDemo)">Mac</a> or <a href="[https://github.com/ReactiveCocoa/RACiOSDemo](https://github.com/ReactiveCocoa/RACiOSDemo)">iOS</a> demos.
 Additional information about RAC can be found in the <a href="Documentation">Documentation</a> folder.</p>
 
-<h2>Foundation Support</h2>
+<h2>When to use ReactiveCocoa</h2>
 
-<p>There are a number of categories that provide RAC-based bridges to standard
-Foundation classes. They&rsquo;re not included as part of the framework proper in
-order to keep the framework size down.</p>
+<p>Upon first glance, ReactiveCocoa is very abstract, and it can be difficult to
+understand how to apply it to concrete problems.</p>
 
-<p>You can find them in <a href="RACExtensions">RACExtensions</a>. To use them, simply add them directly to
-your project as needed.</p>
+<p>Here are some of the use cases that RAC excels at.</p>
 
-<h2>License</h2>
+<h3>Handling asynchronous or event-driven data sources</h3>
 
-<p>ReactiveCocoa is available under the <a href="LICENSE.md">MIT License</a>.</p>
+<p>Much of Cocoa programming is focused on reacting to user events or changes in
+application state. Code that deals with such events can quickly become very
+complex and spaghetti-like, with lots of callbacks and state variables to handle
+ordering issues.</p>
+
+<p>Patterns that seem superficially different, like UI callbacks, network
+responses, and KVO notifications, actually have a lot in common. <a href="ReactiveCocoaFramework/ReactiveCocoa/RACSignal.h">RACSignal</a>
+unifies all these different APIs so that they can be composed together and
+manipulated in the same way.</p>
+
+<p>For example, the following code:</p>
+
+<p>```objc
+&ndash; (void)viewDidLoad {</p>
+
+<pre><code>[super viewDidLoad];
+
+[self.usernameTextField addTarget:self action:@selector(updateLogInButton) forControlEvents:UIControlEventEditingChanged];
+[self.passwordTextField addTarget:self action:@selector(updateLogInButton) forControlEvents:UIControlEventEditingChanged];
+[self.logInButton addTarget:self action:@selector(logInPressed:) forControlEvents:UIControlEventTouchUpInside];
+</code></pre>
+
+<p>}</p>
+
+<ul>
+<li><p>(void)updateLogInButton {
+  BOOL textFieldsNonEmpty = self.usernameTextField.text.length > 0 &amp;&amp; self.passwordTextField.text.length > 0;
+  BOOL readyToLogIn = ![[LoginManager sharedManager] isLoggingIn] &amp;&amp; !self.loggedIn;
+  self.logInButton.enabled = textFieldsNonEmpty &amp;&amp; readyToLogIn;
+}</p></li>
+<li><p>(IBAction)logInPressed:(UIButton <em>)sender {
+  [[LoginManager sharedManager]
+      logInWithUsername:self.usernameTextField.text
+      password:self.passwordTextField.text
+      success:^{
+          self.loggedIn = YES;
+      } failure:^(NSError </em>error) {
+          [self presentError:error];
+      }];
+}</p></li>
+<li><p>(void)loggedOut:(NSNotification *)notification {
+  self.loggedIn = NO;
+}</p></li>
+<li><p>(void)observeValueForKeyPath:(NSString <em>)keyPath ofObject:(id)object change:(NSDictionary </em>)change context:(void *)context {
+  if ([object isEqual:[LoginManager sharedManager]] &amp;&amp; [keyPath isEqualToString:@&ldquo;loggingIn&rdquo;]) {
+      [self updateLogInButton];
+  }
+}
+```</p></li>
+</ul>
+
+
+<p>… could be expressed in RAC like so:</p>
+
+<p>```objc
+&ndash; (void)viewDidLoad {</p>
+
+<pre><code>[super viewDidLoad];
+
+@weakify(self);
+
+RAC(self.logInButton, enabled) = [RACSignal
+    combineLatest:@[
+        self.usernameTextField.rac_textSignal,
+        self.passwordTextField.rac_textSignal,
+        RACAbleWithStart(LoginManager.sharedManager, loggingIn),
+        RACAbleWithStart(self.loggedIn)
+    ] reduce:^(NSString *username, NSString *password, NSNumber *loggingIn, NSNumber *loggedIn) {
+        return @(username.length &gt; 0 &amp;&amp; password.length &gt; 0 &amp;&amp; !loggingIn.boolValue &amp;&amp; !loggedIn.boolValue);
+    }];
+
+[[self.logInButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *sender) {
+    @strongify(self);
+
+    RACSignal *loginSignal = [[LoginManager sharedManager]
+        logInWithUsername:self.usernameTextField.text
+        password:self.passwordTextField.text];
+
+    [loginSignal subscribeError:^(NSError *error) {
+        @strongify(self);
+        [self presentError:error];
+    } completed:{
+        @strongify(self);
+        self.loggedIn = YES;
+    }];
+}];
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Chaining dependent operations</h3>
+
+<p>Dependencies are most often found in network requests, where a previous request
+to the server needs to complete before the next one can be constructed, and so
+on:</p>
+
+<p>```objc
+[client logInWithSuccess:^{</p>
+
+<pre><code>[client loadCachedMessagesWithSuccess:^(NSArray *messages) {
+    [client fetchMessagesAfterMessage:messages.lastObject success:^(NSArray *nextMessages) {
+        NSLog(@"Fetched all messages.");
+    } failure:^(NSError *error) {
+        [self presentError:error];
+    }];
+} failure:^(NSError *error) {
+    [self presentError:error];
+}];
+</code></pre>
+
+<p>} failure:^(NSError *error) {</p>
+
+<pre><code>[self presentError:error];
+</code></pre>
+
+<p>}];
+```</p>
+
+<p>ReactiveCocoa makes this pattern particularly easy:</p>
+
+<p>```objc
+[[[[client logIn]</p>
+
+<pre><code>sequenceNext:^{
+    return [client loadCachedMessages];
+}]
+flattenMap:^(NSArray *messages) {
+    return [client fetchMessagesAfterMessage:messages.lastObject];
+}]
+subscribeError:^(NSError *error) {
+    [self presentError:error];
+} completed:^{
+    NSLog(@"Fetched all messages.");
+}];
+</code></pre>
+
+<p>```</p>
+
+<h3>Parallelizing independent work</h3>
+
+<p>Working with independent data sets in parallel and then combining them into
+a final result is non-trivial in Cocoa, and often involves a lot of
+synchronization:</p>
+
+<p>```objc
+<strong>block NSArray *databaseObjects;
+</strong>block NSArray *fileContents;</p>
+
+<p>NSOperationQueue <em>backgroundQueue = [[NSOperationQueue alloc] init];
+NSBlockOperation </em>databaseOperation = [NSBlockOperation blockOperationWithBlock:^{</p>
+
+<pre><code>databaseObjects = [databaseClient fetchObjectsMatchingPredicate:predicate];
+</code></pre>
+
+<p>}];</p>
+
+<p>NSBlockOperation *filesOperation = [NSBlockOperation blockOperationWithBlock:^{</p>
+
+<pre><code>NSMutableArray *filesInProgress = [NSMutableArray array];
+for (NSString *path in files) {
+    [filesInProgress addObject:[NSData dataWithContentsOfFile:path]];
+}
+
+fileContents = [filesInProgress copy];
+</code></pre>
+
+<p>}];</p>
+
+<p>NSBlockOperation *finishOperation = [NSBlockOperation blockOperationWithBlock:^{</p>
+
+<pre><code>[self finishProcessingDatabaseObjects:databaseObjects fileContents:fileContents];
+NSLog(@"Done processing");
+</code></pre>
+
+<p>}];</p>
+
+<p>[finishOperation addDependency:databaseOperation];
+[finishOperation addDependency:filesOperation];
+[backgroundQueue addOperation:databaseOperation];
+[backgroundQueue addOperation:filesOperation];
+[backgroundQueue addOperation:finishOperation];
+```</p>
+
+<p>The above code can be cleaned up and optimized by simply composing signals:</p>
+
+<p>```objc
+RACSignal *databaseSignal = [[databaseClient fetchObjectsMatchingPredicate:predicate]</p>
+
+<pre><code>subscribeOn:[RACScheduler schedulerWithPriority:RACSchedulerPriorityDefault]];
+</code></pre>
+
+<p>RACSignal <em>fileSignal = [RACSignal start:^(BOOL </em>success, NSError **error) {</p>
+
+<pre><code>NSMutableArray *filesInProgress = [NSMutableArray array];
+for (NSString *path in files) {
+    [filesInProgress addObject:[NSData dataWithContentsOfFile:path]];
+}
+
+return [filesInProgress copy];
+</code></pre>
+
+<p>}];</p>
+
+<p>[[RACSignal</p>
+
+<pre><code>combineLatest:@[ databaseSignal, fileSignal ]
+reduce:^(NSArray *databaseObjects, NSArray *fileContents) {
+    [self finishProcessingDatabaseObjects:databaseObjects fileContents:fileContents];
+    return nil;
+}]
+subscribeCompleted:^{
+    NSLog(@"Done processing");
+}];
+</code></pre>
+
+<p>```</p>
+
+<h3>Simplifying collection transformations</h3>
+
+<p>Higher-order functions like <code>map</code>, <code>filter</code>, <code>fold</code>/<code>reduce</code> are sorely missing
+from Foundation, leading to loop-focused code like this:</p>
+
+<p>```objc
+NSMutableArray <em>results = [NSMutableArray array];
+for (NSString </em>str in strings) {</p>
+
+<pre><code>if (str.length &lt; 2) {
+    continue;
+}
+
+NSString *newString = [str stringByAppendingString:@"foobar"];
+[results addObject:newString];
+</code></pre>
+
+<p>}
+```</p>
+
+<p><a href="ReactiveCocoaFramework/ReactiveCocoa/RACSequence.h">RACSequence</a> allows any Cocoa collection to be manipulated in a uniform and
+declarative way:</p>
+
+<p>```objc
+<a href="Classes/RACSequence.html">RACSequence</a> *results = [[strings.rac_sequence</p>
+
+<pre><code>filter:^ BOOL (NSString *str) {
+    return str.length &gt;= 2;
+}]
+map:^(NSString *str) {
+    return [str stringByAppendingString:@"foobar"];
+}];
+</code></pre>
+
+<p>```</p>
+
+<h2>Importing ReactiveCocoa</h2>
+
+<p>To add RAC to your application:</p>
+
+<ol>
+<li>Add the ReactiveCocoa repository as a submodule of your application&rsquo;s
+repository. Make sure to update the submodules within with <code>git submodule update
+-i --recursive</code></li>
+<li>Drag and drop <code>ReactiveCocoaFramework/ReactiveCocoa.xcodeproj</code> into your
+application&rsquo;s Xcode project or workspace.</li>
+<li>On the &ldquo;Build Phases&rdquo; tab of your application target, add RAC to the &ldquo;Link
+Binary With Libraries&rdquo; phase.
+
+<ul>
+<li><strong>On iOS</strong>, add <code>libReactiveCocoa-iOS.a</code>.</li>
+<li><strong>On OS X</strong>, add <code>ReactiveCocoa.framework</code>. RAC must also be added to any
+&ldquo;Copy Frameworks&rdquo; build phase. If you don&rsquo;t already have one, simply add
+a &ldquo;Copy Files&rdquo; build phase and target the &ldquo;Frameworks&rdquo; destination.</li>
+</ul>
+</li>
+<li>Add <code>$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include
+$(inherited)</code> to the &ldquo;Header Search Paths&rdquo; build setting (this is only
+necessary for archive builds, but it has no negative effect otherwise).</li>
+<li><strong>For iOS targets</strong>, add <code>-ObjC</code> to the &ldquo;Other Linker Flags&rdquo; build setting.</li>
+<li><strong>If you added RAC to a project (not a workspace)</strong>, you will also need to
+add the appropriate RAC target to the &ldquo;Target Dependencies&rdquo; of your
+application.</li>
+</ol>
+
+
+<p>If you would prefer to use <a href="http://cocoapods.org">CocoaPods</a>, there are some
+~!@<a href="https://github.com/CocoaPods/Specs/tree/master/ReactiveCocoa">ReactiveCocoa
+podspecs</a>@!~ that
+have been generously contributed by third parties.</p>
+
+<p>To see a project already set up with RAC, check out the <a href="[https://github.com/ReactiveCocoa/GHAPIDemo](https://github.com/ReactiveCocoa/GHAPIDemo)">Mac</a> or
+<a href="[https://github.com/ReactiveCocoa/RACiOSDemo](https://github.com/ReactiveCocoa/RACiOSDemo)">iOS</a> demos.</p>
 
 <h2>More Info</h2>
 
@@ -471,6 +739,10 @@ out there:</p>
 							
 							<li><a href="Categories/NSArray+RACSequenceAdditions.html">NSArray(RACSequenceAdditions)</a></li>
 							
+							<li><a href="Categories/NSControl+RACCommandSupport.html">NSControl(RACCommandSupport)</a></li>
+							
+							<li><a href="Categories/NSControl+RACTextSignalSupport.html">NSControl(RACTextSignalSupport)</a></li>
+							
 							<li><a href="Categories/NSData+RACSupport.html">NSData(RACSupport)</a></li>
 							
 							<li><a href="Categories/NSDictionary+RACSequenceAdditions.html">NSDictionary(RACSequenceAdditions)</a></li>
@@ -483,6 +755,10 @@ out there:</p>
 							
 							<li><a href="Categories/NSNotificationCenter+RACSupport.html">NSNotificationCenter(RACSupport)</a></li>
 							
+							<li><a href="Categories/NSObject+RACAppKitBindings.html">NSObject(RACAppKitBindings)</a></li>
+							
+							<li><a href="Categories/NSObject+RACDeallocating.html">NSObject(RACDeallocating)</a></li>
+							
 							<li><a href="Categories/NSObject+RACKVOWrapper.html">NSObject(RACKVOWrapper)</a></li>
 							
 							<li><a href="Categories/NSObject+RACKVOWrapperPrivate.html">NSObject(RACKVOWrapperPrivate)</a></li>
@@ -493,6 +769,8 @@ out there:</p>
 							
 							<li><a href="Categories/NSObject+RACPropertySubscribing.html">NSObject(RACPropertySubscribing)</a></li>
 							
+							<li><a href="Categories/NSObject+RACSelectorSignal.html">NSObject(RACSelectorSignal)</a></li>
+							
 							<li><a href="Categories/NSOrderedSet+RACSequenceAdditions.html">NSOrderedSet(RACSequenceAdditions)</a></li>
 							
 							<li><a href="Categories/NSSet+RACSequenceAdditions.html">NSSet(RACSequenceAdditions)</a></li>
@@ -500,6 +778,10 @@ out there:</p>
 							<li><a href="Categories/NSString+RACSequenceAdditions.html">NSString(RACSequenceAdditions)</a></li>
 							
 							<li><a href="Categories/NSString+RACSupport.html">NSString(RACSupport)</a></li>
+							
+							<li><a href="Categories/NSTask+RACSupport.html">NSTask(RACSupport)</a></li>
+							
+							<li><a href="Categories/NSText+RACSignalSupport.html">NSText(RACSignalSupport)</a></li>
 							
 							<li><a href="Categories/UIControl+RACSignalSupport.html">UIControl(RACSignalSupport)</a></li>
 							
@@ -518,7 +800,7 @@ out there:</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-02-17)</span><br />
+						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-04-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

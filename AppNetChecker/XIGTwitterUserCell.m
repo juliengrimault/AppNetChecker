@@ -16,7 +16,6 @@
 static NSNumberFormatter *_decimalFormatter;
 
 @interface XIGTwitterUserCell()
-@property (nonatomic, strong) RACDisposable* disposable;
 @end
 
 @implementation XIGTwitterUserCell
@@ -34,17 +33,14 @@ static NSNumberFormatter *_decimalFormatter;
     [super prepareForReuse];
     [self.profileImageView cancelImageRequestOperation];
     self.accessoryType = UITableViewCellAccessoryNone;
-    [self.activityIndicator startAnimating];
-    [self.disposable dispose];
     self.statusLabel.text = nil;
-    self.appNetTitle.text = NSLocalizedString(@"searching...", nil);
+    self.appNetTitle.text = nil;
     self.appNetSubTitle.text = nil;
 }
 
 - (void)dealloc
 {
     [self.profileImageView cancelImageRequestOperation];
-    [self.disposable dispose];
 }
 
 - (void)awakeFromNib
@@ -61,28 +57,23 @@ static NSNumberFormatter *_decimalFormatter;
 {
     self.usernameLabel.text = [NSString stringWithFormat:@"@%@",[userMatcher.twitterUser.screenName uppercaseString]];
     [self.profileImageView setImageWithURL:userMatcher.twitterUser.profileImageURL placeholderImage:[UIImage imageNamed:@"default-avatar.png"]];
-    
-    @weakify(self);
-    self.disposable = [[userMatcher.appNetUser deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(XIGAppNetUser *appNetUser) {
-        @strongify(self);
-        [self.activityIndicator stopAnimating];
-        if (appNetUser != nil) {
-            NSNumberFormatter *formatter = [[self class] decimalFormatter];
-            self.appNetTitle.text = [NSString localizedStringWithFormat:@"%@ Following", [formatter stringFromNumber:appNetUser.followingCount]];
-            NSString *followers = @"Follower";
-            if ([appNetUser.followerCount integerValue]  > 0) {
-                followers = [followers pluralizedString];
-            }
-            self.appNetSubTitle.text = [NSString localizedStringWithFormat:@"%@ %@", [formatter stringFromNumber:appNetUser.followerCount], followers];
-            self.statusLabel.text = @"\U0000e010";
-            self.statusLabel.textColor = [UIColor xig_greenColor];
-        } else {
-            self.appNetTitle.text = NSLocalizedString(@"User Not Found", nil);
-            self.appNetSubTitle.text = nil;
-            self.statusLabel.text = @"\U0000e00d";
-            self.statusLabel.textColor = [UIColor xig_redColor];
+
+    if (userMatcher.appNetUser != nil) {
+        NSNumberFormatter *formatter = [[self class] decimalFormatter];
+        self.appNetTitle.text = [NSString localizedStringWithFormat:@"%@ Following", [formatter stringFromNumber:userMatcher.appNetUser.followingCount]];
+        NSString *followers = @"Follower";
+        if ([userMatcher.appNetUser.followerCount integerValue]  > 0) {
+            followers = [followers pluralizedString];
         }
-    }];
+        self.appNetSubTitle.text = [NSString localizedStringWithFormat:@"%@ %@", [formatter stringFromNumber:userMatcher.appNetUser.followerCount], followers];
+        self.statusLabel.text = @"\U0000e010";
+        self.statusLabel.textColor = [UIColor xig_greenColor];
+    } else {
+        self.appNetTitle.text = NSLocalizedString(@"User Not Found", nil);
+        self.appNetSubTitle.text = nil;
+        self.statusLabel.text = @"\U0000e00d";
+        self.statusLabel.textColor = [UIColor xig_redColor];
+    }
 }
 
 + (CGFloat)rowHeight

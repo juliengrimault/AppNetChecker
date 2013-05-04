@@ -1,62 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DDLogMessage.html">
+	<File path="Protocols/DDLogFileManager.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DDLogMessage</TokenIdentifier>
-			<Abstract type="html">The DDLogMessage class encapsulates information about the log message.
-If you write custom loggers or formatters, you will be dealing with objects of this class.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/intf/DDLogFileManager</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>
 			
 			<NodeRef refid="11"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDLogMessage/initWithLogMsg:level:flag:context:file:function:line:tag:options:</TokenIdentifier>
-			<Abstract type="html">Standard init method for a log message object.
-Used by the logging primitives. (And the macros use the logging primitives.)</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/setMaximumNumberOfLogFiles:</TokenIdentifier>
+			<Abstract type="html">The maximum number of archived log files to keep on disk.
+For example, if this property is set to 3,
+then the LogFileManager will only keep 3 archived log files (plus the current active log file) on disk.
+Once the active log file is rolled/archived, then the oldest of the existing 3 rolled/archived log files is deleted.</Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithLogMsg:(NSString *)logMsg level:(int)logLevel flag:(int)logFlag context:(int)logContext file:(const char *)file function:(const char *)function line:(int)line tag:(id)tag options:(DDLogMessageOptions)optionsMask</Declaration>
+			<Declaration>@property (readwrite, assign) NSUInteger maximumNumberOfLogFiles</Declaration>
 			
 			
-			<Anchor>//api/name/initWithLogMsg:level:flag:context:file:function:line:tag:options:</Anchor>
+			<Anchor>//api/name/maximumNumberOfLogFiles</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDLogMessage/threadID</TokenIdentifier>
-			<Abstract type="html">Returns the threadID as it appears in NSLog.
-That is, it is a hexadecimal value which is calculated from the machThreadID.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfp/DDLogFileManager/maximumNumberOfLogFiles</TokenIdentifier>
+			<Abstract type="html">The maximum number of archived log files to keep on disk.
+For example, if this property is set to 3,
+then the LogFileManager will only keep 3 archived log files (plus the current active log file) on disk.
+Once the active log file is rolled/archived, then the oldest of the existing 3 rolled/archived log files is deleted.</Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>- (NSString *)threadID</Declaration>
+			<Declaration>@property (readwrite, assign) NSUInteger maximumNumberOfLogFiles</Declaration>
 			
 			
-			<Anchor>//api/name/threadID</Anchor>
+			<Anchor>//api/name/maximumNumberOfLogFiles</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDLogMessage/fileName</TokenIdentifier>
-			<Abstract type="html">Convenience property to get just the file name, as the file variable is generally the full file path.
-This method does not include the file extension, which is generally unwanted for logging purposes.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/logsDirectory</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>- (NSString *)fileName</Declaration>
+			<Declaration>- (NSString *)logsDirectory</Declaration>
 			
 			
-			<Anchor>//api/name/fileName</Anchor>
+			<Anchor>//api/name/logsDirectory</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDLogMessage/methodName</TokenIdentifier>
-			<Abstract type="html">Returns the function variable in NSString form.</Abstract>
-			<DeclaredIn>DDLog.h</DeclaredIn>			
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/unsortedLogFilePaths</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>- (NSString *)methodName</Declaration>
+			<Declaration>- (NSArray *)unsortedLogFilePaths</Declaration>
 			
 			
-			<Anchor>//api/name/methodName</Anchor>
+			<Anchor>//api/name/unsortedLogFilePaths</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/unsortedLogFileNames</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)unsortedLogFileNames</Declaration>
+			
+			
+			<Anchor>//api/name/unsortedLogFileNames</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/unsortedLogFileInfos</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)unsortedLogFileInfos</Declaration>
+			
+			
+			<Anchor>//api/name/unsortedLogFileInfos</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/sortedLogFilePaths</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)sortedLogFilePaths</Declaration>
+			
+			
+			<Anchor>//api/name/sortedLogFilePaths</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/sortedLogFileNames</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)sortedLogFileNames</Declaration>
+			
+			
+			<Anchor>//api/name/sortedLogFileNames</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/sortedLogFileInfos</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)sortedLogFileInfos</Declaration>
+			
+			
+			<Anchor>//api/name/sortedLogFileInfos</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/createNewLogFile</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)createNewLogFile</Declaration>
+			
+			
+			<Anchor>//api/name/createNewLogFile</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/didArchiveLogFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)didArchiveLogFile:(NSString *)logFilePath</Declaration>
+			
+			
+			<Anchor>//api/name/didArchiveLogFile:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DDLogFileManager/didRollAndArchiveLogFile:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
+			
+			<Declaration>- (void)didRollAndArchiveLogFile:(NSString *)logFilePath</Declaration>
+			
+			
+			<Anchor>//api/name/didRollAndArchiveLogFile:</Anchor>
 		</Token>
 		
 	</File>

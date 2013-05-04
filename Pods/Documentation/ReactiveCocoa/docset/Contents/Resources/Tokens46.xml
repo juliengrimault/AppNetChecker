@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSInvocation+RACTypeParsing.html">
+	<File path="Categories/NSEnumerator+RACSequenceAdditions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSInvocation(RACTypeParsing)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSEnumerator(RACSequenceAdditions)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSInvocation+RACTypeParsing.h</DeclaredIn>
+			<DeclaredIn>NSEnumerator+RACSequenceAdditions.h</DeclaredIn>
 			
 			<NodeRef refid="46"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSInvocation(RACTypeParsing)/rac_setArgument:atIndex:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSEnumerator(RACSequenceAdditions)/setRac_sequence:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSInvocation+RACTypeParsing.h</DeclaredIn>			
+			<DeclaredIn>NSEnumerator+RACSequenceAdditions.h</DeclaredIn>			
 			
-			<Declaration>- (void)rac_setArgument:(id)object atIndex:(NSUInteger)index</Declaration>
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
 			
 			
-			<Anchor>//api/name/rac_setArgument:atIndex:</Anchor>
+			<Anchor>//api/name/rac_sequence</Anchor>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSInvocation(RACTypeParsing)/rac_returnValue</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSEnumerator(RACSequenceAdditions)/rac_sequence</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSInvocation+RACTypeParsing.h</DeclaredIn>			
+			<DeclaredIn>NSEnumerator+RACSequenceAdditions.h</DeclaredIn>			
 			
-			<Declaration>- (id)rac_returnValue</Declaration>
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
 			
 			
-			<Anchor>//api/name/rac_returnValue</Anchor>
+			<Anchor>//api/name/rac_sequence</Anchor>
 		</Token>
 		
 	</File>

@@ -34,6 +34,17 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/RACScheduler/schedulerWithPriority:name:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RACScheduler.h</DeclaredIn>			
+			
+			<Declaration>+ (instancetype)schedulerWithPriority:(RACSchedulerPriority)priority name:(NSString *)name</Declaration>
+			
+			
+			<Anchor>//api/name/schedulerWithPriority:name:</Anchor>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/clm/RACScheduler/schedulerWithPriority:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>RACScheduler.h</DeclaredIn>			
@@ -86,6 +97,17 @@
 			
 			
 			<Anchor>//api/name/after:schedule:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/RACScheduler/afterDelay:schedule:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>RACScheduler.h</DeclaredIn>			
+			
+			<Declaration>- (RACDisposable *)afterDelay:(NSTimeInterval)delay schedule:(void ( ^ ) ( void ))block</Declaration>
+			
+			
+			<Anchor>//api/name/afterDelay:schedule:</Anchor>
 		</Token>
 		
 		<Token>

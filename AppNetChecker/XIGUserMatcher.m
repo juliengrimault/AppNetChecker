@@ -11,16 +11,15 @@
 #import "XIGAppNetClient.h"
 
 @interface XIGUserMatcher()
-@property (nonatomic, strong) RACSignal *appNetUser;
 @end
 @implementation XIGUserMatcher
 
-- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetUserSignal:(RACSignal *)appNetUserSignal
+- (instancetype)initWithTwitterUser:(XIGTwitterUser *)twitterUser appNetUser:(XIGAppNetUser *)appNetUser
 {
     self = [super init];
     if (self) {
         _twitterUser = twitterUser;
-        _appNetUser = appNetUserSignal;
+        _appNetUser = appNetUser;
     }
     return self;
 }

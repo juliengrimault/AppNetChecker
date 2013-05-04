@@ -1,25 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSFileHandle+RACSupport.html">
+	<File path="Categories/NSDictionary+RACSequenceAdditions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSFileHandle(RACSupport)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSDictionary(RACSequenceAdditions)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSFileHandle+RACSupport.h</DeclaredIn>
+			<DeclaredIn>NSDictionary+RACSequenceAdditions.h</DeclaredIn>
 			
 			<NodeRef refid="45"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSFileHandle(RACSupport)/rac_readInBackground</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(RACSequenceAdditions)/setRac_sequence:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSFileHandle+RACSupport.h</DeclaredIn>			
+			<DeclaredIn>NSDictionary+RACSequenceAdditions.h</DeclaredIn>			
 			
-			<Declaration>- (RACSignal *)rac_readInBackground</Declaration>
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
 			
 			
-			<Anchor>//api/name/rac_readInBackground</Anchor>
+			<Anchor>//api/name/rac_sequence</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(RACSequenceAdditions)/rac_sequence</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+RACSequenceAdditions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
+			
+			
+			<Anchor>//api/name/rac_sequence</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(RACSequenceAdditions)/setRac_keySequence:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+RACSequenceAdditions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_keySequence</Declaration>
+			
+			
+			<Anchor>//api/name/rac_keySequence</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(RACSequenceAdditions)/rac_keySequence</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+RACSequenceAdditions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_keySequence</Declaration>
+			
+			
+			<Anchor>//api/name/rac_keySequence</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSDictionary(RACSequenceAdditions)/setRac_valueSequence:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+RACSequenceAdditions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_valueSequence</Declaration>
+			
+			
+			<Anchor>//api/name/rac_valueSequence</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSDictionary(RACSequenceAdditions)/rac_valueSequence</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSDictionary+RACSequenceAdditions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_valueSequence</Declaration>
+			
+			
+			<Anchor>//api/name/rac_valueSequence</Anchor>
 		</Token>
 		
 	</File>

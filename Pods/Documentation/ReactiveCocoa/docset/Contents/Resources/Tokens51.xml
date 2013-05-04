@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/NSObject+RACObservablePropertySubject.html">
+	<File path="Categories/NSObject+RACDeallocating.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/NSObject(RACObservablePropertySubject)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSObject(RACDeallocating)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSObject+RACObservablePropertySubject.h</DeclaredIn>
+			<DeclaredIn>NSObject+RACDeallocating.h</DeclaredIn>
 			
 			<NodeRef refid="51"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACObservablePropertySubject)/rac_propertyForKeyPath:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACDeallocating)/rac_didDeallocSignal</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>NSObject+RACObservablePropertySubject.h</DeclaredIn>			
+			<DeclaredIn>NSObject+RACDeallocating.h</DeclaredIn>			
 			
-			<Declaration>- (RACObservablePropertySubject *)rac_propertyForKeyPath:(NSString *)keyPath</Declaration>
+			<Declaration>- (RACSignal *)rac_didDeallocSignal</Declaration>
 			
 			
-			<Anchor>//api/name/rac_propertyForKeyPath:</Anchor>
+			<Anchor>//api/name/rac_didDeallocSignal</Anchor>
 		</Token>
 		
 	</File>

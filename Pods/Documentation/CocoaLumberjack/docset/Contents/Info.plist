@@ -5,9 +5,9 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.cocoapods.CocoaLumberjack-1.6</string>
+	<string>org.cocoapods.cocoalumberjack.CocoaLumberjack-1.6.2</string>
 	<key>CFBundleName</key>
-	<string>CocoaLumberjack 1.6 Documentation</string>
+	<string>CocoaLumberjack 1.6.2 Documentation</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -15,10 +15,10 @@
 	
 	
 	<key>DocSetDescription</key>
-	<string>It is similar in concept to other popular logging frameworks such as log4j, yet is designed specifically for objective-c, and takes advantage of features such as multi-threading, grand central dispatch (if available), lockless atomic operations, and the dynamic nature of the objective-c runtime.</string>
+	<string>A fast &amp; simple, yet powerful &amp; flexible logging framework for Mac and iOS.</string>
 	
 	<key>DocSetFeedName</key>
-	<string>CocoaLumberjack 1.6 Documentation</string>
+	<string>CocoaLumberjack 1.6.2 Documentation</string>
 	
 	<key>DocSetMinimumXcodeVersion</key>
 	<string>3.0</string>
@@ -26,7 +26,7 @@
 	<key>DashDocSetFamily</key>
 	<string>appledoc</string>
 	<key>DocSetPublisherIdentifier</key>
-	<string>org.cocoapods.documentation</string>
+	<string>org.cocoapods.cocoalumberjack.documentation</string>
 	<key>DocSetPublisherName</key>
 	<string>Robbie Hanson</string>
 	<key>NSHumanReadableCopyright</key>

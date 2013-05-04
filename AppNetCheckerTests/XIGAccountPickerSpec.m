@@ -4,7 +4,7 @@
 #import "XIGAccountPickerViewController.h"
 #import "UIViewController+SLServiceHack.h"
 #import "XIGAccountErrorCell.h"
-#import "XIGTwitterUsersTableViewController.h"
+#import "XIGUserMatcherTableViewController.h"
 #import "XIGTwitterClient.h"
 #import "XIGTwitterAccountCell.h"
 

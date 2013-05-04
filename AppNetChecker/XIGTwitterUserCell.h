@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (void)bindUserMatcher:(XIGUserMatcher *)userMatcher;
 

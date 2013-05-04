@@ -252,7 +252,7 @@ NSString *DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
 /**
  * The THIS_METHOD macro gives you the name of the current objective-c method.
  * 
- * For example: DDLogWarn(@"%@ - Requires non-nil strings") -> @"setMake:model: requires non-nil strings"
+ * For example: DDLogWarn(@"%@ - Requires non-nil strings", THIS_METHOD) -> @"setMake:model: requires non-nil strings"
  * 
  * Note: This does NOT work in straight C functions (non objective-c).
  * Instead you should use the predefined __FUNCTION__ macro.
@@ -275,7 +275,7 @@ NSString *DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
 + (dispatch_queue_t)loggingQueue;
 
 /**
- * Reporting Primitive.
+ * Logging Primitive.
  * 
  * This method is used by the macros above.
  * It is suggested you stick with the macros as they're easier to use.
@@ -292,7 +292,7 @@ NSString *DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
      format:(NSString *)format, ... __attribute__ ((format (__NSString__, 9, 10)));
 
 /**
- * Reporting Primitive.
+ * Logging Primitive.
  * 
  * This method can be used if you have a prepared va_list.
 **/
@@ -329,7 +329,7 @@ NSString *DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
 + (void)removeAllLoggers;
 
 /**
- * Registered Dynamic Reporting
+ * Registered Dynamic Logging
  * 
  * These methods allow you to obtain a list of classes that are using registered dynamic logging,
  * and also provides methods to get and set their log level during run time.
@@ -489,7 +489,7 @@ NSString *DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
 
 enum {
 	DDLogMessageCopyFile     = 1 << 0,
-	DDLogMessageCopyFunction = 1 << 1,
+	DDLogMessageCopyFunction = 1 << 1
 };
 typedef int DDLogMessageOptions;
 
@@ -593,5 +593,9 @@ typedef int DDLogMessageOptions;
 
 - (id <DDLogFormatter>)logFormatter;
 - (void)setLogFormatter:(id <DDLogFormatter>)formatter;
+
+// For thread-safety assertions
+- (BOOL)isOnGlobalLoggingQueue;
+- (BOOL)isOnInternalLoggerQueue;
 
 @end

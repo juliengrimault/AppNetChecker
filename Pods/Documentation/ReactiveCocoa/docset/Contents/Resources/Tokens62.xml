@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSTask+RACSupport.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSTask(RACSupport)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSTask+RACSupport.h</DeclaredIn>
+			
+			<NodeRef refid="62"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTask(RACSupport)/rac_standardOutput</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSTask+RACSupport.h</DeclaredIn>			
+			
+			<Declaration>- (RACSignal *)rac_standardOutput</Declaration>
+			
+			
+			<Anchor>//api/name/rac_standardOutput</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTask(RACSupport)/rac_standardError</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSTask+RACSupport.h</DeclaredIn>			
+			
+			<Declaration>- (RACSignal *)rac_standardError</Declaration>
+			
+			
+			<Anchor>//api/name/rac_standardError</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTask(RACSupport)/rac_completion</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSTask+RACSupport.h</DeclaredIn>			
+			
+			<Declaration>- (RACSignal *)rac_completion</Declaration>
+			
+			
+			<Anchor>//api/name/rac_completion</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTask(RACSupport)/rac_runWithScheduler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSTask+RACSupport.h</DeclaredIn>			
+			
+			<Declaration>- (RACSignal *)rac_runWithScheduler:(RACScheduler *)scheduler</Declaration>
+			
+			
+			<Anchor>//api/name/rac_runWithScheduler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSTask(RACSupport)/rac_run</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSTask+RACSupport.h</DeclaredIn>			
+			
+			<Declaration>- (RACSignal *)rac_run</Declaration>
+			
+			
+			<Anchor>//api/name/rac_run</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

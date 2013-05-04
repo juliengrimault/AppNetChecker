@@ -12,7 +12,7 @@
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
-				<h1><a id="libraryTitle" href="../index.html">ReactiveCocoa 0.17.1 </a></h1>
+				<h1><a id="libraryTitle" href="../index.html">ReactiveCocoa 1.5.0 </a></h1>
 				<a id="developerHome" href="../index.html">Josh Abernathy</a>
 			</div>
 			
@@ -38,7 +38,13 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/allowsConcurrentExecution">&nbsp;&nbsp;&nbsp;&nbsp;allowsConcurrentExecution</option>
+	
 	<option value="//api/name/canExecute">&nbsp;&nbsp;&nbsp;&nbsp;canExecute</option>
+	
+	<option value="//api/name/errors">&nbsp;&nbsp;&nbsp;&nbsp;errors</option>
+	
+	<option value="//api/name/executing">&nbsp;&nbsp;&nbsp;&nbsp;executing</option>
 	
 	
 	
@@ -47,18 +53,28 @@
 	
 	<option value="//api/name/command">&nbsp;&nbsp;&nbsp;&nbsp;+ command</option>
 	
-	<option value="//api/name/commandWithBlock:">&nbsp;&nbsp;&nbsp;&nbsp;+ commandWithBlock:</option>
+	<option value="//api/name/commandWithCanExecuteSignal:">&nbsp;&nbsp;&nbsp;&nbsp;+ commandWithCanExecuteSignal:</option>
 	
-	<option value="//api/name/commandWithCanExecuteSignal:block:">&nbsp;&nbsp;&nbsp;&nbsp;+ commandWithCanExecuteSignal:block:</option>
+	<option value="//api/name/subject">&nbsp;&nbsp;&nbsp;&nbsp;+ subject</option>
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/addSignalBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- addSignalBlock:</option>
+	
+	<option value="//api/name/didSubscribeWithDisposable:">&nbsp;&nbsp;&nbsp;&nbsp;- didSubscribeWithDisposable:</option>
+	
 	<option value="//api/name/execute:">&nbsp;&nbsp;&nbsp;&nbsp;- execute:</option>
 	
-	<option value="//api/name/initWithCanExecuteSignal:block:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithCanExecuteSignal:block:</option>
+	<option value="//api/name/initWithCanExecuteSignal:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithCanExecuteSignal:</option>
+	
+	<option value="//api/name/sendCompleted">&nbsp;&nbsp;&nbsp;&nbsp;- sendCompleted</option>
+	
+	<option value="//api/name/sendError:">&nbsp;&nbsp;&nbsp;&nbsp;- sendError:</option>
+	
+	<option value="//api/name/sendNext:">&nbsp;&nbsp;&nbsp;&nbsp;- sendNext:</option>
 	
 	
 	
@@ -74,6 +90,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Deprecated Methods">Deprecated Methods</a></span></li>
+	
 </ul></li>
 
 
@@ -82,7 +100,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allowsConcurrentExecution">allowsConcurrentExecution</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canExecute">canExecute</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/errors">errors</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/executing">executing</a></span></li>
 	
 </ul></li>
 
@@ -92,9 +116,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/command">command</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/commandWithBlock:">commandWithBlock:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/commandWithCanExecuteSignal:">commandWithCanExecuteSignal:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/commandWithCanExecuteSignal:block:">commandWithCanExecuteSignal:block:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/subject">subject</a></span></li>
 	
 </ul></li>
 
@@ -102,9 +126,19 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addSignalBlock:">addSignalBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didSubscribeWithDisposable:">didSubscribeWithDisposable:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/execute:">execute:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithCanExecuteSignal:block:">initWithCanExecuteSignal:block:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithCanExecuteSignal:">initWithCanExecuteSignal:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendCompleted">sendCompleted</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendError:">sendError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendNext:">sendNext:</a></span></li>
 	
 </ul></li>
 
@@ -130,7 +164,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/RACSubject.html">RACSubject</a> : <a href="../Classes/RACSignal.html">RACSignal</a> : <a href="../Classes/RACStream.html">RACStream</a> : NSObject</td>
+	<td class="specification-value"><a href="../Classes/RACSignal.html">RACSignal</a> : <a href="../Classes/RACStream.html">RACStream</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">RACCommand.h</td>
@@ -148,12 +182,33 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/canExecute">&nbsp;&nbsp;canExecute</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/allowsConcurrentExecution">&nbsp;&nbsp;allowsConcurrentExecution</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/executing">&nbsp;&nbsp;executing</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/errors">&nbsp;&nbsp;errors</a></code>
 		
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -167,21 +222,21 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/commandWithBlock:">+&nbsp;commandWithBlock:</a></code>
+		<code><a href="#//api/name/commandWithCanExecuteSignal:">+&nbsp;commandWithCanExecuteSignal:</a></code>
 		
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/commandWithCanExecuteSignal:block:">+&nbsp;commandWithCanExecuteSignal:block:</a></code>
+		<code><a href="#//api/name/initWithCanExecuteSignal:">&ndash;&nbsp;initWithCanExecuteSignal:</a></code>
 		
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithCanExecuteSignal:block:">&ndash;&nbsp;initWithCanExecuteSignal:block:</a></code>
+		<code><a href="#//api/name/addSignalBlock:">&ndash;&nbsp;addSignalBlock:</a></code>
 		
 	</span>
 	
@@ -189,6 +244,49 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/execute:">&ndash;&nbsp;execute:</a></code>
+		
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Deprecated Methods" name="task_Deprecated Methods"></a>
+						<h3 class="subsubtitle task-title">Deprecated Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendNext:">&ndash;&nbsp;sendNext:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendError:">&ndash;&nbsp;sendError:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendCompleted">&ndash;&nbsp;sendCompleted</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didSubscribeWithDisposable:">&ndash;&nbsp;didSubscribeWithDisposable:</a></code>
+		
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/subject">+&nbsp;subject</a></code>
 		
 	</span>
 	
@@ -207,12 +305,45 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/allowsConcurrentExecution" title="allowsConcurrentExecution"></a>
+	<h3 class="subsubtitle method-title">allowsConcurrentExecution</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic) BOOL allowsConcurrentExecution</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/canExecute" title="canExecute"></a>
 	<h3 class="subsubtitle method-title">canExecute</h3>
 	
 	
 
-	<div class="method-subsection method-declaration"><code>@property (readonly) BOOL canExecute</code></div>
+	<div class="method-subsection method-declaration"><code>@property (atomic, readonly) BOOL canExecute</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/errors" title="errors"></a>
+	<h3 class="subsubtitle method-title">errors</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) RACSignal *errors</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/executing" title="executing"></a>
+	<h3 class="subsubtitle method-title">executing</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (atomic, getter=isExecuting, readonly) BOOL executing</code></div>
 
     
 </div>
@@ -237,23 +368,23 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/commandWithBlock:" title="commandWithBlock:"></a>
-	<h3 class="subsubtitle method-title">commandWithBlock:</h3>
+	<a name="//api/name/commandWithCanExecuteSignal:" title="commandWithCanExecuteSignal:"></a>
+	<h3 class="subsubtitle method-title">commandWithCanExecuteSignal:</h3>
 	
 	
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)commandWithBlock:(void ( ^ ) ( id sender ))<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)commandWithCanExecuteSignal:(RACSignal *)<em>canExecuteSignal</em></code></div>
 
     
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/commandWithCanExecuteSignal:block:" title="commandWithCanExecuteSignal:block:"></a>
-	<h3 class="subsubtitle method-title">commandWithCanExecuteSignal:block:</h3>
+	<a name="//api/name/subject" title="subject"></a>
+	<h3 class="subsubtitle method-title">subject</h3>
 	
 	
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)commandWithCanExecuteSignal:(RACSignal *)<em>canExecuteSignal</em> block:(void ( ^ ) ( id sender ))<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)subject</code></div>
 
     
 </div>
@@ -267,23 +398,78 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/execute:" title="execute:"></a>
-	<h3 class="subsubtitle method-title">execute:</h3>
+	<a name="//api/name/addSignalBlock:" title="addSignalBlock:"></a>
+	<h3 class="subsubtitle method-title">addSignalBlock:</h3>
 	
 	
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)execute:(id)<em>sender</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (RACSignal *)addSignalBlock:(RACSignal *( ^ ) ( id value ))<em>signalBlock</em></code></div>
 
     
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithCanExecuteSignal:block:" title="initWithCanExecuteSignal:block:"></a>
-	<h3 class="subsubtitle method-title">initWithCanExecuteSignal:block:</h3>
+	<a name="//api/name/didSubscribeWithDisposable:" title="didSubscribeWithDisposable:"></a>
+	<h3 class="subsubtitle method-title">didSubscribeWithDisposable:</h3>
 	
 	
 
-	<div class="method-subsection method-declaration"><code>- (id)initWithCanExecuteSignal:(RACSignal *)<em>canExecuteSignal</em> block:(void ( ^ ) ( id sender ))<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)didSubscribeWithDisposable:(RACDisposable *)<em>disposable</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/execute:" title="execute:"></a>
+	<h3 class="subsubtitle method-title">execute:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)execute:(id)<em>value</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithCanExecuteSignal:" title="initWithCanExecuteSignal:"></a>
+	<h3 class="subsubtitle method-title">initWithCanExecuteSignal:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithCanExecuteSignal:(RACSignal *)<em>canExecuteSignal</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendCompleted" title="sendCompleted"></a>
+	<h3 class="subsubtitle method-title">sendCompleted</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)sendCompleted</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendError:" title="sendError:"></a>
+	<h3 class="subsubtitle method-title">sendError:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)sendError:(NSError *)<em>error</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendNext:" title="sendNext:"></a>
+	<h3 class="subsubtitle method-title">sendNext:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)sendNext:(id)<em>value</em></code></div>
 
     
 </div>
@@ -301,7 +487,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-02-17)</span><br />
+						<p><span class="copyright">&copy; 2013 Josh Abernathy. All rights reserved. (Last updated: 2013-04-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface XIGUserMatchersToolbar : UIView
+@interface XIGUserMatchersToolbar : UIButton
 
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (nonatomic, weak) IBOutlet UILabel *friendsCountLabel;

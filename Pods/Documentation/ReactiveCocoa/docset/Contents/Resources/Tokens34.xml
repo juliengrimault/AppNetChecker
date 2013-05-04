@@ -27,7 +27,7 @@
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>RACSubscriptingAssignmentTrampoline.h</DeclaredIn>			
 			
-			<Declaration>- (void)setObject:(id)obj forKeyedSubscript:(id&lt;NSCopying&gt;)key</Declaration>
+			<Declaration>- (void)setObject:(RACSignal *)signal forKeyedSubscript:(id&lt;NSCopying&gt;)key</Declaration>
 			
 			
 			<Anchor>//api/name/setObject:forKeyedSubscript:</Anchor>

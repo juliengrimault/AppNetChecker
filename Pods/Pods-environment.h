@@ -16,7 +16,7 @@
 #define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
 #define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
 #define COCOAPODS_VERSION_MINOR_CocoaLumberjack 6
-#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 0
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 2
 
 // GVUserDefaults
 #define COCOAPODS_POD_AVAILABLE_GVUserDefaults
@@ -50,21 +50,21 @@
 
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 0
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 17
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 1
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 1
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa 5
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa 0
 
 // ReactiveCocoa/Core
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_Core
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 0
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 17
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 1
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_Core 1
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_Core 5
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_Core 0
 
 // ReactiveCocoa/RACExtensions
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa_RACExtensions
-#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_RACExtensions 0
-#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_RACExtensions 17
-#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_RACExtensions 1
+#define COCOAPODS_VERSION_MAJOR_ReactiveCocoa_RACExtensions 1
+#define COCOAPODS_VERSION_MINOR_ReactiveCocoa_RACExtensions 5
+#define COCOAPODS_VERSION_PATCH_ReactiveCocoa_RACExtensions 0
 
 // TSMessages
 #define COCOAPODS_POD_AVAILABLE_TSMessages

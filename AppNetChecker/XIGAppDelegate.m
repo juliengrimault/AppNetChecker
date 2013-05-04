@@ -34,7 +34,7 @@
 - (void)setupViewControllerHierarchy {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     XIGAccountPickerViewController *accountPickerViewController = [[UIStoryboard mainStoryboard] instantiateViewControllerWithIdentifier:@"XIGAccountPickerViewController"];
-    XIGHelpViewController *helpViewController = [[UIStoryboard mainStoryboard] instantiateViewControllerWithIdentifier:@"XIGHelpViewController"];
+    XIGHelpViewController *helpViewController = [[XIGHelpViewController alloc] init];
     XIGSemiModalController *semiModalController = [[XIGSemiModalController alloc] initWithFrontViewController:helpViewController
                                                                                            backViewController:accountPickerViewController];
     UINavigationController*navigationController = [[UINavigationController alloc] initWithRootViewController:semiModalController];

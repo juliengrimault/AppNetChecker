@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UITextField+RACSignalSupport.html">
+	<File path="Categories/NSOrderedSet+RACSequenceAdditions.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UITextField(RACSignalSupport)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSOrderedSet(RACSequenceAdditions)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>UITextField+RACSignalSupport.h</DeclaredIn>
+			<DeclaredIn>NSOrderedSet+RACSequenceAdditions.h</DeclaredIn>
 			
 			<NodeRef refid="58"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UITextField(RACSignalSupport)/rac_textSignal</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSOrderedSet(RACSequenceAdditions)/setRac_sequence:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>UITextField+RACSignalSupport.h</DeclaredIn>			
+			<DeclaredIn>NSOrderedSet+RACSequenceAdditions.h</DeclaredIn>			
 			
-			<Declaration>- (RACSignal *)rac_textSignal</Declaration>
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
 			
 			
-			<Anchor>//api/name/rac_textSignal</Anchor>
+			<Anchor>//api/name/rac_sequence</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfp/NSOrderedSet(RACSequenceAdditions)/rac_sequence</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSOrderedSet+RACSequenceAdditions.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) RACSequence *rac_sequence</Declaration>
+			
+			
+			<Anchor>//api/name/rac_sequence</Anchor>
 		</Token>
 		
 	</File>

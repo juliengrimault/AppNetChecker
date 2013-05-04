@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Categories/UIControl+RACSignalSupport.html">
+	<File path="Categories/NSObject+RACSelectorSignal.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cat/UIControl(RACSignalSupport)</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cat/NSObject(RACSelectorSignal)</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>UIControl+RACSignalSupport.h</DeclaredIn>
+			<DeclaredIn>NSObject+RACSelectorSignal.h</DeclaredIn>
 			
 			<NodeRef refid="57"/>
 		</Token>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/intfm/UIControl(RACSignalSupport)/rac_signalForControlEvents:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACSelectorSignal)/rac_signalForSelector:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>UIControl+RACSignalSupport.h</DeclaredIn>			
+			<DeclaredIn>NSObject+RACSelectorSignal.h</DeclaredIn>			
 			
-			<Declaration>- (RACSignal *)rac_signalForControlEvents:(UIControlEvents)controlEvents</Declaration>
+			<Declaration>- (RACSignal *)rac_signalForSelector:(SEL)selector</Declaration>
 			
 			
-			<Anchor>//api/name/rac_signalForControlEvents:</Anchor>
+			<Anchor>//api/name/rac_signalForSelector:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(RACSelectorSignal)/rac_signalForSelector:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSObject+RACSelectorSignal.h</DeclaredIn>			
+			
+			<Declaration>+ (RACSignal *)rac_signalForSelector:(SEL)selector</Declaration>
+			
+			
+			<Anchor>//api/name/rac_signalForSelector:</Anchor>
 		</Token>
 		
 	</File>

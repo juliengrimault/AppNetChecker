@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/DDFileLogger.html">
+	<File path="Classes/DDLogFileFormatterDefault.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/DDFileLogger</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<TokenIdentifier>//apple_ref/occ/cl/DDLogFileFormatterDefault</TokenIdentifier>
+			<Abstract type="html">Most users will want file log messages to be prepended with the date and time.
+Rather than forcing the majority of users to write their own formatter,
+we will supply a logical default formatter.
+Users can easily replace this formatter with their own by invoking the setLogFormatter method.
+It can also be removed by calling setLogFormatter, and passing a nil parameter.</Abstract>
 			<DeclaredIn>DDFileLogger.h</DeclaredIn>
 			
 			<NodeRef refid="6"/>
@@ -12,7 +16,7 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDFileLogger/init</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileFormatterDefault/init</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
@@ -23,103 +27,14 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDFileLogger/initWithLogFileManager:</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/instm/DDLogFileFormatterDefault/initWithDateFormatter:</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
 			
-			<Declaration>- (id)initWithLogFileManager:(id&lt;DDLogFileManager&gt;)logFileManager</Declaration>
+			<Declaration>- (id)initWithDateFormatter:(NSDateFormatter *)dateFormatter</Declaration>
 			
 			
-			<Anchor>//api/name/initWithLogFileManager:</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDFileLogger/setMaximumFileSize:</TokenIdentifier>
-			<Abstract type="html">Log File Rolling:</Abstract>
-			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
-			
-			<Declaration>@property (readwrite, assign) unsigned long long maximumFileSize</Declaration>
-			
-			
-			<Anchor>//api/name/maximumFileSize</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DDFileLogger/maximumFileSize</TokenIdentifier>
-			<Abstract type="html">Log File Rolling:</Abstract>
-			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
-			
-			<Declaration>@property (readwrite, assign) unsigned long long maximumFileSize</Declaration>
-			
-			
-			<Anchor>//api/name/maximumFileSize</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDFileLogger/setRollingFrequency:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
-			
-			<Declaration>@property (readwrite, assign) NSTimeInterval rollingFrequency</Declaration>
-			
-			
-			<Anchor>//api/name/rollingFrequency</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DDFileLogger/rollingFrequency</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
-			
-			<Declaration>@property (readwrite, assign) NSTimeInterval rollingFrequency</Declaration>
-			
-			
-			<Anchor>//api/name/rollingFrequency</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDFileLogger/setLogFileManager:</TokenIdentifier>
-			<Abstract type="html">The DDLogFileManager instance can be used to retrieve the list of log files,
-and configure the maximum number of archived log files to keep.</Abstract>
-			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
-			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/intf/DDLogFileManager</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (strong, nonatomic, readonly) id&lt;DDLogFileManager&gt; logFileManager</Declaration>
-			
-			
-			<Anchor>//api/name/logFileManager</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/DDFileLogger/logFileManager</TokenIdentifier>
-			<Abstract type="html">The DDLogFileManager instance can be used to retrieve the list of log files,
-and configure the maximum number of archived log files to keep.</Abstract>
-			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
-			
-	<RelatedTokens>
-		<TokenIdentifier>//apple_ref/occ/intf/DDLogFileManager</TokenIdentifier>
-		
-	</RelatedTokens>
-	
-			<Declaration>@property (strong, nonatomic, readonly) id&lt;DDLogFileManager&gt; logFileManager</Declaration>
-			
-			
-			<Anchor>//api/name/logFileManager</Anchor>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/DDFileLogger/rollLogFile</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>DDFileLogger.h</DeclaredIn>			
-			
-			<Declaration>- (void)rollLogFile</Declaration>
-			
-			
-			<Anchor>//api/name/rollLogFile</Anchor>
+			<Anchor>//api/name/initWithDateFormatter:</Anchor>
 		</Token>
 		
 	</File>
