@@ -17,6 +17,7 @@
 #import "XIGUserMatchersToolbar.h"
 #import "UITableView+XIGBackgroundView.h"
 #import "RACSignal+XIGBuffer.h"
+#import "UIViewController+XIGReachability.h"
 
 static NSString * const CellIdentifier = @"TwitterUserCell";
 
@@ -56,6 +57,12 @@ static NSString * const CellIdentifier = @"TwitterUserCell";
 - (void)commonInit {
     _userMatchers = [[NSMutableArray alloc] init];
     self.title = NSLocalizedString(@"Friends", nil);
+    [self subscribeToReachabilityChanges];
+}
+
+- (void)dealloc
+{
+    [self unsubscribeToReachabilityChanges];
 }
 
 #pragma mark - Life cycle

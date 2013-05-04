@@ -4,6 +4,7 @@
 //
 
 #import <ReactiveCocoa/ReactiveCocoa/RACSignal.h>
+#import "TSMessages/TSMessage.h"
 #import "XIGTwitAppClient.h"
 #import "XIGTwitterClient.h"
 #import "XIGAppNetClient.h"

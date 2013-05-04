@@ -10,6 +10,9 @@
 
 @interface XIGTwitAppClient : NSObject
 
+@property (nonatomic, strong, readonly) XIGTwitterClient *twitterClient;
+@property (nonatomic, strong, readonly) XIGAppNetClient  *appNetClient;
+
 - (id)initWithTwitterClient:(XIGTwitterClient *)twitter appNetClient:(XIGAppNetClient *)appNet;
 
 - (RACSignal *)userMatchers;

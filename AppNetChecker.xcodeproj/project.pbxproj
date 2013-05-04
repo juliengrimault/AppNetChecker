@@ -110,6 +110,7 @@
 		F9BC705016FC451C00BCF03B /* default-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BC704E16FC451C00BCF03B /* default-avatar.png */; };
 		F9BC705116FC451C00BCF03B /* default-avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9BC704F16FC451C00BCF03B /* default-avatar@2x.png */; };
 		F9C37F0B16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */; };
+		F9C82A871735429700C57A61 /* UIViewController+XIGReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C82A861735429700C57A61 /* UIViewController+XIGReachability.m */; };
 		F9D2E4D616EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */; };
 		F9D2E4DA16EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */; };
 		F9D2E4E116EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9D2E4DE16EADD14006A1A06 /* YanoneKaffeesatz-Bold.ttf */; };
@@ -289,6 +290,8 @@
 		F9BC704E16FC451C00BCF03B /* default-avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar.png"; sourceTree = "<group>"; };
 		F9BC704F16FC451C00BCF03B /* default-avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar@2x.png"; sourceTree = "<group>"; };
 		F9C37F0A16D666E400955CE1 /* XIGTwitterClientGetProfilesSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIGTwitterClientGetProfilesSpec.m; sourceTree = "<group>"; };
+		F9C82A851735429700C57A61 /* UIViewController+XIGReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XIGReachability.h"; sourceTree = "<group>"; };
+		F9C82A861735429700C57A61 /* UIViewController+XIGReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XIGReachability.m"; sourceTree = "<group>"; };
 		F9D2E4D516EADAE4006A1A06 /* YanoneKaffeesatz-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-Thin.ttf"; sourceTree = "<group>"; };
 		F9D2E4D816EADB0F006A1A06 /* UIFont+XIGAppNetChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+XIGAppNetChecker.h"; sourceTree = "<group>"; };
 		F9D2E4D916EADB0F006A1A06 /* UIFont+XIGAppNetChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+XIGAppNetChecker.m"; sourceTree = "<group>"; };
@@ -686,6 +689,8 @@
 				BB851178A6424BC6758E8BE4 /* XIGSemiModalController.h */,
 				BB85104DD3E0353CA8734120 /* JGTableViewController.h */,
 				BB8518F48CC82C164111BA3F /* JGTableViewController.m */,
+				F9C82A851735429700C57A61 /* UIViewController+XIGReachability.h */,
+				F9C82A861735429700C57A61 /* UIViewController+XIGReachability.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -745,8 +750,8 @@
 		F9E76F9716E355EF003E1B26 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */,
 				BB8514DE9236C3345E088389 /* XIGTwitAppClient.h */,
+				BB8515ED29936E891D45F400 /* XIGTwitAppClient.m */,
 				F9D52EBF16CA0C9E00ABC885 /* XIGTwitterClient+Private.h */,
 				F9D52EB916CA043700ABC885 /* XIGTwitterClient.h */,
 				F9D52EBA16CA043700ABC885 /* XIGTwitterClient.m */,
@@ -1022,6 +1027,7 @@
 				BB85197D02EC730D92363F1C /* XIGUserMatchersToolbar.m in Sources */,
 				BB851E4575D6EA8A43862039 /* JGTableViewController.m in Sources */,
 				BB851A46480D2C46B77DC7D2 /* RACSignal+XIGBuffer.m in Sources */,
+				F9C82A871735429700C57A61 /* UIViewController+XIGReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
