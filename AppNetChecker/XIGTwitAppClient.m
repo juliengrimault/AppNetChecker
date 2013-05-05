@@ -32,7 +32,7 @@
         
         RACSignal *appNetUserSignal = [[self.appNetClient userWithScreenName:twitterUser.screenName] catch:^RACSignal *(NSError *error) {
             DDLogError(@"Error getting App.net user %@ - replacing by nil in sendNext", twitterUser.screenName);
-            return [RACSignal empty];
+            return [RACSignal return:nil];
         }];
         
         return [appNetUserSignal map:^id(XIGAppNetUser *appNetUser) {

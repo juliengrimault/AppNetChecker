@@ -15,6 +15,6 @@
 
 - (id)initWithTwitterClient:(XIGTwitterClient *)twitter appNetClient:(XIGAppNetClient *)appNet;
 
-- (RACSignal *)userMatchers;
+- (RACSignal/*<XIGUserMatcher>*/ *)userMatchers;
 
 @end
